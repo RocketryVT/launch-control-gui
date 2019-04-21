@@ -26,7 +26,7 @@ from tkinter import ttk
 RocketryAPP = tk.Tk()
 RocketryAPP.title('Controls')
 RocketryAPP.geometry("1280x720")
-tk.Tk.iconbitmap(RocketryAPP, "favicon.ico")
+tk.Tk.iconbitmap(RocketryAPP, "./data/img/favicon.ico")
 #------------------------------------------------------------------------------
 topFrame = tk.Frame(RocketryAPP)
 topFrame.pack(side='top', fill='x')

@@ -1,23 +1,13 @@
-#This cals for matplotlib 
 import matplotlib
-#this is a backend for matplotlib 
 matplotlib.use("TKAgg")
-#this allows us to draw a graph on matplot lib aswell as have a navigation tool bar for the graph 
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 from matplotlib.figure import Figure
-#this is importing the animation function from matplotlib
-import matplotlib.animation as animation 
-#this imports different styles for the graph...some can be personalized
-from matplotlib import style
-#this calls for all the functionalities
-import tkinter as tk 
-#This is for styling the GUI...like the buttons 
+import tkinter as tk
 from tkinter import ttk
 import math
-
 import time
 
-text_file = open("C:\\Users\\Alejandro\\Documents\\School\\VTech Rocketry\\Final\\Bytes.txt")
+text_file = open("./data/Bytes.txt")
 line = 0
 
 #------------------------------------------------------------------------------
@@ -38,7 +28,7 @@ def create_window():
     BYTES.geometry("1280x720")
     
     
-    output = tk.Label(BYTES, text = "Output\n", font=("Consolas", 16), justify="left")   
+    output = tk.Label(BYTES, text = "Output\n", font=("Consolas", 16), justify="left" )
     
     def copy(arg=None):
         time.time()

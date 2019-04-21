@@ -4,19 +4,19 @@ Created on Wed Jan  9 19:00:35 2019
 
 @author: Alejandro
 """
-#this calls for all the functionalities
+# this calls for all the functionalities
 import tkinter as tk 
 
-#this is specifying the font size and type 
+# this is specifying the font size and type
 ROMANFONT = ("Times New Roman", 12)
-#This is defining the "StartPage"
+# This is defining the "StartPage"
 
 
-#this is defining the class for the GUI application 
-#the '()' allows this class to inhereit attirbutes from another class
+# this is defining the class for the GUI application
+# the '()' allows this class to inhereit attirbutes from another class
 class Rocketryapp(tk.Tk): 
     
-    #this is a method that is going to initalize this class...everytime the applciation runs, this will pop up first 
+    # this is a method that is going to initalize this class...everytime the applciation runs, this will pop up first
     def __init__(self, *args, **kwargs):
         #now we are going to add what we want to initilialize
         tk.Tk.__init__(self, *args, **kwargs)
