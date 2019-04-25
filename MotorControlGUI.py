@@ -5,8 +5,17 @@ import time
 matplotlib.use("TKAgg")
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 from matplotlib.figure import Figure
+import matplotlib.animation as animation
+from matplotlib import style
+style.use('ggplot')
+import random
 
-numberPackets = 1
+
+f = Figure()
+a = f.add_subplot(111)
+
+def launch_rocket():
+    print("Fire")
 
 def send_command(f, text, channel):
     try:
@@ -40,27 +49,48 @@ def activateCheck2(var, Chk3, chkvar3):
         print("Lock 2 Locked, Lock 3 relocked and disabled")
 
 def Refresher():
+    # TODO change this to the last n digits in the line arrary, plot graph with regresh
     global numberPackets
+    global chanSelectVarList
+    chan = chanSelectVarList.get()
     recivedPackets = open("./recivedpackets.txt", 'r')
     packetArr = []
     for line in recivedPackets:
         packetArr.append(line)
 
+    xr = []
+    yr = []
+    for i in range(numberPackets):
+        xr.append(random.randint(1,10))
+        yr.append(random.randint(1,10))
+
+    a.clear()
+    a.plot(xr, yr)
+    print(xr)
     s = ""
     if numberPackets < 10:
         for i in range(numberPackets):
-            s = s + packetArr[i] + "\n"
+            if chan == "":
+                s = s + packetArr[i] + "\n"
+            else:
+                if packetArr[i][0] == '0':
+                    s = s + packetArr[i] + "\n"
     else:
         bottom = numberPackets - 10
         for i in range(bottom, numberPackets):
-            s = s + packetArr[i] + "\n"
+            if chan == "":
+                s = s + packetArr[i] + "\n"
+            else:
+                if packetArr[i][0] == '0':
+                    s = s + packetArr[i] + "\n"
 
     display.configure(text=s)
     numberPackets += 1
     root.after(1000, Refresher)
 
-commandFile = open("./writecommand.txt", 'w')
 
+commandFile = open("./writecommand.txt", 'w')
+numberPackets = 1
 root = tk.Tk()
 root.geometry("600x400")
 topFrame = tk.Frame(root)
@@ -78,6 +108,10 @@ Var1 = tk.IntVar()
 chk1 = tk.Checkbutton(topFrame, text='Unlock 1', variable=Var1, command=lambda: activateCheck1(Var1.get(), chk2, chk3,  Var2, Var3))
 chk1.pack(side=tk.RIGHT, anchor='n')
 
+LaunchButton = tk.Button( text = "FIRE", height=100, width=100, command=lambda: launch_rocket(), bg="red")
+LaunchButton.pack(padx=10, pady=10, side=tk.RIGHT)
+
+
 note = ttk.Notebook(topFrame)
 note.pack(side=tk.BOTTOM, expand=True, fill='both')
 
@@ -85,7 +119,7 @@ tab1 = tk.Frame(note)
 tab2 = tk.Frame(note)
 tab3 = tk.Frame(note)
 
-# tab 1
+# tab 1 ----------------------------------------------
 channelDict = {
     "/null": 0,
     "/ground/ping": 1,
@@ -136,26 +170,26 @@ text_Output = tk.StringVar()
 txtEntry = tk.Entry(tab1, textvariable=text_Input, width=50)
 txtEntry.pack(side=tk.TOP, anchor='w')
 
-chanSelectVar = tk.StringVar()
-chanSelect = ttk.Combobox(tab1, textvariable=chanSelectVar)
+chanSelectVarSend = tk.StringVar()
+chanSelect = ttk.Combobox(tab1, textvariable=chanSelectVarSend)
 chanSelect.pack(side=tk.RIGHT, anchor='n')
 chanSelect['values'] = channels
 
 
-EnterButton = tk.Button(tab1, text='Send', command=lambda: send_command(commandFile, text_Input.get(), chanSelectVar.get()))
+EnterButton = tk.Button(tab1, text='Send', command=lambda: send_command(commandFile, text_Input.get(), chanSelectVarSend.get()))
 EnterButton.pack(pady=4, padx=4)
 
 
 display = tk.Label(tab1, text="stff")
 display.pack(side=tk.RIGHT, anchor='s')
 
-lbox = tk.Listbox(tab1, listvariable=cnames)
-lbox.pack(side=tk.LEFT, anchor='s')
+chanSelectVarList = tk.StringVar()
+chanSelectList = ttk.Combobox(tab1, textvariable=chanSelectVarList)
+chanSelectList.pack(side=tk.LEFT, anchor='s')
+chanSelectList['values'] = channels
 
-# tab2
-f = Figure()
-a = f.add_subplot(111)
-a.plot([1,2,3,4,5,6], [2,5,4,3,8,9])
+# tab2 -------------------------------------------------------
+
 
 canvas = FigureCanvasTkAgg(f, tab2)
 canvas.draw()
@@ -165,7 +199,7 @@ toolbar = NavigationToolbar2Tk(canvas, tab2)
 toolbar.update()
 canvas._tkcanvas.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
-# tab3
+# tab3 -----------------------------------
 tk.Button(tab3, text='Exit', command=root.destroy).pack(padx=100, pady=100)
 
 note.add(tab1, text="Send/Receive Commands", compound=tk.TOP)
@@ -173,5 +207,6 @@ note.add(tab2, text="Graph 1")
 note.add(tab3, text="Graph 2")
 note.pack()
 
+# ani = animation.FuncAnimation(f, Refresher(), 1000)
 Refresher()
 root.mainloop()
