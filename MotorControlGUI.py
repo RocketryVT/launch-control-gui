@@ -9,10 +9,13 @@ import matplotlib.animation as animation
 from matplotlib import style
 style.use('ggplot')
 import random
+import serial
 
 
+time.sleep(1)
 f = Figure()
 a = f.add_subplot(111)
+arduino = serial.Serial('COM9', 115200, timeout=.1)
 
 def launch_rocket():
     print("Fire")
@@ -30,13 +33,20 @@ def send_command(f, text, channel):
 def activateCheck1(var, Chk2, Chk3,  chkvar2, chkvar3):
     if var:
         Chk2['state'] = tk.NORMAL
-        print("Lock 1 Unlocked")
+        arduino.write(str.encode("Lock 1 Unlocked"))
+        data = arduino.readline()[:-2]  # the last bit gets rid of the new-line chars
+        if data:
+            print(data)
+        # print("Lock 1 Unlocked")
     else:
         Chk2['state'] = tk.DISABLED
         Chk3['state'] = tk.DISABLED
         chkvar2.set(0)
         chkvar3.set(0)
-        print("Lock 1 Locked, Locks 2 and 3 relocked and disabled")
+        arduino.write(str.encode("Lock 1 Locked, Locks 2 and 3 relocked and disabled"))
+        data = arduino.readline()[:-2]  # the last bit gets rid of the new-line chars
+        if data:
+            print(data)
 
 
 def activateCheck2(var, Chk3, chkvar3):
@@ -66,7 +76,7 @@ def Refresher():
 
     a.clear()
     a.plot(xr, yr)
-    print(xr)
+    # print(xr)
     s = ""
     if numberPackets < 10:
         for i in range(numberPackets):
