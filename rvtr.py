@@ -3,7 +3,7 @@
 import numpy as np
 from collections import deque
 import struct
-
+import shlex
 
 def parse(bytes):
     parsing = True
@@ -91,13 +91,17 @@ def buildPacket(id, message):
 
 
 def packetify(formatted):
-    ret = bytes(0);
+    ret = bytes(0)
 
-    for token in formatted.split(' '):
+    for token in shlex.split(formatted):
 
         try:
 
-            if token.endswith('n8'):
+            if token.startswith('#'):
+                string = token[1:len(token)]
+                ret += bytes(string, 'utf-8')
+
+            elif token.endswith('n8'):
                 num = int(token[0:-2])
                 ret += struct.pack(">b", num)
 
@@ -115,7 +119,7 @@ def packetify(formatted):
 
             elif token.endswith('u8'):
                 num = int(token[0:-2])
-                ret += struct.pack(">c", num)
+                ret += struct.pack(">c", bytes([num]))
 
             elif token.endswith('u16'):
                 num = int(token[0:-3])
@@ -138,15 +142,12 @@ def packetify(formatted):
                 num = float(token[0:-1])
                 ret += struct.pack(">d", num)
 
-            elif token.startswith('\"') and token.endswith('\"'):
-                string = token[1:-1];
-                ret += bytes(string, 'utf-8')
-
             else:
-                print("Unrecognized token: " + token)
+                print("Not sure how to parse token: " + token)
+                return list(bytes(0));
 
-        except ValueError:
+        except:
             print("Encountered an error parsing token: " + token)
-            continue
+            return list(bytes(0));
 
     return list(ret);
