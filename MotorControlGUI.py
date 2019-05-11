@@ -10,17 +10,22 @@ from matplotlib import style
 style.use('ggplot')
 import random
 import serial
+from serial.tools import list_ports
 import rvtr
 from collections import deque
 
-time.sleep(1)
-f = Figure()
-a = f.add_subplot(111)
-try:
-    arduino = serial.Serial('COM3', 115200, timeout=.1)
-except Exception as e:
-    print("Failed to open arduino serial port: " + str(e))
-input_deque = deque([]);
+def open_port(port, baudrate):
+    try:
+        arduino.close()
+        arduino.port = port
+        arduino.baudrate = baudrate
+        arduino.open()
+        openButton["text"] = "Close";
+        print("Successfully opened port " + port + " (" + str(baudrate) + ")")
+    except Exception as e:
+        print("Failed to open arduino serial port. Reason:\n" + str(e))
+        arduino.close()
+        openButton["text"] = "Open";
 
 def launch_rocket():
     print("Fire")
@@ -38,7 +43,6 @@ def send_command(channel, text):
         print("Failed to send command: " + str(e))
         pass
 
-
 def activateCheck1(var, Chk2, Chk3, chkvar2, chkvar3):
     if var:
         Chk2['state'] = tk.NORMAL
@@ -46,7 +50,6 @@ def activateCheck1(var, Chk2, Chk3, chkvar2, chkvar3):
         send_command("/rocket/motor-unlock", "0u8")
     else:
         lockMotor(Chk2, Chk3, chkvar2, chkvar3)
-
 
 def activateCheck2(var, Chk2, Chk3, chkvar2, chkvar3):
     if var:
@@ -71,45 +74,10 @@ def lockMotor(Chk2, Chk3, chkvar2, chkvar3):
     send_command("/rocket/motor-lock", "")
     print("Motor relocked")
 
-def Refresher():
-
-    # TODO change this to the last n digits in the line arrary, plot graph with regresh
-    # global numberPackets
-    # global chanSelectVarList
-    # chan = chanSelectVarList.get()
-    # recivedPackets = open("./recivedpackets.txt", 'r')
-    # packetArr = []
-    # for line in recivedPackets:
-    #     packetArr.append(line)
-    #
-    # xr = []
-    # yr = []
-    # for i in range(numberPackets):
-    #     xr.append(random.randint(1,10))
-    #     yr.append(random.randint(1,10))
-    #
-    # a.clear()
-    # a.plot(xr, yr)
-    # # print(xr)
-    # s = ""
-    # if numberPackets < 10:
-    #     for i in range(numberPackets):
-    #         if chan == "":
-    #             s = s + packetArr[i] + "\n"
-    #         else:
-    #             if packetArr[i][0] == '0':
-    #                 s = s + packetArr[i] + "\n"
-    # else:
-    #     bottom = numberPackets - 10
-    #     for i in range(bottom, numberPackets):
-    #         if chan == "":
-    #             s = s + packetArr[i] + "\n"
-    #         else:
-    #             if packetArr[i][0] == '0':
-    #                 s = s + packetArr[i] + "\n"
+def update():
 
     global arduino
-    while arduino.inWaiting():
+    while arduino.is_open and arduino.inWaiting():
         input_deque.append(int.from_bytes(arduino.read(), byteorder='big'))
 
     if len(input_deque) > 0:
@@ -119,13 +87,27 @@ def Refresher():
     for packet in packets:
         print(" ".join("{:02x}".format(x) for x in packet))
 
-    root.after(100, Refresher)
+    root.after(100, update)
 
+
+ports = []
+devices = list_ports.comports(True)
+for x in devices:
+    ports.append(x.device)
+    print("[" + x.device + "] " + x.description)
+print(ports)
+
+arduino = serial.Serial()
+print("Starting R@VT control.")
+f = Figure()
+a = f.add_subplot(111)
+input_deque = deque([])
 
 commandFile = open("./writecommand.txt", 'w')
 numberPackets = 1
 root = tk.Tk()
 root.geometry("800x700")
+root.title("R@VT 2019 Ground Control")
 topFrame = tk.Frame(root)
 topFrame.pack(side='top', fill='x')
 
@@ -211,7 +193,17 @@ channels = (
     "/rocket/motor-lock"
 )
 
-cnames = tk.StringVar(value=channels)
+
+portnames = tk.StringVar()
+portselect = ttk.Combobox(tab1, textvariable=portnames)
+portselect.pack(side=tk.LEFT, anchor='n')
+portselect['values'] = ports
+
+openButton = tk.Button(tab1, text='Open', command=lambda:
+open_port(portnames.get(), 115200))
+openButton.pack(pady=4, padx=4)
+
+# cnames = tk.StringVar(value=channels)
 text_Input = tk.StringVar()
 text_Output = tk.StringVar()
 txtEntry = tk.Entry(tab1, textvariable=text_Input, width=50)
@@ -262,6 +254,6 @@ hextab = tk.Text(tab4, width = 20*3);
 hextab.pack();
 hextab.pack()
 
-# ani = animation.FuncAnimation(f, Refresher(), 1000)
-Refresher()
+# ani = animation.FuncAnimation(f, update(), 1000)
+update()
 root.mainloop()
