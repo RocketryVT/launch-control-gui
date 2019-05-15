@@ -412,8 +412,10 @@ textInputBox.grid(row=1, columnspan=3)
 tk.Button(commsFrame, text='Send', width=10, command=lambda:
 send_command(channelSend.get(), textInputBox.get())).grid(row=2, column=2, padx=5, pady=5)
 
-portselect = ttk.Combobox(commsFrame, values=get_com_ports())
-portselect.current(0)
+ports=get_com_ports()
+portselect = ttk.Combobox(commsFrame, values=ports)
+if len(ports) > 0:
+    portselect.current(0)
 portselect.grid(row=3, column=0, padx=5, pady=5)
 
 tk.Button(commsFrame, text='Update Ports', width=12,
