@@ -1,5 +1,6 @@
-# transmission.py
+# rvtr.py
 
+import time
 import numpy as np
 from collections import deque
 import struct
@@ -9,7 +10,9 @@ def parse(bytes):
     parsing = True
     packets = []
 
-    while len(bytes) > 0 and parsing:
+    start = time.time()
+
+    while len(bytes) > 0 and parsing and time.time() - start < 0.1:
         while len(bytes) > 0 and bytes[0] != 0xAA:
             bytes.popleft()
         if len(bytes) < 2:
@@ -45,6 +48,7 @@ def parse(bytes):
         for i in range(0, len(packet)):
             bytes.popleft()
     return packets
+
 
 
 def xorchecksum(packet):
@@ -135,7 +139,6 @@ def packetify(formatted):
 
             elif token.endswith('f'):
                 num = float(token[0:-1])
-                print(num)
                 ret += struct.pack(">f", num)
 
             elif token.endswith('d'):
