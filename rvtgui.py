@@ -10,6 +10,7 @@ from serial.tools import list_ports
 from collections import deque
 import rvtr
 import shlex
+import string
 
 
 class MainWindow(tkinter.Tk):
@@ -158,6 +159,8 @@ class MainWindow(tkinter.Tk):
     def open_port(self, port, baudrate, button=None):
 
         if self.arduino.is_open:
+            self.arduino.reset_input_buffer()
+            self.arduino.reset_output_buffer()
             self.arduino.close()
             print("Closed " + str(self.arduino) + ".")
         else:
@@ -166,10 +169,12 @@ class MainWindow(tkinter.Tk):
             self.arduino.baudrate = baudrate
             try:
                 self.arduino.open()
+                self.arduino.reset_input_buffer()
+                self.arduino.reset_output_buffer()
             except Exception as e:
                 print(e)
                 return
-            print("Opened", port)
+            print("Opened " + str(self.arduino) + ".")
         if button is not None:
             if self.arduino.is_open:
                 button["text"] = "Close"
@@ -256,10 +261,15 @@ class HexdumpWindow(tkinter.Toplevel):
         self.tk.call('wm', 'iconphoto', self._w,
         tkinter.PhotoImage(file='glider.ico'))
         self.protocol("WM_DELETE_WINDOW", self.destroy)
-        self.textOutput = tkinter.Text(self, width = 20*3,
-        font=("Consolas Bold", 16), borderwidth=3, relief='sunken')
-        self.textOutput.pack(fill=tkinter.BOTH, expand=tkinter.YES)
 
+        header = tkinter.Text(self, wrap="none",
+        height=1, font=("Consolas Bold", 16), borderwidth=3, relief='flat')
+        header.insert(tkinter.END, "       00 01 02 03 04 05 06 07   " +
+            "08 09 0A 0B 0C 0D 0E 0F    ASCII")
+        header.pack(fill=tkinter.BOTH, expand=tkinter.YES)
+        self.textOutput = tkinter.Text(self, wrap="none", width = 28*3,
+        height=27, font=("Consolas Bold", 16), borderwidth=3, relief='sunken')
+        self.textOutput.pack(fill=tkinter.BOTH, expand=tkinter.YES)
         self.begin_loop()
 
     def begin_loop(self):
@@ -274,22 +284,30 @@ class HexdumpWindow(tkinter.Toplevel):
         if start < 0:
             start = 0
         start = int(numpy.ceil(start/16.0)*16);
+        total_string = ""
         hexdumpString = ""
-        i = 0
+        asciiString = ""
+        column = 0
         row = int(start/16)
         toPrint = self.buffer[start:]
-        for x in toPrint:
-            if i % 16 == 0:
+        for i, x in enumerate(toPrint):
+            if chr(x) in string.printable and x not in (10, 11, 12, 13):
+                asciiString += chr(x)
+            else:
+                asciiString += "."
+            if column % 16 == 0:
                 hexdumpString += "{:04X}".format(row) + "   "
                 row += 1
             hexdumpString += "{:02X}".format(x) + " ";
-            i += 1
-            if i % 16 == 0:
-                hexdumpString += "\n"
-            elif i % 8 == 0:
+            column = (column + 1) % 16
+            if column % 16 == 0 or i == len(toPrint) - 1:
+                total_string += hexdumpString.ljust(60) + asciiString + "\n"
+                hexdumpString = ""
+                asciiString = ""
+            elif column % 8 == 0:
                 hexdumpString += "  "
 
-        self.textOutput.insert(tkinter.END, hexdumpString)
+        self.textOutput.insert(tkinter.END, total_string)
         self.textOutput.see(tkinter.END)
 
 
@@ -403,6 +421,9 @@ class PlotterWindow(tkinter.Toplevel):
 
         format = self.format_input.get()
         num_channels = len(shlex.split(format))
+        if not num_channels:
+            return
+
         to_plot = self.packets[-self.plot_recent:]
 
         data_buffer = list([])
@@ -426,7 +447,7 @@ class PlotterWindow(tkinter.Toplevel):
                         data_buffer[i].append(numpy.nan)
 
         self.plot.clear()
-        t = numpy.arange(0, len(to_plot), 1)
+        t = numpy.arange(0, len(data_buffer[0]), 1)
         for i in range(0, num_channels):
             color = 'k'
             if i % 3 == 1:
@@ -435,6 +456,7 @@ class PlotterWindow(tkinter.Toplevel):
                 color = 'r'
             self.plot.plot(t, data_buffer[i], color)
         self.plot.legend(legend, loc='upper right')
+        self.plot.grid()
         self.canvas.draw()
 
 
