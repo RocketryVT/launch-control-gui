@@ -50,7 +50,6 @@ def parse(bytes):
     return packets
 
 
-
 def xorchecksum(packet):
     c0 = 0
     c1 = 0
@@ -94,7 +93,7 @@ def buildPacket(id, message):
     return packet
 
 
-def packetify(formatted):
+def pack(formatted):
     ret = bytes(0)
 
     for token in shlex.split(formatted):
@@ -145,12 +144,77 @@ def packetify(formatted):
                 num = float(token[0:-1])
                 ret += struct.pack(">d", num)
 
-            else:
-                print("Not sure how to parse token: " + token)
-                return list(bytes(0));
-
         except:
-            print("Encountered an error parsing token: " + token)
-            return list(bytes(0));
+            pass
 
     return list(ret);
+
+
+def unpack(packet, formatted):
+
+    ret = list([])
+    index = 0
+
+    for token in shlex.split(formatted):
+        try:
+            if token.startswith("#"):
+                num = int(token[1:])
+                data = bytes(packet[index:index+num])
+                string = data.decode('utf-8')
+                ret.append(string)
+                index += num
+
+            elif token == "n8":
+                data = bytes(packet[index:index+1])
+                ret += list(struct.unpack(">b", data))
+                index += 1
+
+            elif token == "n16":
+                data = bytes(packet[index:index+2])
+                ret += list(struct.unpack(">h", data))
+                index += 2
+
+            elif token == "n32":
+                data = bytes(packet[index:index+4])
+                ret += list(struct.unpack(">l", data))
+                index += 4
+
+            elif token == "n64":
+                data = bytes(packet[index:index+8])
+                ret += list(struct.unpack(">q", data))
+                index += 8
+
+            elif token == "u8":
+                num = int.from_bytes(packet[index:index+1], byteorder='big')
+                ret.append(num)
+                index += 1
+
+            elif token == "u16":
+                data = bytes(packet[index:index+2])
+                ret += list(struct.unpack(">H", data))
+                index += 2
+
+            elif token == "u32":
+                data = bytes(packet[index:index+4])
+                ret += list(struct.unpack(">L", data))
+                index += 4
+
+            elif token == "u64":
+                data = bytes(packet[index:index+8])
+                ret += list(struct.unpack(">Q", data))
+                index += 8
+
+            elif token == "f":
+                data = bytes(packet[index:index+4])
+                ret += list(struct.unpack(">f", data))
+                index += 4
+
+            elif token == "d":
+                data = bytes(packet[index:index+8])
+                ret += list(struct.unpack(">d", data))
+                index += 8
+
+        except:
+            pass
+
+    return ret

@@ -9,11 +9,12 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolb
 from serial.tools import list_ports
 from collections import deque
 import rvtr
+import shlex
 
 
 class MainWindow(tkinter.Tk):
 
-    def __init__(self, channels, delay=100):
+    def __init__(self, channels, delay=50):
 
         self.channels = channels
         self.delay = delay
@@ -48,7 +49,7 @@ class MainWindow(tkinter.Tk):
         command=lambda: PacketWindow(self.packets, self.channels)
         ).grid(row=1, column=1, padx=5, pady=5)
         tkinter.Button(windowsFrame, text='Plotter', width=12,
-        command=lambda: PlotterWindow(self.buffer)
+        command=lambda: PlotterWindow(self.packets, self.channels)
         ).grid(row=1, column=2, padx=2, pady=5)
         tkinter.Button(windowsFrame, text='Clear Buffers', width=12,
         command=self.clear_buffers).grid(row=2, column=1, padx=5, pady=5)
@@ -143,6 +144,8 @@ class MainWindow(tkinter.Tk):
         self.last_time = time.time()
         self.last_bytes = len(self.buffer)
 
+
+
         while self.arduino.is_open and self.arduino.inWaiting():
             byte = int.from_bytes(self.arduino.read(), byteorder='big')
             self.parsing_deque.append(byte)
@@ -190,7 +193,7 @@ class MainWindow(tkinter.Tk):
     def send_command(self, channel, text):
 
         if self.arduino.is_open:
-            data = rvtr.packetify(text)
+            data = rvtr.pack(text)
             id = self.channels[channel]
             packet = rvtr.buildPacket(id, data)
             self.arduino.write(bytearray(packet))
@@ -350,10 +353,11 @@ class PacketWindow(tkinter.Toplevel):
 
 class PlotterWindow(tkinter.Toplevel):
 
-    def __init__(self, buffer, title="Raw Incoming Bytes", plot_bytes=100, delay=1000):
+    def __init__(self, packets, channels, title="Raw Incoming Bytes", plot_recent=100, delay=25):
 
-        self.buffer = buffer
-        self.plot_bytes = plot_bytes
+        self.packets = packets
+        self.channels = channels
+        self.plot_recent = plot_recent
         self.delay = delay
 
         tkinter.Toplevel.__init__(self)
@@ -362,12 +366,31 @@ class PlotterWindow(tkinter.Toplevel):
         tkinter.PhotoImage(file='glider.ico'))
         self.protocol("WM_DELETE_WINDOW", self.destroy)
 
+        topFrame = tkinter.Frame(self)
+        bottomFrame = tkinter.Frame(self)
+
+        tkinter.Label(topFrame, text="Enter parsing format: ",
+        ).grid(row=0, column=0, padx=5, pady=5)
+        tkinter.Label(topFrame, text="Filter for incoming channels: "
+        ).grid(row=1, column=0, padx=5, pady=5)
+
+        self.format_input = tkinter.Entry(topFrame, width=50)
+        self.format_input.grid(row=0, column=1, padx=5, pady=5)
+
+        channel_keys = list(self.channels.keys())
+        channel_keys.sort(key = lambda x: self.channels[x])
+        self.channel_select = ttk.Combobox(topFrame, width=30,
+        values=list(channel_keys))
+        self.channel_select.grid(row=1, column=1, padx=5, pady=5)
+        topFrame.pack()
+
         figure = matplotlib.figure.Figure(dpi=100)
         self.plot = figure.add_subplot(111);
 
-        self.canvas = FigureCanvasTkAgg(figure, self)
+        self.canvas = FigureCanvasTkAgg(figure, bottomFrame)
         self.canvas.draw()
         self.canvas.get_tk_widget().pack(fill=tkinter.BOTH, expand=tkinter.YES)
+        bottomFrame.pack(fill=tkinter.BOTH, expand=tkinter.YES)
 
         self.begin_loop()
 
@@ -378,11 +401,40 @@ class PlotterWindow(tkinter.Toplevel):
 
     def update(self):
 
+        format = self.format_input.get()
+        num_channels = len(shlex.split(format))
+        to_plot = self.packets[-self.plot_recent:]
+
+        data_buffer = list([])
+        legend = list([])
+
+        for i in range(0, num_channels):
+            data_buffer.append(list([]))
+            legend.append("Channel " + str(i+1))
+
+        for packet in to_plot:
+            id = packet[3]
+            channel = self.channel_select.get()
+            if channel != '' and self.channels[channel] == id:
+                data = packet[4:-2]
+                parsed = rvtr.unpack(data, format)
+
+                for i in range(0, num_channels):
+                    if i < len(parsed):
+                        data_buffer[i].append(parsed[i])
+                    else:
+                        data_buffer[i].append(numpy.nan)
+
         self.plot.clear()
-        toPlot = self.buffer[-self.plot_bytes:]
-        elements = len(toPlot)
-        t = numpy.arange(len(self.buffer) - elements, len(self.buffer), 1)
-        self.plot.plot(t, toPlot, 'k')
+        t = numpy.arange(0, len(to_plot), 1)
+        for i in range(0, num_channels):
+            color = 'k'
+            if i % 3 == 1:
+                color = 'b'
+            if i % 3 == 2:
+                color = 'r'
+            self.plot.plot(t, data_buffer[i], color)
+        self.plot.legend(legend, loc='upper right')
         self.canvas.draw()
 
 
