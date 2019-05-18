@@ -1,6 +1,7 @@
 # rvtr.py
 
 import time
+from datetime import datetime
 import numpy as np
 from collections import deque
 import struct
@@ -9,6 +10,7 @@ import shlex
 def parse(bytes):
     parsing = True
     packets = []
+    checksum_errors = 0
 
     start = time.time()
 
@@ -36,10 +38,12 @@ def parse(bytes):
         c1 = bytes[5 + data_len]
 
         if c0 != c0_true or c1 != c1_true:
-            print("Checksum error: got (" + "{:02x}".format(c0) +
+            print(str(datetime.utcnow()) +
+                  ": Checksum error: got (" + "{:02x}".format(c0) +
                   ", {:02x}".format(c1) + "), expected " +
                   "({:02x}".format(c0_true) + ", {:02x}".format(c1_true) + ")")
             bytes.popleft()
+            checksum_errors += 1
             continue
         packet.append(c0)
         packet.append(c1)
@@ -47,7 +51,7 @@ def parse(bytes):
         packets.append(packet)
         for i in range(0, len(packet)):
             bytes.popleft()
-    return packets
+    return (packets, checksum_errors)
 
 
 def xorchecksum(packet):
@@ -162,6 +166,10 @@ def unpack(packet, formatted):
                 data = bytes(packet[index:index+num])
                 string = data.decode('utf-8')
                 ret.append(string)
+                index += num
+
+            elif token.startswith("*"):
+                num = int(token[1:])
                 index += num
 
             elif token == "n8":

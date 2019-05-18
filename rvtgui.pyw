@@ -11,21 +11,38 @@ from collections import deque
 import rvtr
 import shlex
 import string
+import os
 
+import ctypes
+myappid = 'mycompany.myproduct.subproduct.version' # arbitrary string
+ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 
 class MainWindow(tkinter.Tk):
 
     def __init__(self, channels, delay=50):
 
         self.channels = channels
-        self.delay = delay
+        # for i in range(0, 256):
+        #     if i not in self.channels.values():
+        #         self.channels["/channel-" + str(i)] = i;
 
+        self.delay = delay
         self.buffer = list([])
         self.packets = list([])
         self.parsing_deque = deque([])
         self.arduino = serial.Serial()
+        self.checksum_errors = 0
 
-        self.baudates = baudrates = list([
+        if not os.path.exists("logs"):
+            os.mkdir("logs")
+        else:
+            pass
+
+        filename = "logs/LOG-" + str(datetime.utcnow()
+            ).replace(" ", "-").replace(":", "-") + ".rvt"
+        self.logfile = open(filename, 'wb')
+
+        self.baudrates = baudrates = list([
             19200, 38400, 57600, 115200, 230400,
             460800, 500000, 576000, 921600
         ])
@@ -35,8 +52,9 @@ class MainWindow(tkinter.Tk):
 
         tkinter.Tk.__init__(self)
         self.title("Ground Control")
+        self.wm_iconbitmap("launch.ico")
         self.tk.call('wm', 'iconphoto', self._w,
-        tkinter.PhotoImage(file='glider.ico'))
+        tkinter.PhotoImage(file='launch.ico'))
         self.protocol("WM_DELETE_WINDOW", self.destroy)
         self.resizable(width=False, height=False)
 
@@ -68,9 +86,10 @@ class MainWindow(tkinter.Tk):
         channelSend.grid(row=2, column=0, columnspan=2, padx=5, pady=5)
         textInputBox = tkinter.Entry(commsFrame, width=50)
         textInputBox.grid(row=1, columnspan=3)
-        tkinter.Button(commsFrame, text='Send', width=10, command=lambda:
-        self.send_command(channelSend.get(), textInputBox.get())
-        ).grid(row=2, column=2, padx=5, pady=5)
+        self.send_button = tkinter.Button(commsFrame, text='Send',
+        state=tkinter.DISABLED, width=10, command=lambda:
+        self.send_command(channelSend.get(), textInputBox.get()))
+        self.send_button.grid(row=2, column=2, padx=5, pady=5)
         ports = self.refresh_ports()
         portselect = ttk.Combobox(commsFrame, values=ports)
         if len(ports) > 0:
@@ -80,29 +99,17 @@ class MainWindow(tkinter.Tk):
         command=lambda: self.refresh_ports(portselect)
         ).grid(row=3, column=1, padx=5, pady=5)
         baudselect = ttk.Combobox(commsFrame, values=baudrates)
-        baudselect.current(3)
+        baudselect.current(8)
         baudselect.grid(row=4, columnspan=3, padx=5, pady=5)
         openButton = tkinter.Button(commsFrame, text='Open', width=10, command=lambda:
         self.open_port(portselect.get(), baudselect.get(), openButton))
         openButton.grid(row=3, column=2, padx=5, pady=5)
         commsFrame.grid(padx=5, pady=5)
 
-        dataFrame = tkinter.Frame(main_frame)
-        self.clock_display = tkinter.Label(dataFrame, text="Time",
-        font=("Consolas", 10))
-        self.clock_display.grid(row=1, columnspan=2, padx=5, pady=5)
-        self.freq_display = tkinter.Label(dataFrame, text="Frequency",
-        font=("Consolas", 10), width=10)
-        self.freq_display.grid(row=1, column=2, padx=5, pady=5)
-        self.bps_display = tkinter.Label(dataFrame, width=10, text="BPS",
-        anchor=tkinter.E, justify=tkinter.RIGHT, font=("Consolas", 10))
-        self.bps_display.grid(row=1, column=3, padx=5, pady=5)
-        dataFrame.grid(padx=5, pady=5)
-
         unlockFrame = tkinter.Frame(main_frame)
-        unlock3 = tkinter.IntVar()
-        unlock2 = tkinter.IntVar()
-        unlock1 = tkinter.IntVar()
+        unlock3 = tkinter.BooleanVar()
+        unlock2 = tkinter.BooleanVar()
+        unlock1 = tkinter.BooleanVar()
         checkbox3 = tkinter.Checkbutton(unlockFrame, text='Unlock 3',
         state=tkinter.DISABLED, variable=unlock3,
         command=lambda:
@@ -121,6 +128,27 @@ class MainWindow(tkinter.Tk):
         checkbox1, checkbox2, checkbox3, 1))
         checkbox1.grid(column=0, row=0, padx=5, pady=5)
         unlockFrame.grid(padx=5, pady=5)
+
+        dataFrame = tkinter.Frame(main_frame)
+        self.clock_display = tkinter.Label(dataFrame, text="Time",
+        font=("Consolas", 8))
+        self.clock_display.grid(row=0, columnspan=2, padx=5, pady=5)
+        self.freq_display = tkinter.Label(dataFrame, text="Frequency",
+        font=("Consolas", 8), width=10)
+        self.freq_display.grid(row=0, column=2, padx=5, pady=5)
+        self.bps_display = tkinter.Label(dataFrame, width=10, text="BPS",
+        anchor=tkinter.E, justify=tkinter.RIGHT, font=("Consolas", 8))
+        self.bps_display.grid(row=0, column=3, padx=5, pady=5)
+        self.err_display = tkinter.Label(dataFrame, text="Errors",
+        anchor=tkinter.E, justify=tkinter.RIGHT, font=("Consolas", 8))
+        self.err_display.grid(row=1, columnspan=2, padx=5, pady=5)
+        self.bytes_display = tkinter.Label(dataFrame, text="Bytes",
+        anchor=tkinter.E, justify=tkinter.RIGHT, font=("Consolas", 8))
+        self.bytes_display.grid(row=1, column=2, padx=5, pady=5)
+        self.packets_ticker = tkinter.Label(dataFrame, text="Packets",
+        anchor=tkinter.E, justify=tkinter.RIGHT, font=("Consolas", 8))
+        self.packets_ticker.grid(row=1, column=3, padx=5, pady=5)
+        dataFrame.grid(padx=5, pady=5)
 
         main_frame.grid(padx=5, pady=5)
 
@@ -142,18 +170,25 @@ class MainWindow(tkinter.Tk):
         bps = ((len(self.buffer) - self.last_bytes)/(time.time() - self.last_time))
         self.bps_display["text"] = "{0:.1f}".format(numpy.round(bps*10)/10.0) + " B/s"
 
+        self.err_display["text"] = str(self.checksum_errors) + " checksum errors"
+        self.bytes_display["text"] = str(len(self.buffer)) + " bytes"
+        self.packets_ticker["text"] = str(len(self.packets)) + " packets"
+
         self.last_time = time.time()
         self.last_bytes = len(self.buffer)
-
-
 
         while self.arduino.is_open and self.arduino.inWaiting():
             byte = int.from_bytes(self.arduino.read(), byteorder='big')
             self.parsing_deque.append(byte)
             self.buffer.append(byte)
+            if True:
+                self.logfile.write(bytes([byte]))
+                self.logfile.flush()
 
         if len(self.parsing_deque) > 0:
-            for p in rvtr.parse(self.parsing_deque):
+            (packets, err) = rvtr.parse(self.parsing_deque)
+            self.checksum_errors += err
+            for p in packets:
                 self.packets.append(p)
 
     def open_port(self, port, baudrate, button=None):
@@ -163,6 +198,7 @@ class MainWindow(tkinter.Tk):
             self.arduino.reset_output_buffer()
             self.arduino.close()
             print("Closed " + str(self.arduino) + ".")
+            self.send_button["state"] = tkinter.DISABLED
         else:
             self.arduino.close()
             self.arduino.port = port
@@ -175,6 +211,8 @@ class MainWindow(tkinter.Tk):
                 print(e)
                 return
             print("Opened " + str(self.arduino) + ".")
+            print(self.send_button)
+            self.send_button["state"] = tkinter.NORMAL
         if button is not None:
             if self.arduino.is_open:
                 button["text"] = "Close"
@@ -210,20 +248,20 @@ class MainWindow(tkinter.Tk):
         if stage == 1:
             if unlock1.get() == 1:
                 checkbox2['state'] = tkinter.NORMAL
-                self.send_command("/rocket/motor-unlock", "0u8")
+                self.send_command("/ground/motor-unlock", "0u8")
             else:
                 self.lock_motor(unlock1, unlock2, unlock3,
                                 checkbox1, checkbox2, checkbox3)
         elif stage == 2:
             if unlock2.get() == 1:
                 checkbox3['state'] = tkinter.NORMAL
-                self.send_command("/rocket/motor-unlock", "1u8")
+                self.send_command("/ground/motor-unlock", "1u8")
             else:
                 self.lock_motor(unlock1, unlock2, unlock3,
                                 checkbox1, checkbox2, checkbox3)
         elif stage == 3:
             if unlock3.get() == 1:
-                self.send_command("/rocket/motor-unlock", "2u8")
+                self.send_command("/ground/motor-unlock", "2u8")
             else:
                 self.lock_motor(unlock1, unlock2, unlock3,
                                 checkbox1, checkbox2, checkbox3)
@@ -239,13 +277,14 @@ class MainWindow(tkinter.Tk):
         checkbox1['state'] = tkinter.NORMAL
         checkbox2['state'] = tkinter.DISABLED
         checkbox3['state'] = tkinter.DISABLED
-        self.send_command("/rocket/motor-lock", "")
+        self.send_command("/ground/motor-lock", "")
 
     def clear_buffers(self):
 
         self.buffer.clear()
         self.packets.clear()
         self.parsing_deque.clear()
+        self.checksum_errors = 0
 
 
 class HexdumpWindow(tkinter.Toplevel):
@@ -255,20 +294,21 @@ class HexdumpWindow(tkinter.Toplevel):
         self.display_bytes = display_bytes
         self.buffer = buffer
         self.delay = delay
+        self.buffer_size = 0
 
         tkinter.Toplevel.__init__(self)
         self.title("Hexdump")
         self.tk.call('wm', 'iconphoto', self._w,
-        tkinter.PhotoImage(file='glider.ico'))
+        tkinter.PhotoImage(file='launch.ico'))
         self.protocol("WM_DELETE_WINDOW", self.destroy)
 
         header = tkinter.Text(self, wrap="none",
-        height=1, font=("Consolas Bold", 16), borderwidth=3, relief='flat')
+        height=1, font=("Ubuntu Mono", 14), borderwidth=3, relief='flat')
         header.insert(tkinter.END, "       00 01 02 03 04 05 06 07   " +
             "08 09 0A 0B 0C 0D 0E 0F    ASCII")
-        header.pack(fill=tkinter.BOTH, expand=tkinter.YES)
+        header.pack(fill=tkinter.X)
         self.textOutput = tkinter.Text(self, wrap="none", width = 28*3,
-        height=27, font=("Consolas Bold", 16), borderwidth=3, relief='sunken')
+        height=27, font=("Ubuntu Mono", 14), borderwidth=3, relief='sunken')
         self.textOutput.pack(fill=tkinter.BOTH, expand=tkinter.YES)
         self.begin_loop()
 
@@ -279,7 +319,11 @@ class HexdumpWindow(tkinter.Toplevel):
 
     def update(self):
 
-        self.textOutput.delete(1.0, tkinter.END)
+        if len(self.buffer) == self.buffer_size:
+            return
+
+        self.force_render = False
+        self.buffer_size = len(self.buffer)
         start = len(self.buffer) - self.display_bytes;
         if start < 0:
             start = 0
@@ -290,6 +334,8 @@ class HexdumpWindow(tkinter.Toplevel):
         column = 0
         row = int(start/16)
         toPrint = self.buffer[start:]
+        self.textOutput.delete(1.0, tkinter.END)
+
         for i, x in enumerate(toPrint):
             if chr(x) in string.printable and x not in (10, 11, 12, 13):
                 asciiString += chr(x)
@@ -319,12 +365,13 @@ class PacketWindow(tkinter.Toplevel):
         self.channels = channels
         self.display_packets = display_packets
         self.delay = delay
-        self.max_channel_length = max([len(x) for x in channels])
+        self.num_packets = 0
+        self.print_mode = False
 
         tkinter.Toplevel.__init__(self)
         self.title("Packet Viewer")
         self.tk.call('wm', 'iconphoto', self._w,
-        tkinter.PhotoImage(file='glider.ico'))
+        tkinter.PhotoImage(file='launch.ico'))
         self.protocol("WM_DELETE_WINDOW", self.destroy)
 
         topFrame = tkinter.Frame(self)
@@ -339,10 +386,16 @@ class PacketWindow(tkinter.Toplevel):
         values=list(['All Channels']) + list(channel_keys))
         self.channelFilter.grid(row=0, column=1, padx=5, pady=5)
         self.channelFilter.current(0)
+
+        self.ascii_switch = tkinter.BooleanVar()
+        self.ascii_switch.set(True)
+        tkinter.Checkbutton(topFrame, var=self.ascii_switch, text="ASCII"
+        ).grid(row=0, column=2, padx=5, pady=5)
+
         topFrame.pack()
 
-        self.output = tkinter.Text(self, width = 25*3,
-        font=("Consolas Bold", 16), borderwidth=3, relief='sunken')
+        self.output = tkinter.Text(self, width = 25*3, wrap="none",
+        font=("Ubuntu Mono", 14), borderwidth=3, relief='sunken')
         self.output.pack(fill=tkinter.BOTH, expand=tkinter.YES)
 
         self.begin_loop()
@@ -354,16 +407,32 @@ class PacketWindow(tkinter.Toplevel):
 
     def update(self):
 
+        if self.num_packets == len(self.packets) and self.print_mode == self.ascii_switch.get():
+            return
+
+        self.print_mode = self.ascii_switch.get()
+        self.num_packets = len(self.packets)
         self.output.delete(1.0, tkinter.END)
         output = ""
         index = 0
         for p in self.packets:
             id = p[3]
-            if (self.channelFilter.get() == "All Channels") or (self.channels[self.channelFilter.get()] == id):
+            if (self.channelFilter.get() == "All Channels") or (
+            self.channels[self.channelFilter.get()] == id):
                 output += "{:04X}".format(index) + "   "
-                channel = list(self.channels.keys())[list(self.channels.values()).index(id)]
-                output += channel.ljust(self.max_channel_length + 2)
-                output += " ".join("{:02X}".format(x) for x in p) + "\n"
+                channel = list(self.channels.keys())[
+                list(self.channels.values()).index(id)]
+                output += channel.ljust(len(channel) + 2)
+                if self.ascii_switch.get():
+                    for x in p[4:-2]:
+                        if chr(x) in string.printable and x not in (
+                        10, 11, 12, 13):
+                            output += chr(x)
+                        else:
+                            output += "."
+                    output += "\n"
+                else:
+                    output += " ".join("{:02X}".format(x) for x in p) + "\n"
             index += 1
         self.output.insert(tkinter.END, output)
         self.output.see(tkinter.END)
@@ -381,7 +450,7 @@ class PlotterWindow(tkinter.Toplevel):
         tkinter.Toplevel.__init__(self)
         self.title(title)
         self.tk.call('wm', 'iconphoto', self._w,
-        tkinter.PhotoImage(file='glider.ico'))
+        tkinter.PhotoImage(file='launch.ico'))
         self.protocol("WM_DELETE_WINDOW", self.destroy)
 
         topFrame = tkinter.Frame(self)
@@ -465,26 +534,30 @@ if __name__ == "__main__":
     channels = {
         "/null": 0,
         "/ground/ping": 1,
-        "/rocket/ping": 2,
-        "/relay/ping": 3,
-        "/rocket/console": 4,
-        "/relay/rocket/console": 5,
-        "/relay/console": 6,
-        "/rocket/status": 7,
-        "/relay/rocket/status": 8,
-        "/ground/fill-nitrous": 9,
-        "/ground/disconnect-feed-line": 10,
-        "/rocket/imudata": 11,
-        "/relay/rocket/imudata": 12,
-        "/ground/all-stop": 13,
-        "/ground/reset": 14,
-        "/ground/perform-test": 15,
-        "/ground/relay-mode": 16,
-        "/relay/ground/relay-mode": 17,
-        "/rocket/voltage": 18,
-        "/rocket/motor-info": 19,
-        "/rocket/motor-unlock": 20,
-        "/rocket/motor-lock": 21
+        "/ground/echo-commands": 2,
+        "/ground/echo-loglist": 3,
+        "/ground/echo-logs": 4,
+        "/ground/echo-channels": 5,
+        "/ground/stop-log": 8,
+        "/ground/begin-log": 9,
+        "/ground/set-lock": 18,
+        "/ground/small-talk": 34,
+        "/rocket/console": 35,
+        "/ground/echo-status": 47,
+        "/ground/set-status": 48,
+        "/ground/motor-unlock": 60,
+        "/ground/motor-lock": 61,
+        "/ground/fill-nitrous": 80,
+        "/ground/disc-feedline": 81,
+        "/ground/bleed-nitrous": 85,
+        "/ground/echo-tests": 96,
+        "/ground/perform-test": 97,
+        "/ground/hardware-reboot": 124,
+        "/ground/abort": 125,
+        "/ground/reset": 126,
+        "/ground/shutdown": 127,
+        "/rocket/motor-info": 130,
+        "/rocket/voltage": 131
     }
 
     print("Starting R@VT control.")
