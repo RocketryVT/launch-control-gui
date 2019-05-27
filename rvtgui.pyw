@@ -14,8 +14,15 @@ import string
 import os
 
 import ctypes
-myappid = 'mycompany.myproduct.subproduct.version' # arbitrary string
+myappid = 'rvtgui' # arbitrary string
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+
+
+def make_focus(window):
+    window.attributes('-topmost', 1)
+    window.attributes('-topmost', 0)
+    window.focus()
+
 
 class MainWindow(tkinter.Tk):
 
@@ -56,7 +63,8 @@ class MainWindow(tkinter.Tk):
         self.tk.call('wm', 'iconphoto', self._w,
         tkinter.PhotoImage(file='launch.ico'))
         self.protocol("WM_DELETE_WINDOW", self.destroy)
-        self.resizable(width=False, height=False)
+        # self.resizable(width=False, height=False)
+        make_focus(self)
 
         main_frame = tkinter.Frame(self, borderwidth=2, relief='groove')
 
@@ -67,20 +75,21 @@ class MainWindow(tkinter.Tk):
         tkinter.Button(windowsFrame, text='Packet Viewer', width=12,
         command=lambda: PacketWindow(self.packets, self.channels)
         ).grid(row=1, column=1, padx=5, pady=5)
-        tkinter.Button(windowsFrame, text='Plotter', width=12,
-        command=lambda: PlotterWindow(self.packets, self.channels)
-        ).grid(row=1, column=2, padx=2, pady=5)
+
+        # tkinter.Button(windowsFrame, text='Plotter', width=12,
+        # command=lambda: PlotterWindow(self.packets, self.channels)
+        # ).grid(row=1, column=2, padx=2, pady=5)
         tkinter.Button(windowsFrame, text='Clear Buffers', width=12,
-        command=self.clear_buffers).grid(row=2, column=1, padx=5, pady=5)
+        command=self.clear_buffers).grid(row=1, column=2, padx=5, pady=5)
         windowsFrame.grid(padx=5, pady=5)
 
         commsFrame = tkinter.Frame(main_frame)
         channel_keys = list(channels.keys())
-        channel_keys.sort(key = lambda x: channels[x])
+        channel_keys.sort()
         tkinter.Label(commsFrame, text="Send commands to the rocket " +
         "via this dialogue.").grid(row=0, columnspan=3)
         channelSend = ttk.Combobox(commsFrame,
-        values=channel_keys, width=30)
+        values=channel_keys, width=40)
         if len(channel_keys) > 0:
             channelSend.current(0)
         channelSend.grid(row=2, column=0, columnspan=2, padx=5, pady=5)
@@ -106,28 +115,57 @@ class MainWindow(tkinter.Tk):
         openButton.grid(row=3, column=2, padx=5, pady=5)
         commsFrame.grid(padx=5, pady=5)
 
-        unlockFrame = tkinter.Frame(main_frame)
+        motorUnlockFrame = tkinter.Frame(main_frame, borderwidth=2, relief='groove')
+        tkinter.Label(motorUnlockFrame, text="Motor Safety Lock"
+        ).grid(padx=5, pady=5, row=0, columnspan=3);
+
         unlock3 = tkinter.BooleanVar()
         unlock2 = tkinter.BooleanVar()
         unlock1 = tkinter.BooleanVar()
-        checkbox3 = tkinter.Checkbutton(unlockFrame, text='Unlock 3',
+        checkbox3 = tkinter.Checkbutton(motorUnlockFrame, text='Unlock 3',
         state=tkinter.DISABLED, variable=unlock3,
         command=lambda:
         self.handle_motor_lock(unlock1, unlock2, unlock3,
-        checkbox1, checkbox2, checkbox3, 3))
-        checkbox3.grid(column=2, row=0, padx=5, pady=5)
-        checkbox2 = tkinter.Checkbutton(unlockFrame, text='Unlock 2',
+        checkbox1, checkbox2, checkbox3, 3, 'motor'))
+        checkbox3.grid(column=2, row=1, padx=5, pady=5)
+        checkbox2 = tkinter.Checkbutton(motorUnlockFrame, text='Unlock 2',
         state=tkinter.DISABLED, variable=unlock2,
         command=lambda:
         self.handle_motor_lock(unlock1, unlock2, unlock3,
-        checkbox1, checkbox2, checkbox3, 2))
-        checkbox2.grid(column=1, row=0, padx=5, pady=5)
-        checkbox1 = tkinter.Checkbutton(unlockFrame,
+        checkbox1, checkbox2, checkbox3, 2, 'motor'))
+        checkbox2.grid(column=1, row=1, padx=5, pady=5)
+        checkbox1 = tkinter.Checkbutton(motorUnlockFrame,
         text='Unlock 1', variable=unlock1, command=lambda:
         self.handle_motor_lock(unlock1, unlock2, unlock3,
-        checkbox1, checkbox2, checkbox3, 1))
-        checkbox1.grid(column=0, row=0, padx=5, pady=5)
-        unlockFrame.grid(padx=5, pady=5)
+        checkbox1, checkbox2, checkbox3, 1, 'motor'))
+        checkbox1.grid(column=0, row=1, padx=5, pady=5)
+        motorUnlockFrame.grid(padx=5, pady=5)
+
+        supportUnlockFrame = tkinter.Frame(main_frame, borderwidth=2, relief='groove')
+        tkinter.Label(supportUnlockFrame, text="Support Safety Lock"
+        ).grid(padx=5, pady=5, row=0, columnspan=3);
+
+        unlock6 = tkinter.BooleanVar()
+        unlock5 = tkinter.BooleanVar()
+        unlock4 = tkinter.BooleanVar()
+        checkbox6 = tkinter.Checkbutton(supportUnlockFrame, text='Unlock 3',
+        state=tkinter.DISABLED, variable=unlock6,
+        command=lambda:
+        self.handle_motor_lock(unlock4, unlock5, unlock6,
+        checkbox4, checkbox5, checkbox6, 3, 'support'))
+        checkbox6.grid(column=2, row=1, padx=5, pady=5)
+        checkbox5 = tkinter.Checkbutton(supportUnlockFrame, text='Unlock 2',
+        state=tkinter.DISABLED, variable=unlock5,
+        command=lambda:
+        self.handle_motor_lock(unlock4, unlock5, unlock6,
+        checkbox4, checkbox5, checkbox6, 2, 'support'))
+        checkbox5.grid(column=1, row=1, padx=5, pady=5)
+        checkbox4 = tkinter.Checkbutton(supportUnlockFrame,
+        text='Unlock 1', variable=unlock4, command=lambda:
+        self.handle_motor_lock(unlock4, unlock5, unlock6,
+        checkbox4, checkbox5, checkbox6, 1, 'support'))
+        checkbox4.grid(column=0, row=1, padx=5, pady=5)
+        supportUnlockFrame.grid(padx=5, pady=5)
 
         dataFrame = tkinter.Frame(main_frame)
         self.clock_display = tkinter.Label(dataFrame, text="Time",
@@ -151,7 +189,8 @@ class MainWindow(tkinter.Tk):
         dataFrame.grid(padx=5, pady=5)
 
         main_frame.grid(padx=5, pady=5)
-
+        self.grid_columnconfigure(0, weight=1)
+        self.grid_rowconfigure(0, weight=1)
         self.begin_loop()
 
     def begin_loop(self):
@@ -235,41 +274,47 @@ class MainWindow(tkinter.Tk):
 
     def send_command(self, channel, text):
 
+        data = rvtr.pack(text)
+        id = self.channels[channel]
+        packet = rvtr.buildPacket(id, data)
+        self.buffer.extend(packet);
+        self.packets.append(packet);
         if self.arduino.is_open:
-            data = rvtr.pack(text)
-            id = self.channels[channel]
-            packet = rvtr.buildPacket(id, data)
             self.arduino.write(bytearray(packet))
+            self.logfile.write(bytearray(packet))
+            callsign = rvtr.pack("#KM4BTL")
+            self.arduino.write(bytearray(callsign))
+            self.logfile.write(bytearray(callsign))
         else:
             print("Cannot send; port not open")
 
     def handle_motor_lock(self, unlock1, unlock2, unlock3,
-                          checkbox1, checkbox2, checkbox3, stage):
+                          checkbox1, checkbox2, checkbox3, stage, channel):
         if stage == 1:
             if unlock1.get() == 1:
                 checkbox2['state'] = tkinter.NORMAL
-                self.send_command("/ground/motor-unlock", "0u8")
+                self.send_command('/control/' + channel + '/unlock', '0u8')
             else:
                 self.lock_motor(unlock1, unlock2, unlock3,
-                                checkbox1, checkbox2, checkbox3)
+                                checkbox1, checkbox2, checkbox3, channel)
         elif stage == 2:
             if unlock2.get() == 1:
                 checkbox3['state'] = tkinter.NORMAL
-                self.send_command("/ground/motor-unlock", "1u8")
+                self.send_command('/control/' + channel + '/unlock', '1u8')
             else:
                 self.lock_motor(unlock1, unlock2, unlock3,
-                                checkbox1, checkbox2, checkbox3)
+                                checkbox1, checkbox2, checkbox3, channel)
         elif stage == 3:
             if unlock3.get() == 1:
-                self.send_command("/ground/motor-unlock", "2u8")
+                self.send_command('/control/' + channel + '/unlock', '2u8')
             else:
                 self.lock_motor(unlock1, unlock2, unlock3,
-                                checkbox1, checkbox2, checkbox3)
+                                checkbox1, checkbox2, checkbox3, channel)
         else:
             print("Invalid stage: " + str(stage))
 
     def lock_motor(self, unlock1, unlock2, unlock3,
-                   checkbox1, checkbox2, checkbox3):
+                   checkbox1, checkbox2, checkbox3, channel):
 
         checkbox1.deselect()
         checkbox2.deselect()
@@ -277,7 +322,7 @@ class MainWindow(tkinter.Tk):
         checkbox1['state'] = tkinter.NORMAL
         checkbox2['state'] = tkinter.DISABLED
         checkbox3['state'] = tkinter.DISABLED
-        self.send_command("/ground/motor-lock", "")
+        self.send_command('/control/' + channel + '/lock', '')
 
     def clear_buffers(self):
 
@@ -301,14 +346,15 @@ class HexdumpWindow(tkinter.Toplevel):
         self.tk.call('wm', 'iconphoto', self._w,
         tkinter.PhotoImage(file='launch.ico'))
         self.protocol("WM_DELETE_WINDOW", self.destroy)
+        make_focus(self)
 
         header = tkinter.Text(self, wrap="none",
-        height=1, font=("Ubuntu Mono", 14), borderwidth=3, relief='flat')
+        height=1, font=("Droid Sans Mono", 12), borderwidth=3, relief='flat')
         header.insert(tkinter.END, "       00 01 02 03 04 05 06 07   " +
             "08 09 0A 0B 0C 0D 0E 0F    ASCII")
         header.pack(fill=tkinter.X)
         self.textOutput = tkinter.Text(self, wrap="none", width = 28*3,
-        height=27, font=("Ubuntu Mono", 14), borderwidth=3, relief='sunken')
+        height=27, font=("Droid Sans Mono", 12), borderwidth=3, relief='sunken')
         self.textOutput.pack(fill=tkinter.BOTH, expand=tkinter.YES)
         self.begin_loop()
 
@@ -359,11 +405,10 @@ class HexdumpWindow(tkinter.Toplevel):
 
 class PacketWindow(tkinter.Toplevel):
 
-    def __init__(self, packets, channels, display_packets=100, delay=100):
+    def __init__(self, packets, channels, delay=100):
 
         self.packets = packets
         self.channels = channels
-        self.display_packets = display_packets
         self.delay = delay
         self.num_packets = 0
         self.print_mode = False
@@ -373,6 +418,7 @@ class PacketWindow(tkinter.Toplevel):
         self.tk.call('wm', 'iconphoto', self._w,
         tkinter.PhotoImage(file='launch.ico'))
         self.protocol("WM_DELETE_WINDOW", self.destroy)
+        make_focus(self)
 
         topFrame = tkinter.Frame(self)
         bottomFrame = tkinter.Frame(self)
@@ -395,8 +441,9 @@ class PacketWindow(tkinter.Toplevel):
         topFrame.pack()
 
         self.output = tkinter.Text(self, width = 25*3, wrap="none",
-        font=("Ubuntu Mono", 14), borderwidth=3, relief='sunken')
+        font=("Droid Sans Mono", 12), borderwidth=3, relief='sunken')
         self.output.pack(fill=tkinter.BOTH, expand=tkinter.YES)
+        self.output.tag_config("error", background="#FFDDDD")
 
         self.begin_loop()
 
@@ -415,14 +462,20 @@ class PacketWindow(tkinter.Toplevel):
         self.output.delete(1.0, tkinter.END)
         output = ""
         index = 0
+        error_lines = list([])
         for p in self.packets:
             id = p[3]
+            if p[-1] == ord('!') and p[-2] == ord('!'):
+                error_lines.append(index+1)
             if (self.channelFilter.get() == "All Channels") or (
             self.channels[self.channelFilter.get()] == id):
                 output += "{:04X}".format(index) + "   "
-                channel = list(self.channels.keys())[
-                list(self.channels.values()).index(id)]
-                output += channel.ljust(len(channel) + 2)
+                try:
+                    channel = list(self.channels.keys())[
+                    list(self.channels.values()).index(id)]
+                    output += "[" + channel + "] ";
+                except:
+                    channel = str(id)
                 if self.ascii_switch.get():
                     for x in p[4:-2]:
                         if chr(x) in string.printable and x not in (
@@ -436,6 +489,9 @@ class PacketWindow(tkinter.Toplevel):
             index += 1
         self.output.insert(tkinter.END, output)
         self.output.see(tkinter.END)
+        for line in error_lines:
+            self.output.tag_add("error",
+            "{}.0".format(line), "{}.end".format(line))
 
 
 class PlotterWindow(tkinter.Toplevel):
@@ -452,6 +508,7 @@ class PlotterWindow(tkinter.Toplevel):
         self.tk.call('wm', 'iconphoto', self._w,
         tkinter.PhotoImage(file='launch.ico'))
         self.protocol("WM_DELETE_WINDOW", self.destroy)
+        make_focus(self)
 
         topFrame = tkinter.Frame(self)
         bottomFrame = tkinter.Frame(self)
@@ -529,37 +586,9 @@ class PlotterWindow(tkinter.Toplevel):
         self.canvas.draw()
 
 
-if __name__ == "__main__":
 
-    channels = {
-        "/null": 0,
-        "/ground/ping": 1,
-        "/ground/echo-commands": 2,
-        "/ground/echo-loglist": 3,
-        "/ground/echo-logs": 4,
-        "/ground/echo-channels": 5,
-        "/ground/stop-log": 8,
-        "/ground/begin-log": 9,
-        "/ground/set-lock": 18,
-        "/ground/small-talk": 34,
-        "/rocket/console": 35,
-        "/ground/echo-status": 47,
-        "/ground/set-status": 48,
-        "/ground/motor-unlock": 60,
-        "/ground/motor-lock": 61,
-        "/ground/fill-nitrous": 80,
-        "/ground/disc-feedline": 81,
-        "/ground/bleed-nitrous": 85,
-        "/ground/echo-tests": 96,
-        "/ground/perform-test": 97,
-        "/ground/hardware-reboot": 124,
-        "/ground/abort": 125,
-        "/ground/reset": 126,
-        "/ground/shutdown": 127,
-        "/rocket/motor-info": 130,
-        "/rocket/voltage": 131
-    }
+if __name__ == "__main__":
 
     print("Starting R@VT control.")
 
-    MainWindow(channels).mainloop()
+    MainWindow(rvtr.CHANNELS).mainloop()
