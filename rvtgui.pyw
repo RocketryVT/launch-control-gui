@@ -420,30 +420,14 @@ class PacketWindow(tkinter.Toplevel):
         self.protocol("WM_DELETE_WINDOW", self.destroy)
         make_focus(self)
 
-        topFrame = tkinter.Frame(self)
-        bottomFrame = tkinter.Frame(self)
-
-        tkinter.Label(topFrame, text="Filter for incoming channels: "
-        ).grid(row=0, column=0, padx=5, pady=5)
-
-        channel_keys = list(channels.keys())
-        channel_keys.sort(key = lambda x: channels[x])
-        self.channelFilter = ttk.Combobox(topFrame, width=30,
-        values=list(['All Channels']) + list(channel_keys))
-        self.channelFilter.grid(row=0, column=1, padx=5, pady=5)
-        self.channelFilter.current(0)
-
-        self.ascii_switch = tkinter.BooleanVar()
-        self.ascii_switch.set(True)
-        tkinter.Checkbutton(topFrame, var=self.ascii_switch, text="ASCII"
-        ).grid(row=0, column=2, padx=5, pady=5)
-
-        topFrame.pack()
-
         self.output = tkinter.Text(self, width = 25*3, wrap="none",
         font=("Droid Sans Mono", 12), borderwidth=3, relief='sunken')
-        self.output.pack(fill=tkinter.BOTH, expand=tkinter.YES)
         self.output.tag_config("error", background="#FFDDDD")
+
+        scroll = tkinter.Scrollbar(self, command=self.output.yview)
+        self.output['yscrollcommand'] = scroll.set
+        scroll.pack(side=tkinter.RIGHT, fill=tkinter.Y)
+        self.output.pack(expand=True, fill=tkinter.BOTH);
 
         self.begin_loop()
 
@@ -454,10 +438,9 @@ class PacketWindow(tkinter.Toplevel):
 
     def update(self):
 
-        if self.num_packets == len(self.packets) and self.print_mode == self.ascii_switch.get():
+        if self.num_packets == len(self.packets):
             return
 
-        self.print_mode = self.ascii_switch.get()
         self.num_packets = len(self.packets)
         self.output.delete(1.0, tkinter.END)
         output = ""
@@ -467,25 +450,23 @@ class PacketWindow(tkinter.Toplevel):
             id = p[3]
             if p[-1] == ord('!') and p[-2] == ord('!'):
                 error_lines.append(index+1)
-            if (self.channelFilter.get() == "All Channels") or (
-            self.channels[self.channelFilter.get()] == id):
-                output += "{:04X}".format(index) + "   "
-                try:
-                    channel = list(self.channels.keys())[
-                    list(self.channels.values()).index(id)]
-                    output += "[" + channel + "] ";
-                except:
-                    channel = str(id)
-                if self.ascii_switch.get():
-                    for x in p[4:-2]:
-                        if chr(x) in string.printable and x not in (
-                        10, 11, 12, 13):
-                            output += chr(x)
-                        else:
-                            output += "."
-                    output += "\n"
-                else:
-                    output += " ".join("{:02X}".format(x) for x in p) + "\n"
+            output += "{:04X}".format(index) + "   "
+            try:
+                channel = list(self.channels.keys())[
+                list(self.channels.values()).index(id)]
+                output += "[" + channel + "] "
+            except:
+                output += "[failed(" + str(id) + ")]"
+            if True:
+                for x in p[4:-2]:
+                    if chr(x) in string.printable and x not in (
+                    10, 11, 12, 13):
+                        output += chr(x)
+                    else:
+                        output += "."
+                output += "\n"
+            else:
+                output += " ".join("{:02X}".format(x) for x in p) + "\n"
             index += 1
         self.output.insert(tkinter.END, output)
         self.output.see(tkinter.END)

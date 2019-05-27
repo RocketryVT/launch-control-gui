@@ -29,7 +29,7 @@ class MainWindow(tkinter.Tk):
         self.focus()
 
         menu = tkinter.Menu(self)
-        file = tkinter.Menu(menu)
+        file = tkinter.Menu(menu, tearoff=False)
         file.add_command(label="Open", command=self.open_file)
         menu.add_cascade(label="File", menu=file)
         self.config(menu=menu)
@@ -42,7 +42,7 @@ class MainWindow(tkinter.Tk):
         self.output['yscrollcommand'] = scroll.set
         scroll.pack(side=tkinter.RIGHT, fill=tkinter.Y)
         self.output.pack(expand=True, fill=tkinter.BOTH);
-        
+
         self.mainloop()
 
     def open_file(self):

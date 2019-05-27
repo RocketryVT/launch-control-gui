@@ -63,7 +63,9 @@ CHANNELS = {
     "/motor/support/line-disconnected": 42,
     "/motor/support/tank-full": 43,
     "/support/motor/fuel-begin": 44,
-    "/control/support/system": 70
+    # SYSTEM CALLS
+    "/control/motor/system": 45,
+    "/control/support/system": 46
 }
 
 def parse(bytes):

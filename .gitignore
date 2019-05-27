@@ -1,3 +1,4 @@
 .idea/
 __pycache__
 logs/*
+!logs/LOG-2019-05-27-18-37-20.555557.rvt
