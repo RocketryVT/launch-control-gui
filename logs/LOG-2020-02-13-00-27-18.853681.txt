@@ -1,0 +1,32 @@
+[INFO]  [2020-02-12 19:27:23.850429] [/tcp_server]: New connection: (1, ('192.168.1.7', 58295))
+[INFO]  [2020-02-12 19:27:23.875753] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 19:27:23.888308]: Connection to master established.
+[INFO]  [2020-02-12 19:27:23.888635]: You are client #1
+[INFO]  [2020-02-12 19:27:24.774264] [/tcp_server]: Connection with atleast one client restored.
+[DEBUG] [2020-02-12 19:27:28.710237] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:27:32.712334] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:27:36.711274] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:27:38.528518] [/watchdog]: Runtime has reached 163 minutes.
+[DEBUG] [2020-02-12 19:27:40.710584] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:27:44.713857] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:27:48.713220] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:27:52.686507] [/tcp_server]: Command from #1: print whitelist
+[DEBUG] [2020-02-12 19:27:52.713927] [/readiness_admin]: Command matches current pattern: .*, print whitelist
+[INFO]  [2020-02-12 19:27:52.749125] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 19:27:52.770830] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 19:27:52.793170] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-12 19:27:52.808640] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-12 19:27:52.829963] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-12 19:27:52.851783] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-12 19:27:52.874278] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-12 19:27:52.897231] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[INFO]  [2020-02-12 19:27:52.915366] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-12 19:27:52.934856] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[INFO]  [2020-02-12 19:27:52.954207] [/readiness_admin]: RL-8: abort, .*
+[INFO]  [2020-02-12 19:27:52.975010] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-12 19:27:52.995259] [/readiness_admin]: RL-10: .*
+[DEBUG] [2020-02-12 19:27:56.712699] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:28:00.715265] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:28:04.712812] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:28:08.713571] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:28:12.715097] [/tcp_server]: Sending keep-alive message.

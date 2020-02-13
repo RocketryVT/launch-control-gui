@@ -1,0 +1,50 @@
+[INFO]  [2020-02-12 16:58:29.738167] [/tcp_server]: New connection: (1, ('192.168.1.7', 56383))
+[INFO]  [2020-02-12 16:58:29.786731] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 16:58:29.811525]: Connection to master established.
+[INFO]  [2020-02-12 16:58:29.811884]: You are client #1
+[INFO]  [2020-02-12 16:58:30.277811] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 16:58:30.377318] [/tcp_server]: Command from #1: fire ematch
+[INFO]  [2020-02-12 16:58:30.410840] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 16:58:30.447510] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 16:58:30.490099] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 16:58:30.522687] [/readiness_admin]: Current: idiot check
+[WARN]  [2020-02-12 16:58:31.623830] [/sensors/sensor_monitor]: Nitrous tank overpressure (2457.50219727, 2382.65463867 >1200 psig) detected!
+[INFO]  [2020-02-12 16:58:32.479360] [/tcp_server]: Command from #1: fire ematch
+[INFO]  [2020-02-12 16:58:32.518144] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 16:58:32.573720] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 16:58:32.629496] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 16:58:32.678773] [/readiness_admin]: Current: idiot check
+[INFO]  [2020-02-12 16:58:33.130309] [/tcp_server]: Command from #1: fire ematch
+[INFO]  [2020-02-12 16:58:33.185668] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 16:58:33.217006] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 16:58:33.253350] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 16:58:33.294771] [/readiness_admin]: Current: idiot check
+[INFO]  [2020-02-12 16:58:33.609862] [/tcp_server]: Command from #1: fire ematch
+[INFO]  [2020-02-12 16:58:33.653624] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 16:58:33.700598] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 16:58:33.733843] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 16:58:33.777312] [/readiness_admin]: Current: idiot check
+[INFO]  [2020-02-12 16:58:34.330043] [/tcp_server]: Command from #1: fire ematch
+[INFO]  [2020-02-12 16:58:34.375794] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 16:58:34.415925] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 16:58:34.448743] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 16:58:34.499409] [/readiness_admin]: Current: idiot check
+[INFO]  [2020-02-12 16:58:35.174192] [/tcp_server]: Command from #1: fire ematch
+[INFO]  [2020-02-12 16:58:35.217313] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 16:58:35.252195] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 16:58:35.288888] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 16:58:35.324569] [/readiness_admin]: Current: idiot check
+[WARN]  [2020-02-12 16:58:36.691715] [/sensors/sensor_monitor]: Nitrous tank overpressure (2472.80224609, 2397.95489893 >1200 psig) detected!
+[INFO]  [2020-02-12 16:58:38.163113] [/tcp_server]: Command from #1: fire ematch
+[INFO]  [2020-02-12 16:58:38.209663] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 16:58:38.245532] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 16:58:38.289685] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 16:58:38.330946] [/readiness_admin]: Current: idiot check
+[WARN]  [2020-02-12 16:58:41.793730] [/sensors/sensor_monitor]: Nitrous tank overpressure (2488.10180664, 2413.25483008 >1200 psig) detected!
+[INFO]  [2020-02-12 16:58:41.879150] [/tcp_server]: Command from #1: fire ematch
+[INFO]  [2020-02-12 16:58:41.925148] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 16:58:41.957763] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 16:58:41.997357] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 16:58:42.028610] [/readiness_admin]: Current: idiot check
+[WARN]  [2020-02-12 16:58:46.890408] [/sensors/sensor_monitor]: Nitrous tank overpressure (2503.40185547, 2428.55483789 >1200 psig) detected!
+[WARN]  [2020-02-12 16:58:51.994762] [/sensors/sensor_monitor]: Nitrous tank overpressure (2518.70214844, 2443.85466309 >1200 psig) detected!

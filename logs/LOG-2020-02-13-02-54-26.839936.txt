@@ -1,0 +1,82 @@
+[INFO]  [2020-02-12 21:54:31.719268] [/tcp_server]: New connection: (2, ('192.168.1.7', 59847))
+[INFO]  [2020-02-12 21:54:31.742312] [/tcp_server]: 2 active connection(s)
+[DEBUG] [2020-02-12 21:54:35.098365] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:54:39.100709] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:54:43.095915] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 21:54:43.723185] [/tcp_server]: Command from #2: system fortune | cowsay
+[DEBUG] [2020-02-12 21:54:43.760864] [/readiness_admin]: Command matches persistent pattern: system .*, system fortune | cowsay
+[INFO]  [2020-02-12 21:54:43.814093] [/exec]: $ fortune | cowsay
+[INFO]  [2020-02-12 21:54:45.809270] [/exec]: 
+ _________________________________________
+/ Q: How many Oregonians does it take to  \
+| screw in a light bulb? A: Three. One to |
+| screw in the light bulb and two to fend |
+| off all those                           |
+|                                         |
+| Californians trying to share the        |
+\ experience.                             /
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 21:54:45.851457] [/exec]: Finished with exit code 0
+[DEBUG] [2020-02-12 21:54:49.098901] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:54:53.099425] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 21:54:54.223130] [/tcp_server]: Command from #2: system fortune | cowsay
+[DEBUG] [2020-02-12 21:54:54.255413] [/readiness_admin]: Command matches persistent pattern: system .*, system fortune | cowsay
+[INFO]  [2020-02-12 21:54:54.289245] [/exec]: $ fortune | cowsay
+[INFO]  [2020-02-12 21:54:55.562290] [/exec]: 
+ ________________________________________
+/ Its name is Public Opinion. It is held \
+| in reverence. It settles everything.   |
+| Some think it is the voice of God.     |
+|                                        |
+\ -- Mark Twain                          /
+ ----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 21:54:55.621965] [/exec]: Finished with exit code 0
+[INFO]  [2020-02-12 21:54:58.525351] [/watchdog]: Runtime has reached 310 minutes.
+[INFO]  [2020-02-12 21:55:00.481899] [/tcp_server]: Command from #2: system fortune | cowsay
+[DEBUG] [2020-02-12 21:55:00.533706] [/readiness_admin]: Command matches persistent pattern: system .*, system fortune | cowsay
+[INFO]  [2020-02-12 21:55:00.574297] [/exec]: $ fortune | cowsay
+[INFO]  [2020-02-12 21:55:01.695358] [/exec]: 
+ ________________________________________
+/ Love is in the offing. Be affectionate \
+\ to one who adores you.                 /
+ ----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 21:55:01.741800] [/exec]: Finished with exit code 0
+[DEBUG] [2020-02-12 21:55:05.099787] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:55:09.099733] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:55:13.103839] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 21:55:15.834127] [/tcp_server]: Command from #2: figlet DIGLET
+[INFO]  [2020-02-12 21:55:15.862011] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 21:55:15.889907] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 21:55:15.927420] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 21:55:15.953860] [/readiness_admin]: Current: idiot check
+[DEBUG] [2020-02-12 21:55:19.102351] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 21:55:21.518589] [/tcp_server]: Command from #2: system figlet DIGLET
+[DEBUG] [2020-02-12 21:55:21.555245] [/readiness_admin]: Command matches persistent pattern: system .*, system figlet DIGLET
+[INFO]  [2020-02-12 21:55:21.598611] [/exec]: $ figlet DIGLET
+[INFO]  [2020-02-12 21:55:21.764933] [/exec]: 
+ ____ ___ ____ _     _____ _____ 
+|  _ \_ _/ ___| |   | ____|_   _|
+| | | | | |  _| |   |  _|   | |  
+| |_| | | |_| | |___| |___  | |  
+|____/___\____|_____|_____| |_|  
+                                 
+
+[INFO]  [2020-02-12 21:55:21.789949] [/exec]: Finished with exit code 0

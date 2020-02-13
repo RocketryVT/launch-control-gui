@@ -1,0 +1,86 @@
+[INFO]  [2020-02-12 21:27:14.849139] [/tcp_server]: New connection: (1, ('192.168.1.7', 59499))
+[INFO]  [2020-02-12 21:27:14.876119] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 21:27:14.919425]: Connection to master established.
+[INFO]  [2020-02-12 21:27:14.925960]: You are client #1
+[INFO]  [2020-02-12 21:27:15.655408] [/sensors/sensor_monitor]: OTP: 20460.83 psig / CCP: 20465.08 psig / OTT: 13642.06 F / CCT1: 13645.46 F / CCT2: 13644.62 F
+[INFO]  [2020-02-12 21:27:15.776715] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 21:27:16.666450] [/sensors/sensor_monitor]: OTP: 20463.84 psig / CCP: 20468.10 psig / OTT: 13644.06 F / CCT1: 13647.46 F / CCT2: 13646.62 F
+[WARN]  [2020-02-12 21:27:16.704455] [/sensors/sensor_monitor]: Nitrous tank overpressure (20463.8359375, 20388.9861992 >1200 psig) detected!
+[INFO]  [2020-02-12 21:27:17.674593] [/sensors/sensor_monitor]: OTP: 20466.84 psig / CCP: 20471.08 psig / OTT: 13646.07 F / CCT1: 13649.46 F / CCT2: 13648.63 F
+[INFO]  [2020-02-12 21:27:18.664605] [/sensors/sensor_monitor]: OTP: 20469.84 psig / CCP: 20474.08 psig / OTT: 13648.06 F / CCT1: 13651.46 F / CCT2: 13650.62 F
+[INFO]  [2020-02-12 21:27:19.656619] [/sensors/sensor_monitor]: OTP: 20472.84 psig / CCP: 20477.09 psig / OTT: 13650.06 F / CCT1: 13653.46 F / CCT2: 13652.62 F
+[INFO]  [2020-02-12 21:27:20.649142] [/sensors/sensor_monitor]: OTP: 20475.83 psig / CCP: 20480.08 psig / OTT: 13652.07 F / CCT1: 13655.46 F / CCT2: 13654.62 F
+[WARN]  [2020-02-12 21:27:21.653422] [/sensors/sensor_monitor]: Nitrous tank overpressure (20478.8339844, 20403.9861563 >1200 psig) detected!
+[INFO]  [2020-02-12 21:27:21.705336] [/sensors/sensor_monitor]: OTP: 20478.83 psig / CCP: 20483.10 psig / OTT: 13654.06 F / CCT1: 13657.46 F / CCT2: 13656.62 F
+[INFO]  [2020-02-12 21:27:22.674068] [/sensors/sensor_monitor]: OTP: 20481.84 psig / CCP: 20486.09 psig / OTT: 13656.07 F / CCT1: 13659.46 F / CCT2: 13658.62 F
+[INFO]  [2020-02-12 21:27:23.655348] [/sensors/sensor_monitor]: OTP: 20484.83 psig / CCP: 20489.08 psig / OTT: 13658.06 F / CCT1: 13661.46 F / CCT2: 13660.62 F
+[INFO]  [2020-02-12 21:27:24.663560] [/sensors/sensor_monitor]: OTP: 20487.83 psig / CCP: 20492.08 psig / OTT: 13660.06 F / CCT1: 13663.46 F / CCT2: 13662.62 F
+[INFO]  [2020-02-12 21:27:25.677969] [/sensors/sensor_monitor]: OTP: 20490.84 psig / CCP: 20495.08 psig / OTT: 13662.06 F / CCT1: 13665.46 F / CCT2: 13664.62 F
+[INFO]  [2020-02-12 21:27:26.657262] [/sensors/sensor_monitor]: OTP: 20493.84 psig / CCP: 20498.08 psig / OTT: 13664.06 F / CCT1: 13667.46 F / CCT2: 13666.62 F
+[WARN]  [2020-02-12 21:27:26.678899] [/sensors/sensor_monitor]: Nitrous tank overpressure (20493.8398438, 20418.986168 >1200 psig) detected!
+[INFO]  [2020-02-12 21:27:27.662656] [/sensors/sensor_monitor]: OTP: 20496.54 psig / CCP: 20501.09 psig / OTT: 13666.06 F / CCT1: 13669.46 F / CCT2: 13668.62 F
+[INFO]  [2020-02-12 21:27:28.653938] [/sensors/sensor_monitor]: OTP: 20499.84 psig / CCP: 20504.08 psig / OTT: 13668.06 F / CCT1: 13671.46 F / CCT2: 13670.62 F
+[INFO]  [2020-02-12 21:27:29.652707] [/sensors/sensor_monitor]: OTP: 20502.84 psig / CCP: 20507.08 psig / OTT: 13670.06 F / CCT1: 13673.46 F / CCT2: 13672.62 F
+[INFO]  [2020-02-12 21:27:30.653564] [/sensors/sensor_monitor]: OTP: 20505.84 psig / CCP: 20510.08 psig / OTT: 13672.06 F / CCT1: 13675.46 F / CCT2: 13674.62 F
+[INFO]  [2020-02-12 21:27:31.654815] [/sensors/sensor_monitor]: OTP: 20508.83 psig / CCP: 20513.08 psig / OTT: 13674.06 F / CCT1: 13677.46 F / CCT2: 13676.62 F
+[WARN]  [2020-02-12 21:27:31.757392] [/sensors/sensor_monitor]: Nitrous tank overpressure (20509.1347656, 20434.286168 >1200 psig) detected!
+[INFO]  [2020-02-12 21:27:32.716801] [/sensors/sensor_monitor]: OTP: 20511.84 psig / CCP: 20516.08 psig / OTT: 13676.06 F / CCT1: 13679.46 F / CCT2: 13678.62 F
+[INFO]  [2020-02-12 21:27:33.650047] [/sensors/sensor_monitor]: OTP: 20514.84 psig / CCP: 20519.09 psig / OTT: 13677.86 F / CCT1: 13681.46 F / CCT2: 13680.62 F
+[INFO]  [2020-02-12 21:27:34.689376] [/sensors/sensor_monitor]: OTP: 20517.23 psig / CCP: 20521.48 psig / OTT: 13679.66 F / CCT1: 13683.26 F / CCT2: 13682.22 F
+[INFO]  [2020-02-12 21:27:35.701735] [/sensors/sensor_monitor]: OTP: 20520.54 psig / CCP: 20525.08 psig / OTT: 13682.06 F / CCT1: 13685.46 F / CCT2: 13684.62 F
+[INFO]  [2020-02-12 21:27:36.725712] [/sensors/sensor_monitor]: OTP: 20523.84 psig / CCP: 20528.08 psig / OTT: 13684.06 F / CCT1: 13687.47 F / CCT2: 13686.62 F
+[WARN]  [2020-02-12 21:27:36.903170] [/sensors/sensor_monitor]: Nitrous tank overpressure (20524.1367188, 20449.2861563 >1200 psig) detected!
+[INFO]  [2020-02-12 21:27:37.763492] [/sensors/sensor_monitor]: OTP: 20526.84 psig / CCP: 20531.08 psig / OTT: 13686.06 F / CCT1: 13689.66 F / CCT2: 13688.62 F
+[INFO]  [2020-02-12 21:27:38.687475] [/sensors/sensor_monitor]: OTP: 20529.83 psig / CCP: 20534.08 psig / OTT: 13688.06 F / CCT1: 13691.46 F / CCT2: 13690.62 F
+[INFO]  [2020-02-12 21:27:39.487318] [/tcp_server]: Command from #1: system fortune | cowsay
+[DEBUG] [2020-02-12 21:27:39.555589] [/readiness_admin]: Command matches current pattern: .*, system fortune | cowsay
+[INFO]  [2020-02-12 21:27:39.654140] [/exec]: $ fortune | cowsay
+[INFO]  [2020-02-12 21:27:39.755065] [/sensors/sensor_monitor]: OTP: 20532.54 psig / CCP: 20536.78 psig / OTT: 13689.86 F / CCT1: 13693.46 F / CCT2: 13692.42 F
+[INFO]  [2020-02-12 21:27:40.524690] [/watchdog]: Runtime has reached 283 minutes.
+[INFO]  [2020-02-12 21:27:40.750812] [/sensors/sensor_monitor]: OTP: 20533.73 psig / CCP: 20538.89 psig / OTT: 13691.06 F / CCT1: 13694.86 F / CCT2: 13693.82 F
+[INFO]  [2020-02-12 21:27:41.735868] [/sensors/sensor_monitor]: OTP: 20535.54 psig / CCP: 20541.28 psig / OTT: 13692.66 F / CCT1: 13696.26 F / CCT2: 13695.42 F
+[WARN]  [2020-02-12 21:27:42.015203] [/sensors/sensor_monitor]: Nitrous tank overpressure (20535.8359375, 20460.9861211 >1200 psig) detected!
+[INFO]  [2020-02-12 21:27:42.730240] [/sensors/sensor_monitor]: OTP: 20537.04 psig / CCP: 20543.69 psig / OTT: 13694.06 F / CCT1: 13697.66 F / CCT2: 13696.82 F
+[WARN]  [2020-02-12 21:27:42.861311] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 21:27:42.893457] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 21:27:42.949403] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 21:27:42.998535] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 21:27:43.075765] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[INFO]  [2020-02-12 21:27:43.728616] [/sensors/sensor_monitor]: OTP: 20538.23 psig / CCP: 20544.88 psig / OTT: 13695.06 F / CCT1: 13698.66 F / CCT2: 13698.02 F
+[INFO]  [2020-02-12 21:27:44.311133] [/exec]: 
+ _________________________________________
+/ The whole world is a tuxedo and you are \
+| a pair of brown shoes.                  |
+|                                         |
+\ -- George Gobel                         /
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 21:27:44.389188] [/exec]: Finished with exit code 0
+[INFO]  [2020-02-12 21:27:44.714581] [/sensors/sensor_monitor]: OTP: 20539.74 psig / CCP: 20547.29 psig / OTT: 13696.47 F / CCT1: 13699.86 F / CCT2: 13699.22 F
+[INFO]  [2020-02-12 21:27:45.714589] [/sensors/sensor_monitor]: OTP: 20542.48 psig / CCP: 20550.89 psig / OTT: 13698.86 F / CCT1: 13702.46 F / CCT2: 13701.82 F
+[INFO]  [2020-02-12 21:27:46.689711] [/sensors/sensor_monitor]: OTP: 20545.13 psig / CCP: 20554.78 psig / OTT: 13701.46 F / CCT1: 13705.06 F / CCT2: 13704.42 F
+[WARN]  [2020-02-12 21:27:47.057543] [/sensors/sensor_monitor]: Nitrous tank overpressure (20546.0351562, 20471.1862188 >1200 psig) detected!
+[INFO]  [2020-02-12 21:27:47.726489] [/sensors/sensor_monitor]: OTP: 20547.54 psig / CCP: 20558.38 psig / OTT: 13703.86 F / CCT1: 13707.46 F / CCT2: 13706.62 F
+[INFO]  [2020-02-12 21:27:48.662796] [/sensors/sensor_monitor]: OTP: 20558.04 psig / CCP: 20564.10 psig / OTT: 13708.06 F / CCT1: 13711.46 F / CCT2: 13710.62 F
+[INFO]  [2020-02-12 21:27:49.652388] [/sensors/sensor_monitor]: OTP: 20562.84 psig / CCP: 20567.09 psig / OTT: 13710.06 F / CCT1: 13713.47 F / CCT2: 13712.62 F
+[INFO]  [2020-02-12 21:27:50.650211] [/sensors/sensor_monitor]: OTP: 20565.84 psig / CCP: 20570.08 psig / OTT: 13712.06 F / CCT1: 13715.46 F / CCT2: 13714.62 F
+[INFO]  [2020-02-12 21:27:51.654129] [/sensors/sensor_monitor]: OTP: 20568.84 psig / CCP: 20573.08 psig / OTT: 13714.06 F / CCT1: 13717.46 F / CCT2: 13716.62 F
+[WARN]  [2020-02-12 21:27:52.049824] [/sensors/sensor_monitor]: Nitrous tank overpressure (20570.0351562, 20495.1861719 >1200 psig) detected!
+[INFO]  [2020-02-12 21:27:52.656744] [/sensors/sensor_monitor]: OTP: 20571.54 psig / CCP: 20576.08 psig / OTT: 13716.06 F / CCT1: 13719.46 F / CCT2: 13718.62 F
+[INFO]  [2020-02-12 21:27:53.666075] [/sensors/sensor_monitor]: OTP: 20574.84 psig / CCP: 20579.08 psig / OTT: 13718.06 F / CCT1: 13721.46 F / CCT2: 13720.62 F
+[INFO]  [2020-02-12 21:27:54.652383] [/sensors/sensor_monitor]: OTP: 20577.84 psig / CCP: 20582.09 psig / OTT: 13720.06 F / CCT1: 13723.46 F / CCT2: 13722.62 F
+[INFO]  [2020-02-12 21:27:55.650037] [/sensors/sensor_monitor]: OTP: 20580.83 psig / CCP: 20585.08 psig / OTT: 13722.06 F / CCT1: 13725.46 F / CCT2: 13724.62 F
+[INFO]  [2020-02-12 21:27:56.654111] [/sensors/sensor_monitor]: OTP: 20583.84 psig / CCP: 20588.08 psig / OTT: 13724.06 F / CCT1: 13727.46 F / CCT2: 13726.62 F
+[WARN]  [2020-02-12 21:27:57.155064] [/sensors/sensor_monitor]: Nitrous tank overpressure (20585.3359375, 20510.4862383 >1200 psig) detected!
+[INFO]  [2020-02-12 21:27:57.666149] [/sensors/sensor_monitor]: OTP: 20586.54 psig / CCP: 20591.10 psig / OTT: 13726.06 F / CCT1: 13729.46 F / CCT2: 13728.62 F
+[INFO]  [2020-02-12 21:27:58.652951] [/sensors/sensor_monitor]: OTP: 20589.84 psig / CCP: 20594.09 psig / OTT: 13728.06 F / CCT1: 13731.46 F / CCT2: 13730.62 F
+[INFO]  [2020-02-12 21:27:59.651109] [/sensors/sensor_monitor]: OTP: 20592.84 psig / CCP: 20597.08 psig / OTT: 13730.06 F / CCT1: 13733.46 F / CCT2: 13732.62 F
+[INFO]  [2020-02-12 21:28:00.651750] [/sensors/sensor_monitor]: OTP: 20595.83 psig / CCP: 20600.08 psig / OTT: 13732.06 F / CCT1: 13735.46 F / CCT2: 13734.62 F
+[INFO]  [2020-02-12 21:28:01.651764] [/sensors/sensor_monitor]: OTP: 20598.84 psig / CCP: 20603.08 psig / OTT: 13734.06 F / CCT1: 13737.46 F / CCT2: 13736.62 F
+[WARN]  [2020-02-12 21:28:02.247266] [/sensors/sensor_monitor]: Nitrous tank overpressure (20600.6367188, 20525.7862617 >1200 psig) detected!
+[INFO]  [2020-02-12 21:28:02.668547] [/sensors/sensor_monitor]: OTP: 20601.54 psig / CCP: 20606.09 psig / OTT: 13736.06 F / CCT1: 13739.46 F / CCT2: 13738.62 F

@@ -1,0 +1,89 @@
+[INFO]  [2020-02-12 21:46:28.915767] [/tcp_server]: New connection: (2, ('192.168.1.7', 59787))
+[INFO]  [2020-02-12 21:46:28.948412] [/tcp_server]: 2 active connection(s)
+[DEBUG] [2020-02-12 21:46:31.098727] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 21:46:33.531140] [/tcp_server]: Command from #2: read data
+[DEBUG] [2020-02-12 21:46:33.553626] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 21:46:34.775756] [/tcp_server]: Command from #2: read data
+[DEBUG] [2020-02-12 21:46:34.822901] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 21:46:35.128530] [/tcp_server]: Command from #2: read data
+[DEBUG] [2020-02-12 21:46:35.157948] [/readiness_admin]: Command matches current pattern: .*, read data
+[DEBUG] [2020-02-12 21:46:39.101727] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 21:46:39.144731] [/tcp_server]: Command from #2: system fortune | cowsay
+[DEBUG] [2020-02-12 21:46:39.161135] [/readiness_admin]: Command matches current pattern: .*, system fortune | cowsay
+[INFO]  [2020-02-12 21:46:39.211256] [/exec]: $ fortune | cowsay
+[INFO]  [2020-02-12 21:46:40.370485] [/exec]: 
+ _________________________________________
+/ In Marseilles they make half the toilet \
+| soap we consume in America, but the     |
+| Marseillaise only have a vague          |
+| theoretical idea of its use, which they |
+| have obtained from books of travel.     |
+|                                         |
+\ -- Mark Twain                           /
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 21:46:40.431024] [/exec]: Finished with exit code 0
+[DEBUG] [2020-02-12 21:46:43.095924] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:46:47.098620] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:46:51.099048] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 21:46:52.533101] [/watchdog]: Runtime has reached 302 minutes.
+[DEBUG] [2020-02-12 21:46:55.099939] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 21:46:56.276269] [/tcp_server]: Command from #2: read data
+[DEBUG] [2020-02-12 21:46:56.329594] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 21:46:57.006036] [/tcp_server]: Command from #2: read data
+[DEBUG] [2020-02-12 21:46:57.045366] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 21:46:57.433089] [/tcp_server]: Command from #2: read data
+[DEBUG] [2020-02-12 21:46:57.455845] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 21:46:57.591308] [/tcp_server]: Command from #2: read data
+[DEBUG] [2020-02-12 21:46:57.632218] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 21:46:57.748513] [/tcp_server]: Command from #2: read data
+[DEBUG] [2020-02-12 21:46:57.773290] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 21:46:58.035060] [/tcp_server]: Command from #2: read data
+[DEBUG] [2020-02-12 21:46:58.064686] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 21:46:58.223310] [/tcp_server]: Command from #2: read data
+[DEBUG] [2020-02-12 21:46:58.245914] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 21:46:58.418877] [/tcp_server]: Command from #2: read data
+[DEBUG] [2020-02-12 21:46:58.449759] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 21:46:58.559606] [/tcp_server]: Command from #2: read data
+[DEBUG] [2020-02-12 21:46:58.597769] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 21:46:58.734028] [/tcp_server]: Command from #2: read data
+[DEBUG] [2020-02-12 21:46:58.765372] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 21:46:58.896647] [/tcp_server]: Command from #2: read data
+[DEBUG] [2020-02-12 21:46:58.936576] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 21:46:59.072404] [/tcp_server]: Command from #2: read data
+[DEBUG] [2020-02-12 21:46:59.112656] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 21:46:59.436097] [/tcp_server]: Command from #2: read data
+[DEBUG] [2020-02-12 21:46:59.461291] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 21:47:01.632904] [/tcp_server]: Command from #2: fire ematch
+[DEBUG] [2020-02-12 21:47:01.661454] [/readiness_admin]: Command matches current pattern: .*, fire ematch
+[INFO]  [2020-02-12 21:47:01.691295] [/hardware/ematch]: Firing e-match.
+[INFO]  [2020-02-12 21:47:04.100373] [/tcp_server]: Command from #2: system fortune | cowsay
+[DEBUG] [2020-02-12 21:47:04.130544] [/readiness_admin]: Command matches current pattern: .*, system fortune | cowsay
+[INFO]  [2020-02-12 21:47:04.165933] [/exec]: $ fortune | cowsay
+[INFO]  [2020-02-12 21:47:05.271797] [/exec]: 
+ _____________________________________
+/ You will have a long and unpleasant \
+\ discussion with your supervisor.    /
+ -------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 21:47:05.309775] [/exec]: Finished with exit code 0
+[DEBUG] [2020-02-12 21:47:09.100895] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 21:47:11.936109] [/tcp_server]: Command from #2: crack vent valve
+[DEBUG] [2020-02-12 21:47:11.964778] [/readiness_admin]: Command matches current pattern: .*, crack vent valve
+[INFO]  [2020-02-12 21:47:12.005915] [/hardware/vent_valve]: Turning the motor counterclockwise
+[INFO]  [2020-02-12 21:47:12.126432] [/hardware/vent_valve]: Stopping the motor
+[DEBUG] [2020-02-12 21:47:15.096976] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:47:19.100988] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:47:23.100714] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:47:27.097731] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:47:31.100802] [/tcp_server]: Sending keep-alive message.

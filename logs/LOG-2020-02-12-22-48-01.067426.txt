@@ -1,0 +1,19 @@
+[INFO]  [2020-02-12 17:48:07.253645] [/tcp_server]: New connection: (1, ('192.168.1.7', 56964))
+[INFO]  [2020-02-12 17:48:07.309424] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 17:48:07.384097] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 17:48:07.433726]: Connection to master established.
+[INFO]  [2020-02-12 17:48:07.434147]: You are client #1
+[WARN]  [2020-02-12 17:48:10.196745] [/sensors/sensor_monitor]: Nitrous tank overpressure (11393.3037109, 11318.4561191 >1200 psig) detected!
+[WARN]  [2020-02-12 17:48:15.201129] [/sensors/sensor_monitor]: Nitrous tank overpressure (11408.3037109, 11333.4563965 >1200 psig) detected!
+[INFO]  [2020-02-12 17:48:17.819952] [/tcp_server]: Command from #1: close ignition valve
+[DEBUG] [2020-02-12 17:48:17.882143] [/readiness_admin]: Command matches current pattern: .*, close ignition valve
+[INFO]  [2020-02-12 17:48:17.930670] [/hardware/ignition_valve]: Turning the motor clockwise
+[WARN]  [2020-02-12 17:48:20.342117] [/sensors/sensor_monitor]: Nitrous tank overpressure (11423.6025391, 11348.7564707 >1200 psig) detected!
+[WARN]  [2020-02-12 17:48:22.419501] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[INFO]  [2020-02-12 17:48:22.672618] [/tcp_server]: Command from #1: set readiness 10
+[DEBUG] [2020-02-12 17:48:22.715846] [/readiness_admin]: Command matches current pattern: .*, set readiness 10
+[INFO]  [2020-02-12 17:48:22.785948] [/readiness_admin]: Set readiness level to 10
+[INFO]  [2020-02-12 17:48:23.627551] [/tcp_server]: Command from #1: set readiness 0
+[DEBUG] [2020-02-12 17:48:23.672891] [/readiness_admin]: Command matches current pattern: .*, set readiness 0
+[INFO]  [2020-02-12 17:48:23.739470] [/readiness_admin]: Set readiness level to 0
+[WARN]  [2020-02-12 17:48:25.533826] [/sensors/sensor_monitor]: Nitrous tank overpressure (11438.9072266, 11364.0567051 >1200 psig) detected!

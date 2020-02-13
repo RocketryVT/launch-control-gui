@@ -1,0 +1,109 @@
+[INFO]  [2020-02-12 18:44:40.750634] [/tcp_server]: New connection: (1, ('192.168.1.7', 57921))
+[INFO]  [2020-02-12 18:44:40.796881] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 18:44:40.819712]: Connection to master established.
+[INFO]  [2020-02-12 18:44:40.824911]: You are client #1
+[INFO]  [2020-02-12 18:44:41.276227] [/tcp_server]: Connection with atleast one client restored.
+[WARN]  [2020-02-12 18:44:41.803412] [/sensors/sensor_monitor]: Nitrous tank overpressure (21568.1054688, 21493.2546172 >1200 psig) detected!
+[WARN]  [2020-02-12 18:44:46.892992] [/sensors/sensor_monitor]: Nitrous tank overpressure (21583.4042969, 21508.5546797 >1200 psig) detected!
+[WARN]  [2020-02-12 18:44:51.998238] [/sensors/sensor_monitor]: Nitrous tank overpressure (21598.7050781, 21523.8547656 >1200 psig) detected!
+[WARN]  [2020-02-12 18:44:56.999261] [/sensors/sensor_monitor]: Nitrous tank overpressure (21613.7011719, 21538.8547734 >1200 psig) detected!
+[WARN]  [2020-02-12 18:45:02.102794] [/sensors/sensor_monitor]: Nitrous tank overpressure (21629.0019531, 21554.1549844 >1200 psig) detected!
+[WARN]  [2020-02-12 18:45:07.216938] [/sensors/sensor_monitor]: Nitrous tank overpressure (21644.3046875, 21569.4550859 >1200 psig) detected!
+[WARN]  [2020-02-12 18:45:12.203064] [/sensors/sensor_monitor]: Nitrous tank overpressure (21659.3046875, 21584.4552422 >1200 psig) detected!
+[INFO]  [2020-02-12 18:45:14.531810] [/watchdog]: Runtime has reached 121 minutes.
+[WARN]  [2020-02-12 18:45:17.244937] [/sensors/sensor_monitor]: Nitrous tank overpressure (21674.3007812, 21599.4553516 >1200 psig) detected!
+[WARN]  [2020-02-12 18:45:22.299555] [/sensors/sensor_monitor]: Nitrous tank overpressure (21689.6015625, 21614.7556562 >1200 psig) detected!
+[WARN]  [2020-02-12 18:45:26.126287] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 18:45:27.423234] [/sensors/sensor_monitor]: Nitrous tank overpressure (21704.9023438, 21630.0560781 >1200 psig) detected!
+[WARN]  [2020-02-12 18:45:32.423217] [/sensors/sensor_monitor]: Nitrous tank overpressure (21719.9101562, 21645.0558945 >1200 psig) detected!
+[WARN]  [2020-02-12 18:45:37.430583] [/sensors/sensor_monitor]: Nitrous tank overpressure (21734.9179688, 21660.0555586 >1200 psig) detected!
+[DEBUG] [2020-02-12 18:45:41.681296] [/tcp_server]: connecting to gandalf 42209
+[DEBUG] [2020-02-12 18:45:42.314772] [/tcp_server]: connecting to gandalf 43945
+[INFO]  [2020-02-12 18:45:42.832435] [/watchdog]: Node killed: /sensors/float_switch
+[WARN]  [2020-02-12 18:45:42.751181] [/sensors/sensor_monitor]: Nitrous tank overpressure (21746.0078125, 21671.1555508 >1200 psig) detected!
+[INFO]  [2020-02-12 18:45:42.877120] [/watchdog]: Node killed: /sensors/ox_tank_transducer
+[DEBUG] [2020-02-12 18:45:43.073737] [/tcp_server]: connecting to gandalf 45455
+[DEBUG] [2020-02-12 18:45:43.474685] [/tcp_server]: connecting to gandalf 35327
+[INFO]  [2020-02-12 18:45:43.835711] [/watchdog]: Node killed: /sensors/combustion_thermocouple_1
+[DEBUG] [2020-02-12 18:45:43.724733] [/tcp_server]: connecting to gandalf 44441
+[INFO]  [2020-02-12 18:45:43.868078] [/watchdog]: Node killed: /sensors/combustion_thermocouple_2
+[INFO]  [2020-02-12 18:45:43.910195] [/watchdog]: Node killed: /sensors/combustion_transducer
+[INFO]  [2020-02-12 18:45:43.950123] [/watchdog]: Node killed: /sensors/ox_tank_thermocouple
+[DEBUG] [2020-02-12 18:45:43.971793] [/tcp_server]: connecting to gandalf 38191
+[DEBUG] [2020-02-12 18:45:44.629339] [/tcp_server]: connecting to gandalf 45455
+[INFO]  [2020-02-12 18:45:45.602606] [/watchdog]: Node killed: /sensors/sensor_monitor
+[DEBUG] [2020-02-12 18:45:46.768987] [/tcp_server]: connecting to gandalf 32909
+[DEBUG] [2020-02-12 18:45:46.795108] [/tcp_server]: Unable to connect subscriber to publisher [http://gandalf:45047/] for topic [/rosout]: [Errno 111] Connection refused
+[WARN]  [2020-02-12 18:45:46.885120] [/readiness_admin]: Inbound TCP/IP connection failed: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+[DEBUG] [2020-02-12 18:45:47.924986] [/tcp_server]: connecting to gandalf 32909
+[DEBUG] [2020-02-12 18:45:58.229713] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:46:10.229335] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 18:46:15.532800] [/watchdog]: Runtime has reached 122 minutes.
+[DEBUG] [2020-02-12 18:46:26.229082] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:46:38.228691] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:46:50.228901] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:47:02.230134] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:47:14.229279] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 18:47:15.531323] [/watchdog]: Runtime has reached 123 minutes.
+[DEBUG] [2020-02-12 18:47:26.229739] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:47:38.227711] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:47:50.226061] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:48:02.229907] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:48:14.229988] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 18:48:16.524723] [/watchdog]: Runtime has reached 124 minutes.
+[DEBUG] [2020-02-12 18:48:28.230549] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:48:40.229835] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:48:52.229753] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:49:04.231000] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:49:16.230290] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 18:49:16.526817] [/watchdog]: Runtime has reached 125 minutes.
+[DEBUG] [2020-02-12 18:49:28.230784] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:49:40.231554] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:49:52.228780] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:50:04.228918] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:50:16.230063] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 18:50:16.528281] [/watchdog]: Runtime has reached 126 minutes.
+[DEBUG] [2020-02-12 18:50:28.227674] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:50:40.230972] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:50:52.231519] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:51:04.230397] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:51:16.230368] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 18:51:16.529293] [/watchdog]: Runtime has reached 127 minutes.
+[DEBUG] [2020-02-12 18:51:28.228900] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:51:40.227412] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:51:52.229304] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:52:04.231135] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:52:16.233216] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 18:52:17.525219] [/watchdog]: Runtime has reached 128 minutes.
+[DEBUG] [2020-02-12 18:52:28.233884] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:52:40.231136] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:52:52.230459] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:53:04.230023] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:53:16.229995] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 18:53:17.532756] [/watchdog]: Runtime has reached 129 minutes.
+[DEBUG] [2020-02-12 18:53:28.230772] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:53:40.232857] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:53:52.230233] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:54:04.230963] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:54:16.232445] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 18:54:18.525326] [/watchdog]: Runtime has reached 130 minutes.
+[DEBUG] [2020-02-12 18:54:30.229895] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:54:42.229194] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:54:54.228291] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:55:06.230515] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:55:18.234605] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 18:55:19.525650] [/watchdog]: Runtime has reached 131 minutes.
+[DEBUG] [2020-02-12 18:55:30.230903] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:55:42.230466] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:55:54.230535] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:56:06.228905] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:56:18.230523] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 18:56:20.532200] [/watchdog]: Runtime has reached 132 minutes.
+[DEBUG] [2020-02-12 18:56:32.229371] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:56:44.234233] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:56:56.230185] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:57:08.229626] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:57:20.230196] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 18:57:20.528444] [/watchdog]: Runtime has reached 133 minutes.
+[DEBUG] [2020-02-12 18:57:32.233281] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:57:44.230849] [/tcp_server]: Sending keep-alive message.

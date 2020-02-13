@@ -1,0 +1,6 @@
+[INFO]  [2020-02-12 19:03:20.973933]: Connection to master established.
+[INFO]  [2020-02-12 19:03:20.974453]: You are client #2
+[INFO]  [2020-02-12 19:03:20.915716] [/tcp_server]: Client #1 has disconnected
+[INFO]  [2020-02-12 19:03:20.945175] [/tcp_server]: 2 active connection(s)
+[INFO]  [2020-02-12 19:03:20.966224] [/tcp_server]: 1 client(s) remaining
+[INFO]  [2020-02-12 19:03:23.533569] [/watchdog]: Runtime has reached 139 minutes.

@@ -1,0 +1,26 @@
+[INFO]  [2020-02-12 17:01:03.846036] [/tcp_server]: New connection: (1, ('192.168.1.7', 56421))
+[INFO]  [2020-02-12 17:01:03.897803] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 17:01:03.929706]: Connection to master established.
+[INFO]  [2020-02-12 17:01:03.930062]: You are client #1
+[INFO]  [2020-02-12 17:01:06.963867] [/tcp_server]: Command from #1: 5
+[INFO]  [2020-02-12 17:01:07.015020] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:01:07.051530] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:01:07.089340] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:01:07.123597] [/readiness_admin]: Current: idiot check
+[WARN]  [2020-02-12 17:01:08.390192] [/sensors/sensor_monitor]: Nitrous tank overpressure (2927.90283203, 2853.0540957 >1200 psig) detected!
+[INFO]  [2020-02-12 17:01:10.675651] [/tcp_server]: Command from #1: 5
+[INFO]  [2020-02-12 17:01:10.716559] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:01:10.750739] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:01:10.787384] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:01:10.817483] [/readiness_admin]: Current: idiot check
+[INFO]  [2020-02-12 17:01:12.037017] [/tcp_server]: Command from #1: 5
+[INFO]  [2020-02-12 17:01:12.087255] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:01:12.119601] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:01:12.145043] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:01:12.186053] [/readiness_admin]: Current: idiot check
+[INFO]  [2020-02-12 17:01:12.794069] [/tcp_server]: Command from #1: 5
+[INFO]  [2020-02-12 17:01:12.822148] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:01:12.846361] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:01:12.898236] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:01:12.925691] [/readiness_admin]: Current: idiot check
+[WARN]  [2020-02-12 17:01:13.500929] [/sensors/sensor_monitor]: Nitrous tank overpressure (2943.20361328, 2868.35398926 >1200 psig) detected!

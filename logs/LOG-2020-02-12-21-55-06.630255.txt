@@ -1,0 +1,29 @@
+[INFO]  [2020-02-12 16:55:10.846700] [/tcp_server]: New connection: (1, ('192.168.1.7', 56366))
+[INFO]  [2020-02-12 16:55:10.888981] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 16:55:10.920220]: Connection to master established.
+[INFO]  [2020-02-12 16:55:10.920799]: You are client #1
+[INFO]  [2020-02-12 16:55:11.274968] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 16:55:12.525342] [/watchdog]: Runtime has reached 11 minutes.
+[INFO]  [2020-02-12 16:55:12.672764] [/tcp_server]: Command from #1: fire ematch
+[DEBUG] [2020-02-12 16:55:12.713066] [/readiness_admin]: Command matches current pattern: .*, fire ematch
+[WARN]  [2020-02-12 16:55:14.391446] [/sensors/sensor_monitor]: Nitrous tank overpressure (1865.90270996, 1791.05385791 >1200 psig) detected!
+[INFO]  [2020-02-12 16:55:16.365440] [/tcp_server]: Command from #1: fire ematch
+[DEBUG] [2020-02-12 16:55:16.397192] [/readiness_admin]: Command matches current pattern: .*, fire ematch
+[WARN]  [2020-02-12 16:55:19.502605] [/sensors/sensor_monitor]: Nitrous tank overpressure (1881.20214844, 1806.35377588 >1200 psig) detected!
+[WARN]  [2020-02-12 16:55:20.095457] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 16:55:20.142421] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 16:55:20.178661] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 16:55:20.188887] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 16:55:20.210354] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[INFO]  [2020-02-12 16:55:20.245108] [/tcp_server]: Command from #1: fire ematch
+[DEBUG] [2020-02-12 16:55:20.305228] [/readiness_admin]: Command matches current pattern: .*, fire ematch
+[WARN]  [2020-02-12 16:55:24.493134] [/sensors/sensor_monitor]: Nitrous tank overpressure (1896.20336914, 1821.35374658 >1200 psig) detected!
+[INFO]  [2020-02-12 16:55:27.130405] [/tcp_server]: Command from #1: fire ematch
+[DEBUG] [2020-02-12 16:55:27.182030] [/readiness_admin]: Command matches current pattern: .*, fire ematch
+[INFO]  [2020-02-12 16:55:28.789166] [/tcp_server]: Command from #1: fire ematch
+[DEBUG] [2020-02-12 16:55:28.825362] [/readiness_admin]: Command matches current pattern: .*, fire ematch
+[WARN]  [2020-02-12 16:55:29.599730] [/sensors/sensor_monitor]: Nitrous tank overpressure (1911.50158691, 1836.65402222 >1200 psig) detected!
+[INFO]  [2020-02-12 16:55:30.117245] [/tcp_server]: Command from #1: fire ematch
+[DEBUG] [2020-02-12 16:55:30.154851] [/readiness_admin]: Command matches current pattern: .*, fire ematch
+[INFO]  [2020-02-12 16:55:32.035889] [/tcp_server]: Command from #1: fire ematch
+[DEBUG] [2020-02-12 16:55:32.084515] [/readiness_admin]: Command matches current pattern: .*, fire ematch

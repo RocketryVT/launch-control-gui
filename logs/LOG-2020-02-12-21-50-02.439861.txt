@@ -1,0 +1,74 @@
+[INFO]  [2020-02-12 16:50:06.046681] [/tcp_server]: New connection: (1, ('192.168.1.7', 56354))
+[INFO]  [2020-02-12 16:50:06.089341] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 16:50:06.123784]: Connection to master established.
+[INFO]  [2020-02-12 16:50:06.124256]: You are client #1
+[INFO]  [2020-02-12 16:50:06.275257] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 16:50:06.941843] [/sensors/sensor_monitor]: OTP: 943.40 psig / CCP: 947.13 psig / OTT: 630.04 F / CCT1: 631.59 F / CCT2: 631.57 F
+[INFO]  [2020-02-12 16:50:07.940862] [/sensors/sensor_monitor]: OTP: 946.40 psig / CCP: 950.13 psig / OTT: 632.04 F / CCT1: 633.59 F / CCT2: 633.57 F
+[WARN]  [2020-02-12 16:50:08.712093] [/sensors/sensor_monitor]: Oxidizer tank pressure reading (948.80) falls outside of nominal bounds ([0, 900])
+[WARN]  [2020-02-12 16:50:08.764560] [/sensors/sensor_monitor]: Combustion chamber pressure reading (952.53) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 16:50:08.809511] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (635.19) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 16:50:08.826801] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (635.17) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 16:50:08.828684] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (633.64) falls outside of nominal bounds ([0, 95])
+[INFO]  [2020-02-12 16:50:08.950678] [/sensors/sensor_monitor]: OTP: 949.40 psig / CCP: 953.14 psig / OTT: 634.05 F / CCT1: 635.59 F / CCT2: 635.57 F
+[ERROR] [2020-02-12 16:50:09.315459] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (586.09) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 16:50:09.409148] [/sensors/sensor_monitor]: Oxidizer tank temperature average (584.54) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 16:50:09.476501] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (586.27) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 16:50:09.546918] [/sensors/sensor_monitor]: Combustion chamber pressure average (879.18) falls outside of nominal bounds ([0, 50])
+[INFO]  [2020-02-12 16:50:09.977027] [/sensors/sensor_monitor]: OTP: 952.42 psig / CCP: 955.83 psig / OTT: 636.04 F / CCT1: 637.59 F / CCT2: 637.37 F
+[INFO]  [2020-02-12 16:50:10.524970] [/watchdog]: Runtime has reached 6 minutes.
+[INFO]  [2020-02-12 16:50:10.943158] [/sensors/sensor_monitor]: OTP: 955.40 psig / CCP: 959.13 psig / OTT: 638.04 F / CCT1: 639.59 F / CCT2: 639.60 F
+[INFO]  [2020-02-12 16:50:11.944288] [/sensors/sensor_monitor]: OTP: 958.43 psig / CCP: 962.13 psig / OTT: 640.04 F / CCT1: 641.59 F / CCT2: 641.58 F
+[INFO]  [2020-02-12 16:50:13.013044] [/sensors/sensor_monitor]: OTP: 961.70 psig / CCP: 965.13 psig / OTT: 642.04 F / CCT1: 643.59 F / CCT2: 643.77 F
+[INFO]  [2020-02-12 16:50:13.941953] [/sensors/sensor_monitor]: OTP: 964.42 psig / CCP: 968.13 psig / OTT: 644.04 F / CCT1: 645.59 F / CCT2: 645.57 F
+[ERROR] [2020-02-12 16:50:14.428730] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (596.67) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 16:50:14.489118] [/sensors/sensor_monitor]: Combustion chamber pressure average (894.78) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 16:50:14.545624] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (596.69) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 16:50:14.628646] [/sensors/sensor_monitor]: Oxidizer tank temperature average (595.14) falls outside of nominal bounds ([0, 95])
+[INFO]  [2020-02-12 16:50:14.995849] [/sensors/sensor_monitor]: OTP: 967.70 psig / CCP: 971.43 psig / OTT: 646.04 F / CCT1: 647.79 F / CCT2: 647.77 F
+[INFO]  [2020-02-12 16:50:16.001068] [/sensors/sensor_monitor]: OTP: 970.40 psig / CCP: 974.13 psig / OTT: 648.04 F / CCT1: 649.59 F / CCT2: 649.57 F
+[INFO]  [2020-02-12 16:50:16.937808] [/sensors/sensor_monitor]: OTP: 973.43 psig / CCP: 977.13 psig / OTT: 650.04 F / CCT1: 651.59 F / CCT2: 651.57 F
+[INFO]  [2020-02-12 16:50:17.933596] [/sensors/sensor_monitor]: OTP: 976.40 psig / CCP: 980.13 psig / OTT: 652.04 F / CCT1: 653.59 F / CCT2: 653.57 F
+[WARN]  [2020-02-12 16:50:18.783194] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (655.17) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 16:50:18.801083] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (655.19) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 16:50:18.821620] [/sensors/sensor_monitor]: Combustion chamber pressure reading (982.53) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 16:50:18.833494] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (653.64) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 16:50:18.910672] [/sensors/sensor_monitor]: Oxidizer tank pressure reading (979.10) falls outside of nominal bounds ([0, 900])
+[INFO]  [2020-02-12 16:50:19.041968] [/sensors/sensor_monitor]: OTP: 979.10 psig / CCP: 982.53 psig / OTT: 653.64 F / CCT1: 655.39 F / CCT2: 655.37 F
+[ERROR] [2020-02-12 16:50:19.492388] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (606.89) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 16:50:19.564998] [/sensors/sensor_monitor]: Oxidizer tank pressure average (906.35) falls outside of nominal bounds ([0, 900])
+[ERROR] [2020-02-12 16:50:19.586096] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (606.87) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 16:50:19.599578] [/sensors/sensor_monitor]: Combustion chamber pressure average (910.08) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 16:50:19.665009] [/sensors/sensor_monitor]: Oxidizer tank temperature average (605.34) falls outside of nominal bounds ([0, 95])
+[INFO]  [2020-02-12 16:50:19.709846] [/tcp_server]: Command from #1: toggle sensor warning suppression
+[DEBUG] [2020-02-12 16:50:19.746468] [/readiness_admin]: Command matches current pattern: .*, toggle sensor warning suppression
+[INFO]  [2020-02-12 16:50:19.816984] [/sensors/sensor_monitor]: Sensor warning suppression set to True
+[WARN]  [2020-02-12 16:50:19.873179] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 16:50:19.916713] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 16:50:19.954340] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 16:50:19.976851] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[INFO]  [2020-02-12 16:50:19.999224] [/sensors/sensor_monitor]: OTP: 982.10 psig / CCP: 985.53 psig / OTT: 655.64 F / CCT1: 657.39 F / CCT2: 657.37 F
+[WARN]  [2020-02-12 16:50:20.014417] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[INFO]  [2020-02-12 16:50:20.990965] [/sensors/sensor_monitor]: OTP: 985.71 psig / CCP: 989.13 psig / OTT: 658.04 F / CCT1: 659.59 F / CCT2: 659.57 F
+[INFO]  [2020-02-12 16:50:21.938136] [/sensors/sensor_monitor]: OTP: 988.40 psig / CCP: 992.13 psig / OTT: 660.04 F / CCT1: 661.59 F / CCT2: 661.57 F
+[INFO]  [2020-02-12 16:50:22.938607] [/sensors/sensor_monitor]: OTP: 991.40 psig / CCP: 995.13 psig / OTT: 662.04 F / CCT1: 663.59 F / CCT2: 663.57 F
+[INFO]  [2020-02-12 16:50:23.940290] [/sensors/sensor_monitor]: OTP: 994.40 psig / CCP: 998.13 psig / OTT: 664.04 F / CCT1: 665.59 F / CCT2: 665.57 F
+[INFO]  [2020-02-12 16:50:24.942715] [/sensors/sensor_monitor]: OTP: 997.41 psig / CCP: 1001.13 psig / OTT: 666.04 F / CCT1: 667.59 F / CCT2: 667.57 F
+[INFO]  [2020-02-12 16:50:25.938628] [/sensors/sensor_monitor]: OTP: 1000.40 psig / CCP: 1004.13 psig / OTT: 668.04 F / CCT1: 669.59 F / CCT2: 669.57 F
+[INFO]  [2020-02-12 16:50:26.308846] [/tcp_server]: Command from #1: stop data
+[DEBUG] [2020-02-12 16:50:26.342722] [/readiness_admin]: Command matches current pattern: .*, stop data
+[INFO]  [2020-02-12 16:50:31.686139] [/tcp_server]: Command from #1: print whitelist
+[DEBUG] [2020-02-12 16:50:31.722746] [/readiness_admin]: Command matches current pattern: .*, print whitelist
+[INFO]  [2020-02-12 16:50:31.773447] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 16:50:31.801771] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 16:50:31.833610] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-12 16:50:31.874372] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-12 16:50:31.898713] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-12 16:50:31.937593] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-12 16:50:31.986138] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-12 16:50:32.017026] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[INFO]  [2020-02-12 16:50:32.077763] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-12 16:50:32.109592] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[INFO]  [2020-02-12 16:50:32.140693] [/readiness_admin]: RL-8: abort, .*
+[INFO]  [2020-02-12 16:50:32.183013] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-12 16:50:32.216268] [/readiness_admin]: RL-10: .*

@@ -1,0 +1,13 @@
+[INFO]  [2020-02-12 16:37:41.745812] [/tcp_server]: New connection: (1, ('192.168.1.7', 56288))
+[INFO]  [2020-02-12 16:37:41.766827] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 16:37:41.780670]: Connection to master established.
+[INFO]  [2020-02-12 16:37:41.780999]: You are client #1
+[INFO]  [2020-02-12 16:37:42.254440] [/tcp_server]: Connection with atleast one client restored.
+[DEBUG] [2020-02-12 16:37:54.229453] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 16:38:06.228426] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 16:38:18.229776] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 16:38:20.610191] [/tcp_server]: Command from #1: do the thing
+[INFO]  [2020-02-12 16:38:20.633357] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 16:38:20.657590] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 16:38:20.672650] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 16:38:20.690861] [/readiness_admin]: Current: 

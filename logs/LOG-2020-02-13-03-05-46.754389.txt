@@ -1,0 +1,46 @@
+[INFO]  [2020-02-12 22:05:51.117960] [/tcp_server]: New connection: (1, ('192.168.1.7', 59915))
+[INFO]  [2020-02-12 22:05:51.143844] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 22:05:51.172172] [/tcp_server]: 1 active connection(s)
+[DEBUG] [2020-02-12 22:05:55.102476] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:05:59.090363] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 22:06:02.533209] [/watchdog]: Runtime has reached 321 minutes.
+[DEBUG] [2020-02-12 22:06:05.097281] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:06:09.099001] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:06:13.095390] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 22:06:16.144968] [/tcp_server]: Command from #1: system fortune | cowsay
+[DEBUG] [2020-02-12 22:06:16.176975] [/readiness_admin]: Command matches persistent pattern: system .*, system fortune | cowsay
+[INFO]  [2020-02-12 22:06:16.230961] [/exec]: $ fortune | cowsay
+[INFO]  [2020-02-12 22:06:17.362924] [/exec]: 
+ __________________________________
+/ You will win success in whatever \
+\ calling you adopt.               /
+ ----------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 22:06:17.408894] [/exec]: Finished with exit code 0
+[DEBUG] [2020-02-12 22:06:21.102535] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:06:25.095272] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:06:29.095851] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:06:33.096922] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:06:37.100803] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:06:41.096926] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 22:06:42.049673] [/tcp_server]: Command from #1: system figlet RVT
+[DEBUG] [2020-02-12 22:06:42.084159] [/readiness_admin]: Command matches persistent pattern: system .*, system figlet RVT
+[INFO]  [2020-02-12 22:06:42.141471] [/exec]: $ figlet RVT
+[INFO]  [2020-02-12 22:06:42.270379] [/exec]: 
+ ______     _______ 
+|  _ \ \   / /_   _|
+| |_) \ \ / /  | |  
+|  _ < \ V /   | |  
+|_| \_\ \_/    |_|  
+                    
+
+[INFO]  [2020-02-12 22:06:42.298777] [/exec]: Finished with exit code 0
+[DEBUG] [2020-02-12 22:06:45.100923] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:06:49.102723] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:06:53.101117] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:06:57.099718] [/tcp_server]: Sending keep-alive message.

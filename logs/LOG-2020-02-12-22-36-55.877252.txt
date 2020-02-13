@@ -1,0 +1,247 @@
+[INFO]  [2020-02-12 17:36:58.366043] [/tcp_server]: New connection: (1, ('192.168.1.7', 56881))
+[INFO]  [2020-02-12 17:36:58.419814] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 17:36:58.474462]: Connection to master established.
+[INFO]  [2020-02-12 17:36:58.476621]: You are client #1
+[INFO]  [2020-02-12 17:36:59.276459] [/tcp_server]: Connection with atleast one client restored.
+[WARN]  [2020-02-12 17:37:01.398846] [/sensors/sensor_monitor]: Nitrous tank overpressure (9386.90234375, 9312.05517773 >1200 psig) detected!
+[INFO]  [2020-02-12 17:37:04.213657] [/tcp_server]: Command from #1: retract linear actuator
+[DEBUG] [2020-02-12 17:37:04.264622] [/readiness_admin]: Command matches current pattern: .*, retract linear actuator
+[WARN]  [2020-02-12 17:37:06.503135] [/sensors/sensor_monitor]: Nitrous tank overpressure (9402.20410156, 9327.35504297 >1200 psig) detected!
+[INFO]  [2020-02-12 17:37:09.464861] [/tcp_server]: Command from #1: set readiness 0
+[DEBUG] [2020-02-12 17:37:09.500636] [/readiness_admin]: Command matches current pattern: .*, set readiness 0
+[INFO]  [2020-02-12 17:37:09.573574] [/readiness_admin]: Set readiness level to 0
+[WARN]  [2020-02-12 17:37:11.495872] [/sensors/sensor_monitor]: Nitrous tank overpressure (9417.20703125, 9342.35503516 >1200 psig) detected!
+[INFO]  [2020-02-12 17:37:15.671881] [/tcp_server]: Command from #1: system df -h
+[DEBUG] [2020-02-12 17:37:15.718643] [/readiness_admin]: Command matches persistent pattern: system .*, system df -h
+[INFO]  [2020-02-12 17:37:15.745584] [/exec]: $ df -h
+[INFO]  [2020-02-12 17:37:16.072846] [/exec]: 
+Filesystem      Size  Used Avail Use% Mounted on
+udev            216M     0  216M   0% /dev
+tmpfs            49M  1.6M   47M   4% /run
+/dev/mmcblk0p1   59G  4.8G   52G   9% /
+tmpfs           243M     0  243M   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           243M     0  243M   0% /sys/fs/cgroup
+
+[INFO]  [2020-02-12 17:37:16.109377] [/exec]: Finished with exit code 0
+[WARN]  [2020-02-12 17:37:16.497342] [/sensors/sensor_monitor]: Nitrous tank overpressure (9432.20117188, 9357.35493945 >1200 psig) detected!
+[WARN]  [2020-02-12 17:37:21.601670] [/sensors/sensor_monitor]: Nitrous tank overpressure (9447.50195312, 9372.65466992 >1200 psig) detected!
+[WARN]  [2020-02-12 17:37:21.822573] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[INFO]  [2020-02-12 17:37:22.268921] [/tcp_server]: Command from #1: read data
+[DEBUG] [2020-02-12 17:37:22.303241] [/readiness_admin]: Command matches persistent pattern: read data, read data
+[INFO]  [2020-02-12 17:37:22.351130] [/sensors/sensor_monitor]: OTP: 9449.60 psig / CCP: 9453.33 psig / OTT: 6300.84 F / CCT1: 6302.39 F / CCT2: 6302.37 F
+[WARN]  [2020-02-12 17:37:26.691338] [/sensors/sensor_monitor]: Nitrous tank overpressure (9462.80175781, 9387.95469922 >1200 psig) detected!
+[INFO]  [2020-02-12 17:37:28.000866] [/tcp_server]: Command from #1: read data 1
+[DEBUG] [2020-02-12 17:37:28.037758] [/readiness_admin]: Command matches persistent pattern: read data .*, read data 1
+[INFO]  [2020-02-12 17:37:29.128658] [/sensors/sensor_monitor]: OTP: 9470.00 psig / CCP: 9473.73 psig / OTT: 6314.44 F / CCT1: 6315.99 F / CCT2: 6315.97 F
+[INFO]  [2020-02-12 17:37:30.129577] [/sensors/sensor_monitor]: OTP: 9473.03 psig / CCP: 9476.73 psig / OTT: 6316.44 F / CCT1: 6317.99 F / CCT2: 6317.97 F
+[INFO]  [2020-02-12 17:37:31.137705] [/sensors/sensor_monitor]: OTP: 9476.00 psig / CCP: 9479.73 psig / OTT: 6318.25 F / CCT1: 6319.99 F / CCT2: 6319.97 F
+[WARN]  [2020-02-12 17:37:31.697164] [/sensors/sensor_monitor]: Nitrous tank overpressure (9477.82910156, 9402.95484766 >1200 psig) detected!
+[INFO]  [2020-02-12 17:37:32.132472] [/sensors/sensor_monitor]: OTP: 9479.01 psig / CCP: 9482.73 psig / OTT: 6320.44 F / CCT1: 6321.99 F / CCT2: 6321.97 F
+[INFO]  [2020-02-12 17:37:33.137231] [/sensors/sensor_monitor]: OTP: 9482.00 psig / CCP: 9485.73 psig / OTT: 6322.24 F / CCT1: 6323.99 F / CCT2: 6323.97 F
+[INFO]  [2020-02-12 17:37:33.527382] [/watchdog]: Runtime has reached 53 minutes.
+[INFO]  [2020-02-12 17:37:34.141894] [/sensors/sensor_monitor]: OTP: 9485.00 psig / CCP: 9488.73 psig / OTT: 6324.44 F / CCT1: 6325.99 F / CCT2: 6325.98 F
+[INFO]  [2020-02-12 17:37:35.302079] [/sensors/sensor_monitor]: OTP: 9488.00 psig / CCP: 9491.73 psig / OTT: 6326.44 F / CCT1: 6327.99 F / CCT2: 6328.00 F
+[INFO]  [2020-02-12 17:37:36.138382] [/sensors/sensor_monitor]: OTP: 9491.06 psig / CCP: 9494.73 psig / OTT: 6328.24 F / CCT1: 6329.99 F / CCT2: 6329.97 F
+[WARN]  [2020-02-12 17:37:36.730515] [/sensors/sensor_monitor]: Nitrous tank overpressure (9492.82421875, 9417.95470703 >1200 psig) detected!
+[INFO]  [2020-02-12 17:37:37.145446] [/sensors/sensor_monitor]: OTP: 9494.02 psig / CCP: 9497.73 psig / OTT: 6330.44 F / CCT1: 6332.01 F / CCT2: 6332.01 F
+[INFO]  [2020-02-12 17:37:37.715805] [/tcp_server]: Command from #1: system fortune | cowsay
+[DEBUG] [2020-02-12 17:37:37.770335] [/readiness_admin]: Command matches persistent pattern: system .*, system fortune | cowsay
+[INFO]  [2020-02-12 17:37:37.811869] [/exec]: $ fortune | cowsay
+[INFO]  [2020-02-12 17:37:38.176581] [/sensors/sensor_monitor]: OTP: 9496.70 psig / CCP: 9500.43 psig / OTT: 6332.24 F / CCT1: 6333.99 F / CCT2: 6333.77 F
+[INFO]  [2020-02-12 17:37:39.200845] [/sensors/sensor_monitor]: OTP: 9499.10 psig / CCP: 9503.13 psig / OTT: 6334.06 F / CCT1: 6335.79 F / CCT2: 6335.77 F
+[INFO]  [2020-02-12 17:37:40.197192] [/sensors/sensor_monitor]: OTP: 9501.20 psig / CCP: 9506.13 psig / OTT: 6336.04 F / CCT1: 6337.39 F / CCT2: 6337.57 F
+[INFO]  [2020-02-12 17:37:41.242980] [/sensors/sensor_monitor]: OTP: 9503.61 psig / CCP: 9508.83 psig / OTT: 6338.24 F / CCT1: 6339.39 F / CCT2: 6339.57 F
+[INFO]  [2020-02-12 17:37:41.410426] [/exec]: 
+ _________________________________________
+/ It is right that he too should have his \
+| little chronicle, his memories, his     |
+| reason, and be able to recognize the    |
+| good in the bad, the bad in the worst,  |
+| and so grow gently old all down the     |
+| unchanging days and die one day like    |
+| any other day, only shorter.            |
+|                                         |
+\ -- Samuel Beckett, "Malone Dies"        /
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 17:37:41.470919] [/exec]: Finished with exit code 0
+[WARN]  [2020-02-12 17:37:41.854170] [/sensors/sensor_monitor]: Nitrous tank overpressure (9505.1015625, 9430.25425391 >1200 psig) detected!
+[INFO]  [2020-02-12 17:37:42.158602] [/sensors/sensor_monitor]: OTP: 9506.00 psig / CCP: 9512.43 psig / OTT: 6340.24 F / CCT1: 6341.39 F / CCT2: 6341.57 F
+[INFO]  [2020-02-12 17:37:43.194202] [/sensors/sensor_monitor]: OTP: 9512.00 psig / CCP: 9515.73 psig / OTT: 6342.44 F / CCT1: 6343.99 F / CCT2: 6343.97 F
+[INFO]  [2020-02-12 17:37:44.141117] [/sensors/sensor_monitor]: OTP: 9515.00 psig / CCP: 9518.73 psig / OTT: 6344.44 F / CCT1: 6345.99 F / CCT2: 6345.97 F
+[INFO]  [2020-02-12 17:37:45.128369] [/sensors/sensor_monitor]: OTP: 9518.00 psig / CCP: 9521.73 psig / OTT: 6346.44 F / CCT1: 6347.99 F / CCT2: 6347.97 F
+[INFO]  [2020-02-12 17:37:46.133231] [/sensors/sensor_monitor]: OTP: 9521.00 psig / CCP: 9524.73 psig / OTT: 6348.24 F / CCT1: 6349.99 F / CCT2: 6349.97 F
+[WARN]  [2020-02-12 17:37:46.891033] [/sensors/sensor_monitor]: Nitrous tank overpressure (9523.40234375, 9448.55416992 >1200 psig) detected!
+[INFO]  [2020-02-12 17:37:47.127754] [/sensors/sensor_monitor]: OTP: 9524.00 psig / CCP: 9527.73 psig / OTT: 6350.24 F / CCT1: 6351.99 F / CCT2: 6351.97 F
+[INFO]  [2020-02-12 17:37:48.128505] [/sensors/sensor_monitor]: OTP: 9527.00 psig / CCP: 9530.73 psig / OTT: 6352.44 F / CCT1: 6353.99 F / CCT2: 6353.97 F
+[INFO]  [2020-02-12 17:37:49.126927] [/sensors/sensor_monitor]: OTP: 9530.01 psig / CCP: 9533.73 psig / OTT: 6354.44 F / CCT1: 6355.99 F / CCT2: 6355.97 F
+[INFO]  [2020-02-12 17:37:50.129121] [/sensors/sensor_monitor]: OTP: 9533.01 psig / CCP: 9536.73 psig / OTT: 6356.44 F / CCT1: 6357.99 F / CCT2: 6357.97 F
+[INFO]  [2020-02-12 17:37:50.333043] [/tcp_server]: Command from #1: stop data
+[DEBUG] [2020-02-12 17:37:50.409824] [/readiness_admin]: Command matches persistent pattern: stop data, stop data
+[WARN]  [2020-02-12 17:37:51.999232] [/sensors/sensor_monitor]: Nitrous tank overpressure (9538.703125, 9463.85411719 >1200 psig) detected!
+[WARN]  [2020-02-12 17:37:57.100489] [/sensors/sensor_monitor]: Nitrous tank overpressure (9554.00390625, 9479.15401367 >1200 psig) detected!
+[WARN]  [2020-02-12 17:38:02.138381] [/sensors/sensor_monitor]: Nitrous tank overpressure (9567.80273438, 9492.95429102 >1200 psig) detected!
+[WARN]  [2020-02-12 17:38:07.189628] [/sensors/sensor_monitor]: Nitrous tank overpressure (9584.30371094, 9509.45444531 >1200 psig) detected!
+[WARN]  [2020-02-12 17:38:12.313622] [/sensors/sensor_monitor]: Nitrous tank overpressure (9599.30371094, 9524.45464844 >1200 psig) detected!
+[WARN]  [2020-02-12 17:38:17.338770] [/sensors/sensor_monitor]: Nitrous tank overpressure (9614.60546875, 9539.75465234 >1200 psig) detected!
+[WARN]  [2020-02-12 17:38:21.899564] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:38:21.977213] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:38:22.002472] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:38:22.070984] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:38:22.092541] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:38:22.391838] [/sensors/sensor_monitor]: Nitrous tank overpressure (9628.40332031, 9553.55488086 >1200 psig) detected!
+[WARN]  [2020-02-12 17:38:27.462513] [/sensors/sensor_monitor]: Nitrous tank overpressure (9644.60449219, 9569.7547207 >1200 psig) detected!
+[WARN]  [2020-02-12 17:38:33.064852] [/sensors/sensor_monitor]: Nitrous tank overpressure (9649.10351562, 9574.25473437 >1200 psig) detected!
+[INFO]  [2020-02-12 17:38:34.792680] [/watchdog]: Runtime has reached 54 minutes.
+[WARN]  [2020-02-12 17:38:38.403246] [/sensors/sensor_monitor]: Nitrous tank overpressure (9651.8046875, 9576.95475391 >1200 psig) detected!
+[WARN]  [2020-02-12 17:38:43.521328] [/sensors/sensor_monitor]: Nitrous tank overpressure (9655.40332031, 9580.55475977 >1200 psig) detected!
+[WARN]  [2020-02-12 17:38:48.893542] [/sensors/sensor_monitor]: Nitrous tank overpressure (9659.60253906, 9584.75496875 >1200 psig) detected!
+[WARN]  [2020-02-12 17:38:53.898086] [/sensors/sensor_monitor]: Nitrous tank overpressure (9663.50488281, 9588.65497852 >1200 psig) detected!
+[WARN]  [2020-02-12 17:38:59.215453] [/sensors/sensor_monitor]: Nitrous tank overpressure (9666.50390625, 9591.65495313 >1200 psig) detected!
+[WARN]  [2020-02-12 17:39:04.229223] [/sensors/sensor_monitor]: Nitrous tank overpressure (9669.80175781, 9594.95478516 >1200 psig) detected!
+[INFO]  [2020-02-12 17:39:05.996965] [/watchdog]: New node registered: /hardware/ignition_valve
+[INFO]  [2020-02-12 17:39:06.084764] [/watchdog]: New node registered: /hardware/linear_actuator
+[INFO]  [2020-02-12 17:39:06.113667] [/watchdog]: New node registered: /hardware/vent_valve
+[DEBUG] [2020-02-12 17:39:06.345434] [/tcp_server]: connecting to gandalf 39515
+[DEBUG] [2020-02-12 17:39:06.716653] [/hardware/vent_valve]: [/hardware/vent_valve/set_logger_level]: new Service instance
+[INFO]  [2020-02-12 17:39:07.507621] [/watchdog]: New node registered: /hardware/solenoid
+[DEBUG] [2020-02-12 17:39:07.509150] [/tcp_server]: connecting to gandalf 46443
+[DEBUG] [2020-02-12 17:39:07.537399] [/hardware/ignition_valve]: [/hardware/ignition_valve/set_logger_level]: new Service instance
+[INFO]  [2020-02-12 17:39:07.997488] [/hardware/vent_valve]: Starting DC motor driver on pins P9_11, P9_12
+[INFO]  [2020-02-12 17:39:08.686953] [/hardware/ignition_valve]: Starting DC motor driver on pins P9_17, P9_18
+[INFO]  [2020-02-12 17:39:08.727055] [/hardware/vent_valve]: Failed to configure. Waiting for 6 seconds
+[INFO]  [2020-02-12 17:39:09.252338] [/watchdog]: New node registered: /hardware/driver_dispatcher
+[INFO]  [2020-02-12 17:39:09.287380] [/watchdog]: New node registered: /hardware/ematch
+[INFO]  [2020-02-12 17:39:09.498947] [/hardware/ignition_valve]: Failed to configure. Waiting for 10 seconds
+[DEBUG] [2020-02-12 17:39:09.398374] [/tcp_server]: connecting to gandalf 36015
+[INFO]  [2020-02-12 17:39:08.901793] [/hardware/linear_actuator]: Failed to configure. Waiting for 10 seconds
+[WARN]  [2020-02-12 17:39:09.718273] [/sensors/sensor_monitor]: Nitrous tank overpressure (9673.40527344, 9598.55479687 >1200 psig) detected!
+[DEBUG] [2020-02-12 17:39:10.989387] [/tcp_server]: connecting to gandalf 44967
+[INFO]  [2020-02-12 17:39:09.288201] [/hardware/solenoid]: Failed to configure. Waiting for 4 seconds
+[DEBUG] [2020-02-12 17:39:12.077159] [/tcp_server]: connecting to gandalf 41805
+[DEBUG] [2020-02-12 17:39:12.203848] [/tcp_server]: connecting to gandalf 36683
+[INFO]  [2020-02-12 17:39:12.021097] [/hardware/ematch]: Success.
+[INFO]  [2020-02-12 17:39:13.709188] [/hardware/solenoid]: Success.
+[WARN]  [2020-02-12 17:39:14.509885] [/sensors/sensor_monitor]: Nitrous tank overpressure (9687.20214844, 9612.35526758 >1200 psig) detected!
+[INFO]  [2020-02-12 17:39:15.528867] [/hardware/vent_valve]: Success.
+[DEBUG] [2020-02-12 17:39:15.639138] [/hardware/vent_valve]: node[/hardware/vent_valve, http://gandalf:33511/] entering spin(), pid[11445]
+[DEBUG] [2020-02-12 17:39:15.833104] [/hardware/vent_valve]: connecting to gandalf 41805
+[INFO]  [2020-02-12 17:39:19.565274] [/hardware/linear_actuator]: Success.
+[DEBUG] [2020-02-12 17:39:19.633057] [/hardware/linear_actuator]: node[/hardware/linear_actuator, http://gandalf:33409/] entering spin(), pid[11446]
+[WARN]  [2020-02-12 17:39:19.714893] [/sensors/sensor_monitor]: Nitrous tank overpressure (9717.50195312, 9642.65542383 >1200 psig) detected!
+[DEBUG] [2020-02-12 17:39:19.838798] [/hardware/linear_actuator]: connecting to gandalf 41805
+[INFO]  [2020-02-12 17:39:20.152925] [/hardware/ignition_valve]: Success.
+[DEBUG] [2020-02-12 17:39:20.225131] [/hardware/ignition_valve]: node[/hardware/ignition_valve, http://gandalf:38803/] entering spin(), pid[11443]
+[DEBUG] [2020-02-12 17:39:20.527953] [/hardware/ignition_valve]: connecting to gandalf 41805
+[WARN]  [2020-02-12 17:39:21.962839] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:39:22.008207] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:39:22.032597] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:39:22.038867] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:39:24.643627] [/sensors/sensor_monitor]: Nitrous tank overpressure (9746.31054688, 9671.45547266 >1200 psig) detected!
+[WARN]  [2020-02-12 17:39:29.628607] [/sensors/sensor_monitor]: Nitrous tank overpressure (9797.00976562, 9722.15543164 >1200 psig) detected!
+[WARN]  [2020-02-12 17:39:34.698926] [/sensors/sensor_monitor]: Nitrous tank overpressure (9846.80175781, 9771.95510742 >1200 psig) detected!
+[INFO]  [2020-02-12 17:39:35.531739] [/watchdog]: Runtime has reached 55 minutes.
+[WARN]  [2020-02-12 17:39:39.701515] [/sensors/sensor_monitor]: Nitrous tank overpressure (9861.80859375, 9786.95486914 >1200 psig) detected!
+[WARN]  [2020-02-12 17:39:44.797795] [/sensors/sensor_monitor]: Nitrous tank overpressure (9877.10253906, 9802.25480469 >1200 psig) detected!
+[WARN]  [2020-02-12 17:39:49.796999] [/sensors/sensor_monitor]: Nitrous tank overpressure (9892.10253906, 9817.25465625 >1200 psig) detected!
+[WARN]  [2020-02-12 17:39:54.892451] [/sensors/sensor_monitor]: Nitrous tank overpressure (9907.40234375, 9832.55457813 >1200 psig) detected!
+[INFO]  [2020-02-12 17:39:57.728584] [/tcp_server]: Command from #1: fire ematch
+[INFO]  [2020-02-12 17:39:57.784863] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:39:57.828459] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:39:57.878719] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:39:57.916130] [/readiness_admin]: Current: idiot check
+[WARN]  [2020-02-12 17:39:59.894388] [/sensors/sensor_monitor]: Nitrous tank overpressure (9922.40429688, 9847.55473438 >1200 psig) detected!
+[INFO]  [2020-02-12 17:40:00.827753] [/tcp_server]: Command from #1: set readiness 10
+[DEBUG] [2020-02-12 17:40:00.893933] [/readiness_admin]: Command matches persistent pattern: set readiness [0-9]+, set readiness 10
+[INFO]  [2020-02-12 17:40:00.945545] [/readiness_admin]: Set readiness level to 10
+[INFO]  [2020-02-12 17:40:02.682234] [/tcp_server]: Command from #1: fire ematch
+[DEBUG] [2020-02-12 17:40:02.725913] [/readiness_admin]: Command matches current pattern: .*, fire ematch
+[INFO]  [2020-02-12 17:40:02.780647] [/hardware/ematch]: Firing e-match.
+[WARN]  [2020-02-12 17:40:04.994988] [/sensors/sensor_monitor]: Nitrous tank overpressure (9937.70214844, 9862.85455664 >1200 psig) detected!
+[WARN]  [2020-02-12 17:40:09.998270] [/sensors/sensor_monitor]: Nitrous tank overpressure (9952.71191406, 9877.85448633 >1200 psig) detected!
+[WARN]  [2020-02-12 17:40:15.092487] [/sensors/sensor_monitor]: Nitrous tank overpressure (9968.00195312, 9893.15452148 >1200 psig) detected!
+[WARN]  [2020-02-12 17:40:20.094420] [/sensors/sensor_monitor]: Nitrous tank overpressure (9983.00195312, 9908.154625 >1200 psig) detected!
+[WARN]  [2020-02-12 17:40:21.991036] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:40:22.046170] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:40:22.071307] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:40:22.096226] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:40:22.118648] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:40:25.196592] [/sensors/sensor_monitor]: Nitrous tank overpressure (9998.30175781, 9923.45479102 >1200 psig) detected!
+[INFO]  [2020-02-12 17:40:26.065757] [/tcp_server]: Command from #1: open solenoid
+[DEBUG] [2020-02-12 17:40:26.119398] [/readiness_admin]: Command matches current pattern: .*, open solenoid
+[INFO]  [2020-02-12 17:40:26.182214] [/hardware/solenoid]: Enable solenoid open cycle
+[INFO]  [2020-02-12 17:40:30.211660] [/hardware/solenoid]: Opening the solenoid
+[WARN]  [2020-02-12 17:40:30.358898] [/sensors/sensor_monitor]: Nitrous tank overpressure (10013.6044922, 9938.75476172 >1200 psig) detected!
+[INFO]  [2020-02-12 17:40:34.213400] [/hardware/solenoid]: Closing the solenoid
+[INFO]  [2020-02-12 17:40:35.525380] [/watchdog]: Runtime has reached 56 minutes.
+[WARN]  [2020-02-12 17:40:35.563678] [/sensors/sensor_monitor]: Nitrous tank overpressure (10028.9023438, 9954.05477734 >1200 psig) detected!
+[INFO]  [2020-02-12 17:40:40.209895] [/hardware/solenoid]: Opening the solenoid
+[WARN]  [2020-02-12 17:40:40.609675] [/sensors/sensor_monitor]: Nitrous tank overpressure (10044.2431641, 9969.35496484 >1200 psig) detected!
+[INFO]  [2020-02-12 17:40:44.211923] [/hardware/solenoid]: Closing the solenoid
+[WARN]  [2020-02-12 17:40:45.628886] [/sensors/sensor_monitor]: Nitrous tank overpressure (10059.2021484, 9984.35488477 >1200 psig) detected!
+[INFO]  [2020-02-12 17:40:50.201025] [/hardware/solenoid]: Opening the solenoid
+[WARN]  [2020-02-12 17:40:50.639358] [/sensors/sensor_monitor]: Nitrous tank overpressure (10074.2021484, 9999.35486133 >1200 psig) detected!
+[INFO]  [2020-02-12 17:40:54.214643] [/hardware/solenoid]: Closing the solenoid
+[WARN]  [2020-02-12 17:40:55.720660] [/sensors/sensor_monitor]: Nitrous tank overpressure (10089.5019531, 10014.6550195 >1200 psig) detected!
+[INFO]  [2020-02-12 17:41:00.209993] [/hardware/solenoid]: Opening the solenoid
+[WARN]  [2020-02-12 17:41:00.737692] [/sensors/sensor_monitor]: Nitrous tank overpressure (10104.8017578, 10029.9551543 >1200 psig) detected!
+[INFO]  [2020-02-12 17:41:04.209646] [/hardware/solenoid]: Closing the solenoid
+[WARN]  [2020-02-12 17:41:05.729808] [/sensors/sensor_monitor]: Nitrous tank overpressure (10119.8017578, 10044.955418 >1200 psig) detected!
+[INFO]  [2020-02-12 17:41:10.213418] [/hardware/solenoid]: Opening the solenoid
+[WARN]  [2020-02-12 17:41:10.838339] [/sensors/sensor_monitor]: Nitrous tank overpressure (10135.1015625, 10060.2553437 >1200 psig) detected!
+[INFO]  [2020-02-12 17:41:14.210172] [/hardware/solenoid]: Closing the solenoid
+[WARN]  [2020-02-12 17:41:15.903724] [/sensors/sensor_monitor]: Nitrous tank overpressure (10150.4033203, 10075.5551309 >1200 psig) detected!
+[INFO]  [2020-02-12 17:41:20.214351] [/hardware/solenoid]: Opening the solenoid
+[WARN]  [2020-02-12 17:41:20.996960] [/sensors/sensor_monitor]: Nitrous tank overpressure (10165.7021484, 10090.855127 >1200 psig) detected!
+[WARN]  [2020-02-12 17:41:22.002016] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:41:22.058622] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:41:22.087605] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:41:22.099709] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:41:22.142722] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[INFO]  [2020-02-12 17:41:24.209962] [/hardware/solenoid]: Closing the solenoid
+[WARN]  [2020-02-12 17:41:25.998923] [/sensors/sensor_monitor]: Nitrous tank overpressure (10180.7021484, 10105.8551211 >1200 psig) detected!
+[INFO]  [2020-02-12 17:41:29.559695] [/tcp_server]: Command from #1: close solenoid
+[DEBUG] [2020-02-12 17:41:29.608950] [/readiness_admin]: Command matches current pattern: .*, close solenoid
+[INFO]  [2020-02-12 17:41:29.664186] [/hardware/solenoid]: Disable solenoid open cycle
+[WARN]  [2020-02-12 17:41:31.099941] [/sensors/sensor_monitor]: Nitrous tank overpressure (10196.0019531, 10121.1551777 >1200 psig) detected!
+[INFO]  [2020-02-12 17:41:35.237296] [/tcp_server]: Command from #1: retract linear actuator
+[DEBUG] [2020-02-12 17:41:35.302739] [/readiness_admin]: Command matches current pattern: .*, retract linear actuator
+[INFO]  [2020-02-12 17:41:35.386379] [/hardware/linear_actuator]: Turning the motor clockwise
+[WARN]  [2020-02-12 17:41:36.093425] [/sensors/sensor_monitor]: Nitrous tank overpressure (10211.0019531, 10136.1553086 >1200 psig) detected!
+[INFO]  [2020-02-12 17:41:36.525374] [/watchdog]: Runtime has reached 57 minutes.
+[WARN]  [2020-02-12 17:41:41.218954] [/sensors/sensor_monitor]: Nitrous tank overpressure (10226.3017578, 10151.4553652 >1200 psig) detected!
+[WARN]  [2020-02-12 17:41:46.200609] [/sensors/sensor_monitor]: Nitrous tank overpressure (10241.3017578, 10166.4551289 >1200 psig) detected!
+[WARN]  [2020-02-12 17:41:51.292506] [/sensors/sensor_monitor]: Nitrous tank overpressure (10256.6015625, 10181.7549277 >1200 psig) detected!
+[WARN]  [2020-02-12 17:41:56.295643] [/sensors/sensor_monitor]: Nitrous tank overpressure (10271.6015625, 10196.754625 >1200 psig) detected!
+[WARN]  [2020-02-12 17:42:01.340918] [/sensors/sensor_monitor]: Nitrous tank overpressure (10286.6142578, 10211.7548301 >1200 psig) detected!
+[WARN]  [2020-02-12 17:42:06.299309] [/sensors/sensor_monitor]: Nitrous tank overpressure (10301.6132812, 10226.7550566 >1200 psig) detected!
+[WARN]  [2020-02-12 17:42:11.539880] [/sensors/sensor_monitor]: Nitrous tank overpressure (10316.9082031, 10242.0551816 >1200 psig) detected!
+[WARN]  [2020-02-12 17:42:16.617941] [/sensors/sensor_monitor]: Nitrous tank overpressure (10332.203125, 10257.3551094 >1200 psig) detected!
+[WARN]  [2020-02-12 17:42:21.622555] [/sensors/sensor_monitor]: Nitrous tank overpressure (10347.5019531, 10272.654959 >1200 psig) detected!
+[WARN]  [2020-02-12 17:42:22.097364] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:42:22.170116] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:42:22.189481] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:42:22.225341] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:42:22.228619] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:42:26.624611] [/sensors/sensor_monitor]: Nitrous tank overpressure (10362.5263672, 10287.6550234 >1200 psig) detected!
+[WARN]  [2020-02-12 17:42:31.702323] [/sensors/sensor_monitor]: Nitrous tank overpressure (10377.8027344, 10302.9551094 >1200 psig) detected!
+[INFO]  [2020-02-12 17:42:36.526511] [/watchdog]: Runtime has reached 58 minutes.
+[WARN]  [2020-02-12 17:42:36.794626] [/sensors/sensor_monitor]: Nitrous tank overpressure (10393.1015625, 10318.2549766 >1200 psig) detected!
+[WARN]  [2020-02-12 17:42:41.894946] [/sensors/sensor_monitor]: Nitrous tank overpressure (10408.4013672, 10333.554918 >1200 psig) detected!
+[WARN]  [2020-02-12 17:42:46.995368] [/sensors/sensor_monitor]: Nitrous tank overpressure (10423.7060547, 10348.8551035 >1200 psig) detected!
+[WARN]  [2020-02-12 17:42:52.098071] [/sensors/sensor_monitor]: Nitrous tank overpressure (10439.0019531, 10364.1547969 >1200 psig) detected!
+[WARN]  [2020-02-12 17:42:57.102948] [/sensors/sensor_monitor]: Nitrous tank overpressure (10454.0019531, 10379.1547109 >1200 psig) detected!
+[WARN]  [2020-02-12 17:43:02.098479] [/sensors/sensor_monitor]: Nitrous tank overpressure (10469.0048828, 10394.1548008 >1200 psig) detected!
+[WARN]  [2020-02-12 17:43:07.198161] [/sensors/sensor_monitor]: Nitrous tank overpressure (10484.3017578, 10409.4548223 >1200 psig) detected!
+[WARN]  [2020-02-12 17:43:12.294625] [/sensors/sensor_monitor]: Nitrous tank overpressure (10499.6015625, 10424.7547188 >1200 psig) detected!
+[WARN]  [2020-02-12 17:43:17.297605] [/sensors/sensor_monitor]: Nitrous tank overpressure (10514.6025391, 10439.7547656 >1200 psig) detected!
+[WARN]  [2020-02-12 17:43:22.123385] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:43:22.399835] [/sensors/sensor_monitor]: Nitrous tank overpressure (10529.9023438, 10455.0546309 >1200 psig) detected!
+[WARN]  [2020-02-12 17:43:27.409555] [/sensors/sensor_monitor]: Nitrous tank overpressure (10544.9023438, 10470.0546895 >1200 psig) detected!
+[WARN]  [2020-02-12 17:43:32.402226] [/sensors/sensor_monitor]: Nitrous tank overpressure (10559.9023438, 10485.0547187 >1200 psig) detected!

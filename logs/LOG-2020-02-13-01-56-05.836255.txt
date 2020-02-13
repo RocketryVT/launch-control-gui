@@ -1,0 +1,86 @@
+[INFO]  [2020-02-12 20:56:10.153689] [/tcp_server]: New connection: (1, ('192.168.1.7', 59330))
+[INFO]  [2020-02-12 20:56:10.173776] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 20:56:10.216725]: Connection to master established.
+[INFO]  [2020-02-12 20:56:10.217092]: You are client #1
+[INFO]  [2020-02-12 20:56:10.775179] [/tcp_server]: Connection with atleast one client restored.
+[WARN]  [2020-02-12 20:56:11.247925] [/sensors/sensor_monitor]: Nitrous tank overpressure (14867.6347656, 14792.7860977 >1200 psig) detected!
+[DEBUG] [2020-02-12 20:56:14.728741] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 20:56:16.481045] [/sensors/sensor_monitor]: Nitrous tank overpressure (14882.9345703, 14808.0861289 >1200 psig) detected!
+[DEBUG] [2020-02-12 20:56:18.730093] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 20:56:21.463099] [/sensors/sensor_monitor]: Nitrous tank overpressure (14897.9345703, 14823.086209 >1200 psig) detected!
+[DEBUG] [2020-02-12 20:56:24.718058] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 20:56:26.525461] [/watchdog]: Runtime has reached 252 minutes.
+[WARN]  [2020-02-12 20:56:26.662026] [/sensors/sensor_monitor]: Nitrous tank overpressure (14913.2363281, 14838.3861719 >1200 psig) detected!
+[DEBUG] [2020-02-12 20:56:30.715414] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 20:56:31.654492] [/sensors/sensor_monitor]: Nitrous tank overpressure (14928.5351562, 14853.6861211 >1200 psig) detected!
+[INFO]  [2020-02-12 20:56:37.149968] [/tcp_server]: New connection: (1, ('192.168.1.7', 59333))
+[INFO]  [2020-02-12 20:56:37.196104] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 20:56:37.241590]: Connection to master established.
+[INFO]  [2020-02-12 20:56:37.246172]: You are client #1
+[WARN]  [2020-02-12 20:56:39.651804] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 20:56:39.733167] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 20:56:39.761086] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 20:56:39.786432] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 20:56:39.802137] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 20:56:41.652903] [/sensors/sensor_monitor]: Nitrous tank overpressure (14958.8427734, 14883.9862363 >1200 psig) detected!
+[DEBUG] [2020-02-12 20:56:44.727388] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 20:56:46.664408] [/sensors/sensor_monitor]: Nitrous tank overpressure (14973.8476562, 14898.9864063 >1200 psig) detected!
+[DEBUG] [2020-02-12 20:56:48.732879] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 20:56:51.758996] [/sensors/sensor_monitor]: Nitrous tank overpressure (14989.1357422, 14914.2865488 >1200 psig) detected!
+[DEBUG] [2020-02-12 20:56:54.719155] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 20:56:56.255214] [/tcp_server]: New connection: (2, ('192.168.1.7', 59335))
+[INFO]  [2020-02-12 20:56:56.299814] [/tcp_server]: 2 active connection(s)
+[WARN]  [2020-02-12 20:56:56.850826] [/sensors/sensor_monitor]: Nitrous tank overpressure (15004.4355469, 14929.5866602 >1200 psig) detected!
+[DEBUG] [2020-02-12 20:57:00.729785] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 20:57:01.953426] [/sensors/sensor_monitor]: Nitrous tank overpressure (15019.7353516, 14944.8867773 >1200 psig) detected!
+[DEBUG] [2020-02-12 20:57:04.703097] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 20:57:06.949118] [/sensors/sensor_monitor]: Nitrous tank overpressure (15034.7363281, 14959.8866563 >1200 psig) detected!
+[DEBUG] [2020-02-12 20:57:10.723462] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 20:57:11.970975] [/sensors/sensor_monitor]: Nitrous tank overpressure (15049.7353516, 14974.8865723 >1200 psig) detected!
+[DEBUG] [2020-02-12 20:57:14.718869] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 20:57:17.099426] [/sensors/sensor_monitor]: Nitrous tank overpressure (15065.0341797, 14990.1865781 >1200 psig) detected!
+[INFO]  [2020-02-12 20:57:20.465188] [/tcp_server]: Command from #1: system ls ~/rocket-os
+[DEBUG] [2020-02-12 20:57:20.538750] [/readiness_admin]: Command matches current pattern: .*, system ls ~/rocket-os
+[INFO]  [2020-02-12 20:57:20.638749] [/exec]: $ ls ~/rocket-os
+[INFO]  [2020-02-12 20:57:21.068667] [/exec]: 
+bag2csv.py
+build
+devel
+Dockerfile
+lcs-networking
+pythonLED
+README.md
+src
+
+[INFO]  [2020-02-12 20:57:21.138491] [/exec]: Finished with exit code 0
+[WARN]  [2020-02-12 20:57:22.170190] [/sensors/sensor_monitor]: Nitrous tank overpressure (15078.8349609, 15003.9866133 >1200 psig) detected!
+[DEBUG] [2020-02-12 20:57:24.719011] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 20:57:26.525612] [/watchdog]: Runtime has reached 253 minutes.
+[WARN]  [2020-02-12 20:57:27.137995] [/sensors/sensor_monitor]: Nitrous tank overpressure (15095.3349609, 15020.4866758 >1200 psig) detected!
+[DEBUG] [2020-02-12 20:57:30.714892] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 20:57:32.143018] [/sensors/sensor_monitor]: Nitrous tank overpressure (15110.3359375, 15035.4864902 >1200 psig) detected!
+[DEBUG] [2020-02-12 20:57:34.713922] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 20:57:35.863535] [/tcp_server]: Command from #1: system fortune | cowsay
+[DEBUG] [2020-02-12 20:57:35.900357] [/readiness_admin]: Command matches current pattern: .*, system fortune | cowsay
+[INFO]  [2020-02-12 20:57:35.969383] [/exec]: $ fortune | cowsay
+[WARN]  [2020-02-12 20:57:37.245667] [/sensors/sensor_monitor]: Nitrous tank overpressure (15124.1582031, 15049.2863906 >1200 psig) detected!
+[INFO]  [2020-02-12 20:57:39.754878] [/exec]: 
+ ______________________________________
+< Stay away from flying saucers today. >
+ --------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 20:57:39.844214] [/exec]: Finished with exit code 0
+[WARN]  [2020-02-12 20:57:39.814600] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 20:57:39.871906] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 20:57:39.923219] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 20:57:39.957328] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 20:57:39.987381] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 20:57:42.238965] [/sensors/sensor_monitor]: Nitrous tank overpressure (15140.6357422, 15065.7863301 >1200 psig) detected!
+[DEBUG] [2020-02-12 20:57:44.719023] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 20:57:47.444414] [/sensors/sensor_monitor]: Nitrous tank overpressure (15155.9375, 15081.0861074 >1200 psig) detected!
+[DEBUG] [2020-02-12 20:57:50.732643] [/tcp_server]: Sending keep-alive message.

@@ -1,0 +1,9 @@
+[INFO]  [2020-02-12 20:55:37.057081] [/tcp_server]: New connection: (1, ('192.168.1.7', 59328))
+[INFO]  [2020-02-12 20:55:37.117043] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 20:55:37.150507]: Connection to master established.
+[INFO]  [2020-02-12 20:55:37.150894]: You are client #1
+[INFO]  [2020-02-12 20:55:37.775170] [/tcp_server]: Connection with atleast one client restored.
+[WARN]  [2020-02-12 20:55:39.560440] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 20:55:39.600527] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 20:55:39.646729] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 20:55:40.747193] [/sensors/sensor_monitor]: Nitrous tank overpressure (14776.1357422, 14701.2863867 >1200 psig) detected!

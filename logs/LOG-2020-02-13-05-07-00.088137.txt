@@ -1,0 +1,105 @@
+[INFO]  [2020-02-13 00:07:12.236648] [/tcp_server]: New connection: (1, ('192.168.1.7', 64456))
+[INFO]  [2020-02-13 00:07:12.265526] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-13 00:07:13.149300] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-13 00:07:13.683031] [/watchdog]: Runtime has reached 443 minutes.
+[INFO]  [2020-02-13 00:07:15.104141] [/tcp_server]: Command from #1: system fortune | cowsay
+[DEBUG] [2020-02-13 00:07:15.156696] [/readiness_admin]: Command matches current pattern: .*, system fortune | cowsay
+[INFO]  [2020-02-13 00:07:15.227518] [/exec]: $ fortune | cowsay
+[ERROR] [2020-02-13 00:07:15.508766] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (12037.47) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-13 00:07:15.567416] [/sensors/sensor_monitor]: Oxidizer tank pressure average (18047.62) falls outside of nominal bounds ([0, 900])
+[ERROR] [2020-02-13 00:07:15.609972] [/sensors/sensor_monitor]: Combustion chamber pressure average (18052.14) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-13 00:07:15.645378] [/sensors/sensor_monitor]: Oxidizer tank temperature average (12033.01) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-13 00:07:15.695196] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (12036.06) falls outside of nominal bounds ([0, 95])
+[FATAL] [2020-02-13 00:07:15.945154] [/sensors/sensor_monitor]: Nitrous tank overpressure (18122.7792969, 18047.9230117 >1200 psig) detected!
+[INFO]  [2020-02-13 00:07:16.216210] [/tcp_server]: Command from #1: print whitelist
+[DEBUG] [2020-02-13 00:07:16.293201] [/readiness_admin]: Command matches current pattern: .*, print whitelist
+[INFO]  [2020-02-13 00:07:16.393581] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-13 00:07:16.443431] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-13 00:07:16.518934] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-13 00:07:16.556575] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-13 00:07:16.640974] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-13 00:07:16.710010] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-13 00:07:16.794411] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-13 00:07:16.844531] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[INFO]  [2020-02-13 00:07:16.902913] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-13 00:07:16.943888] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[INFO]  [2020-02-13 00:07:17.004830] [/readiness_admin]: RL-8: abort, .*
+[INFO]  [2020-02-13 00:07:17.067339] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-13 00:07:17.129785] [/readiness_admin]: RL-10: .*
+[INFO]  [2020-02-13 00:07:17.494204] [/tcp_server]: Command from #1: print whitelist
+[DEBUG] [2020-02-13 00:07:17.545374] [/readiness_admin]: Command matches current pattern: .*, print whitelist
+[INFO]  [2020-02-13 00:07:17.659340] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-13 00:07:17.747209] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-13 00:07:17.811738] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-13 00:07:17.867190] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-13 00:07:17.926898] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-13 00:07:17.996565] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-13 00:07:18.049913] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-13 00:07:18.105811] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[INFO]  [2020-02-13 00:07:18.175514] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-13 00:07:18.219740] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[INFO]  [2020-02-13 00:07:18.295084] [/readiness_admin]: RL-8: abort, .*
+[INFO]  [2020-02-13 00:07:18.357121] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-13 00:07:18.427538] [/readiness_admin]: RL-10: .*
+[INFO]  [2020-02-13 00:07:18.707793] [/tcp_server]: Command from #1: print whitelist
+[DEBUG] [2020-02-13 00:07:18.822143] [/readiness_admin]: Command matches current pattern: .*, print whitelist
+[INFO]  [2020-02-13 00:07:18.937148] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-13 00:07:19.005436] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-13 00:07:19.088857] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-13 00:07:19.147578] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-13 00:07:19.207600] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-13 00:07:19.259455] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-13 00:07:19.322751] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-13 00:07:19.391226] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[INFO]  [2020-02-13 00:07:19.437389] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-13 00:07:19.486768] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[INFO]  [2020-02-13 00:07:19.533523] [/readiness_admin]: RL-8: abort, .*
+[INFO]  [2020-02-13 00:07:19.575758] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-13 00:07:19.641246] [/readiness_admin]: RL-10: .*
+[INFO]  [2020-02-13 00:07:20.043665] [/tcp_server]: Command from #1: print whitelist
+[DEBUG] [2020-02-13 00:07:20.104753] [/readiness_admin]: Command matches current pattern: .*, print whitelist
+[INFO]  [2020-02-13 00:07:20.206045] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-13 00:07:20.254773] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-13 00:07:20.309414] [/exec]: 
+ ____________________________________
+/ FORTUNE PROVIDES QUESTIONS FOR THE \
+| GREAT ANSWERS: #13 A: Doc, Happy,  |
+| Bashful, Dopey, Sneezy, Sleepy, &  |
+| Grumpy Q: Who were the Democratic  |
+\ presidential candidates?           /
+ ------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-13 00:07:20.334526] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-13 00:07:20.391870] [/exec]: Finished with exit code 0
+[INFO]  [2020-02-13 00:07:20.399366] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-13 00:07:20.443813] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-13 00:07:20.491519] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-13 00:07:20.534732] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-13 00:07:20.597020] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[ERROR] [2020-02-13 00:07:20.628547] [/sensors/sensor_monitor]: Oxidizer tank temperature average (12039.41) falls outside of nominal bounds ([0, 95])
+[INFO]  [2020-02-13 00:07:20.651328] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-13 00:07:20.715899] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[ERROR] [2020-02-13 00:07:20.707762] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (12043.87) falls outside of nominal bounds ([0, 95])
+[INFO]  [2020-02-13 00:07:20.780985] [/readiness_admin]: RL-8: abort, .*
+[ERROR] [2020-02-13 00:07:20.826186] [/sensors/sensor_monitor]: Oxidizer tank pressure average (18054.22) falls outside of nominal bounds ([0, 900])
+[INFO]  [2020-02-13 00:07:20.845612] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-13 00:07:20.898173] [/readiness_admin]: RL-10: .*
+[ERROR] [2020-02-13 00:07:20.864758] [/sensors/sensor_monitor]: Combustion chamber pressure average (18061.74) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-13 00:07:20.942338] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (12042.46) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-13 00:07:21.006150] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (12089.51) falls outside of nominal bounds ([0, 95])
+[FATAL] [2020-02-13 00:07:21.051850] [/sensors/sensor_monitor]: Nitrous tank overpressure (18129.0683594, 18054.2229609 >1200 psig) detected!
+[WARN]  [2020-02-13 00:07:21.101325] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (12093.97) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-13 00:07:21.130510] [/sensors/sensor_monitor]: Combustion chamber pressure reading (18136.88) falls outside of nominal bounds ([0, 50])
+[DEBUG] [2020-02-13 00:07:25.097585] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-13 00:07:25.827005] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (12058.27) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-13 00:07:25.897799] [/sensors/sensor_monitor]: Oxidizer tank temperature average (12053.81) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-13 00:07:25.910252] [/sensors/sensor_monitor]: Combustion chamber pressure average (18083.34) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-13 00:07:25.912667] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (12056.86) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-13 00:07:25.942129] [/sensors/sensor_monitor]: Oxidizer tank pressure average (18079.12) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-13 00:07:26.031336] [/sensors/sensor_monitor]: Nitrous tank overpressure (18153.96875, 18079.1229805 >1200 psig) detected!
+[DEBUG] [2020-02-13 00:07:29.090349] [/tcp_server]: Sending keep-alive message.

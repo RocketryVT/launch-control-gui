@@ -1,0 +1,74 @@
+[INFO]  [2020-02-12 21:35:42.354979] [/tcp_server]: New connection: (1, ('192.168.1.7', 59716))
+[INFO]  [2020-02-12 21:35:42.395916] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 21:35:42.430356]: Connection to master established.
+[INFO]  [2020-02-12 21:35:42.431164]: You are client #1
+[INFO]  [2020-02-12 21:35:42.775259] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 21:35:44.534190] [/watchdog]: Runtime has reached 291 minutes.
+[INFO]  [2020-02-12 21:35:46.723304] [/tcp_server]: Command from #1: system fortune | cowsay
+[DEBUG] [2020-02-12 21:35:46.746450] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:35:46.767921] [/readiness_admin]: Command matches current pattern: .*, system fortune | cowsay
+[INFO]  [2020-02-12 21:35:46.817195] [/exec]: $ fortune | cowsay
+[INFO]  [2020-02-12 21:35:47.963045] [/exec]: 
+ ______________________________________
+/ You need more time; and you probably \
+\ always will.                         /
+ --------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 21:35:47.999380] [/exec]: Finished with exit code 0
+[DEBUG] [2020-02-12 21:35:50.716530] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:35:54.715292] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:35:58.716960] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:36:02.717334] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:36:06.716852] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:36:10.718128] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:36:14.718054] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 21:36:16.810198] [/tcp_server]: Command from #1: fire ematch
+[DEBUG] [2020-02-12 21:36:16.842141] [/readiness_admin]: Command matches current pattern: .*, fire ematch
+[INFO]  [2020-02-12 21:36:16.876941] [/hardware/ematch]: Firing e-match.
+[DEBUG] [2020-02-12 21:36:20.713893] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:36:24.718411] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 21:36:25.071519] [/tcp_server]: Command from #1: open vent valve
+[DEBUG] [2020-02-12 21:36:25.102272] [/readiness_admin]: Command matches current pattern: .*, open vent valve
+[INFO]  [2020-02-12 21:36:25.347132] [/hardware/vent_valve]: Turning the motor counterclockwise
+[INFO]  [2020-02-12 21:36:27.118551] [/tcp_server]: Command from #1: close vent valve
+[DEBUG] [2020-02-12 21:36:27.148716] [/readiness_admin]: Command matches current pattern: .*, close vent valve
+[INFO]  [2020-02-12 21:36:27.189850] [/hardware/vent_valve]: Turning the motor clockwise
+[INFO]  [2020-02-12 21:36:28.951109] [/tcp_server]: Command from #1: crack vent valve
+[DEBUG] [2020-02-12 21:36:28.990100] [/readiness_admin]: Command matches current pattern: .*, crack vent valve
+[INFO]  [2020-02-12 21:36:29.025255] [/hardware/vent_valve]: Turning the motor counterclockwise
+[INFO]  [2020-02-12 21:36:29.237826] [/hardware/vent_valve]: Stopping the motor
+[DEBUG] [2020-02-12 21:36:32.727548] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:36:36.717713] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 21:36:36.990925] [/tcp_server]: Command from #1: set readiness 0
+[DEBUG] [2020-02-12 21:36:37.040898] [/readiness_admin]: Command matches current pattern: .*, set readiness 0
+[INFO]  [2020-02-12 21:36:37.076518] [/readiness_admin]: Set readiness level to 0
+[INFO]  [2020-02-12 21:36:37.887662] [/tcp_server]: Command from #1: set readiness 10
+[DEBUG] [2020-02-12 21:36:37.924422] [/readiness_admin]: Command matches persistent pattern: set readiness [0-9]+, set readiness 10
+[INFO]  [2020-02-12 21:36:37.971626] [/readiness_admin]: Set readiness level to 10
+[DEBUG] [2020-02-12 21:36:40.717082] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:36:44.722786] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 21:36:45.531303] [/watchdog]: Runtime has reached 292 minutes.
+[DEBUG] [2020-02-12 21:36:48.716878] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:36:52.717562] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:36:56.717037] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:37:00.716910] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 21:37:02.543047] [/tcp_server]: Command from #1: print whitelist
+[DEBUG] [2020-02-12 21:37:02.583083] [/readiness_admin]: Command matches current pattern: .*, print whitelist
+[INFO]  [2020-02-12 21:37:02.629892] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 21:37:02.653159] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 21:37:02.678068] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-12 21:37:02.714951] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-12 21:37:02.745377] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-12 21:37:02.775464] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-12 21:37:02.804402] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-12 21:37:02.838368] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[INFO]  [2020-02-12 21:37:02.866860] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-12 21:37:02.889932] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[INFO]  [2020-02-12 21:37:02.914491] [/readiness_admin]: RL-8: abort, .*
+[INFO]  [2020-02-12 21:37:02.946045] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-12 21:37:02.972546] [/readiness_admin]: RL-10: .*

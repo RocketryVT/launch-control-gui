@@ -1,0 +1,5 @@
+[INFO]  [2020-02-12 16:39:46.079939] [/tcp_server]: Client #1 has disconnected
+[INFO]  [2020-02-12 16:39:46.102003] [/tcp_server]: 2 active connection(s)
+[INFO]  [2020-02-12 16:39:46.113455] [/tcp_server]: 1 client(s) remaining
+[INFO]  [2020-02-12 16:39:46.123755]: Connection to master established.
+[INFO]  [2020-02-12 16:39:46.123943]: You are client #2

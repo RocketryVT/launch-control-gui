@@ -1,0 +1,9 @@
+[INFO]  [2020-02-12 17:05:30.884986]: Connection to master established.
+[INFO]  [2020-02-12 17:05:30.885535]: You are client #2
+[INFO]  [2020-02-12 17:05:30.808926] [/tcp_server]: Client #1 has disconnected
+[INFO]  [2020-02-12 17:05:30.836269] [/tcp_server]: 2 active connection(s)
+[INFO]  [2020-02-12 17:05:30.875171] [/tcp_server]: 1 client(s) remaining
+[WARN]  [2020-02-12 17:05:31.294779] [/sensors/sensor_monitor]: Nitrous tank overpressure (3716.6027832, 3641.75392676 >1200 psig) detected!
+[WARN]  [2020-02-12 17:05:36.326663] [/sensors/sensor_monitor]: Nitrous tank overpressure (3731.60205078, 3656.75391064 >1200 psig) detected!
+[WARN]  [2020-02-12 17:05:41.297324] [/sensors/sensor_monitor]: Nitrous tank overpressure (3746.60131836, 3671.75391357 >1200 psig) detected!
+[WARN]  [2020-02-12 17:05:46.331264] [/sensors/sensor_monitor]: Nitrous tank overpressure (3761.62548828, 3686.75397266 >1200 psig) detected!

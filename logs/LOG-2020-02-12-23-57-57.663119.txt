@@ -1,0 +1,38 @@
+[INFO]  [2020-02-12 18:58:07.790932] [/tcp_server]: New connection: (1, ('192.168.1.7', 58005))
+[INFO]  [2020-02-12 18:58:07.813473] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 18:58:07.830491]: Connection to master established.
+[INFO]  [2020-02-12 18:58:07.830814]: You are client #1
+[INFO]  [2020-02-12 18:58:08.256504] [/tcp_server]: Connection with atleast one client restored.
+[DEBUG] [2020-02-12 18:58:20.229756] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 18:58:20.532652] [/watchdog]: Runtime has reached 134 minutes.
+[DEBUG] [2020-02-12 18:58:32.232934] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:58:44.221598] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:58:56.233532] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:59:08.229028] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:59:20.232328] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 18:59:21.532405] [/watchdog]: Runtime has reached 135 minutes.
+[DEBUG] [2020-02-12 18:59:32.232487] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:59:44.230000] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 18:59:56.230943] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:00:08.230162] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:00:20.229909] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:00:20.973467] [/tcp_server]: Command from #1: fire ematch
+[DEBUG] [2020-02-12 19:00:20.997013] [/readiness_admin]: Command matches current pattern: .*, fire ematch
+[INFO]  [2020-02-12 19:00:21.025001] [/hardware/ematch]: Firing e-match.
+[INFO]  [2020-02-12 19:00:21.531875] [/watchdog]: Runtime has reached 136 minutes.
+[DEBUG] [2020-02-12 19:00:32.230027] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:00:44.237743] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:00:56.227056] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:01:08.228345] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:01:20.228579] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:01:22.532729] [/watchdog]: Runtime has reached 137 minutes.
+[DEBUG] [2020-02-12 19:01:34.231250] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:01:46.230257] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:01:58.230376] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:02:10.233245] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:02:22.230416] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:02:23.524540] [/watchdog]: Runtime has reached 138 minutes.
+[DEBUG] [2020-02-12 19:02:34.229206] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:02:46.230138] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:02:58.230298] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:03:10.229356] [/tcp_server]: Sending keep-alive message.

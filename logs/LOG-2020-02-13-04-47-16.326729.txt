@@ -1,0 +1,390 @@
+[INFO]  [2020-02-12 23:47:29.633792] [/tcp_server]: New connection: (1, ('192.168.1.7', 64026))
+[INFO]  [2020-02-12 23:47:29.715168] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 23:47:30.143864] [/tcp_server]: Connection with atleast one client restored.
+[WARN]  [2020-02-12 23:47:31.530415] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (9719.56) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:47:31.561361] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (9715.12) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:47:31.602821] [/sensors/sensor_monitor]: Combustion chamber pressure reading (14575.28) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 23:47:31.614030] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (9718.15) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:47:31.642127] [/sensors/sensor_monitor]: Oxidizer tank pressure reading (14571.07) falls outside of nominal bounds ([0, 900])
+[ERROR] [2020-02-12 23:47:33.130793] [/sensors/sensor_monitor]: Combustion chamber pressure average (14505.24) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:47:33.189993] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9672.87) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:47:33.217410] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9671.46) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:47:33.242575] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9668.41) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:47:33.244759] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14501.02) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:47:33.321310] [/sensors/sensor_monitor]: Nitrous tank overpressure (14575.8701172, 14501.0236094 >1200 psig) detected!
+[INFO]  [2020-02-12 23:47:33.546013] [/tcp_server]: Command from #1: system figlet RVT
+[DEBUG] [2020-02-12 23:47:33.614819] [/readiness_admin]: Command matches current pattern: .*, system figlet RVT
+[INFO]  [2020-02-12 23:47:33.687383] [/exec]: $ figlet RVT
+[INFO]  [2020-02-12 23:47:33.983871] [/exec]: 
+ ______     _______ 
+|  _ \ \   / /_   _|
+| |_) \ \ / /  | |  
+|  _ < \ V /   | |  
+|_| \_\ \_/    |_|  
+                    
+
+[INFO]  [2020-02-12 23:47:34.036174] [/exec]: Finished with exit code 0
+[INFO]  [2020-02-12 23:47:34.311783] [/tcp_server]: Command from #1: system fortune | cowsay
+[DEBUG] [2020-02-12 23:47:34.404695] [/readiness_admin]: Command matches current pattern: .*, system fortune | cowsay
+[INFO]  [2020-02-12 23:47:34.482021] [/exec]: $ fortune | cowsay
+[DEBUG] [2020-02-12 23:47:37.095857] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 23:47:37.243869] [/exec]: 
+ _________________________________________
+/  My dear People.                        \
+|                                         |
+| My dear Bagginses and Boffins, and my   |
+| dear Tooks and Brandybucks, and Grubbs, |
+| and Chubbs, and Burrowses, and          |
+| Hornblowers, and Bolgers, Bracegirdles, |
+| Goodbodies, Brockhouses and Proudfoots. |
+| Also my good Sackville Bagginses that I |
+| welcome back at last to Bag End. Today  |
+| is my one hundred and eleventh          |
+| birthday: I am eleventy-one today!"     |
+|                                         |
+\ -- J. R. R. Tolkien                     /
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 23:47:37.294172] [/exec]: Finished with exit code 0
+[ERROR] [2020-02-12 23:47:38.241932] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9681.66) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:47:38.280229] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9678.61) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:47:38.304710] [/sensors/sensor_monitor]: Combustion chamber pressure average (14520.54) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:47:38.308647] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9683.07) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:47:38.337543] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14516.32) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:47:38.426095] [/sensors/sensor_monitor]: Nitrous tank overpressure (14591.1748047, 14516.3236367 >1200 psig) detected!
+[DEBUG] [2020-02-12 23:47:41.097255] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 23:47:41.687480] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (9739.76) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:47:41.748729] [/sensors/sensor_monitor]: Combustion chamber pressure reading (14605.59) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 23:47:41.757793] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (9735.31) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:47:41.792375] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (9738.35) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:47:41.800335] [/sensors/sensor_monitor]: Oxidizer tank pressure reading (14601.38) falls outside of nominal bounds ([0, 900])
+[ERROR] [2020-02-12 23:47:43.225500] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14531.32) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:47:43.416967] [/sensors/sensor_monitor]: Nitrous tank overpressure (14606.7695312, 14531.9232539 >1200 psig) detected!
+[DEBUG] [2020-02-12 23:47:47.093024] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 23:47:48.227577] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14546.32) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:47:48.418605] [/sensors/sensor_monitor]: Nitrous tank overpressure (14621.7685547, 14546.9234141 >1200 psig) detected!
+[DEBUG] [2020-02-12 23:47:51.098254] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 23:47:51.685723] [/sensors/sensor_monitor]: Oxidizer tank pressure reading (14631.37) falls outside of nominal bounds ([0, 900])
+[WARN]  [2020-02-12 23:47:51.750848] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (9759.96) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:47:51.812161] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (9755.51) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:47:51.815862] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (9758.55) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:47:51.829726] [/sensors/sensor_monitor]: Combustion chamber pressure reading (14635.88) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:47:53.235882] [/sensors/sensor_monitor]: Combustion chamber pressure average (14565.54) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:47:53.299631] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14561.32) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:47:53.424784] [/sensors/sensor_monitor]: Nitrous tank overpressure (14636.7685547, 14561.9238047 >1200 psig) detected!
+[DEBUG] [2020-02-12 23:47:57.092989] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 23:47:58.319265] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9723.27) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:47:58.367638] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9721.86) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:47:58.401205] [/sensors/sensor_monitor]: Combustion chamber pressure average (14580.84) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:47:58.413850] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9718.81) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:47:58.433798] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14576.62) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:47:58.513276] [/sensors/sensor_monitor]: Nitrous tank overpressure (14651.46875, 14576.6238145 >1200 psig) detected!
+[DEBUG] [2020-02-12 23:48:01.093762] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 23:48:01.818286] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (9780.17) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:48:01.875669] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (9775.71) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:48:01.903212] [/sensors/sensor_monitor]: Combustion chamber pressure reading (14666.18) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 23:48:01.910607] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (9778.75) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:48:01.927340] [/sensors/sensor_monitor]: Oxidizer tank pressure reading (14661.97) falls outside of nominal bounds ([0, 900])
+[INFO]  [2020-02-12 23:48:02.657852] [/watchdog]: Runtime has reached 423 minutes.
+[ERROR] [2020-02-12 23:48:03.338003] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9728.81) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:03.398563] [/sensors/sensor_monitor]: Combustion chamber pressure average (14595.84) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:48:03.421681] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9733.27) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:03.456811] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9731.86) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:03.494216] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14591.62) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:48:03.552732] [/sensors/sensor_monitor]: Nitrous tank overpressure (14666.4736328, 14591.6236816 >1200 psig) detected!
+[DEBUG] [2020-02-12 23:48:07.098715] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 23:48:08.441318] [/sensors/sensor_monitor]: Combustion chamber pressure average (14611.14) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:48:08.509913] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9743.47) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:08.525517] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9742.06) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:08.541876] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9739.01) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:08.600995] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14606.92) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:48:08.706666] [/sensors/sensor_monitor]: Nitrous tank overpressure (14681.7695312, 14606.9234492 >1200 psig) detected!
+[DEBUG] [2020-02-12 23:48:11.097440] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 23:48:11.919306] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (9795.91) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:48:11.981011] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (9800.36) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:48:12.011870] [/sensors/sensor_monitor]: Combustion chamber pressure reading (14696.48) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 23:48:12.030952] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (9798.96) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:48:12.058498] [/sensors/sensor_monitor]: Oxidizer tank pressure reading (14692.27) falls outside of nominal bounds ([0, 900])
+[ERROR] [2020-02-12 23:48:13.525469] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9753.67) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:13.580878] [/sensors/sensor_monitor]: Combustion chamber pressure average (14626.44) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:48:13.614574] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9749.21) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:13.625544] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9752.26) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:13.697254] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14622.22) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:48:13.814330] [/sensors/sensor_monitor]: Nitrous tank overpressure (14697.0800781, 14622.2234258 >1200 psig) detected!
+[DEBUG] [2020-02-12 23:48:17.095046] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 23:48:18.689983] [/sensors/sensor_monitor]: Combustion chamber pressure average (14641.74) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:48:18.718669] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9763.87) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:18.743779] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9762.46) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:18.782643] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9759.41) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:18.791223] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14637.52) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:48:18.875673] [/sensors/sensor_monitor]: Nitrous tank overpressure (14712.3691406, 14637.5230742 >1200 psig) detected!
+[INFO]  [2020-02-12 23:48:20.921097] [/tcp_server]: Command from #1: system figlet gandalf.local
+[DEBUG] [2020-02-12 23:48:20.981389] [/readiness_admin]: Command matches current pattern: .*, system figlet gandalf.local
+[INFO]  [2020-02-12 23:48:21.048539] [/exec]: $ figlet gandalf.local
+[INFO]  [2020-02-12 23:48:21.333269] [/exec]: 
+                       _       _  __  _                 _ 
+  __ _  __ _ _ __   __| | __ _| |/ _|| | ___   ___ __ _| |
+ / _` |/ _` | '_ \ / _` |/ _` | | |_ | |/ _ \ / __/ _` | |
+| (_| | (_| | | | | (_| | (_| | |  _|| | (_) | (_| (_| | |
+ \__, |\__,_|_| |_|\__,_|\__,_|_|_|(_)_|\___/ \___\__,_|_|
+ |___/                                                    
+
+[INFO]  [2020-02-12 23:48:21.387527] [/exec]: Finished with exit code 0
+[WARN]  [2020-02-12 23:48:22.032906] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (9819.15) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:48:22.055749] [/sensors/sensor_monitor]: Combustion chamber pressure reading (14726.79) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 23:48:22.090907] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (9820.56) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:48:22.121241] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (9816.11) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:48:22.137121] [/sensors/sensor_monitor]: Oxidizer tank pressure reading (14722.57) falls outside of nominal bounds ([0, 900])
+[ERROR] [2020-02-12 23:48:23.698068] [/sensors/sensor_monitor]: Combustion chamber pressure average (14656.74) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:48:23.750500] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9773.87) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:23.798200] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14652.52) falls outside of nominal bounds ([0, 900])
+[ERROR] [2020-02-12 23:48:23.844877] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9769.61) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:23.883836] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9772.66) falls outside of nominal bounds ([0, 95])
+[FATAL] [2020-02-12 23:48:23.929785] [/sensors/sensor_monitor]: Nitrous tank overpressure (14727.3681641, 14652.5233301 >1200 psig) detected!
+[DEBUG] [2020-02-12 23:48:27.101041] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 23:48:28.826984] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9779.81) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:28.894404] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9784.27) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:28.919951] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9782.86) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:28.946303] [/sensors/sensor_monitor]: Combustion chamber pressure average (14672.34) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:48:28.983743] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14668.12) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:48:29.051176] [/sensors/sensor_monitor]: Nitrous tank overpressure (14742.96875, 14668.1232773 >1200 psig) detected!
+[WARN]  [2020-02-12 23:48:32.015805] [/sensors/sensor_monitor]: Oxidizer tank pressure reading (14752.57) falls outside of nominal bounds ([0, 900])
+[ERROR] [2020-02-12 23:48:33.925772] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9794.47) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:33.954815] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9790.01) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:33.990317] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9793.06) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:34.022056] [/sensors/sensor_monitor]: Combustion chamber pressure average (14687.64) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:48:34.034794] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14683.42) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:48:34.118388] [/sensors/sensor_monitor]: Nitrous tank overpressure (14758.2695312, 14683.4231191 >1200 psig) detected!
+[DEBUG] [2020-02-12 23:48:37.095536] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 23:48:38.550742] [/tcp_server]: Command from #1: system figlet debian@gandalf.local
+[DEBUG] [2020-02-12 23:48:38.620690] [/readiness_admin]: Command matches current pattern: .*, system figlet debian@gandalf.local
+[INFO]  [2020-02-12 23:48:38.703812] [/exec]: $ figlet debian@gandalf.local
+[ERROR] [2020-02-12 23:48:38.988865] [/sensors/sensor_monitor]: Combustion chamber pressure average (14702.34) falls outside of nominal bounds ([0, 50])
+[INFO]  [2020-02-12 23:48:39.051452] [/exec]: 
+     _      _     _               ____                        _       _  __  _ 
+  __| | ___| |__ (_) __ _ _ __   / __ \  __ _  __ _ _ __   __| | __ _| |/ _|| |
+ / _` |/ _ \ '_ \| |/ _` | '_ \ / / _` |/ _` |/ _` | '_ \ / _` |/ _` | | |_ | |
+| (_| |  __/ |_) | | (_| | | | | | (_| | (_| | (_| | | | | (_| | (_| | |  _|| |
+ \__,_|\___|_.__/|_|\__,_|_| |_|\ \__,_|\__, |\__,_|_| |_|\__,_|\__,_|_|_|(_)_|
+                                 \____/ |___/                                  
+                 _ 
+  ___   ___ __ _| |
+ / _ \ / __/ _` | |
+| (_) | (_| (_| | |
+ \___/ \___\__,_|_|
+                   
+
+[ERROR] [2020-02-12 23:48:39.059404] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9802.86) falls outside of nominal bounds ([0, 95])
+[INFO]  [2020-02-12 23:48:39.113312] [/exec]: Finished with exit code 0
+[ERROR] [2020-02-12 23:48:39.120415] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9799.81) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:39.159286] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9804.47) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:39.208958] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14698.12) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:48:39.293662] [/sensors/sensor_monitor]: Nitrous tank overpressure (14772.96875, 14698.1229121 >1200 psig) detected!
+[WARN]  [2020-02-12 23:48:42.025648] [/sensors/sensor_monitor]: Oxidizer tank pressure reading (14782.57) falls outside of nominal bounds ([0, 900])
+[ERROR] [2020-02-12 23:48:44.033182] [/sensors/sensor_monitor]: Combustion chamber pressure average (14717.94) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:48:44.086366] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9814.67) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:44.105060] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9810.21) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:44.135535] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14713.72) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:48:44.424609] [/sensors/sensor_monitor]: Nitrous tank overpressure (14789.4707031, 14714.6227559 >1200 psig) detected!
+[DEBUG] [2020-02-12 23:48:47.111167] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 23:48:49.131273] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9824.87) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:49.191271] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9820.42) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:49.212918] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9823.46) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:49.234655] [/sensors/sensor_monitor]: Combustion chamber pressure average (14733.24) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:48:49.241360] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14729.02) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:48:49.467940] [/sensors/sensor_monitor]: Nitrous tank overpressure (14804.1982422, 14729.322877 >1200 psig) detected!
+[INFO]  [2020-02-12 23:48:51.286707] [/tcp_server]: Command from #1: system figlet GANDALF
+[DEBUG] [2020-02-12 23:48:51.341296] [/readiness_admin]: Command matches current pattern: .*, system figlet GANDALF
+[INFO]  [2020-02-12 23:48:51.410594] [/exec]: $ figlet GANDALF
+[INFO]  [2020-02-12 23:48:51.731829] [/exec]: 
+  ____    _    _   _ ____    _    _     _____ 
+ / ___|  / \  | \ | |  _ \  / \  | |   |  ___|
+| |  _  / _ \ |  \| | | | |/ _ \ | |   | |_   
+| |_| |/ ___ \| |\  | |_| / ___ \| |___|  _|  
+ \____/_/   \_\_| \_|____/_/   \_\_____|_|    
+                                              
+
+[INFO]  [2020-02-12 23:48:51.783733] [/exec]: Finished with exit code 0
+[WARN]  [2020-02-12 23:48:52.119096] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (9879.35) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:48:52.183436] [/sensors/sensor_monitor]: Combustion chamber pressure reading (14817.08) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 23:48:52.212636] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (9876.31) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:48:52.241641] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (9880.77) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:48:52.272840] [/sensors/sensor_monitor]: Oxidizer tank pressure reading (14812.87) falls outside of nominal bounds ([0, 900])
+[ERROR] [2020-02-12 23:48:54.233101] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9835.07) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:54.293951] [/sensors/sensor_monitor]: Combustion chamber pressure average (14748.54) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:48:54.313628] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9833.66) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:54.337712] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9830.62) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:54.413654] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14744.32) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:48:54.604596] [/sensors/sensor_monitor]: Nitrous tank overpressure (14819.1689453, 14744.3226934 >1200 psig) detected!
+[DEBUG] [2020-02-12 23:48:57.100461] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 23:48:59.363729] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9840.81) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:59.448950] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9845.27) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:59.495746] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9843.86) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:48:59.568896] [/sensors/sensor_monitor]: Combustion chamber pressure average (14763.84) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:48:59.655024] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14759.62) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:48:59.810181] [/sensors/sensor_monitor]: Nitrous tank overpressure (14834.4697266, 14759.622584 >1200 psig) detected!
+[WARN]  [2020-02-12 23:49:02.209660] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (9899.55) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:49:02.267008] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (9896.51) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:49:02.295465] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (9900.96) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:49:02.309780] [/sensors/sensor_monitor]: Combustion chamber pressure reading (14847.41) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 23:49:02.331843] [/sensors/sensor_monitor]: Oxidizer tank pressure reading (14843.17) falls outside of nominal bounds ([0, 900])
+[INFO]  [2020-02-12 23:49:02.684690] [/watchdog]: Runtime has reached 424 minutes.
+[ERROR] [2020-02-12 23:49:04.498042] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9855.47) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:49:04.610578] [/sensors/sensor_monitor]: Combustion chamber pressure average (14779.14) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:49:04.638268] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9854.06) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:49:04.686608] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9851.01) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:49:04.706339] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14774.92) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:49:04.816989] [/sensors/sensor_monitor]: Nitrous tank overpressure (14849.7705078, 14774.922582 >1200 psig) detected!
+[DEBUG] [2020-02-12 23:49:07.098011] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 23:49:09.161399] [/tcp_server]: Command from #1: system df -h
+[DEBUG] [2020-02-12 23:49:09.225176] [/readiness_admin]: Command matches current pattern: .*, system df -h
+[INFO]  [2020-02-12 23:49:09.296691] [/exec]: $ df -h
+[ERROR] [2020-02-12 23:49:09.684933] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9865.27) falls outside of nominal bounds ([0, 95])
+[INFO]  [2020-02-12 23:49:09.853101] [/exec]: 
+Filesystem      Size  Used Avail Use% Mounted on
+udev            216M     0  216M   0% /dev
+tmpfs            49M  2.2M   47M   5% /run
+/dev/mmcblk0p1   59G  4.8G   52G   9% /
+tmpfs           243M     0  243M   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           243M     0  243M   0% /sys/fs/cgroup
+
+[ERROR] [2020-02-12 23:49:09.813270] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9864.06) falls outside of nominal bounds ([0, 95])
+[INFO]  [2020-02-12 23:49:09.933899] [/exec]: Finished with exit code 0
+[ERROR] [2020-02-12 23:49:09.940519] [/sensors/sensor_monitor]: Combustion chamber pressure average (14794.14) falls outside of nominal bounds ([0, 50])
+[FATAL] [2020-02-12 23:49:10.019829] [/sensors/sensor_monitor]: Nitrous tank overpressure (14864.7695312, 14789.923125 >1200 psig) detected!
+[WARN]  [2020-02-12 23:49:12.309905] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (9919.75) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:49:12.354172] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (9916.71) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:49:12.401182] [/sensors/sensor_monitor]: Combustion chamber pressure reading (14877.70) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 23:49:12.428534] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (9921.16) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:49:12.446029] [/sensors/sensor_monitor]: Oxidizer tank pressure reading (14873.50) falls outside of nominal bounds ([0, 900])
+[ERROR] [2020-02-12 23:49:14.729902] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9876.07) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:49:14.759826] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9871.61) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:49:14.834508] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9874.86) falls outside of nominal bounds ([0, 95])
+[FATAL] [2020-02-12 23:49:15.019782] [/sensors/sensor_monitor]: Nitrous tank overpressure (14881.5683594, 14806.7231309 >1200 psig) detected!
+[DEBUG] [2020-02-12 23:49:17.102835] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 23:49:19.814477] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14821.12) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:49:20.023457] [/sensors/sensor_monitor]: Nitrous tank overpressure (14896.5859375, 14821.723207 >1200 psig) detected!
+[WARN]  [2020-02-12 23:49:22.437217] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (9936.91) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:49:22.493625] [/sensors/sensor_monitor]: Combustion chamber pressure reading (14907.98) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 23:49:22.510289] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (9939.95) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:49:22.533956] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (9941.37) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:49:22.551560] [/sensors/sensor_monitor]: Oxidizer tank pressure reading (14903.77) falls outside of nominal bounds ([0, 900])
+[ERROR] [2020-02-12 23:49:24.820651] [/sensors/sensor_monitor]: Combustion chamber pressure average (14840.34) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:49:24.847051] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14836.12) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:49:25.124193] [/sensors/sensor_monitor]: Nitrous tank overpressure (14911.8691406, 14837.0233457 >1200 psig) detected!
+[DEBUG] [2020-02-12 23:49:29.103585] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 23:49:29.889987] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9906.07) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:49:29.957473] [/sensors/sensor_monitor]: Combustion chamber pressure average (14855.04) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:49:30.015059] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9901.81) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:49:30.086783] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9904.86) falls outside of nominal bounds ([0, 95])
+[FATAL] [2020-02-12 23:49:30.197629] [/sensors/sensor_monitor]: Nitrous tank overpressure (14926.2763672, 14851.423373 >1200 psig) detected!
+[WARN]  [2020-02-12 23:49:32.579096] [/sensors/sensor_monitor]: Combustion chamber pressure reading (14938.28) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 23:49:32.648543] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (9961.56) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:49:32.690674] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (9960.16) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:49:32.751487] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (9957.11) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:49:32.808952] [/sensors/sensor_monitor]: Oxidizer tank pressure reading (14934.07) falls outside of nominal bounds ([0, 900])
+[DEBUG] [2020-02-12 23:49:35.091008] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 23:49:35.071540] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9916.67) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:49:35.185395] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9915.26) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:49:35.207545] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9912.21) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:49:35.234031] [/sensors/sensor_monitor]: Combustion chamber pressure average (14870.94) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:49:35.315323] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14866.72) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:49:35.487573] [/sensors/sensor_monitor]: Nitrous tank overpressure (14941.5712891, 14866.7231797 >1200 psig) detected!
+[DEBUG] [2020-02-12 23:49:39.097484] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 23:49:40.286032] [/sensors/sensor_monitor]: Combustion chamber pressure average (14886.54) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:49:40.354528] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9925.66) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:49:40.393529] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9922.61) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:49:40.432859] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9927.07) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:49:40.466168] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14882.32) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:49:40.603801] [/sensors/sensor_monitor]: Nitrous tank overpressure (14957.1679688, 14882.323127 >1200 psig) detected!
+[WARN]  [2020-02-12 23:49:42.740614] [/sensors/sensor_monitor]: Combustion chamber pressure reading (14968.60) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 23:49:42.797719] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (9981.77) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:49:42.821681] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (9977.31) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:49:42.854179] [/sensors/sensor_monitor]: Oxidizer tank pressure reading (14964.37) falls outside of nominal bounds ([0, 900])
+[WARN]  [2020-02-12 23:49:42.886773] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (9980.56) falls outside of nominal bounds ([0, 95])
+[DEBUG] [2020-02-12 23:49:45.099361] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 23:49:45.325976] [/sensors/sensor_monitor]: Combustion chamber pressure average (14901.84) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:49:45.390356] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9937.27) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:49:45.408911] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9935.86) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:49:45.417045] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9932.81) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:49:45.456603] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14897.62) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:49:45.636859] [/sensors/sensor_monitor]: Nitrous tank overpressure (14972.7705078, 14897.9230371 >1200 psig) detected!
+[DEBUG] [2020-02-12 23:49:49.103571] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 23:49:50.430083] [/sensors/sensor_monitor]: Combustion chamber pressure average (14917.14) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:49:50.500128] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9946.06) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:49:50.537269] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9947.47) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:49:50.546355] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9943.01) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:49:50.554599] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14912.92) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:49:50.686923] [/sensors/sensor_monitor]: Nitrous tank overpressure (14987.8310547, 14912.9232656 >1200 psig) detected!
+[WARN]  [2020-02-12 23:49:52.729098] [/sensors/sensor_monitor]: Oxidizer tank pressure reading (14994.67) falls outside of nominal bounds ([0, 900])
+[DEBUG] [2020-02-12 23:49:55.094081] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 23:49:55.434327] [/sensors/sensor_monitor]: Combustion chamber pressure average (14932.14) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:49:55.452180] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14927.92) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:49:55.709734] [/sensors/sensor_monitor]: Nitrous tank overpressure (15003.3691406, 14928.523168 >1200 psig) detected!
+[DEBUG] [2020-02-12 23:49:59.094328] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 23:50:00.415025] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14942.92) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:50:00.710398] [/sensors/sensor_monitor]: Nitrous tank overpressure (15018.3691406, 14943.522916 >1200 psig) detected!
+[WARN]  [2020-02-12 23:50:02.818354] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (10020.75) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:50:02.887204] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (10017.73) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:50:02.904704] [/sensors/sensor_monitor]: Combustion chamber pressure reading (15029.18) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 23:50:02.920640] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (10022.17) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:50:02.934285] [/sensors/sensor_monitor]: Oxidizer tank pressure reading (15024.97) falls outside of nominal bounds ([0, 900])
+[INFO]  [2020-02-12 23:50:03.670132] [/watchdog]: Runtime has reached 425 minutes.
+[ERROR] [2020-02-12 23:50:05.536954] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9976.26) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:50:05.606478] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9977.67) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:50:05.642502] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9973.22) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:50:05.709512] [/sensors/sensor_monitor]: Combustion chamber pressure average (14962.44) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:50:05.734239] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14958.22) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:50:05.837881] [/sensors/sensor_monitor]: Nitrous tank overpressure (15033.0800781, 14958.2229648 >1200 psig) detected!
+[DEBUG] [2020-02-12 23:50:09.094163] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 23:50:10.682529] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9983.42) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:50:10.733447] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9987.87) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:50:10.754782] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9986.46) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:50:10.784232] [/sensors/sensor_monitor]: Combustion chamber pressure average (14977.74) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:50:10.826120] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14973.52) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:50:10.909970] [/sensors/sensor_monitor]: Nitrous tank overpressure (15048.3964844, 14973.5233047 >1200 psig) detected!
+[WARN]  [2020-02-12 23:50:12.915105] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (10040.95) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:50:12.952639] [/sensors/sensor_monitor]: Combustion chamber pressure reading (15059.50) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 23:50:13.000904] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (10037.91) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:50:13.014753] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (10042.37) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:50:13.030495] [/sensors/sensor_monitor]: Oxidizer tank pressure reading (15055.28) falls outside of nominal bounds ([0, 900])
+[DEBUG] [2020-02-12 23:50:15.096733] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 23:50:15.829459] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (9996.86) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:50:15.885299] [/sensors/sensor_monitor]: Combustion chamber pressure average (14993.34) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:50:15.925434] [/sensors/sensor_monitor]: Oxidizer tank temperature average (9993.82) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:50:15.936530] [/sensors/sensor_monitor]: Oxidizer tank pressure average (14989.12) falls outside of nominal bounds ([0, 900])
+[ERROR] [2020-02-12 23:50:15.954380] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (9998.27) falls outside of nominal bounds ([0, 95])
+[FATAL] [2020-02-12 23:50:16.030130] [/sensors/sensor_monitor]: Nitrous tank overpressure (15063.96875, 14989.123373 >1200 psig) detected!
+[DEBUG] [2020-02-12 23:50:19.103428] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 23:50:20.825086] [/sensors/sensor_monitor]: Oxidizer tank pressure average (15004.12) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:50:21.038317] [/sensors/sensor_monitor]: Nitrous tank overpressure (15079.5693359, 15004.7235605 >1200 psig) detected!
+[WARN]  [2020-02-12 23:50:22.918307] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (10060.95) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:50:22.952570] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (10057.91) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:50:22.998852] [/sensors/sensor_monitor]: Combustion chamber pressure reading (15089.48) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 23:50:23.038796] [/sensors/sensor_monitor]: Oxidizer tank pressure reading (15085.27) falls outside of nominal bounds ([0, 900])
+[WARN]  [2020-02-12 23:50:23.102978] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (10062.56) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:50:25.841608] [/sensors/sensor_monitor]: Oxidizer tank temperature average (10013.82) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:50:25.930437] [/sensors/sensor_monitor]: Combustion chamber pressure average (15023.34) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:50:25.954713] [/sensors/sensor_monitor]: Oxidizer tank pressure average (15019.12) falls outside of nominal bounds ([0, 900])
+[ERROR] [2020-02-12 23:50:26.046099] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (10017.06) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:50:26.091691] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (10018.47) falls outside of nominal bounds ([0, 95])
+[FATAL] [2020-02-12 23:50:26.151929] [/sensors/sensor_monitor]: Nitrous tank overpressure (15093.96875, 15019.1234941 >1200 psig) detected!
+[DEBUG] [2020-02-12 23:50:29.095138] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 23:50:30.927373] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (10028.47) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:50:30.993685] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (10027.06) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 23:50:31.011861] [/sensors/sensor_monitor]: Oxidizer tank pressure average (15034.42) falls outside of nominal bounds ([0, 900])
+[ERROR] [2020-02-12 23:50:31.054760] [/sensors/sensor_monitor]: Oxidizer tank temperature average (10024.22) falls outside of nominal bounds ([0, 95])
+[FATAL] [2020-02-12 23:50:31.157520] [/sensors/sensor_monitor]: Nitrous tank overpressure (15109.5976562, 15034.7234902 >1200 psig) detected!
+[WARN]  [2020-02-12 23:50:33.021026] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (10078.11) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:50:33.059430] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (10081.18) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:50:33.114506] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (10082.56) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 23:50:33.127012] [/sensors/sensor_monitor]: Oxidizer tank pressure reading (15115.58) falls outside of nominal bounds ([0, 900])
+[WARN]  [2020-02-12 23:50:33.180897] [/sensors/sensor_monitor]: Combustion chamber pressure reading (15120.08) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 23:50:36.021001] [/sensors/sensor_monitor]: Oxidizer tank pressure average (15049.72) falls outside of nominal bounds ([0, 900])
+[FATAL] [2020-02-12 23:50:36.220759] [/sensors/sensor_monitor]: Nitrous tank overpressure (15125.1689453, 15050.3236074 >1200 psig) detected!

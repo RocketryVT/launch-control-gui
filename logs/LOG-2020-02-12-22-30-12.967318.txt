@@ -1,0 +1,42 @@
+[INFO]  [2020-02-12 17:30:20.466064] [/tcp_server]: New connection: (1, ('192.168.1.7', 56806))
+[INFO]  [2020-02-12 17:30:20.518242] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 17:30:20.572248]: Connection to master established.
+[INFO]  [2020-02-12 17:30:20.572675]: You are client #1
+[INFO]  [2020-02-12 17:30:21.277239] [/tcp_server]: Connection with atleast one client restored.
+[WARN]  [2020-02-12 17:30:21.525844] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:30:21.585200] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:30:21.602464] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:30:21.616263] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:30:21.632542] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:30:21.890269] [/sensors/sensor_monitor]: Nitrous tank overpressure (8188.40380859, 8113.55406152 >1200 psig) detected!
+[INFO]  [2020-02-12 17:30:23.153255] [/tcp_server]: Command from #1: abort
+[INFO]  [2020-02-12 17:30:23.193819] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:30:23.226889] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:30:23.264695] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:30:23.302728] [/readiness_admin]: Current: idiot check
+[INFO]  [2020-02-12 17:30:25.374033] [/tcp_server]: Command from #1: system fortune | cowsay
+[DEBUG] [2020-02-12 17:30:25.414894] [/readiness_admin]: Command matches persistent pattern: system .*, system fortune | cowsay
+[INFO]  [2020-02-12 17:30:25.463206] [/exec]: $ fortune | cowsay
+[WARN]  [2020-02-12 17:30:27.170224] [/sensors/sensor_monitor]: Nitrous tank overpressure (8203.40136719, 8128.5540459 >1200 psig) detected!
+[INFO]  [2020-02-12 17:30:28.303297] [/exec]: 
+ _______________________________________
+/ Q: What do monsters eat? A: Things.   \
+|                                       |
+| Q: What do monsters drink? A: Coke.   |
+\ (Because Things go better with Coke.) /
+ ---------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 17:30:28.343393] [/exec]: Finished with exit code 0
+[INFO]  [2020-02-12 17:30:30.288997] [/tcp_server]: Command from #1: fire ematch
+[INFO]  [2020-02-12 17:30:30.321925] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:30:30.364784] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:30:30.397667] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:30:30.423492] [/readiness_admin]: Current: idiot check
+[INFO]  [2020-02-12 17:30:30.524462] [/watchdog]: Runtime has reached 46 minutes.
+[WARN]  [2020-02-12 17:30:32.087209] [/sensors/sensor_monitor]: Nitrous tank overpressure (8219.00195312, 8144.15406738 >1200 psig) detected!
+[WARN]  [2020-02-12 17:30:37.091704] [/sensors/sensor_monitor]: Nitrous tank overpressure (8234.00292969, 8159.15407129 >1200 psig) detected!

@@ -1,0 +1,5 @@
+[INFO]  [2020-02-12 19:58:40.357700] [/tcp_server]: New connection: (1, ('192.168.1.7', 58522))
+[INFO]  [2020-02-12 19:58:40.443306] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 19:58:40.513897]: Connection to master established.
+[INFO]  [2020-02-12 19:58:40.518244]: You are client #1
+[INFO]  [2020-02-12 19:58:40.774258] [/tcp_server]: Connection with atleast one client restored.

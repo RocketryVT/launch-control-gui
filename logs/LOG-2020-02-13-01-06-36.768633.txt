@@ -1,0 +1,7 @@
+[INFO]  [2020-02-12 20:06:41.055251] [/tcp_server]: New connection: (1, ('192.168.1.7', 58568))
+[INFO]  [2020-02-12 20:06:41.090142] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 20:06:41.132237]: Connection to master established.
+[INFO]  [2020-02-12 20:06:41.135954]: You are client #1
+[INFO]  [2020-02-12 20:06:41.777919] [/tcp_server]: Connection with atleast one client restored.
+[WARN]  [2020-02-12 20:06:44.145221] [/sensors/sensor_monitor]: Nitrous tank overpressure (5966.33789062, 5891.48608496 >1200 psig) detected!
+[DEBUG] [2020-02-12 20:06:46.716959] [/tcp_server]: Sending keep-alive message.

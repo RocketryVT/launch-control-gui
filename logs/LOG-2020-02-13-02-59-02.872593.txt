@@ -1,0 +1,55 @@
+[INFO]  [2020-02-12 21:59:07.522716] [/tcp_server]: New connection: (1, ('192.168.1.7', 59889))
+[INFO]  [2020-02-12 21:59:07.551516] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 21:59:08.144960] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 21:59:09.399602] [/tcp_server]: Command from #1: system fortune | cowsay
+[DEBUG] [2020-02-12 21:59:09.444761] [/readiness_admin]: Command matches persistent pattern: system .*, system fortune | cowsay
+[INFO]  [2020-02-12 21:59:09.481592] [/exec]: $ fortune | cowsay
+[INFO]  [2020-02-12 21:59:10.762474] [/exec]: 
+ ______________________________________
+/ Your reasoning is excellent -- it's  \
+| only your basic assumptions that are |
+\ wrong.                               /
+ --------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 21:59:10.790283] [/exec]: Finished with exit code 0
+[DEBUG] [2020-02-12 21:59:13.117361] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:59:17.103365] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:59:21.100738] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:59:25.101009] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:59:29.102126] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:59:33.100828] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:59:37.103129] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:59:41.098307] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:59:45.106101] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:59:49.103131] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:59:53.099576] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:59:57.109873] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 22:00:00.528548] [/watchdog]: Runtime has reached 315 minutes.
+[DEBUG] [2020-02-12 22:00:03.106784] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:00:07.103268] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:00:11.116541] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:00:15.108312] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:00:19.100983] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:00:23.100871] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:00:27.099716] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:00:31.099695] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:00:35.097578] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:00:39.100615] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:00:43.100818] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:00:47.098397] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:00:51.099659] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:00:55.098039] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:00:59.098413] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 22:01:00.531156] [/watchdog]: Runtime has reached 316 minutes.
+[DEBUG] [2020-02-12 22:01:03.098008] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:01:07.107687] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:01:11.101727] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:01:15.098142] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:01:19.099636] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:01:23.101822] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:01:27.100583] [/tcp_server]: Sending keep-alive message.

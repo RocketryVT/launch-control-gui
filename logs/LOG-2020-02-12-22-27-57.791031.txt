@@ -1,0 +1,8 @@
+[INFO]  [2020-02-12 17:28:02.746332] [/tcp_server]: New connection: (1, ('192.168.1.7', 56796))
+[INFO]  [2020-02-12 17:28:02.788172] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 17:28:02.817238]: Connection to master established.
+[INFO]  [2020-02-12 17:28:02.817575]: You are client #1
+[INFO]  [2020-02-12 17:28:03.272368] [/tcp_server]: Connection with atleast one client restored.
+[WARN]  [2020-02-12 17:28:05.297360] [/sensors/sensor_monitor]: Nitrous tank overpressure (7778.6015625, 7703.75520801 >1200 psig) detected!
+[WARN]  [2020-02-12 17:28:10.295707] [/sensors/sensor_monitor]: Nitrous tank overpressure (7793.60107422, 7718.75530371 >1200 psig) detected!
+[WARN]  [2020-02-12 17:28:15.394198] [/sensors/sensor_monitor]: Nitrous tank overpressure (7808.90234375, 7734.05515527 >1200 psig) detected!

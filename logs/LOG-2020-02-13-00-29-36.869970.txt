@@ -1,0 +1,27 @@
+[INFO]  [2020-02-12 19:29:42.152726] [/tcp_server]: New connection: (1, ('192.168.1.7', 58333))
+[INFO]  [2020-02-12 19:29:42.176445] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 19:29:42.190843]: Connection to master established.
+[INFO]  [2020-02-12 19:29:42.191201]: You are client #1
+[INFO]  [2020-02-12 19:29:42.778909] [/tcp_server]: Connection with atleast one client restored.
+[DEBUG] [2020-02-12 19:29:46.712338] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:29:50.710547] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:29:51.842277] [/tcp_server]: Command from #1: print whitelist
+[DEBUG] [2020-02-12 19:29:51.869006] [/readiness_admin]: Command matches current pattern: .*, print whitelist
+[INFO]  [2020-02-12 19:29:51.898122] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 19:29:51.915255] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 19:29:51.937612] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-12 19:29:51.967810] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-12 19:29:51.991511] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-12 19:29:52.011056] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-12 19:29:52.033114] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-12 19:29:52.055691] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[INFO]  [2020-02-12 19:29:52.077164] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-12 19:29:52.095097] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[INFO]  [2020-02-12 19:29:52.112968] [/readiness_admin]: RL-8: abort, .*
+[INFO]  [2020-02-12 19:29:52.133225] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-12 19:29:52.156690] [/readiness_admin]: RL-10: .*
+[DEBUG] [2020-02-12 19:29:54.710115] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:29:58.711761] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:30:02.710282] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:30:06.710807] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:30:10.712584] [/tcp_server]: Sending keep-alive message.

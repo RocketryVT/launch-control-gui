@@ -1,0 +1,24 @@
+[INFO]  [2020-02-12 17:28:52.045482] [/tcp_server]: New connection: (1, ('192.168.1.7', 56799))
+[INFO]  [2020-02-12 17:28:52.089871] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 17:28:52.114921]: Connection to master established.
+[INFO]  [2020-02-12 17:28:52.115282]: You are client #1
+[INFO]  [2020-02-12 17:28:52.282160] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 17:28:53.333506] [/tcp_server]: Command from #1: system fortune | cowsay
+[DEBUG] [2020-02-12 17:28:53.379804] [/readiness_admin]: Command matches persistent pattern: system .*, system fortune | cowsay
+[INFO]  [2020-02-12 17:28:53.413261] [/exec]: $ fortune | cowsay
+[INFO]  [2020-02-12 17:28:55.164116] [/exec]: 
+ _________________________________________
+< Q: How do you keep a moron in suspense? >
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 17:28:55.201226] [/exec]: Finished with exit code 0
+[WARN]  [2020-02-12 17:28:55.796189] [/sensors/sensor_monitor]: Nitrous tank overpressure (7930.10205078, 7855.25411914 >1200 psig) detected!
+[WARN]  [2020-02-12 17:29:00.901948] [/sensors/sensor_monitor]: Nitrous tank overpressure (7945.40185547, 7870.55408203 >1200 psig) detected!
+[WARN]  [2020-02-12 17:29:05.896139] [/sensors/sensor_monitor]: Nitrous tank overpressure (7960.40234375, 7885.55419238 >1200 psig) detected!
+[WARN]  [2020-02-12 17:29:10.897497] [/sensors/sensor_monitor]: Nitrous tank overpressure (7975.40234375, 7900.55431836 >1200 psig) detected!
+[WARN]  [2020-02-12 17:29:15.989144] [/sensors/sensor_monitor]: Nitrous tank overpressure (7990.70166016, 7915.85431641 >1200 psig) detected!

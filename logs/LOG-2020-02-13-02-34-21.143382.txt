@@ -1,0 +1,33 @@
+[INFO]  [2020-02-12 21:34:25.453464] [/tcp_server]: New connection: (1, ('192.168.1.7', 59633))
+[INFO]  [2020-02-12 21:34:25.482598] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 21:34:25.500740]: Connection to master established.
+[INFO]  [2020-02-12 21:34:25.501331]: You are client #1
+[INFO]  [2020-02-12 21:34:25.775865] [/tcp_server]: Connection with atleast one client restored.
+[DEBUG] [2020-02-12 21:34:28.718884] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 21:34:29.122601] [/tcp_server]: Command from #1: system fortune | cowsay
+[DEBUG] [2020-02-12 21:34:29.147379] [/readiness_admin]: Command matches current pattern: .*, system fortune | cowsay
+[INFO]  [2020-02-12 21:34:29.189890] [/exec]: $ fortune | cowsay
+[INFO]  [2020-02-12 21:34:30.298189] [/exec]: 
+ _______________________________________
+/ I dote on his very absence.           \
+|                                       |
+| -- William Shakespeare, "The Merchant |
+\ of Venice"                            /
+ ---------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 21:34:30.343122] [/exec]: Finished with exit code 0
+[DEBUG] [2020-02-12 21:34:32.717036] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:34:36.726088] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:34:40.718740] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 21:34:44.530454] [/watchdog]: Runtime has reached 290 minutes.
+[DEBUG] [2020-02-12 21:34:46.717594] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:34:50.721562] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:34:54.721812] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:34:58.716418] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:35:02.713940] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:35:06.716776] [/tcp_server]: Sending keep-alive message.

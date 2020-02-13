@@ -1,0 +1,25 @@
+[INFO]  [2020-02-12 18:39:29.277609] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 18:39:29.319612] [/tcp_server]: New connection: (1, ('192.168.1.7', 57876))
+[INFO]  [2020-02-12 18:39:29.428396] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 18:39:29.374570] [/sensors/sensor_monitor]: OTP: 20630.32 psig / CCP: 20634.03 psig / OTT: 13754.64 F / CCT1: 13756.19 F / CCT2: 13756.18 F
+[INFO]  [2020-02-12 18:39:29.514479]: Connection to master established.
+[INFO]  [2020-02-12 18:39:29.514840]: You are client #1
+[INFO]  [2020-02-12 18:39:29.675498] [/sensors/sensor_monitor]: OTP: 20630.60 psig / CCP: 20634.63 psig / OTT: 13754.84 F / CCT1: 13756.79 F / CCT2: 13756.57 F
+[INFO]  [2020-02-12 18:39:29.797946] [/sensors/sensor_monitor]: OTP: 20631.20 psig / CCP: 20635.23 psig / OTT: 13755.45 F / CCT1: 13757.19 F / CCT2: 13756.97 F
+[INFO]  [2020-02-12 18:39:29.903908] [/sensors/sensor_monitor]: OTP: 20631.50 psig / CCP: 20635.83 psig / OTT: 13755.84 F / CCT1: 13757.39 F / CCT2: 13757.38 F
+[INFO]  [2020-02-12 18:39:30.102137] [/sensors/sensor_monitor]: OTP: 20633.00 psig / CCP: 20636.43 psig / OTT: 13756.24 F / CCT1: 13757.79 F / CCT2: 13757.77 F
+[INFO]  [2020-02-12 18:39:30.287770] [/sensors/sensor_monitor]: OTP: 20633.33 psig / CCP: 20637.03 psig / OTT: 13756.65 F / CCT1: 13758.19 F / CCT2: 13758.17 F
+[INFO]  [2020-02-12 18:39:30.502343] [/sensors/sensor_monitor]: OTP: 20634.20 psig / CCP: 20637.93 psig / OTT: 13757.05 F / CCT1: 13758.79 F / CCT2: 13758.77 F
+[INFO]  [2020-02-12 18:39:30.685612] [/sensors/sensor_monitor]: OTP: 20634.50 psig / CCP: 20638.23 psig / OTT: 13757.44 F / CCT1: 13758.99 F / CCT2: 13758.97 F
+[INFO]  [2020-02-12 18:39:30.889946] [/sensors/sensor_monitor]: OTP: 20635.10 psig / CCP: 20638.83 psig / OTT: 13757.84 F / CCT1: 13759.39 F / CCT2: 13759.37 F
+[INFO]  [2020-02-12 18:39:31.091554] [/sensors/sensor_monitor]: OTP: 20635.71 psig / CCP: 20639.43 psig / OTT: 13758.24 F / CCT1: 13759.81 F / CCT2: 13759.78 F
+[INFO]  [2020-02-12 18:39:31.278331] [/sensors/sensor_monitor]: OTP: 20636.30 psig / CCP: 20640.03 psig / OTT: 13758.64 F / CCT1: 13760.19 F / CCT2: 13760.17 F
+[INFO]  [2020-02-12 18:39:31.481700] [/sensors/sensor_monitor]: OTP: 20636.90 psig / CCP: 20640.63 psig / OTT: 13759.04 F / CCT1: 13760.59 F / CCT2: 13760.57 F
+[INFO]  [2020-02-12 18:39:31.688952] [/sensors/sensor_monitor]: OTP: 20637.51 psig / CCP: 20641.23 psig / OTT: 13759.44 F / CCT1: 13760.99 F / CCT2: 13760.97 F
+[INFO]  [2020-02-12 18:39:31.888951] [/sensors/sensor_monitor]: OTP: 20638.11 psig / CCP: 20641.83 psig / OTT: 13759.84 F / CCT1: 13761.39 F / CCT2: 13761.37 F
+[INFO]  [2020-02-12 18:39:32.081146] [/sensors/sensor_monitor]: OTP: 20638.71 psig / CCP: 20642.43 psig / OTT: 13760.24 F / CCT1: 13761.80 F / CCT2: 13761.77 F
+[INFO]  [2020-02-12 18:39:32.297453] [/sensors/sensor_monitor]: OTP: 20639.33 psig / CCP: 20643.03 psig / OTT: 13760.64 F / CCT1: 13762.19 F / CCT2: 13762.17 F
+[INFO]  [2020-02-12 18:39:32.484175] [/sensors/sensor_monitor]: OTP: 20639.90 psig / CCP: 20643.63 psig / OTT: 13761.04 F / CCT1: 13762.59 F / CCT2: 13762.59 F
+[INFO]  [2020-02-12 18:39:32.654007] [/sensors/sensor_monitor]: OTP: 20640.53 psig / CCP: 20644.23 psig / OTT: 13761.44 F / CCT1: 13762.99 F / CCT2: 13762.97 F
+[INFO]  [2020-02-12 18:39:32.882160] [/sensors/sensor_monitor]: OTP: 20641.10 psig / CCP: 20644.83 psig / OTT: 13761.84 F / CCT1: 13763.39 F / CCT2: 13763.37 F
+[INFO]  [2020-02-12 18:39:33.092492] [/sensors/sensor_monitor]: OTP: 20641.72 psig / CCP: 20645.43 psig / OTT: 13762.24 F / CCT1: 13763.79 F / CCT2: 13763.77 F

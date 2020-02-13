@@ -1,0 +1,23 @@
+[INFO]  [2020-02-12 19:07:46.688743] [/tcp_server]: New connection: (1, ('192.168.1.7', 58079))
+[INFO]  [2020-02-12 19:07:46.713201] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 19:07:46.728233]: Connection to master established.
+[INFO]  [2020-02-12 19:07:46.728587]: You are client #1
+[INFO]  [2020-02-12 19:07:47.258533] [/tcp_server]: Connection with atleast one client restored.
+[DEBUG] [2020-02-12 19:07:58.227264] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:08:10.226238] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:08:17.682586] [/tcp_server]: Command from #1: system rosnode kill /tcp_server
+[DEBUG] [2020-02-12 19:08:17.711447] [/readiness_admin]: Command matches current pattern: .*, system rosnode kill /tcp_server
+[INFO]  [2020-02-12 19:08:17.733255] [/exec]: $ rosnode kill /tcp_server
+[DEBUG] [2020-02-12 19:08:24.778498] [/readiness_admin]: connecting to gandalf 40435
+[INFO]  [2020-02-12 19:09:55.752393] [/tcp_server]: New connection: (1, ('192.168.1.7', 58091))
+[INFO]  [2020-02-12 19:09:55.780154] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 19:09:55.812475] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 19:09:55.833091]: Connection to master established.
+[INFO]  [2020-02-12 19:09:55.833432]: You are client #1
+[DEBUG] [2020-02-12 19:09:58.715112] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:10:02.712691] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:10:06.710036] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:10:10.712658] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:10:14.710352] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:10:18.710580] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:10:22.709734] [/tcp_server]: Sending keep-alive message.

@@ -1,0 +1,152 @@
+[INFO]  [2020-02-12 17:15:11.945390] [/tcp_server]: New connection: (1, ('192.168.1.7', 56559))
+[INFO]  [2020-02-12 17:15:11.987740] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 17:15:12.017286]: Connection to master established.
+[INFO]  [2020-02-12 17:15:12.017613]: You are client #1
+[WARN]  [2020-02-12 17:15:12.102798] [/sensors/sensor_monitor]: Nitrous tank overpressure (5459.00244141, 5384.1538916 >1200 psig) detected!
+[INFO]  [2020-02-12 17:15:12.269862] [/tcp_server]: Connection with atleast one client restored.
+[WARN]  [2020-02-12 17:15:17.092973] [/sensors/sensor_monitor]: Nitrous tank overpressure (5474.00244141, 5399.15400684 >1200 psig) detected!
+[INFO]  [2020-02-12 17:15:20.525613] [/watchdog]: Runtime has reached 31 minutes.
+[WARN]  [2020-02-12 17:15:20.991214] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:15:21.047036] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:15:21.081676] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:15:21.086065] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:15:21.091212] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:15:22.091886] [/sensors/sensor_monitor]: Nitrous tank overpressure (5489.00292969, 5414.15391504 >1200 psig) detected!
+[WARN]  [2020-02-12 17:15:27.197222] [/sensors/sensor_monitor]: Nitrous tank overpressure (5504.30224609, 5429.45394824 >1200 psig) detected!
+[WARN]  [2020-02-12 17:15:32.198774] [/sensors/sensor_monitor]: Nitrous tank overpressure (5519.30664062, 5444.45394238 >1200 psig) detected!
+[WARN]  [2020-02-12 17:15:37.294259] [/sensors/sensor_monitor]: Nitrous tank overpressure (5534.60107422, 5459.75382617 >1200 psig) detected!
+[WARN]  [2020-02-12 17:15:42.290801] [/sensors/sensor_monitor]: Nitrous tank overpressure (5549.6015625, 5474.7538916 >1200 psig) detected!
+[WARN]  [2020-02-12 17:15:47.389721] [/sensors/sensor_monitor]: Nitrous tank overpressure (5564.90136719, 5490.05383301 >1200 psig) detected!
+[WARN]  [2020-02-12 17:15:52.501479] [/sensors/sensor_monitor]: Nitrous tank overpressure (5580.20214844, 5505.35391406 >1200 psig) detected!
+[WARN]  [2020-02-12 17:15:57.620703] [/sensors/sensor_monitor]: Nitrous tank overpressure (5595.50146484, 5520.65403613 >1200 psig) detected!
+[WARN]  [2020-02-12 17:16:02.686087] [/sensors/sensor_monitor]: Nitrous tank overpressure (5610.80273438, 5535.95408887 >1200 psig) detected!
+[WARN]  [2020-02-12 17:16:07.691100] [/sensors/sensor_monitor]: Nitrous tank overpressure (5625.80224609, 5550.95391504 >1200 psig) detected!
+[WARN]  [2020-02-12 17:16:12.694608] [/sensors/sensor_monitor]: Nitrous tank overpressure (5640.82275391, 5565.95392383 >1200 psig) detected!
+[WARN]  [2020-02-12 17:16:17.794285] [/sensors/sensor_monitor]: Nitrous tank overpressure (5656.10205078, 5581.25393848 >1200 psig) detected!
+[WARN]  [2020-02-12 17:16:21.022188] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[INFO]  [2020-02-12 17:16:21.527450] [/watchdog]: Runtime has reached 32 minutes.
+[WARN]  [2020-02-12 17:16:22.799015] [/sensors/sensor_monitor]: Nitrous tank overpressure (5671.10253906, 5596.25409766 >1200 psig) detected!
+[WARN]  [2020-02-12 17:16:27.821601] [/sensors/sensor_monitor]: Nitrous tank overpressure (5686.11962891, 5611.25411133 >1200 psig) detected!
+[WARN]  [2020-02-12 17:16:32.886880] [/sensors/sensor_monitor]: Nitrous tank overpressure (5701.40185547, 5626.55416895 >1200 psig) detected!
+[WARN]  [2020-02-12 17:16:37.895488] [/sensors/sensor_monitor]: Nitrous tank overpressure (5716.40527344, 5641.55400879 >1200 psig) detected!
+[WARN]  [2020-02-12 17:16:42.995300] [/sensors/sensor_monitor]: Nitrous tank overpressure (5731.70166016, 5656.85399902 >1200 psig) detected!
+[WARN]  [2020-02-12 17:16:47.991635] [/sensors/sensor_monitor]: Nitrous tank overpressure (5746.70751953, 5671.85396094 >1200 psig) detected!
+[WARN]  [2020-02-12 17:16:53.094916] [/sensors/sensor_monitor]: Nitrous tank overpressure (5762.00146484, 5687.15391992 >1200 psig) detected!
+[WARN]  [2020-02-12 17:16:58.191442] [/sensors/sensor_monitor]: Nitrous tank overpressure (5777.31201172, 5702.45417773 >1200 psig) detected!
+[WARN]  [2020-02-12 17:17:03.194659] [/sensors/sensor_monitor]: Nitrous tank overpressure (5792.30371094, 5717.4541543 >1200 psig) detected!
+[WARN]  [2020-02-12 17:17:08.194053] [/sensors/sensor_monitor]: Nitrous tank overpressure (5807.30224609, 5732.4541748 >1200 psig) detected!
+[WARN]  [2020-02-12 17:17:13.294385] [/sensors/sensor_monitor]: Nitrous tank overpressure (5822.60253906, 5747.75389355 >1200 psig) detected!
+[WARN]  [2020-02-12 17:17:18.326606] [/sensors/sensor_monitor]: Nitrous tank overpressure (5837.60498047, 5762.75374023 >1200 psig) detected!
+[WARN]  [2020-02-12 17:17:21.025041] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[INFO]  [2020-02-12 17:17:22.524937] [/watchdog]: Runtime has reached 33 minutes.
+[WARN]  [2020-02-12 17:17:23.440328] [/sensors/sensor_monitor]: Nitrous tank overpressure (5852.91259766, 5778.05422363 >1200 psig) detected!
+[WARN]  [2020-02-12 17:17:28.443515] [/sensors/sensor_monitor]: Nitrous tank overpressure (5867.93115234, 5793.05466406 >1200 psig) detected!
+[WARN]  [2020-02-12 17:17:33.496484] [/sensors/sensor_monitor]: Nitrous tank overpressure (5883.20214844, 5808.35461133 >1200 psig) detected!
+[WARN]  [2020-02-12 17:17:38.601786] [/sensors/sensor_monitor]: Nitrous tank overpressure (5898.50146484, 5823.65439551 >1200 psig) detected!
+[WARN]  [2020-02-12 17:17:43.693820] [/sensors/sensor_monitor]: Nitrous tank overpressure (5913.80224609, 5838.9544541 >1200 psig) detected!
+[WARN]  [2020-02-12 17:17:48.692732] [/sensors/sensor_monitor]: Nitrous tank overpressure (5928.81054688, 5853.95434277 >1200 psig) detected!
+[WARN]  [2020-02-12 17:17:53.694307] [/sensors/sensor_monitor]: Nitrous tank overpressure (5943.80273438, 5868.95463477 >1200 psig) detected!
+[WARN]  [2020-02-12 17:17:58.795442] [/sensors/sensor_monitor]: Nitrous tank overpressure (5959.10253906, 5884.2547793 >1200 psig) detected!
+[WARN]  [2020-02-12 17:18:03.891415] [/sensors/sensor_monitor]: Nitrous tank overpressure (5974.40332031, 5899.55508301 >1200 psig) detected!
+[WARN]  [2020-02-12 17:18:08.893087] [/sensors/sensor_monitor]: Nitrous tank overpressure (5989.40234375, 5914.5549248 >1200 psig) detected!
+[WARN]  [2020-02-12 17:18:13.893791] [/sensors/sensor_monitor]: Nitrous tank overpressure (6004.40234375, 5929.55447266 >1200 psig) detected!
+[WARN]  [2020-02-12 17:18:18.999539] [/sensors/sensor_monitor]: Nitrous tank overpressure (6019.70361328, 5944.85425 >1200 psig) detected!
+[WARN]  [2020-02-12 17:18:21.025526] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[INFO]  [2020-02-12 17:18:22.524985] [/watchdog]: Runtime has reached 34 minutes.
+[WARN]  [2020-02-12 17:18:24.091862] [/sensors/sensor_monitor]: Nitrous tank overpressure (6035.00292969, 5960.15424805 >1200 psig) detected!
+[WARN]  [2020-02-12 17:18:29.092990] [/sensors/sensor_monitor]: Nitrous tank overpressure (6050.00244141, 5975.15437402 >1200 psig) detected!
+[WARN]  [2020-02-12 17:18:34.190212] [/sensors/sensor_monitor]: Nitrous tank overpressure (6065.30224609, 5990.45451367 >1200 psig) detected!
+[WARN]  [2020-02-12 17:18:39.326839] [/sensors/sensor_monitor]: Nitrous tank overpressure (6080.60595703, 6005.75447363 >1200 psig) detected!
+[WARN]  [2020-02-12 17:18:44.293763] [/sensors/sensor_monitor]: Nitrous tank overpressure (6095.60205078, 6020.7542959 >1200 psig) detected!
+[WARN]  [2020-02-12 17:18:49.442558] [/sensors/sensor_monitor]: Nitrous tank overpressure (6110.90722656, 6036.05419043 >1200 psig) detected!
+[WARN]  [2020-02-12 17:18:54.433277] [/sensors/sensor_monitor]: Nitrous tank overpressure (6125.90380859, 6051.0539668 >1200 psig) detected!
+[WARN]  [2020-02-12 17:18:59.451581] [/sensors/sensor_monitor]: Nitrous tank overpressure (6140.90283203, 6066.05394922 >1200 psig) detected!
+[WARN]  [2020-02-12 17:19:04.522064] [/sensors/sensor_monitor]: Nitrous tank overpressure (6156.22216797, 6081.3538252 >1200 psig) detected!
+[WARN]  [2020-02-12 17:19:09.522013] [/sensors/sensor_monitor]: Nitrous tank overpressure (6171.20166016, 6096.35368359 >1200 psig) detected!
+[WARN]  [2020-02-12 17:19:14.602343] [/sensors/sensor_monitor]: Nitrous tank overpressure (6186.52978516, 6111.65370801 >1200 psig) detected!
+[WARN]  [2020-02-12 17:19:19.689450] [/sensors/sensor_monitor]: Nitrous tank overpressure (6201.80224609, 6126.95357715 >1200 psig) detected!
+[WARN]  [2020-02-12 17:19:21.093287] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:19:21.134221] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:19:21.164558] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:19:21.188493] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:19:21.195368] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[INFO]  [2020-02-12 17:19:23.525301] [/watchdog]: Runtime has reached 35 minutes.
+[WARN]  [2020-02-12 17:19:24.693832] [/sensors/sensor_monitor]: Nitrous tank overpressure (6216.82373047, 6141.95356348 >1200 psig) detected!
+[WARN]  [2020-02-12 17:19:29.797300] [/sensors/sensor_monitor]: Nitrous tank overpressure (6232.11328125, 6157.2537998 >1200 psig) detected!
+[WARN]  [2020-02-12 17:19:34.893535] [/sensors/sensor_monitor]: Nitrous tank overpressure (6247.40234375, 6172.55365234 >1200 psig) detected!
+[WARN]  [2020-02-12 17:19:39.888843] [/sensors/sensor_monitor]: Nitrous tank overpressure (6262.40283203, 6187.5537373 >1200 psig) detected!
+[WARN]  [2020-02-12 17:19:44.998808] [/sensors/sensor_monitor]: Nitrous tank overpressure (6277.70263672, 6202.85377637 >1200 psig) detected!
+[WARN]  [2020-02-12 17:19:50.092799] [/sensors/sensor_monitor]: Nitrous tank overpressure (6293.00195312, 6218.15382422 >1200 psig) detected!
+[WARN]  [2020-02-12 17:19:55.099614] [/sensors/sensor_monitor]: Nitrous tank overpressure (6308.00244141, 6233.15376758 >1200 psig) detected!
+[WARN]  [2020-02-12 17:20:00.190629] [/sensors/sensor_monitor]: Nitrous tank overpressure (6323.30126953, 6248.45375781 >1200 psig) detected!
+[WARN]  [2020-02-12 17:20:05.196156] [/sensors/sensor_monitor]: Nitrous tank overpressure (6338.30175781, 6263.45365527 >1200 psig) detected!
+[WARN]  [2020-02-12 17:20:10.196595] [/sensors/sensor_monitor]: Nitrous tank overpressure (6353.32519531, 6278.45398047 >1200 psig) detected!
+[WARN]  [2020-02-12 17:20:15.291067] [/sensors/sensor_monitor]: Nitrous tank overpressure (6368.60253906, 6293.75425195 >1200 psig) detected!
+[WARN]  [2020-02-12 17:20:20.295097] [/sensors/sensor_monitor]: Nitrous tank overpressure (6383.60595703, 6308.75404199 >1200 psig) detected!
+[WARN]  [2020-02-12 17:20:21.122545] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[INFO]  [2020-02-12 17:20:24.524416] [/watchdog]: Runtime has reached 36 minutes.
+[WARN]  [2020-02-12 17:20:25.298514] [/sensors/sensor_monitor]: Nitrous tank overpressure (6398.6015625, 6323.75402441 >1200 psig) detected!
+[WARN]  [2020-02-12 17:20:30.298391] [/sensors/sensor_monitor]: Nitrous tank overpressure (6413.60253906, 6338.75408301 >1200 psig) detected!
+[WARN]  [2020-02-12 17:20:35.388611] [/sensors/sensor_monitor]: Nitrous tank overpressure (6428.90136719, 6354.05414453 >1200 psig) detected!
+[WARN]  [2020-02-12 17:20:40.421788] [/sensors/sensor_monitor]: Nitrous tank overpressure (6443.92431641, 6369.05421094 >1200 psig) detected!
+[WARN]  [2020-02-12 17:20:45.525136] [/sensors/sensor_monitor]: Nitrous tank overpressure (6459.20214844, 6384.35440039 >1200 psig) detected!
+[WARN]  [2020-02-12 17:20:50.679190] [/sensors/sensor_monitor]: Nitrous tank overpressure (6474.50341797, 6399.65470215 >1200 psig) detected!
+[WARN]  [2020-02-12 17:20:55.744331] [/sensors/sensor_monitor]: Nitrous tank overpressure (6489.8046875, 6414.95498145 >1200 psig) detected!
+[WARN]  [2020-02-12 17:21:00.793421] [/sensors/sensor_monitor]: Nitrous tank overpressure (6505.10205078, 6430.2547041 >1200 psig) detected!
+[WARN]  [2020-02-12 17:21:05.793535] [/sensors/sensor_monitor]: Nitrous tank overpressure (6520.10205078, 6445.2546377 >1200 psig) detected!
+[WARN]  [2020-02-12 17:21:10.901154] [/sensors/sensor_monitor]: Nitrous tank overpressure (6535.40136719, 6460.55454687 >1200 psig) detected!
+[WARN]  [2020-02-12 17:21:15.897689] [/sensors/sensor_monitor]: Nitrous tank overpressure (6550.40185547, 6475.55459863 >1200 psig) detected!
+[WARN]  [2020-02-12 17:21:20.990292] [/sensors/sensor_monitor]: Nitrous tank overpressure (6565.70214844, 6490.85451465 >1200 psig) detected!
+[WARN]  [2020-02-12 17:21:21.121793] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[INFO]  [2020-02-12 17:21:24.530414] [/watchdog]: Runtime has reached 37 minutes.
+[WARN]  [2020-02-12 17:21:25.989993] [/sensors/sensor_monitor]: Nitrous tank overpressure (6580.70166016, 6505.85456641 >1200 psig) detected!
+[WARN]  [2020-02-12 17:21:30.990134] [/sensors/sensor_monitor]: Nitrous tank overpressure (6595.70214844, 6520.85443359 >1200 psig) detected!
+[WARN]  [2020-02-12 17:21:36.088912] [/sensors/sensor_monitor]: Nitrous tank overpressure (6611.00244141, 6536.15441113 >1200 psig) detected!
+[WARN]  [2020-02-12 17:21:41.096937] [/sensors/sensor_monitor]: Nitrous tank overpressure (6626.00195312, 6551.15429004 >1200 psig) detected!
+[WARN]  [2020-02-12 17:21:46.099777] [/sensors/sensor_monitor]: Nitrous tank overpressure (6641.00390625, 6566.15413672 >1200 psig) detected!
+[WARN]  [2020-02-12 17:21:51.189458] [/sensors/sensor_monitor]: Nitrous tank overpressure (6656.30371094, 6581.45412891 >1200 psig) detected!
+[WARN]  [2020-02-12 17:21:56.295825] [/sensors/sensor_monitor]: Nitrous tank overpressure (6671.6015625, 6596.75376367 >1200 psig) detected!
+[WARN]  [2020-02-12 17:22:01.390426] [/sensors/sensor_monitor]: Nitrous tank overpressure (6686.90185547, 6612.0537373 >1200 psig) detected!
+[WARN]  [2020-02-12 17:22:06.391328] [/sensors/sensor_monitor]: Nitrous tank overpressure (6701.90429688, 6627.05373926 >1200 psig) detected!
+[WARN]  [2020-02-12 17:22:11.395673] [/sensors/sensor_monitor]: Nitrous tank overpressure (6716.90429688, 6642.05375684 >1200 psig) detected!
+[WARN]  [2020-02-12 17:22:16.498740] [/sensors/sensor_monitor]: Nitrous tank overpressure (6732.20947266, 6657.35374512 >1200 psig) detected!
+[WARN]  [2020-02-12 17:22:21.188426] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:22:21.226238] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:22:21.273722] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:22:21.300170] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:22:21.317361] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:22:21.601484] [/sensors/sensor_monitor]: Nitrous tank overpressure (6747.50585938, 6672.65378027 >1200 psig) detected!
+[INFO]  [2020-02-12 17:22:25.525946] [/watchdog]: Runtime has reached 38 minutes.
+[WARN]  [2020-02-12 17:22:26.598091] [/sensors/sensor_monitor]: Nitrous tank overpressure (6762.50244141, 6687.65378809 >1200 psig) detected!
+[WARN]  [2020-02-12 17:22:31.602284] [/sensors/sensor_monitor]: Nitrous tank overpressure (6777.50146484, 6702.65374121 >1200 psig) detected!
+[WARN]  [2020-02-12 17:22:36.694096] [/sensors/sensor_monitor]: Nitrous tank overpressure (6792.80908203, 6717.95371973 >1200 psig) detected!
+[WARN]  [2020-02-12 17:22:41.788692] [/sensors/sensor_monitor]: Nitrous tank overpressure (6808.10205078, 6733.25378613 >1200 psig) detected!
+[WARN]  [2020-02-12 17:22:46.792961] [/sensors/sensor_monitor]: Nitrous tank overpressure (6823.10205078, 6748.2539541 >1200 psig) detected!
+[WARN]  [2020-02-12 17:22:51.890826] [/sensors/sensor_monitor]: Nitrous tank overpressure (6838.40136719, 6763.55399414 >1200 psig) detected!
+[WARN]  [2020-02-12 17:22:56.895942] [/sensors/sensor_monitor]: Nitrous tank overpressure (6853.40332031, 6778.5539209 >1200 psig) detected!
+[WARN]  [2020-02-12 17:23:01.990273] [/sensors/sensor_monitor]: Nitrous tank overpressure (6868.70214844, 6793.85405273 >1200 psig) detected!
+[WARN]  [2020-02-12 17:23:06.993268] [/sensors/sensor_monitor]: Nitrous tank overpressure (6883.70507812, 6808.85399414 >1200 psig) detected!
+[WARN]  [2020-02-12 17:23:11.995389] [/sensors/sensor_monitor]: Nitrous tank overpressure (6898.70263672, 6823.85395117 >1200 psig) detected!
+[WARN]  [2020-02-12 17:23:17.021767] [/sensors/sensor_monitor]: Nitrous tank overpressure (6913.73681641, 6838.85414355 >1200 psig) detected!
+[WARN]  [2020-02-12 17:23:21.226393] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:23:22.095264] [/sensors/sensor_monitor]: Nitrous tank overpressure (6929.00195312, 6854.1540918 >1200 psig) detected!
+[INFO]  [2020-02-12 17:23:26.525287] [/watchdog]: Runtime has reached 39 minutes.
+[WARN]  [2020-02-12 17:23:27.090579] [/sensors/sensor_monitor]: Nitrous tank overpressure (6944.00341797, 6869.15408203 >1200 psig) detected!
+[WARN]  [2020-02-12 17:23:32.094506] [/sensors/sensor_monitor]: Nitrous tank overpressure (6959.00292969, 6884.15405957 >1200 psig) detected!
+[WARN]  [2020-02-12 17:23:37.095141] [/sensors/sensor_monitor]: Nitrous tank overpressure (6974.00537109, 6899.15417383 >1200 psig) detected!
+[WARN]  [2020-02-12 17:23:42.203819] [/sensors/sensor_monitor]: Nitrous tank overpressure (6989.31787109, 6914.45419336 >1200 psig) detected!
+[WARN]  [2020-02-12 17:23:47.290471] [/sensors/sensor_monitor]: Nitrous tank overpressure (7004.60205078, 6929.75427539 >1200 psig) detected!
+[WARN]  [2020-02-12 17:23:52.429209] [/sensors/sensor_monitor]: Nitrous tank overpressure (7019.90185547, 6945.05416602 >1200 psig) detected!
+[WARN]  [2020-02-12 17:23:57.523288] [/sensors/sensor_monitor]: Nitrous tank overpressure (7035.20556641, 6960.35421289 >1200 psig) detected!
+[WARN]  [2020-02-12 17:24:02.607860] [/sensors/sensor_monitor]: Nitrous tank overpressure (7050.20214844, 6975.35417969 >1200 psig) detected!
+[WARN]  [2020-02-12 17:24:07.688466] [/sensors/sensor_monitor]: Nitrous tank overpressure (7065.50195312, 6990.65408984 >1200 psig) detected!
+[WARN]  [2020-02-12 17:24:12.651487] [/sensors/sensor_monitor]: Nitrous tank overpressure (7080.50195312, 7005.65419922 >1200 psig) detected!
+[WARN]  [2020-02-12 17:24:17.698127] [/sensors/sensor_monitor]: Nitrous tank overpressure (7095.84765625, 7020.95435059 >1200 psig) detected!
+[WARN]  [2020-02-12 17:24:21.298928] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:24:21.365941] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:24:21.380283] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:24:21.393434] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:24:21.397194] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:24:22.701294] [/sensors/sensor_monitor]: Nitrous tank overpressure (7110.84667969, 7035.95450977 >1200 psig) detected!
+[INFO]  [2020-02-12 17:24:27.524426] [/watchdog]: Runtime has reached 40 minutes.
+[WARN]  [2020-02-12 17:24:27.797499] [/sensors/sensor_monitor]: Nitrous tank overpressure (7126.11425781, 7051.25453027 >1200 psig) detected!

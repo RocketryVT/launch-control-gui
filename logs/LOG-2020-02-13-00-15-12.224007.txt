@@ -1,0 +1,10 @@
+[INFO]  [2020-02-12 19:15:16.554451] [/tcp_server]: New connection: (1, ('192.168.1.7', 58175))
+[INFO]  [2020-02-12 19:15:16.576474] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 19:15:16.588847]: Connection to master established.
+[INFO]  [2020-02-12 19:15:16.589166]: You are client #1
+[INFO]  [2020-02-12 19:15:16.774258] [/tcp_server]: Connection with atleast one client restored.
+[DEBUG] [2020-02-12 19:15:20.716299] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:15:24.714200] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:15:28.710357] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:15:30.525186] [/watchdog]: Runtime has reached 151 minutes.
+[DEBUG] [2020-02-12 19:15:32.710476] [/tcp_server]: Sending keep-alive message.

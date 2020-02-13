@@ -1,0 +1,28 @@
+[INFO]  [2020-02-12 17:00:08.145783] [/tcp_server]: New connection: (1, ('192.168.1.7', 56419))
+[INFO]  [2020-02-12 17:00:08.196704] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 17:00:08.226502]: Connection to master established.
+[INFO]  [2020-02-12 17:00:08.226870]: You are client #1
+[INFO]  [2020-02-12 17:00:08.273320] [/tcp_server]: Connection with atleast one client restored.
+[WARN]  [2020-02-12 17:00:12.794689] [/sensors/sensor_monitor]: Nitrous tank overpressure (2761.10229492, 2686.25397363 >1200 psig) detected!
+[INFO]  [2020-02-12 17:00:13.525600] [/watchdog]: Runtime has reached 16 minutes.
+[WARN]  [2020-02-12 17:00:17.894460] [/sensors/sensor_monitor]: Nitrous tank overpressure (2776.40258789, 2701.55394531 >1200 psig) detected!
+[WARN]  [2020-02-12 17:00:20.477236] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:00:20.551594] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:00:20.622035] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:00:20.654441] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[INFO]  [2020-02-12 17:00:23.677976]: Connection to master established.
+[INFO]  [2020-02-12 17:00:23.679238]: You are client #2
+[INFO]  [2020-02-12 17:00:23.543326] [/tcp_server]: Client #1 has disconnected
+[INFO]  [2020-02-12 17:00:23.599936] [/tcp_server]: 2 active connection(s)
+[INFO]  [2020-02-12 17:00:23.679793] [/tcp_server]: 1 client(s) remaining
+[INFO]  [2020-02-12 17:00:25.973210] [/tcp_server]: Command from #2: fire ematch
+[INFO]  [2020-02-12 17:00:26.022060] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:00:26.087737] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:00:26.121913] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:00:26.195488] [/readiness_admin]: Current: idiot check
+[WARN]  [2020-02-12 17:00:27.940819] [/sensors/sensor_monitor]: Nitrous tank overpressure (2806.41723633, 2731.55389844 >1200 psig) detected!
+[WARN]  [2020-02-12 17:00:32.990363] [/sensors/sensor_monitor]: Nitrous tank overpressure (2821.70214844, 2746.85383496 >1200 psig) detected!
+[WARN]  [2020-02-12 17:00:38.094290] [/sensors/sensor_monitor]: Nitrous tank overpressure (2837.00170898, 2762.15375586 >1200 psig) detected!
+[WARN]  [2020-02-12 17:00:43.089733] [/sensors/sensor_monitor]: Nitrous tank overpressure (2852.00170898, 2777.15370361 >1200 psig) detected!
+[WARN]  [2020-02-12 17:00:48.094258] [/sensors/sensor_monitor]: Nitrous tank overpressure (2867.00244141, 2792.15366309 >1200 psig) detected!
+[WARN]  [2020-02-12 17:00:53.202191] [/sensors/sensor_monitor]: Nitrous tank overpressure (2882.30151367, 2807.45369043 >1200 psig) detected!

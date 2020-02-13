@@ -1,0 +1,21 @@
+[INFO]  [2020-02-12 17:05:52.403686]: Connection to master established.
+[INFO]  [2020-02-12 17:05:52.315730] [/tcp_server]: Client #2 has disconnected
+[INFO]  [2020-02-12 17:05:52.345653] [/tcp_server]: 2 active connection(s)
+[INFO]  [2020-02-12 17:05:52.382612] [/tcp_server]: 1 client(s) remaining
+[INFO]  [2020-02-12 17:05:52.404376]: You are client #2
+[INFO]  [2020-02-12 17:05:53.969897] [/tcp_server]: Command from #2: dugus
+[INFO]  [2020-02-12 17:05:54.004312] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:05:54.045240] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:05:54.086735] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:05:54.117369] [/readiness_admin]: Current: idiot check
+[INFO]  [2020-02-12 17:05:55.244904] [/tcp_server]: Command from #2: dugus
+[INFO]  [2020-02-12 17:05:55.304472] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:05:55.338648] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:05:55.380405] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:05:55.411453] [/readiness_admin]: Current: idiot check
+[INFO]  [2020-02-12 17:05:56.181866] [/tcp_server]: Command from #2: dugus
+[INFO]  [2020-02-12 17:05:56.214625] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:05:56.250172] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:05:56.290988] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:05:56.342090] [/readiness_admin]: Current: idiot check
+[WARN]  [2020-02-12 17:05:56.589181] [/sensors/sensor_monitor]: Nitrous tank overpressure (3791.90258789, 3717.05415479 >1200 psig) detected!

@@ -1,0 +1,19 @@
+[INFO]  [2020-02-12 21:58:40.113139] [/tcp_server]: New connection: (1, ('192.168.1.7', 59887))
+[INFO]  [2020-02-12 21:58:40.148631] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 21:58:40.172822] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 21:58:41.466472] [/tcp_server]: Command from #1: system fortune | cowsay
+[DEBUG] [2020-02-12 21:58:41.500790] [/readiness_admin]: Command matches persistent pattern: system .*, system fortune | cowsay
+[INFO]  [2020-02-12 21:58:41.559798] [/exec]: $ fortune | cowsay
+[INFO]  [2020-02-12 21:58:42.688925] [/exec]: 
+ ___________________________
+< You are as I am with You. >
+ ---------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 21:58:42.730042] [/exec]: Finished with exit code 0
+[DEBUG] [2020-02-12 21:58:45.098636] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 21:58:49.097943] [/tcp_server]: Sending keep-alive message.

@@ -1,0 +1,35 @@
+[INFO]  [2020-02-12 21:50:08.618948] [/tcp_server]: New connection: (2, ('192.168.1.7', 59820))
+[INFO]  [2020-02-12 21:50:08.644887] [/tcp_server]: 2 active connection(s)
+[DEBUG] [2020-02-12 21:50:11.100929] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 21:50:11.709713] [/tcp_server]: Command from #2: system fortune | cowsay
+[DEBUG] [2020-02-12 21:50:11.740951] [/readiness_admin]: Command matches current pattern: .*, system fortune | cowsay
+[INFO]  [2020-02-12 21:50:11.792962] [/exec]: $ fortune | cowsay
+[INFO]  [2020-02-12 21:50:12.953649] [/exec]: 
+ _______________________________________
+/ You are fighting for survival in your \
+\ own sweet and gentle way.             /
+ ---------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 21:50:12.987762] [/exec]: Finished with exit code 0
+[INFO]  [2020-02-12 21:50:14.985906] [/tcp_server]: Command from #2: set readiness 10
+[DEBUG] [2020-02-12 21:50:15.022354] [/readiness_admin]: Command matches current pattern: .*, set readiness 10
+[INFO]  [2020-02-12 21:50:15.069179] [/readiness_admin]: Set readiness level to 10
+[INFO]  [2020-02-12 21:50:15.761115] [/tcp_server]: Command from #2: set readiness 10
+[DEBUG] [2020-02-12 21:50:15.795657] [/readiness_admin]: Command matches current pattern: .*, set readiness 10
+[INFO]  [2020-02-12 21:50:15.844727] [/readiness_admin]: Set readiness level to 10
+[INFO]  [2020-02-12 21:50:16.231917] [/tcp_server]: Command from #2: set readiness 10
+[DEBUG] [2020-02-12 21:50:16.259927] [/readiness_admin]: Command matches current pattern: .*, set readiness 10
+[INFO]  [2020-02-12 21:50:16.347744] [/readiness_admin]: Set readiness level to 10
+[INFO]  [2020-02-12 21:50:16.793656] [/tcp_server]: Command from #2: set readiness 10
+[DEBUG] [2020-02-12 21:50:16.838434] [/readiness_admin]: Command matches current pattern: .*, set readiness 10
+[INFO]  [2020-02-12 21:50:16.877753] [/readiness_admin]: Set readiness level to 10
+[DEBUG] [2020-02-12 21:50:19.102039] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 21:50:20.166790] [/tcp_server]: Command from #2: fire ematch
+[DEBUG] [2020-02-12 21:50:20.201585] [/readiness_admin]: Command matches current pattern: .*, fire ematch
+[INFO]  [2020-02-12 21:50:20.241084] [/hardware/ematch]: Firing e-match.
+[DEBUG] [2020-02-12 21:50:23.101108] [/tcp_server]: Sending keep-alive message.

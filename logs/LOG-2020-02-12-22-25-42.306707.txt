@@ -1,0 +1,46 @@
+[INFO]  [2020-02-12 17:25:48.545721] [/tcp_server]: New connection: (1, ('192.168.1.7', 56787))
+[INFO]  [2020-02-12 17:25:48.601635] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 17:25:48.636716]: Connection to master established.
+[INFO]  [2020-02-12 17:25:48.637111]: You are client #1
+[WARN]  [2020-02-12 17:25:48.689598] [/sensors/sensor_monitor]: Nitrous tank overpressure (7368.50488281, 7293.6535166 >1200 psig) detected!
+[INFO]  [2020-02-12 17:25:49.274578] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 17:25:49.629860] [/tcp_server]: Command from #1: fire ematch
+[INFO]  [2020-02-12 17:25:49.681094] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:25:49.711384] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:25:49.740891] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:25:49.787324] [/readiness_admin]: Current: idiot check
+[INFO]  [2020-02-12 17:25:51.697548] [/tcp_server]: Command from #1: system fortune | cowsay
+[DEBUG] [2020-02-12 17:25:51.733546] [/readiness_admin]: Command matches persistent pattern: system .*, system fortune | cowsay
+[INFO]  [2020-02-12 17:25:51.777347] [/exec]: $ fortune | cowsay
+[INFO]  [2020-02-12 17:25:53.423483] [/exec]: 
+ ________________________________________
+/ Your manuscript is both good and       \
+| original, but the part that is good is |
+| not original and the part that is      |
+| original is not good.                  |
+|                                        |
+\ -- Samuel Johnson                      /
+ ----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 17:25:53.477530] [/exec]: Finished with exit code 0
+[WARN]  [2020-02-12 17:25:53.696704] [/sensors/sensor_monitor]: Nitrous tank overpressure (7383.81542969, 7308.95377441 >1200 psig) detected!
+[WARN]  [2020-02-12 17:25:58.793920] [/sensors/sensor_monitor]: Nitrous tank overpressure (7399.10253906, 7324.25370898 >1200 psig) detected!
+[WARN]  [2020-02-12 17:26:03.898752] [/sensors/sensor_monitor]: Nitrous tank overpressure (7414.40234375, 7339.55377832 >1200 psig) detected!
+[WARN]  [2020-02-12 17:26:08.896252] [/sensors/sensor_monitor]: Nitrous tank overpressure (7429.40234375, 7354.55381836 >1200 psig) detected!
+[WARN]  [2020-02-12 17:26:13.994845] [/sensors/sensor_monitor]: Nitrous tank overpressure (7444.70263672, 7369.85386621 >1200 psig) detected!
+[WARN]  [2020-02-12 17:26:19.002848] [/sensors/sensor_monitor]: Nitrous tank overpressure (7459.72851562, 7384.85380957 >1200 psig) detected!
+[WARN]  [2020-02-12 17:26:21.322523] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 17:26:24.093352] [/sensors/sensor_monitor]: Nitrous tank overpressure (7475.01025391, 7400.15398828 >1200 psig) detected!
+[INFO]  [2020-02-12 17:26:27.525550] [/watchdog]: Runtime has reached 42 minutes.
+[WARN]  [2020-02-12 17:26:29.190263] [/sensors/sensor_monitor]: Nitrous tank overpressure (7490.30175781, 7415.45397852 >1200 psig) detected!
+[WARN]  [2020-02-12 17:26:34.290502] [/sensors/sensor_monitor]: Nitrous tank overpressure (7505.60107422, 7430.75398242 >1200 psig) detected!
+[WARN]  [2020-02-12 17:26:39.292546] [/sensors/sensor_monitor]: Nitrous tank overpressure (7520.60400391, 7445.75388574 >1200 psig) detected!
+[WARN]  [2020-02-12 17:26:44.294830] [/sensors/sensor_monitor]: Nitrous tank overpressure (7535.6015625, 7460.75396484 >1200 psig) detected!
+[WARN]  [2020-02-12 17:26:49.398073] [/sensors/sensor_monitor]: Nitrous tank overpressure (7550.90185547, 7476.05398633 >1200 psig) detected!
+[WARN]  [2020-02-12 17:26:54.497674] [/sensors/sensor_monitor]: Nitrous tank overpressure (7566.20410156, 7491.3540459 >1200 psig) detected!
+[WARN]  [2020-02-12 17:26:59.501471] [/sensors/sensor_monitor]: Nitrous tank overpressure (7581.20263672, 7506.35395801 >1200 psig) detected!

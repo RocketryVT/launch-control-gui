@@ -1,0 +1,54 @@
+[INFO]  [2020-02-12 17:52:00.962486] [/tcp_server]: New connection: (1, ('192.168.1.7', 56991))
+[INFO]  [2020-02-12 17:52:01.000494] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 17:52:01.033785]: Connection to master established.
+[INFO]  [2020-02-12 17:52:01.034151]: You are client #1
+[INFO]  [2020-02-12 17:52:01.280145] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 17:52:02.573934] [/tcp_server]: Command from #1: rgseregeg
+[INFO]  [2020-02-12 17:52:02.618882] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:52:02.651003] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:52:02.695899] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:52:02.734472] [/readiness_admin]: Current: idiot check
+[WARN]  [2020-02-12 17:52:02.894774] [/sensors/sensor_monitor]: Nitrous tank overpressure (12091.4042969, 12016.5546328 >1200 psig) detected!
+[INFO]  [2020-02-12 17:52:05.370411] [/tcp_server]: Command from #1: rgseregeg
+[INFO]  [2020-02-12 17:52:05.431207] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:52:05.478836] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:52:05.518021] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:52:05.551484] [/readiness_admin]: Current: idiot check
+[INFO]  [2020-02-12 17:52:05.774615] [/tcp_server]: Command from #1: rgseregeg
+[INFO]  [2020-02-12 17:52:05.815194] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:52:05.863903] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:52:05.896293] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:52:05.930109] [/readiness_admin]: Current: idiot check
+[INFO]  [2020-02-12 17:52:06.300193] [/tcp_server]: Command from #1: rgseregeg
+[INFO]  [2020-02-12 17:52:06.370500] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:52:06.419264] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:52:06.482103] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:52:06.519869] [/readiness_admin]: Current: idiot check
+[INFO]  [2020-02-12 17:52:06.677518] [/tcp_server]: Command from #1: rgseregeg
+[INFO]  [2020-02-12 17:52:06.720430] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:52:06.778719] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:52:06.813382] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:52:06.823159] [/tcp_server]: Command from #1: rgseregeg
+[INFO]  [2020-02-12 17:52:06.876227] [/readiness_admin]: Current: idiot check
+[INFO]  [2020-02-12 17:52:06.919849] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:52:06.980534] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:52:07.013107] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:52:07.064147] [/tcp_server]: Command from #1: rgseregeg
+[INFO]  [2020-02-12 17:52:07.052485] [/readiness_admin]: Current: idiot check
+[INFO]  [2020-02-12 17:52:07.115476] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:52:07.152989] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:52:07.196234] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:52:07.244723] [/readiness_admin]: Current: idiot check
+[INFO]  [2020-02-12 17:52:07.357166] [/tcp_server]: Command from #1: rgseregeg
+[INFO]  [2020-02-12 17:52:07.421859] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:52:07.487784] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:52:07.528401] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:52:07.576139] [/readiness_admin]: Current: idiot check
+[WARN]  [2020-02-12 17:52:07.924643] [/sensors/sensor_monitor]: Nitrous tank overpressure (12105.5019531, 12030.654582 >1200 psig) detected!
+[INFO]  [2020-02-12 17:52:12.424999] [/tcp_server]: Command from #1: pjseprjgerg
+[INFO]  [2020-02-12 17:52:12.482426] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:52:12.522698] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:52:12.557770] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:52:12.603423] [/readiness_admin]: Current: idiot check
+[WARN]  [2020-02-12 17:52:12.998847] [/sensors/sensor_monitor]: Nitrous tank overpressure (12121.7041016, 12046.8544434 >1200 psig) detected!
+[WARN]  [2020-02-12 17:52:18.090658] [/sensors/sensor_monitor]: Nitrous tank overpressure (12137.0019531, 12062.1543613 >1200 psig) detected!

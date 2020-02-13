@@ -1,0 +1,21 @@
+[INFO]  [2020-02-12 21:50:47.617864] [/tcp_server]: New connection: (2, ('192.168.1.7', 59826))
+[INFO]  [2020-02-12 21:50:47.645166] [/tcp_server]: 2 active connection(s)
+[INFO]  [2020-02-12 21:50:50.154324] [/tcp_server]: Command from #2: set readiness 0
+[DEBUG] [2020-02-12 21:50:50.182192] [/readiness_admin]: Command matches current pattern: .*, set readiness 0
+[INFO]  [2020-02-12 21:50:50.237381] [/readiness_admin]: Set readiness level to 0
+[INFO]  [2020-02-12 21:50:52.309563] [/tcp_server]: Command from #2: system fortune | cowsay
+[DEBUG] [2020-02-12 21:50:52.367939] [/readiness_admin]: Command matches persistent pattern: system .*, system fortune | cowsay
+[INFO]  [2020-02-12 21:50:52.423754] [/exec]: $ fortune | cowsay
+[INFO]  [2020-02-12 21:50:53.571888] [/exec]: 
+ ________________________________________
+< Your present plans will be successful. >
+ ----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 21:50:53.614035] [/exec]: Finished with exit code 0
+[INFO]  [2020-02-12 21:50:56.532388] [/watchdog]: Runtime has reached 306 minutes.
+[DEBUG] [2020-02-12 21:50:59.100915] [/tcp_server]: Sending keep-alive message.

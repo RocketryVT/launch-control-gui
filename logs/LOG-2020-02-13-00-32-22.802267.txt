@@ -1,0 +1,699 @@
+[INFO]  [2020-02-12 19:32:27.851420] [/tcp_server]: New connection: (1, ('192.168.1.7', 58340))
+[INFO]  [2020-02-12 19:32:27.875392] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 19:32:27.888873]: Connection to master established.
+[INFO]  [2020-02-12 19:32:27.889225]: You are client #1
+[INFO]  [2020-02-12 19:32:28.773713] [/tcp_server]: Connection with atleast one client restored.
+[DEBUG] [2020-02-12 19:32:32.709861] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:32:36.712593] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:32:40.710589] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:32:41.533475] [/watchdog]: Runtime has reached 168 minutes.
+[DEBUG] [2020-02-12 19:32:44.712726] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:32:48.711264] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:32:52.710658] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:32:56.712360] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:33:00.710738] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:33:04.707731] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:33:08.702995] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:33:12.712563] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:33:16.709418] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:33:20.713641] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:33:24.718909] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:33:28.709350] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:33:32.714477] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:33:36.052399] [/watchdog]: New node registered: /sensors/combustion_thermocouple_1
+[INFO]  [2020-02-12 19:33:36.834134] [/watchdog]: New node registered: /sensors/combustion_thermocouple_2
+[DEBUG] [2020-02-12 19:33:36.820531] [/tcp_server]: connecting to gandalf 44123
+[DEBUG] [2020-02-12 19:33:37.919949] [/tcp_server]: connecting to gandalf 42327
+[INFO]  [2020-02-12 19:33:38.427319] [/sensors/combustion_thermocouple_1]: Starting thermocouple driver.
+[INFO]  [2020-02-12 19:33:38.574646] [/watchdog]: New node registered: /sensors/combustion_transducer
+[INFO]  [2020-02-12 19:33:38.601479] [/watchdog]: New node registered: /sensors/ox_tank_thermocouple
+[DEBUG] [2020-02-12 19:33:38.672797] [/tcp_server]: connecting to gandalf 37433
+[DEBUG] [2020-02-12 19:33:39.510080] [/tcp_server]: connecting to gandalf 42087
+[INFO]  [2020-02-12 19:33:39.547915] [/sensors/combustion_thermocouple_2]: Starting thermocouple driver.
+[INFO]  [2020-02-12 19:33:39.745098] [/sensors/combustion_transducer]: Starting pressure transducer driver.
+[INFO]  [2020-02-12 19:33:39.803815] [/watchdog]: New node registered: /sensors/float_switch
+[INFO]  [2020-02-12 19:33:39.823907] [/watchdog]: New node registered: /sensors/ox_tank_transducer
+[DEBUG] [2020-02-12 19:33:40.068525] [/tcp_server]: connecting to gandalf 37613
+[INFO]  [2020-02-12 19:33:40.472994] [/sensors/ox_tank_thermocouple]: Starting thermocouple driver.
+[INFO]  [2020-02-12 19:33:40.839348] [/sensors/ox_tank_transducer]: Starting pressure transducer driver.
+[DEBUG] [2020-02-12 19:33:41.036507] [/tcp_server]: connecting to gandalf 38281
+[INFO]  [2020-02-12 19:33:40.966114] [/sensors/float_switch]: Starting liquid level switch driver.
+[DEBUG] [2020-02-12 19:33:42.174308] [/tcp_server]: connecting to gandalf 44923
+[INFO]  [2020-02-12 19:33:42.467088] [/watchdog]: New node registered: /sensors/sensor_monitor
+[INFO]  [2020-02-12 19:33:42.524911] [/watchdog]: Runtime has reached 169 minutes.
+[DEBUG] [2020-02-12 19:33:44.715364] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:33:48.716943] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:33:50.641056] [/sensors/sensor_monitor]: Combustion chamber pressure reading (50.09) falls outside of nominal bounds ([0, 50])
+[DEBUG] [2020-02-12 19:33:52.716891] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:33:56.718858] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:33:58.353367] [/sensors/sensor_monitor]: Combustion chamber pressure average (50.09) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 19:34:00.636907] [/sensors/sensor_monitor]: Combustion chamber pressure reading (80.08) falls outside of nominal bounds ([0, 50])
+[DEBUG] [2020-02-12 19:34:02.719142] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:34:03.441232] [/sensors/sensor_monitor]: Combustion chamber pressure average (57.74) falls outside of nominal bounds ([0, 50])
+[DEBUG] [2020-02-12 19:34:06.701497] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:34:08.448567] [/sensors/sensor_monitor]: Combustion chamber pressure average (65.24) falls outside of nominal bounds ([0, 50])
+[DEBUG] [2020-02-12 19:34:10.718987] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:34:10.759762] [/sensors/sensor_monitor]: Combustion chamber pressure reading (110.40) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:34:13.443040] [/sensors/sensor_monitor]: Combustion chamber pressure average (72.74) falls outside of nominal bounds ([0, 50])
+[DEBUG] [2020-02-12 19:34:16.722159] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:34:18.538238] [/sensors/sensor_monitor]: Combustion chamber pressure average (80.39) falls outside of nominal bounds ([0, 50])
+[DEBUG] [2020-02-12 19:34:20.716281] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:34:20.805771] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (95.86) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:34:20.867711] [/sensors/sensor_monitor]: Combustion chamber pressure reading (140.72) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 19:34:20.901517] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (95.04) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:34:23.644775] [/sensors/sensor_monitor]: Combustion chamber pressure average (88.04) falls outside of nominal bounds ([0, 50])
+[DEBUG] [2020-02-12 19:34:26.724699] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:34:28.647145] [/sensors/sensor_monitor]: Combustion chamber pressure average (95.54) falls outside of nominal bounds ([0, 50])
+[DEBUG] [2020-02-12 19:34:30.725406] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:34:30.937108] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (116.06) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:34:30.975496] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (115.22) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:34:31.036816] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (112.66) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:34:31.055804] [/sensors/sensor_monitor]: Combustion chamber pressure reading (170.98) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:34:33.742678] [/sensors/sensor_monitor]: Combustion chamber pressure average (104.54) falls outside of nominal bounds ([0, 50])
+[DEBUG] [2020-02-12 19:34:36.719411] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:34:38.746122] [/sensors/sensor_monitor]: Combustion chamber pressure average (119.54) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 19:34:41.044720] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (136.26) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:34:41.079470] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (135.42) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:34:41.123710] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (132.86) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:34:41.150066] [/sensors/sensor_monitor]: Combustion chamber pressure reading (201.29) falls outside of nominal bounds ([0, 50])
+[INFO]  [2020-02-12 19:34:43.525127] [/watchdog]: Runtime has reached 170 minutes.
+[ERROR] [2020-02-12 19:34:43.843300] [/sensors/sensor_monitor]: Combustion chamber pressure average (134.84) falls outside of nominal bounds ([0, 50])
+[DEBUG] [2020-02-12 19:34:46.723105] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:34:48.843048] [/sensors/sensor_monitor]: Combustion chamber pressure average (149.84) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:34:48.863417] [/sensors/sensor_monitor]: Oxidizer tank temperature average (98.56) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:34:51.137505] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (156.46) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:34:51.177911] [/sensors/sensor_monitor]: Combustion chamber pressure reading (231.58) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 19:34:51.232393] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (155.62) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:34:51.256204] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (153.06) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:34:53.846628] [/sensors/sensor_monitor]: Combustion chamber pressure average (164.84) falls outside of nominal bounds ([0, 50])
+[DEBUG] [2020-02-12 19:34:56.726073] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:34:58.953472] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (122.16) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:34:58.993682] [/sensors/sensor_monitor]: Combustion chamber pressure average (180.14) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:34:59.039001] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (121.32) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:34:59.058770] [/sensors/sensor_monitor]: Oxidizer tank temperature average (118.76) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:35:01.264560] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (176.67) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:35:01.383927] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (173.26) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:35:01.505945] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (175.83) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:35:01.549243] [/sensors/sensor_monitor]: Combustion chamber pressure reading (261.90) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:35:04.055190] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (132.36) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:04.094402] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (131.52) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:04.138723] [/sensors/sensor_monitor]: Combustion chamber pressure average (195.44) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:35:04.155306] [/sensors/sensor_monitor]: Oxidizer tank temperature average (128.96) falls outside of nominal bounds ([0, 95])
+[DEBUG] [2020-02-12 19:35:06.731518] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:35:09.144675] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (142.56) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:09.177739] [/sensors/sensor_monitor]: Combustion chamber pressure average (210.74) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:35:09.245851] [/sensors/sensor_monitor]: Oxidizer tank temperature average (139.16) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:09.265862] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (141.72) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:35:11.354154] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (196.86) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:35:11.431056] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (196.02) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:35:11.470838] [/sensors/sensor_monitor]: Combustion chamber pressure reading (292.18) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 19:35:11.503539] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (193.46) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:14.245187] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (152.76) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:14.279224] [/sensors/sensor_monitor]: Combustion chamber pressure average (226.04) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:35:14.349732] [/sensors/sensor_monitor]: Oxidizer tank temperature average (149.36) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:14.371744] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (151.92) falls outside of nominal bounds ([0, 95])
+[DEBUG] [2020-02-12 19:35:16.725183] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:35:19.367150] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (162.96) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:19.430092] [/sensors/sensor_monitor]: Combustion chamber pressure average (241.34) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:35:19.476291] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (162.12) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:19.512651] [/sensors/sensor_monitor]: Oxidizer tank temperature average (159.56) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:35:21.435711] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (217.06) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:35:21.483795] [/sensors/sensor_monitor]: Combustion chamber pressure reading (322.48) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 19:35:21.529896] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (216.22) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:35:21.552897] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (213.66) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:24.434260] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (173.16) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:24.465823] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (172.32) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:24.534977] [/sensors/sensor_monitor]: Oxidizer tank temperature average (169.76) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:24.547718] [/sensors/sensor_monitor]: Combustion chamber pressure average (256.64) falls outside of nominal bounds ([0, 50])
+[DEBUG] [2020-02-12 19:35:26.724857] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:35:29.546510] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (183.36) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:29.586853] [/sensors/sensor_monitor]: Oxidizer tank temperature average (179.96) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:29.629995] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (182.52) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:29.651357] [/sensors/sensor_monitor]: Combustion chamber pressure average (271.94) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 19:35:31.546903] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (237.26) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:35:31.570156] [/sensors/sensor_monitor]: Combustion chamber pressure reading (352.79) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 19:35:31.627258] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (236.42) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:35:31.645581] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (233.86) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:34.641768] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (193.56) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:34.673698] [/sensors/sensor_monitor]: Combustion chamber pressure average (287.24) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:35:34.754840] [/sensors/sensor_monitor]: Oxidizer tank temperature average (190.16) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:34.790462] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (192.72) falls outside of nominal bounds ([0, 95])
+[DEBUG] [2020-02-12 19:35:38.715591] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:35:39.745076] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (203.76) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:39.816169] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (202.92) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:39.845408] [/sensors/sensor_monitor]: Combustion chamber pressure average (302.54) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:35:39.858745] [/sensors/sensor_monitor]: Oxidizer tank temperature average (200.36) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:35:41.642314] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (257.46) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:35:41.677362] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (254.06) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:35:41.705700] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (256.62) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:35:41.727188] [/sensors/sensor_monitor]: Combustion chamber pressure reading (383.12) falls outside of nominal bounds ([0, 50])
+[INFO]  [2020-02-12 19:35:43.527883] [/watchdog]: Runtime has reached 171 minutes.
+[ERROR] [2020-02-12 19:35:44.841750] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (213.96) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:44.886888] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (213.12) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:44.930489] [/sensors/sensor_monitor]: Combustion chamber pressure average (317.84) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:35:44.945512] [/sensors/sensor_monitor]: Oxidizer tank temperature average (210.56) falls outside of nominal bounds ([0, 95])
+[DEBUG] [2020-02-12 19:35:48.717068] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:35:49.950524] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (224.16) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:49.973847] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (223.32) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:50.031840] [/sensors/sensor_monitor]: Combustion chamber pressure average (333.14) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:35:50.063767] [/sensors/sensor_monitor]: Oxidizer tank temperature average (220.76) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:35:51.663153] [/sensors/sensor_monitor]: Combustion chamber pressure reading (413.08) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 19:35:51.733405] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (276.62) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:35:51.774652] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (274.06) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:35:51.788841] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (277.66) falls outside of nominal bounds ([0, 95])
+[DEBUG] [2020-02-12 19:35:54.722570] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:35:55.076435] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (234.36) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:55.166902] [/sensors/sensor_monitor]: Combustion chamber pressure average (348.44) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:35:55.235398] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (233.52) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:35:55.260503] [/sensors/sensor_monitor]: Oxidizer tank temperature average (230.96) falls outside of nominal bounds ([0, 95])
+[DEBUG] [2020-02-12 19:35:58.724636] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:36:00.176916] [/sensors/sensor_monitor]: Combustion chamber pressure average (363.74) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:36:00.258623] [/sensors/sensor_monitor]: Oxidizer tank temperature average (241.16) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:00.277960] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (243.72) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:36:01.766300] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (296.82) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:36:01.828113] [/sensors/sensor_monitor]: Combustion chamber pressure reading (443.38) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 19:36:01.869770] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (294.26) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:36:01.931275] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (297.86) falls outside of nominal bounds ([0, 95])
+[INFO]  [2020-02-12 19:36:03.565061] [/tcp_server]: Command from #1: print whitelist
+[DEBUG] [2020-02-12 19:36:03.633855] [/readiness_admin]: Command matches current pattern: .*, print whitelist
+[INFO]  [2020-02-12 19:36:03.715843] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 19:36:03.762446] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 19:36:03.814079] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-12 19:36:03.868120] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-12 19:36:03.930507] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-12 19:36:03.973766] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-12 19:36:04.041724] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-12 19:36:04.089246] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[INFO]  [2020-02-12 19:36:04.142931] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-12 19:36:04.189141] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[INFO]  [2020-02-12 19:36:04.257342] [/readiness_admin]: RL-8: abort, .*
+[INFO]  [2020-02-12 19:36:04.300535] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-12 19:36:04.365821] [/readiness_admin]: RL-10: .*
+[ERROR] [2020-02-12 19:36:05.246251] [/sensors/sensor_monitor]: Oxidizer tank temperature average (251.16) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:05.310786] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (253.72) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:05.449763] [/sensors/sensor_monitor]: Combustion chamber pressure average (378.74) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:36:05.490761] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (254.76) falls outside of nominal bounds ([0, 95])
+[DEBUG] [2020-02-12 19:36:08.726511] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:36:10.424712] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (264.96) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:10.531678] [/sensors/sensor_monitor]: Combustion chamber pressure average (394.34) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:36:10.576619] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (264.12) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:36:11.844924] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (317.02) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:36:11.866201] [/sensors/sensor_monitor]: Combustion chamber pressure reading (473.68) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 19:36:11.899552] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (314.46) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:36:11.961320] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (318.06) falls outside of nominal bounds ([0, 95])
+[DEBUG] [2020-02-12 19:36:14.715538] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:36:15.513609] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (275.16) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:15.571617] [/sensors/sensor_monitor]: Oxidizer tank temperature average (271.76) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:15.646834] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (274.32) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:15.674886] [/sensors/sensor_monitor]: Combustion chamber pressure average (409.64) falls outside of nominal bounds ([0, 50])
+[DEBUG] [2020-02-12 19:36:18.717269] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:36:20.550275] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (285.16) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:20.637631] [/sensors/sensor_monitor]: Oxidizer tank temperature average (281.76) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:20.677937] [/sensors/sensor_monitor]: Combustion chamber pressure average (424.64) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:36:20.734296] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (284.52) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:36:21.938865] [/sensors/sensor_monitor]: Combustion chamber pressure reading (503.98) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 19:36:21.970742] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (337.22) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:36:22.017325] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (334.66) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:36:22.051714] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (338.26) falls outside of nominal bounds ([0, 95])
+[DEBUG] [2020-02-12 19:36:24.715860] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:36:25.563270] [/sensors/sensor_monitor]: Oxidizer tank temperature average (291.76) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:25.623860] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (294.32) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:25.666054] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (295.36) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:25.713295] [/sensors/sensor_monitor]: Combustion chamber pressure average (439.94) falls outside of nominal bounds ([0, 50])
+[DEBUG] [2020-02-12 19:36:28.722898] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:36:30.605365] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (304.52) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:30.690352] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (305.36) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:30.734112] [/sensors/sensor_monitor]: Oxidizer tank temperature average (301.96) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:36:32.050390] [/sensors/sensor_monitor]: Combustion chamber pressure reading (534.28) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 19:36:32.075762] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (357.42) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:36:32.143815] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (358.46) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:36:32.159229] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (354.86) falls outside of nominal bounds ([0, 95])
+[INFO]  [2020-02-12 19:36:34.613090] [/tcp_server]: Command from #1: system fortune | cowsay
+[DEBUG] [2020-02-12 19:36:34.670356] [/readiness_admin]: Command matches current pattern: .*, system fortune | cowsay
+[INFO]  [2020-02-12 19:36:34.715288] [/exec]: $ fortune | cowsay
+[ERROR] [2020-02-12 19:36:35.816917] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (315.16) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:35.878853] [/sensors/sensor_monitor]: Oxidizer tank temperature average (311.76) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:35.933571] [/sensors/sensor_monitor]: Combustion chamber pressure average (469.64) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:36:35.986494] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (314.52) falls outside of nominal bounds ([0, 95])
+[INFO]  [2020-02-12 19:36:38.353819] [/exec]: 
+ _________________________________________
+/ Courage is resistance to fear, mastery  \
+| of fear--not absence of fear. Except a  |
+| creature be part coward it is not a     |
+| compliment to say it is brave; it is    |
+| merely a loose misapplication of the    |
+| word. Consider the flea!--incomparably  |
+| the bravest of all the creatures of     |
+| God, if ignorance of fear were courage. |
+| Whether you are asleep or awake he will |
+| attack you, caring nothing for the fact |
+| that in bulk and strength you are to    |
+| him as are the massed armies of the     |
+| earth to a sucking child; he lives both |
+| day and night and all days and nights   |
+| in the very lap of peril and the        |
+| immediate presence of death, and yet is |
+| no more afraid than is the man who      |
+| walks the streets of a city that was    |
+| threatened by an earthquake ten         |
+| centuries before. When we speak of      |
+| Clive, Nelson, and Putnam as men who    |
+| "didn't know what fear was," we ought   |
+| always to add the flea--and put him at  |
+| the head of the procession.             |
+|                                         |
+| -- Mark Twain, "Pudd'nhead Wilson's     |
+\ Calendar"                               /
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 19:36:38.414084] [/exec]: Finished with exit code 0
+[DEBUG] [2020-02-12 19:36:40.725861] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:36:40.776995] [/sensors/sensor_monitor]: Combustion chamber pressure average (485.54) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:36:40.849643] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (324.92) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:40.864415] [/sensors/sensor_monitor]: Oxidizer tank temperature average (322.36) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:40.923657] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (325.96) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:36:42.139092] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (378.46) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:36:42.172513] [/sensors/sensor_monitor]: Combustion chamber pressure reading (564.59) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 19:36:42.229534] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (377.62) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:36:42.245182] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (375.06) falls outside of nominal bounds ([0, 95])
+[INFO]  [2020-02-12 19:36:43.528449] [/watchdog]: Runtime has reached 172 minutes.
+[INFO]  [2020-02-12 19:36:45.555299] [/tcp_server]: Command from #1: system fortune | cowsay
+[DEBUG] [2020-02-12 19:36:45.613937] [/readiness_admin]: Command matches current pattern: .*, system fortune | cowsay
+[INFO]  [2020-02-12 19:36:45.672938] [/exec]: $ fortune | cowsay
+[ERROR] [2020-02-12 19:36:45.930672] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (335.96) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:45.981108] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (335.12) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:46.047677] [/sensors/sensor_monitor]: Oxidizer tank temperature average (332.56) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:46.069217] [/sensors/sensor_monitor]: Combustion chamber pressure average (500.84) falls outside of nominal bounds ([0, 50])
+[INFO]  [2020-02-12 19:36:47.862464] [/exec]: 
+ _________________________________________
+/ Q: How many mathematicians does it take \
+| to screw in a light bulb? A: One. He    |
+| gives it to six Californians, thereby   |
+| reducing the problem                    |
+|                                         |
+\ to the earlier joke.                    /
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 19:36:47.901524] [/exec]: Finished with exit code 0
+[DEBUG] [2020-02-12 19:36:50.719188] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:36:50.935088] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (346.16) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:51.003387] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (345.32) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:51.034825] [/sensors/sensor_monitor]: Combustion chamber pressure average (516.14) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:36:51.046218] [/sensors/sensor_monitor]: Oxidizer tank temperature average (342.76) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:36:52.247122] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (398.66) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:36:52.284568] [/sensors/sensor_monitor]: Combustion chamber pressure reading (594.89) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 19:36:52.345207] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (395.26) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:36:52.357249] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (397.82) falls outside of nominal bounds ([0, 95])
+[DEBUG] [2020-02-12 19:36:54.713541] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:36:56.038076] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (356.36) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:56.078872] [/sensors/sensor_monitor]: Combustion chamber pressure average (531.44) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:36:56.144642] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (355.52) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:36:56.156578] [/sensors/sensor_monitor]: Oxidizer tank temperature average (352.96) falls outside of nominal bounds ([0, 95])
+[DEBUG] [2020-02-12 19:36:58.725501] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:37:01.138793] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (366.56) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:37:01.174730] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (365.72) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:37:01.232903] [/sensors/sensor_monitor]: Combustion chamber pressure average (546.74) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:37:01.246844] [/sensors/sensor_monitor]: Oxidizer tank temperature average (363.16) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:37:02.366224] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (418.87) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:37:02.433105] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (418.02) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:37:02.470251] [/sensors/sensor_monitor]: Combustion chamber pressure reading (625.18) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 19:37:02.474265] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (415.46) falls outside of nominal bounds ([0, 95])
+[DEBUG] [2020-02-12 19:37:04.715851] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:37:06.251258] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (376.76) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:37:06.288606] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (375.92) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:37:06.354458] [/sensors/sensor_monitor]: Oxidizer tank temperature average (373.36) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:37:06.384583] [/sensors/sensor_monitor]: Combustion chamber pressure average (562.04) falls outside of nominal bounds ([0, 50])
+[DEBUG] [2020-02-12 19:37:08.716553] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:37:11.365003] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (386.96) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:37:11.441735] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (386.12) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:37:11.466679] [/sensors/sensor_monitor]: Oxidizer tank temperature average (383.56) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:37:11.489696] [/sensors/sensor_monitor]: Combustion chamber pressure average (577.34) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 19:37:12.437235] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (439.06) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:37:12.465621] [/sensors/sensor_monitor]: Combustion chamber pressure reading (655.48) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 19:37:12.523934] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (438.22) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:37:12.538347] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (435.66) falls outside of nominal bounds ([0, 95])
+[DEBUG] [2020-02-12 19:37:14.725460] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:37:16.438903] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (397.16) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:37:16.469687] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (396.32) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:37:16.534470] [/sensors/sensor_monitor]: Combustion chamber pressure average (592.64) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:37:16.550555] [/sensors/sensor_monitor]: Oxidizer tank temperature average (393.76) falls outside of nominal bounds ([0, 95])
+[DEBUG] [2020-02-12 19:37:18.732256] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:37:19.365584] [/tcp_server]: Command from #1: system fortune | cowsay
+[DEBUG] [2020-02-12 19:37:19.435628] [/readiness_admin]: Command matches current pattern: .*, system fortune | cowsay
+[INFO]  [2020-02-12 19:37:19.471493] [/exec]: $ fortune | cowsay
+[ERROR] [2020-02-12 19:37:21.489823] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (407.16) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:37:21.564966] [/sensors/sensor_monitor]: Oxidizer tank temperature average (403.76) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:37:21.584223] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (406.32) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:37:21.632258] [/sensors/sensor_monitor]: Combustion chamber pressure average (607.64) falls outside of nominal bounds ([0, 50])
+[INFO]  [2020-02-12 19:37:22.030512] [/exec]: 
+ _______________________________________
+/ You had some happiness once, but your \
+| parents moved away, and you had to    |
+\ leave it behind.                      /
+ ---------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 19:37:22.069228] [/exec]: Finished with exit code 0
+[WARN]  [2020-02-12 19:37:22.537865] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (459.26) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:37:22.565920] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (458.42) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:37:22.611892] [/sensors/sensor_monitor]: Combustion chamber pressure reading (685.79) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 19:37:22.643849] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (455.86) falls outside of nominal bounds ([0, 95])
+[DEBUG] [2020-02-12 19:37:24.718956] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:37:26.539127] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (417.36) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:37:26.577376] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (416.52) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:37:26.638055] [/sensors/sensor_monitor]: Oxidizer tank temperature average (413.96) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:37:26.655866] [/sensors/sensor_monitor]: Combustion chamber pressure average (622.94) falls outside of nominal bounds ([0, 50])
+[DEBUG] [2020-02-12 19:37:28.716293] [/tcp_server]: Sending keep-alive message.
+[ERROR] [2020-02-12 19:37:31.632733] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (427.56) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:37:31.692617] [/sensors/sensor_monitor]: Combustion chamber pressure average (638.24) falls outside of nominal bounds ([0, 50])
+[ERROR] [2020-02-12 19:37:31.732144] [/sensors/sensor_monitor]: Oxidizer tank temperature average (424.16) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 19:37:31.744449] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (426.72) falls outside of nominal bounds ([0, 95])
+[INFO]  [2020-02-12 19:37:32.660796] [/tcp_server]: Command from #1: toggle sensor warning suppression
+[WARN]  [2020-02-12 19:37:32.649941] [/sensors/sensor_monitor]: Combustion chamber temperature 1 reading (479.46) falls outside of nominal bounds ([0, 95])
+[DEBUG] [2020-02-12 19:37:32.741679] [/readiness_admin]: Command matches current pattern: .*, toggle sensor warning suppression
+[WARN]  [2020-02-12 19:37:32.718547] [/sensors/sensor_monitor]: Combustion chamber pressure reading (716.10) falls outside of nominal bounds ([0, 50])
+[WARN]  [2020-02-12 19:37:32.818722] [/sensors/sensor_monitor]: Combustion chamber temperature 2 reading (478.62) falls outside of nominal bounds ([0, 95])
+[WARN]  [2020-02-12 19:37:32.856657] [/sensors/sensor_monitor]: Oxidizer tank temperature reading (476.06) falls outside of nominal bounds ([0, 95])
+[INFO]  [2020-02-12 19:37:32.877883] [/sensors/sensor_monitor]: Sensor warning suppression set to True
+[WARN]  [2020-02-12 19:37:32.928664] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:37:32.978231] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:37:33.013609] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:37:33.024692] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[DEBUG] [2020-02-12 19:37:36.718652] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:37:40.719358] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:37:44.530214] [/watchdog]: Runtime has reached 173 minutes.
+[DEBUG] [2020-02-12 19:37:46.722612] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:37:48.614198] [/tcp_server]: Command from #1: read data
+[DEBUG] [2020-02-12 19:37:48.661508] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 19:37:48.754584] [/sensors/sensor_monitor]: OTP: 760.14 psig / CCP: 764.40 psig / OTT: 508.06 F / CCT1: 511.66 F / CCT2: 510.62 F
+[INFO]  [2020-02-12 19:37:49.623743] [/tcp_server]: Command from #1: read data
+[DEBUG] [2020-02-12 19:37:49.669833] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 19:37:49.768636] [/sensors/sensor_monitor]: OTP: 763.14 psig / CCP: 767.09 psig / OTT: 510.26 F / CCT1: 513.66 F / CCT2: 512.62 F
+[INFO]  [2020-02-12 19:37:50.253247] [/tcp_server]: Command from #1: read data
+[DEBUG] [2020-02-12 19:37:50.297236] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 19:37:50.466889] [/sensors/sensor_monitor]: OTP: 765.23 psig / CCP: 769.18 psig / OTT: 511.26 F / CCT1: 514.86 F / CCT2: 514.02 F
+[INFO]  [2020-02-12 19:37:50.718033] [/tcp_server]: Command from #1: read data
+[DEBUG] [2020-02-12 19:37:50.763183] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 19:37:50.845067] [/sensors/sensor_monitor]: OTP: 766.45 psig / CCP: 770.38 psig / OTT: 512.26 F / CCT1: 515.66 F / CCT2: 514.82 F
+[INFO]  [2020-02-12 19:37:51.173991] [/tcp_server]: Command from #1: read data
+[DEBUG] [2020-02-12 19:37:51.234065] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 19:37:51.329941] [/sensors/sensor_monitor]: OTP: 767.63 psig / CCP: 771.89 psig / OTT: 513.26 F / CCT1: 516.66 F / CCT2: 515.83 F
+[INFO]  [2020-02-12 19:37:51.815885] [/tcp_server]: Command from #1: read data
+[DEBUG] [2020-02-12 19:37:51.862090] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 19:37:51.951213] [/sensors/sensor_monitor]: OTP: 769.74 psig / CCP: 773.68 psig / OTT: 514.46 F / CCT1: 517.86 F / CCT2: 517.02 F
+[INFO]  [2020-02-12 19:37:53.234633] [/tcp_server]: Command from #1: read data
+[DEBUG] [2020-02-12 19:37:53.276405] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 19:37:53.435897] [/sensors/sensor_monitor]: OTP: 773.94 psig / CCP: 778.19 psig / OTT: 517.26 F / CCT1: 520.86 F / CCT2: 520.02 F
+[DEBUG] [2020-02-12 19:37:56.717091] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:37:59.864636] [/tcp_server]: Command from #1: fire ematch
+[DEBUG] [2020-02-12 19:37:59.927365] [/readiness_admin]: Command matches current pattern: .*, fire ematch
+[INFO]  [2020-02-12 19:37:59.978386] [/hardware/ematch]: Firing e-match.
+[DEBUG] [2020-02-12 19:38:02.724429] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:38:06.718626] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:38:10.717087] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:38:14.722394] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:38:18.716908] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:38:22.716707] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:38:26.714658] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:38:30.725688] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:38:33.037459] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:38:33.072887] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:38:33.126707] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:38:33.142930] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[DEBUG] [2020-02-12 19:38:36.702731] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:38:40.718627] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:38:42.162714] [/tcp_server]: Command from #1: abort
+[DEBUG] [2020-02-12 19:38:42.203535] [/readiness_admin]: Command matches current pattern: .*, abort
+[INFO]  [2020-02-12 19:38:43.514177] [/tcp_server]: Command from #1: abort
+[DEBUG] [2020-02-12 19:38:43.559359] [/readiness_admin]: Command matches current pattern: .*, abort
+[INFO]  [2020-02-12 19:38:43.976466] [/tcp_server]: Command from #1: abort
+[DEBUG] [2020-02-12 19:38:44.045357] [/readiness_admin]: Command matches current pattern: .*, abort
+[INFO]  [2020-02-12 19:38:44.524986] [/watchdog]: Runtime has reached 174 minutes.
+[DEBUG] [2020-02-12 19:38:46.719617] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:38:49.025302] [/tcp_server]: Command from #1: set readiness 0
+[DEBUG] [2020-02-12 19:38:49.072811] [/readiness_admin]: Command matches current pattern: .*, set readiness 0
+[INFO]  [2020-02-12 19:38:49.142903] [/readiness_admin]: Set readiness level to 0
+[DEBUG] [2020-02-12 19:38:52.719130] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:38:54.498646] [/tcp_server]: Command from #1: abort
+[INFO]  [2020-02-12 19:38:54.559307] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 19:38:54.599795] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 19:38:54.642621] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 19:38:54.672364] [/readiness_admin]: Current: idiot check
+[DEBUG] [2020-02-12 19:38:56.726560] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:39:00.715217] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:39:04.715463] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:39:08.716810] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:39:12.725927] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:39:16.725710] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:39:20.725695] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:39:24.718447] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:39:28.716730] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:39:32.730489] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:39:33.147765] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:39:33.268984] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:39:33.303138] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:39:33.359501] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:39:33.422673] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[DEBUG] [2020-02-12 19:39:36.729493] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:39:40.723827] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:39:44.528602] [/watchdog]: Runtime has reached 175 minutes.
+[DEBUG] [2020-02-12 19:39:46.717052] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:39:50.726683] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:39:54.722471] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:39:58.726545] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:40:02.717375] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:40:06.719034] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:40:10.723737] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:40:14.723684] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:40:18.723399] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:40:22.732930] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:40:26.709498] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:40:30.717515] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:40:33.241618] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:40:33.362190] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:40:33.415695] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:40:33.469950] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:40:33.524845] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[DEBUG] [2020-02-12 19:40:36.763515] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:40:37.172325] [/watchdog]: New node registered: /idiot_checker_one
+[INFO]  [2020-02-12 19:40:37.716307] [/watchdog]: New node registered: /idiot_checker_two
+[DEBUG] [2020-02-12 19:40:37.802674] [/tcp_server]: connecting to gandalf 38741
+[DEBUG] [2020-02-12 19:40:38.477020] [/tcp_server]: connecting to gandalf 39219
+[DEBUG] [2020-02-12 19:40:40.729531] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:40:42.118668] [/sensors/sensor_monitor]: Nitrous tank overpressure (1274.93603516, 1200.08736133 >1200 psig) detected!
+[INFO]  [2020-02-12 19:40:44.331874] [/tcp_server]: Command from #1: idiot check
+[DEBUG] [2020-02-12 19:40:44.413096] [/readiness_admin]: Command matches current pattern: idiot check, idiot check
+[INFO]  [2020-02-12 19:40:44.529253] [/watchdog]: Runtime has reached 176 minutes.
+[DEBUG] [2020-02-12 19:40:46.715918] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:40:47.155409] [/sensors/sensor_monitor]: Nitrous tank overpressure (1295.33496094, 1220.48716211 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:40:50.726334] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:40:52.152497] [/tcp_server]: Command from #1: begin idiot check
+[WARN]  [2020-02-12 19:40:52.150853] [/sensors/sensor_monitor]: Nitrous tank overpressure (1310.3359375, 1235.48720117 >1200 psig) detected!
+[INFO]  [2020-02-12 19:40:52.238672] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 19:40:52.276269] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 19:40:52.347537] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 19:40:52.416296] [/readiness_admin]: Current: idiot check
+[DEBUG] [2020-02-12 19:40:54.725472] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:40:57.251515] [/sensors/sensor_monitor]: Nitrous tank overpressure (1325.6348877, 1250.78713892 >1200 psig) detected!
+[INFO]  [2020-02-12 19:40:59.626164] [/tcp_server]: Command from #1: idiot check one
+[INFO]  [2020-02-12 19:40:59.673035] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 19:40:59.734904] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 19:40:59.774359] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 19:40:59.833474] [/readiness_admin]: Current: idiot check
+[WARN]  [2020-02-12 19:41:02.253534] [/sensors/sensor_monitor]: Nitrous tank overpressure (1340.63720703, 1265.787073 >1200 psig) detected!
+[INFO]  [2020-02-12 19:41:02.266258] [/tcp_server]: Command from #1: idiot check
+[DEBUG] [2020-02-12 19:41:02.358410] [/readiness_admin]: Command matches current pattern: idiot check, idiot check
+[INFO]  [2020-02-12 19:41:04.499768] [/tcp_server]: Command from #1: set readiness 10
+[DEBUG] [2020-02-12 19:41:04.561648] [/readiness_admin]: Command matches persistent pattern: set readiness [0-9]+, set readiness 10
+[INFO]  [2020-02-12 19:41:04.637288] [/readiness_admin]: Set readiness level to 10
+[DEBUG] [2020-02-12 19:41:06.728726] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:41:07.349995] [/tcp_server]: Command from #1: idiot check 1
+[DEBUG] [2020-02-12 19:41:07.436964] [/readiness_admin]: Command matches current pattern: .*, idiot check 1
+[WARN]  [2020-02-12 19:41:07.573131] [/sensors/sensor_monitor]: Nitrous tank overpressure (1355.93640137, 1281.08712598 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:41:10.724622] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:41:11.616073] [/tcp_server]: Command from #1: idiot check one
+[DEBUG] [2020-02-12 19:41:11.666051] [/readiness_admin]: Command matches current pattern: .*, idiot check one
+[INFO]  [2020-02-12 19:41:11.741543] [/idiot_checker_one]: Beginning interactive test: idiot check one
+[INFO]  [2020-02-12 19:41:11.798604] [/idiot_checker_one]: Q1: What word starts with y? (1)
+[WARN]  [2020-02-12 19:41:12.650431] [/sensors/sensor_monitor]: Nitrous tank overpressure (1371.83789062, 1296.98707983 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:41:14.749186] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:41:17.648700] [/sensors/sensor_monitor]: Nitrous tank overpressure (1386.83532715, 1311.98702588 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:41:20.716741] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:41:22.625995] [/tcp_server]: Command from #1: yes
+[DEBUG] [2020-02-12 19:41:22.666406] [/readiness_admin]: Command matches current pattern: .*, yes
+[INFO]  [2020-02-12 19:41:22.746253] [/idiot_checker_one]: Correct response recieved!
+[INFO]  [2020-02-12 19:41:22.813093] [/idiot_checker_one]: Q2: What word starts with n? (1)
+[WARN]  [2020-02-12 19:41:22.917624] [/sensors/sensor_monitor]: Nitrous tank overpressure (1402.13464355, 1327.28668652 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:41:26.718239] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:41:27.958067] [/sensors/sensor_monitor]: Nitrous tank overpressure (1417.73461914, 1342.88650879 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:41:30.723305] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 19:41:31.187170] [/tcp_server]: Command from #1: no
+[DEBUG] [2020-02-12 19:41:31.243542] [/readiness_admin]: Command matches current pattern: .*, no
+[INFO]  [2020-02-12 19:41:31.303862] [/idiot_checker_one]: Correct response recieved!
+[INFO]  [2020-02-12 19:41:31.371745] [/idiot_checker_one]: Q3: Is rocketry really cool? (1)
+[WARN]  [2020-02-12 19:41:32.954233] [/sensors/sensor_monitor]: Nitrous tank overpressure (1432.73461914, 1357.88632886 >1200 psig) detected!
+[WARN]  [2020-02-12 19:41:33.252196] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:41:33.316221] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:41:33.389177] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:41:33.432848] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:41:33.463863] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[INFO]  [2020-02-12 19:41:33.601069] [/tcp_server]: Command from #1: yes
+[DEBUG] [2020-02-12 19:41:33.658717] [/readiness_admin]: Command matches current pattern: .*, yes
+[INFO]  [2020-02-12 19:41:33.718606] [/idiot_checker_one]: Correct response recieved!
+[INFO]  [2020-02-12 19:41:33.776427] [/idiot_checker_one]: Test passed!
+[DEBUG] [2020-02-12 19:41:36.727527] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:41:38.058136] [/sensors/sensor_monitor]: Nitrous tank overpressure (1448.03503418, 1373.18638867 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:41:40.727282] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:41:43.049121] [/sensors/sensor_monitor]: Nitrous tank overpressure (1463.03491211, 1388.18627002 >1200 psig) detected!
+[INFO]  [2020-02-12 19:41:45.529610] [/watchdog]: Runtime has reached 177 minutes.
+[WARN]  [2020-02-12 19:41:48.152975] [/sensors/sensor_monitor]: Nitrous tank overpressure (1478.3359375, 1403.48623462 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:41:50.718272] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:41:53.145120] [/sensors/sensor_monitor]: Nitrous tank overpressure (1493.3347168, 1418.48630273 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:41:56.723203] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:41:58.253695] [/sensors/sensor_monitor]: Nitrous tank overpressure (1508.63500977, 1433.78633447 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:42:00.715862] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:42:03.249069] [/sensors/sensor_monitor]: Nitrous tank overpressure (1523.6348877, 1448.78628882 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:42:06.729775] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:42:08.409591] [/sensors/sensor_monitor]: Nitrous tank overpressure (1538.93591309, 1464.08621509 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:42:10.718374] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:42:13.428148] [/sensors/sensor_monitor]: Nitrous tank overpressure (1553.93505859, 1479.0861687 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:42:16.727129] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:42:18.399278] [/sensors/sensor_monitor]: Nitrous tank overpressure (1568.93566895, 1494.08640869 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:42:20.718732] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:42:23.370224] [/sensors/sensor_monitor]: Nitrous tank overpressure (1583.93591309, 1509.08638135 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:42:26.717007] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:42:28.454145] [/sensors/sensor_monitor]: Nitrous tank overpressure (1599.23498535, 1524.38634619 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:42:30.715306] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:42:33.369262] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:42:33.460967] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:42:33.488722] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:42:33.501097] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:42:33.542319] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:42:33.638841] [/sensors/sensor_monitor]: Nitrous tank overpressure (1613.93493652, 1539.08634497 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:42:36.724309] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:42:38.634070] [/sensors/sensor_monitor]: Nitrous tank overpressure (1629.83532715, 1554.9864834 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:42:40.724954] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:42:43.755243] [/sensors/sensor_monitor]: Nitrous tank overpressure (1643.93518066, 1569.08673145 >1200 psig) detected!
+[INFO]  [2020-02-12 19:42:45.525219] [/watchdog]: Runtime has reached 178 minutes.
+[DEBUG] [2020-02-12 19:42:48.726615] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:42:48.877298] [/sensors/sensor_monitor]: Nitrous tank overpressure (1660.14526367, 1585.28653589 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:42:52.715413] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:42:53.867882] [/sensors/sensor_monitor]: Nitrous tank overpressure (1675.43688965, 1600.58675684 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:42:56.716854] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:42:58.958645] [/sensors/sensor_monitor]: Nitrous tank overpressure (1690.73498535, 1615.88678931 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:43:02.713430] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:43:03.961432] [/sensors/sensor_monitor]: Nitrous tank overpressure (1705.73608398, 1630.88678833 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:43:06.718435] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:43:09.060078] [/sensors/sensor_monitor]: Nitrous tank overpressure (1721.03552246, 1646.18650439 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:43:12.729799] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:43:14.160617] [/sensors/sensor_monitor]: Nitrous tank overpressure (1736.33557129, 1661.48656226 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:43:16.725275] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:43:19.245926] [/sensors/sensor_monitor]: Nitrous tank overpressure (1751.63500977, 1676.78658154 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:43:22.718757] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:43:24.253630] [/sensors/sensor_monitor]: Nitrous tank overpressure (1766.63684082, 1691.78673169 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:43:26.717579] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:43:29.249678] [/sensors/sensor_monitor]: Nitrous tank overpressure (1781.63623047, 1706.78661865 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:43:32.728530] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:43:33.437892] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:43:33.499572] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:43:33.548787] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:43:33.575380] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:43:33.605180] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:43:34.378329] [/sensors/sensor_monitor]: Nitrous tank overpressure (1796.93469238, 1722.08653394 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:43:36.735139] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:43:39.376947] [/sensors/sensor_monitor]: Nitrous tank overpressure (1811.93469238, 1737.0864165 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:43:42.719197] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:43:44.448443] [/sensors/sensor_monitor]: Nitrous tank overpressure (1827.23498535, 1752.38627393 >1200 psig) detected!
+[INFO]  [2020-02-12 19:43:45.525454] [/watchdog]: Runtime has reached 179 minutes.
+[DEBUG] [2020-02-12 19:43:48.723717] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:43:49.450151] [/sensors/sensor_monitor]: Nitrous tank overpressure (1842.23852539, 1767.38631763 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:43:52.727555] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:43:54.552640] [/sensors/sensor_monitor]: Nitrous tank overpressure (1857.53515625, 1782.68633374 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:43:56.725063] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:43:59.550171] [/sensors/sensor_monitor]: Nitrous tank overpressure (1872.53503418, 1797.68636694 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:44:02.703440] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:44:04.654445] [/sensors/sensor_monitor]: Nitrous tank overpressure (1887.83630371, 1812.98638208 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:44:06.714995] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:44:09.652338] [/sensors/sensor_monitor]: Nitrous tank overpressure (1902.83618164, 1827.9863689 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:44:12.719143] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:44:14.759179] [/sensors/sensor_monitor]: Nitrous tank overpressure (1918.13562012, 1843.28629614 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:44:18.728562] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:44:19.852411] [/sensors/sensor_monitor]: Nitrous tank overpressure (1933.43615723, 1858.58620972 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:44:22.717111] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:44:24.859168] [/sensors/sensor_monitor]: Nitrous tank overpressure (1948.43615723, 1873.58612598 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:44:28.718050] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:44:29.956387] [/sensors/sensor_monitor]: Nitrous tank overpressure (1963.73510742, 1888.88614966 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:44:32.719291] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:44:33.537773] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:44:33.596888] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:44:33.631000] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:44:33.651372] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:44:33.658148] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:44:35.051649] [/sensors/sensor_monitor]: Nitrous tank overpressure (1979.03588867, 1904.1861084 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:44:38.727759] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:44:40.060742] [/sensors/sensor_monitor]: Nitrous tank overpressure (1994.03552246, 1919.18624097 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:44:42.722940] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:44:45.046487] [/sensors/sensor_monitor]: Nitrous tank overpressure (2009.03881836, 1934.18624072 >1200 psig) detected!
+[INFO]  [2020-02-12 19:44:46.524717] [/watchdog]: Runtime has reached 180 minutes.
+[DEBUG] [2020-02-12 19:44:48.716213] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:44:50.150418] [/sensors/sensor_monitor]: Nitrous tank overpressure (2024.33520508, 1949.4861521 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:44:52.722301] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:44:55.142944] [/sensors/sensor_monitor]: Nitrous tank overpressure (2039.3347168, 1964.48621436 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:44:58.722844] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:45:00.153641] [/sensors/sensor_monitor]: Nitrous tank overpressure (2054.33496094, 1979.48623486 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:45:02.726278] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:45:05.257170] [/sensors/sensor_monitor]: Nitrous tank overpressure (2069.63500977, 1994.78640112 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:45:08.717614] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:45:10.253192] [/sensors/sensor_monitor]: Nitrous tank overpressure (2084.63549805, 2009.78642261 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:45:12.726488] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:45:15.254365] [/sensors/sensor_monitor]: Nitrous tank overpressure (2099.63525391, 2024.78648315 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:45:18.725100] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:45:20.377702] [/sensors/sensor_monitor]: Nitrous tank overpressure (2114.93554688, 2040.08653979 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:45:22.715539] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:45:25.363493] [/sensors/sensor_monitor]: Nitrous tank overpressure (2129.93505859, 2055.08660815 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:45:28.718114] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:45:30.452635] [/sensors/sensor_monitor]: Nitrous tank overpressure (2145.23510742, 2070.38662427 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:45:32.717138] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:45:33.548313] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:45:33.576594] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:45:33.625327] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:45:33.647844] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:45:33.712460] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 19:45:35.552466] [/sensors/sensor_monitor]: Nitrous tank overpressure (2160.53466797, 2085.68657544 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:45:38.724512] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:45:40.553289] [/sensors/sensor_monitor]: Nitrous tank overpressure (2175.54272461, 2100.6867749 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:45:42.723134] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:45:45.644663] [/sensors/sensor_monitor]: Nitrous tank overpressure (2190.83520508, 2115.98666455 >1200 psig) detected!
+[INFO]  [2020-02-12 19:45:46.525330] [/watchdog]: Runtime has reached 181 minutes.
+[INFO]  [2020-02-12 19:45:47.154358] [/tcp_server]: Command from #1: system rosnode list
+[DEBUG] [2020-02-12 19:45:47.187279] [/readiness_admin]: Command matches current pattern: .*, system rosnode list
+[INFO]  [2020-02-12 19:45:47.269724] [/exec]: $ rosnode list
+[DEBUG] [2020-02-12 19:45:50.718013] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:45:50.770280] [/sensors/sensor_monitor]: Nitrous tank overpressure (2205.83691406, 2130.98686963 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:45:54.728202] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:45:55.798061] [/sensors/sensor_monitor]: Nitrous tank overpressure (2218.43481445, 2143.58661523 >1200 psig) detected!
+[WARN]  [2020-02-12 19:45:57.537128] [/exec]: Command timed out after 10.0 seconds.
+[DEBUG] [2020-02-12 19:46:00.717149] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:46:00.900857] [/sensors/sensor_monitor]: Nitrous tank overpressure (2236.13476562, 2161.28678223 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:46:04.702628] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:46:05.953815] [/sensors/sensor_monitor]: Nitrous tank overpressure (2246.93530273, 2172.08671094 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:46:08.724608] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:46:11.054725] [/sensors/sensor_monitor]: Nitrous tank overpressure (2266.734375, 2191.88680957 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:46:14.714987] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:46:16.138755] [/sensors/sensor_monitor]: Nitrous tank overpressure (2282.03442383, 2207.1868999 >1200 psig) detected!
+[DEBUG] [2020-02-12 19:46:18.724120] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 19:46:21.159426] [/sensors/sensor_monitor]: Nitrous tank overpressure (2297.33544922, 2222.48701172 >1200 psig) detected!

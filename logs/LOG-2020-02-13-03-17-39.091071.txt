@@ -1,0 +1,15 @@
+[INFO]  [2020-02-12 22:17:43.338088] [/tcp_server]: New connection: (1, ('192.168.1.7', 60072))
+[INFO]  [2020-02-12 22:17:43.369014] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 22:17:44.145528] [/tcp_server]: Connection with atleast one client restored.
+[DEBUG] [2020-02-12 22:17:47.097817] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:17:51.098162] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:17:55.097347] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:17:59.102283] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:18:03.098012] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:18:07.097457] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 22:18:08.620717] [/watchdog]: Runtime has reached 334 minutes.
+[DEBUG] [2020-02-12 22:18:11.098468] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:18:15.098276] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:18:19.087259] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:18:23.099445] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:18:27.097641] [/tcp_server]: Sending keep-alive message.

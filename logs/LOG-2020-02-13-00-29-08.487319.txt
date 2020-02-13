@@ -1,0 +1,22 @@
+[INFO]  [2020-02-12 19:29:12.851483] [/tcp_server]: New connection: (1, ('192.168.1.7', 58332))
+[INFO]  [2020-02-12 19:29:12.882753] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 19:29:12.899879]: Connection to master established.
+[INFO]  [2020-02-12 19:29:12.900360]: You are client #1
+[INFO]  [2020-02-12 19:29:13.777515] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 19:29:15.518710] [/tcp_server]: Command from #1: print whitelist
+[DEBUG] [2020-02-12 19:29:15.537508] [/readiness_admin]: Command matches current pattern: .*, print whitelist
+[INFO]  [2020-02-12 19:29:15.569206] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 19:29:15.589431] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 19:29:15.610158] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-12 19:29:15.627028] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-12 19:29:15.649286] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-12 19:29:15.668413] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-12 19:29:15.693833] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-12 19:29:15.717698] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[INFO]  [2020-02-12 19:29:15.741694] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-12 19:29:15.762313] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[INFO]  [2020-02-12 19:29:15.788765] [/readiness_admin]: RL-8: abort, .*
+[INFO]  [2020-02-12 19:29:15.812178] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-12 19:29:15.827938] [/readiness_admin]: RL-10: .*
+[DEBUG] [2020-02-12 19:29:18.712897] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:29:22.712547] [/tcp_server]: Sending keep-alive message.

@@ -1,0 +1,19 @@
+[INFO]  [2020-02-12 17:53:40.052310] [/tcp_server]: New connection: (1, ('192.168.1.7', 57014))
+[INFO]  [2020-02-12 17:53:40.095848] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 17:53:40.131785]: Connection to master established.
+[INFO]  [2020-02-12 17:53:40.132527]: You are client #1
+[INFO]  [2020-02-12 17:53:40.277364] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 17:53:43.337331] [/tcp_server]: Command from #1: do the thing
+[INFO]  [2020-02-12 17:53:43.432553] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:53:43.511608] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:53:43.539132] [/watchdog]: Runtime has reached 69 minutes.
+[INFO]  [2020-02-12 17:53:43.589736] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:53:43.631213] [/readiness_admin]: Current: idiot check
+[WARN]  [2020-02-12 17:53:43.994871] [/sensors/sensor_monitor]: Nitrous tank overpressure (12394.7021484, 12319.8548887 >1200 psig) detected!
+[WARN]  [2020-02-12 17:53:49.098626] [/sensors/sensor_monitor]: Nitrous tank overpressure (12410.0039062, 12335.1550684 >1200 psig) detected!
+[WARN]  [2020-02-12 17:53:54.097900] [/sensors/sensor_monitor]: Nitrous tank overpressure (12425.0009766, 12350.154627 >1200 psig) detected!
+[INFO]  [2020-02-12 17:53:55.785079] [/tcp_server]: Command from #1: do the thing
+[INFO]  [2020-02-12 17:53:55.822744] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:53:55.878181] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:53:55.903387] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:53:55.941622] [/readiness_admin]: Current: idiot check

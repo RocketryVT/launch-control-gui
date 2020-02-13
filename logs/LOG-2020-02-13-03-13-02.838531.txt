@@ -1,0 +1,7 @@
+[INFO]  [2020-02-12 22:13:07.749013] [/tcp_server]: New connection: (1, ('192.168.1.7', 59984))
+[INFO]  [2020-02-12 22:13:07.801401] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 22:13:08.145414] [/tcp_server]: Connection with atleast one client restored.
+[ERROR] [2020-02-12 22:13:09.460334] [/sensors/sensor_monitor]: Combustion chamber temperature 1 average (419.01) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 22:13:09.516587] [/sensors/sensor_monitor]: Oxidizer tank temperature average (415.32) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 22:13:09.535389] [/sensors/sensor_monitor]: Combustion chamber temperature 2 average (417.75) falls outside of nominal bounds ([0, 95])
+[ERROR] [2020-02-12 22:13:09.591849] [/sensors/sensor_monitor]: Combustion chamber pressure average (625.40) falls outside of nominal bounds ([0, 50])

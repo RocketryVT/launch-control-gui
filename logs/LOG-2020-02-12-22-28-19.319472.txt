@@ -1,0 +1,11 @@
+[INFO]  [2020-02-12 17:28:23.346483] [/tcp_server]: New connection: (1, ('192.168.1.7', 56798))
+[INFO]  [2020-02-12 17:28:23.389834] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 17:28:23.416856]: Connection to master established.
+[INFO]  [2020-02-12 17:28:23.417188]: You are client #1
+[INFO]  [2020-02-12 17:28:24.276169] [/tcp_server]: Connection with atleast one client restored.
+[WARN]  [2020-02-12 17:28:25.489634] [/sensors/sensor_monitor]: Nitrous tank overpressure (7839.20214844, 7764.35404102 >1200 psig) detected!
+[INFO]  [2020-02-12 17:28:29.525279] [/watchdog]: Runtime has reached 44 minutes.
+[WARN]  [2020-02-12 17:28:30.489651] [/sensors/sensor_monitor]: Nitrous tank overpressure (7854.20214844, 7779.35386035 >1200 psig) detected!
+[WARN]  [2020-02-12 17:28:35.620445] [/sensors/sensor_monitor]: Nitrous tank overpressure (7869.50195312, 7794.65386719 >1200 psig) detected!
+[WARN]  [2020-02-12 17:28:40.690469] [/sensors/sensor_monitor]: Nitrous tank overpressure (7884.80224609, 7809.95381055 >1200 psig) detected!
+[WARN]  [2020-02-12 17:28:45.698259] [/sensors/sensor_monitor]: Nitrous tank overpressure (7899.83496094, 7824.95383984 >1200 psig) detected!

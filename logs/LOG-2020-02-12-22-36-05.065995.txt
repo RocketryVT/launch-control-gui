@@ -1,0 +1,56 @@
+[INFO]  [2020-02-12 17:36:11.352521] [/tcp_server]: New connection: (1, ('192.168.1.7', 56880))
+[INFO]  [2020-02-12 17:36:11.393853] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 17:36:11.420282]: Connection to master established.
+[INFO]  [2020-02-12 17:36:11.420624]: You are client #1
+[INFO]  [2020-02-12 17:36:12.280571] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 17:36:12.962784] [/tcp_server]: Command from #1: print whitelist
+[DEBUG] [2020-02-12 17:36:13.001363] [/readiness_admin]: Command matches persistent pattern: print whitelist, print whitelist
+[INFO]  [2020-02-12 17:36:13.052949] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:36:13.089965] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:36:13.121613] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-12 17:36:13.162541] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-12 17:36:13.199506] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-12 17:36:13.232593] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-12 17:36:13.294557] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-12 17:36:13.345555] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[INFO]  [2020-02-12 17:36:13.394034] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-12 17:36:13.433443] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[INFO]  [2020-02-12 17:36:13.485790] [/readiness_admin]: RL-8: abort, .*
+[INFO]  [2020-02-12 17:36:13.552224] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-12 17:36:13.602227] [/readiness_admin]: RL-10: .*
+[INFO]  [2020-02-12 17:36:14.686397] [/tcp_server]: Command from #1: close solenoid
+[INFO]  [2020-02-12 17:36:14.722702] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:36:14.764660] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:36:14.812840] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:36:14.841224] [/readiness_admin]: Current: idiot check
+[WARN]  [2020-02-12 17:36:15.895077] [/sensors/sensor_monitor]: Nitrous tank overpressure (9250.40234375, 9175.55406836 >1200 psig) detected!
+[WARN]  [2020-02-12 17:36:20.893784] [/sensors/sensor_monitor]: Nitrous tank overpressure (9265.40234375, 9190.5539082 >1200 psig) detected!
+[INFO]  [2020-02-12 17:36:21.508959] [/tcp_server]: Command from #1: retract linear actuator
+[INFO]  [2020-02-12 17:36:21.572452] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:36:21.610040] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:36:21.651317] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:36:21.689326] [/readiness_admin]: Current: idiot check
+[WARN]  [2020-02-12 17:36:21.821564] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[INFO]  [2020-02-12 17:36:22.933020] [/tcp_server]: Command from #1: close vent valve
+[INFO]  [2020-02-12 17:36:22.986099] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:36:23.015083] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:36:23.064711] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:36:23.097221] [/readiness_admin]: Current: idiot check
+[INFO]  [2020-02-12 17:36:24.071322] [/tcp_server]: Command from #1: open vent valve
+[INFO]  [2020-02-12 17:36:24.109245] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:36:24.145384] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:36:24.183483] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:36:24.217848] [/readiness_admin]: Current: idiot check
+[INFO]  [2020-02-12 17:36:25.275749] [/tcp_server]: Command from #1: close solenoid
+[INFO]  [2020-02-12 17:36:25.322470] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:36:25.367671] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:36:25.397884] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:36:25.430037] [/readiness_admin]: Current: idiot check
+[WARN]  [2020-02-12 17:36:25.986962] [/sensors/sensor_monitor]: Nitrous tank overpressure (9280.703125, 9205.85405469 >1200 psig) detected!
+[WARN]  [2020-02-12 17:36:30.993616] [/sensors/sensor_monitor]: Nitrous tank overpressure (9295.70214844, 9220.85423828 >1200 psig) detected!
+[INFO]  [2020-02-12 17:36:31.071404] [/tcp_server]: Command from #1: set readiness 10
+[DEBUG] [2020-02-12 17:36:31.117302] [/readiness_admin]: Command matches persistent pattern: set readiness [0-9]+, set readiness 10
+[INFO]  [2020-02-12 17:36:31.164677] [/readiness_admin]: Set readiness level to 10
+[INFO]  [2020-02-12 17:36:33.525317] [/watchdog]: Runtime has reached 52 minutes.
+[WARN]  [2020-02-12 17:36:36.090342] [/sensors/sensor_monitor]: Nitrous tank overpressure (9311.00488281, 9236.15416016 >1200 psig) detected!
+[WARN]  [2020-02-12 17:36:41.095833] [/sensors/sensor_monitor]: Nitrous tank overpressure (9326.01757812, 9251.15417773 >1200 psig) detected!

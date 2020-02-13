@@ -1,0 +1,11 @@
+[INFO]  [2020-02-12 17:33:58.964453] [/tcp_server]: New connection: (1, ('192.168.1.7', 56870))
+[INFO]  [2020-02-12 17:33:59.009178] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 17:33:59.040272]: Connection to master established.
+[INFO]  [2020-02-12 17:33:59.043698]: You are client #1
+[WARN]  [2020-02-12 17:33:59.190647] [/sensors/sensor_monitor]: Nitrous tank overpressure (8840.30175781, 8765.45395703 >1200 psig) detected!
+[INFO]  [2020-02-12 17:33:59.270402] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 17:34:01.429881] [/tcp_server]: Command from #1: close vent valve
+[INFO]  [2020-02-12 17:34:01.494554] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:34:01.550159] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:34:01.595489] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:34:01.637520] [/readiness_admin]: Current: idiot check

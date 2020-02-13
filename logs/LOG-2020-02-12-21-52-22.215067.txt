@@ -1,0 +1,42 @@
+[INFO]  [2020-02-12 16:52:27.155017] [/tcp_server]: New connection: (1, ('192.168.1.7', 56360))
+[INFO]  [2020-02-12 16:52:27.197795] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 16:52:27.226662]: Connection to master established.
+[INFO]  [2020-02-12 16:52:27.227209]: You are client #1
+[INFO]  [2020-02-12 16:52:27.274198] [/tcp_server]: Connection with atleast one client restored.
+[WARN]  [2020-02-12 16:52:27.692357] [/sensors/sensor_monitor]: Nitrous tank overpressure (1365.80358887, 1290.95374829 >1200 psig) detected!
+[INFO]  [2020-02-12 16:52:29.115816] [/tcp_server]: Command from #1: system fortune | cowsay
+[DEBUG] [2020-02-12 16:52:29.169094] [/readiness_admin]: Command matches current pattern: .*, system fortune | cowsay
+[INFO]  [2020-02-12 16:52:29.200415] [/exec]: $ fortune | cowsay
+[INFO]  [2020-02-12 16:52:31.822573] [/exec]: 
+ ________________________________________
+/ Q: Why does Washington have the most   \
+| lawyers per capita and                 |
+|                                        |
+| New Jersey the most toxic waste dumps? |
+\ A: God gave New Jersey first choice.   /
+ ----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 16:52:31.875723] [/exec]: Finished with exit code 0
+[WARN]  [2020-02-12 16:52:32.691246] [/sensors/sensor_monitor]: Nitrous tank overpressure (1380.80224609, 1305.95396484 >1200 psig) detected!
+[WARN]  [2020-02-12 16:52:37.792504] [/sensors/sensor_monitor]: Nitrous tank overpressure (1396.10205078, 1321.2540188 >1200 psig) detected!
+[WARN]  [2020-02-12 16:52:42.894322] [/sensors/sensor_monitor]: Nitrous tank overpressure (1411.40344238, 1336.55403662 >1200 psig) detected!
+[INFO]  [2020-02-12 16:52:44.286727] [/tcp_server]: Command from #1: system fortune | cowsay
+[DEBUG] [2020-02-12 16:52:44.331609] [/readiness_admin]: Command matches current pattern: .*, system fortune | cowsay
+[INFO]  [2020-02-12 16:52:44.389970] [/exec]: $ fortune | cowsay
+[INFO]  [2020-02-12 16:52:46.363709] [/exec]: 
+ __________________________________
+< Someone is speaking well of you. >
+ ----------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+[INFO]  [2020-02-12 16:52:46.408933] [/exec]: Finished with exit code 0
+[WARN]  [2020-02-12 16:52:47.990216] [/sensors/sensor_monitor]: Nitrous tank overpressure (1426.70349121, 1351.85411572 >1200 psig) detected!

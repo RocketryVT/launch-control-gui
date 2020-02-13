@@ -1,0 +1,12 @@
+[INFO]  [2020-02-12 18:29:44.852876] [/tcp_server]: New connection: (1, ('192.168.1.7', 57834))
+[INFO]  [2020-02-12 18:29:44.895902] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 18:29:44.930765]: Connection to master established.
+[INFO]  [2020-02-12 18:29:44.931474]: You are client #1
+[INFO]  [2020-02-12 18:29:44.990883] [/sensors/sensor_monitor]: OTP: 18877.70 psig / CCP: 18881.43 psig / OTT: 12586.04 F / CCT1: 12587.79 F / CCT2: 12587.77 F
+[INFO]  [2020-02-12 18:29:45.191783] [/sensors/sensor_monitor]: OTP: 18878.31 psig / CCP: 18882.03 psig / OTT: 12586.44 F / CCT1: 12588.19 F / CCT2: 12588.17 F
+[INFO]  [2020-02-12 18:29:45.275424] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 18:29:45.517119] [/sensors/sensor_monitor]: OTP: 18878.60 psig / CCP: 18882.63 psig / OTT: 12586.84 F / CCT1: 12588.59 F / CCT2: 12588.57 F
+[INFO]  [2020-02-12 18:29:45.691182] [/sensors/sensor_monitor]: OTP: 18878.90 psig / CCP: 18882.93 psig / OTT: 12587.24 F / CCT1: 12588.79 F / CCT2: 12588.77 F
+[INFO]  [2020-02-12 18:29:45.798638] [/sensors/sensor_monitor]: OTP: 18879.80 psig / CCP: 18883.85 psig / OTT: 12587.65 F / CCT1: 12589.39 F / CCT2: 12589.37 F
+[INFO]  [2020-02-12 18:29:45.990456] [/sensors/sensor_monitor]: OTP: 18880.70 psig / CCP: 18884.43 psig / OTT: 12588.04 F / CCT1: 12589.79 F / CCT2: 12589.77 F
+[INFO]  [2020-02-12 18:29:46.207859] [/sensors/sensor_monitor]: OTP: 18881.30 psig / CCP: 18885.03 psig / OTT: 12588.44 F / CCT1: 12590.19 F / CCT2: 12590.17 F

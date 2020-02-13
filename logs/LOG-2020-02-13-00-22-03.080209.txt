@@ -1,0 +1,10 @@
+[INFO]  [2020-02-12 19:22:08.750004] [/tcp_server]: New connection: (1, ('192.168.1.7', 58276))
+[INFO]  [2020-02-12 19:22:08.773607] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 19:22:08.802138] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 19:22:08.820256]: Connection to master established.
+[INFO]  [2020-02-12 19:22:08.820581]: You are client #1
+[DEBUG] [2020-02-12 19:22:12.710647] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:22:16.712549] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:22:20.713066] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:22:24.709960] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 19:22:28.710356] [/tcp_server]: Sending keep-alive message.

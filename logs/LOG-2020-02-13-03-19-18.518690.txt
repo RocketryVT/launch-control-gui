@@ -1,0 +1,217 @@
+[INFO]  [2020-02-12 22:19:22.333883] [/tcp_server]: New connection: (1, ('192.168.1.7', 60152))
+[INFO]  [2020-02-12 22:19:22.360786] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 22:19:23.142701] [/tcp_server]: Connection with atleast one client restored.
+[DEBUG] [2020-02-12 22:19:27.101649] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:19:31.098120] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:19:35.095907] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:19:39.097076] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:19:43.099023] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:19:47.100493] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:19:51.098100] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 22:19:51.801940] [/tcp_server]: Command from #1: print whitelist
+[DEBUG] [2020-02-12 22:19:51.827165] [/readiness_admin]: Command matches current pattern: .*, print whitelist
+[INFO]  [2020-02-12 22:19:51.869678] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 22:19:51.891770] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 22:19:51.918382] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-12 22:19:51.946347] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-12 22:19:51.963617] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-12 22:19:51.984599] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-12 22:19:52.003451] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-12 22:19:52.034394] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[INFO]  [2020-02-12 22:19:52.054824] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-12 22:19:52.078325] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[INFO]  [2020-02-12 22:19:52.097702] [/readiness_admin]: RL-8: abort, .*
+[INFO]  [2020-02-12 22:19:52.120795] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-12 22:19:52.150631] [/readiness_admin]: RL-10: .*
+[DEBUG] [2020-02-12 22:19:55.099068] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:19:59.097339] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:20:03.097997] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:20:07.101011] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 22:20:08.291802] [/tcp_server]: Command from #1: print whitelist
+[DEBUG] [2020-02-12 22:20:08.344171] [/readiness_admin]: Command matches current pattern: .*, print whitelist
+[INFO]  [2020-02-12 22:20:08.399392] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 22:20:08.433009] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 22:20:08.466446] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-12 22:20:08.499847] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-12 22:20:08.538274] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-12 22:20:08.559730] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-12 22:20:08.602839] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-12 22:20:08.642804] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[INFO]  [2020-02-12 22:20:08.681190] [/watchdog]: Runtime has reached 336 minutes.
+[INFO]  [2020-02-12 22:20:08.694371] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-12 22:20:08.718624] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[INFO]  [2020-02-12 22:20:08.740610] [/readiness_admin]: RL-8: abort, .*
+[INFO]  [2020-02-12 22:20:08.761238] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-12 22:20:08.781637] [/readiness_admin]: RL-10: .*
+[INFO]  [2020-02-12 22:20:09.376656] [/tcp_server]: Command from #1: print whitelist
+[DEBUG] [2020-02-12 22:20:09.406905] [/readiness_admin]: Command matches current pattern: .*, print whitelist
+[INFO]  [2020-02-12 22:20:09.441697] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 22:20:09.466771] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 22:20:09.491749] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-12 22:20:09.512902] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-12 22:20:09.538107] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-12 22:20:09.553919] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-12 22:20:09.573191] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-12 22:20:09.607589] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[INFO]  [2020-02-12 22:20:09.641774] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-12 22:20:09.666154] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[INFO]  [2020-02-12 22:20:09.693901] [/readiness_admin]: RL-8: abort, .*
+[INFO]  [2020-02-12 22:20:09.724559] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-12 22:20:09.738868] [/readiness_admin]: RL-10: .*
+[INFO]  [2020-02-12 22:20:10.285602] [/tcp_server]: Command from #1: print whitelist
+[DEBUG] [2020-02-12 22:20:10.306719] [/readiness_admin]: Command matches current pattern: .*, print whitelist
+[INFO]  [2020-02-12 22:20:10.345184] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 22:20:10.362678] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 22:20:10.385847] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-12 22:20:10.417669] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-12 22:20:10.440723] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-12 22:20:10.470344] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-12 22:20:10.489534] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-12 22:20:10.512397] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[INFO]  [2020-02-12 22:20:10.535412] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-12 22:20:10.556414] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[INFO]  [2020-02-12 22:20:10.580475] [/readiness_admin]: RL-8: abort, .*
+[INFO]  [2020-02-12 22:20:10.614840] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-12 22:20:10.643591] [/readiness_admin]: RL-10: .*
+[INFO]  [2020-02-12 22:20:11.163491] [/tcp_server]: Command from #1: print whitelist
+[DEBUG] [2020-02-12 22:20:11.187692] [/readiness_admin]: Command matches current pattern: .*, print whitelist
+[INFO]  [2020-02-12 22:20:11.231296] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 22:20:11.251863] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 22:20:11.272969] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-12 22:20:11.294100] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-12 22:20:11.314710] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-12 22:20:11.338175] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-12 22:20:11.361287] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-12 22:20:11.381002] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[INFO]  [2020-02-12 22:20:11.401823] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-12 22:20:11.427052] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[INFO]  [2020-02-12 22:20:11.450830] [/readiness_admin]: RL-8: abort, .*
+[INFO]  [2020-02-12 22:20:11.476383] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-12 22:20:11.498986] [/readiness_admin]: RL-10: .*
+[INFO]  [2020-02-12 22:20:12.378112] [/tcp_server]: Command from #1: print whitelist
+[DEBUG] [2020-02-12 22:20:12.405391] [/readiness_admin]: Command matches current pattern: .*, print whitelist
+[INFO]  [2020-02-12 22:20:12.449345] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 22:20:12.475355] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 22:20:12.499458] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-12 22:20:12.525058] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-12 22:20:12.546529] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-12 22:20:12.565809] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-12 22:20:12.594551] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-12 22:20:12.634236] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[INFO]  [2020-02-12 22:20:12.662047] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-12 22:20:12.687807] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[INFO]  [2020-02-12 22:20:12.713382] [/readiness_admin]: RL-8: abort, .*
+[INFO]  [2020-02-12 22:20:12.738105] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-12 22:20:12.756358] [/readiness_admin]: RL-10: .*
+[INFO]  [2020-02-12 22:20:13.145094] [/tcp_server]: Command from #1: print whitelist
+[DEBUG] [2020-02-12 22:20:13.166408] [/readiness_admin]: Command matches current pattern: .*, print whitelist
+[INFO]  [2020-02-12 22:20:13.204454] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 22:20:13.229912] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 22:20:13.250492] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-12 22:20:13.269743] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-12 22:20:13.292244] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-12 22:20:13.329546] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-12 22:20:13.364077] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-12 22:20:13.399296] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[INFO]  [2020-02-12 22:20:13.442516] [/tcp_server]: Command from #1: print whitelist
+[INFO]  [2020-02-12 22:20:13.431059] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-12 22:20:13.478644] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[INFO]  [2020-02-12 22:20:13.514479] [/readiness_admin]: RL-8: abort, .*
+[INFO]  [2020-02-12 22:20:13.546009] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-12 22:20:13.578131] [/readiness_admin]: RL-10: .*
+[DEBUG] [2020-02-12 22:20:13.629866] [/readiness_admin]: Command matches current pattern: .*, print whitelist
+[INFO]  [2020-02-12 22:20:13.701495] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 22:20:13.734467] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 22:20:13.755903] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-12 22:20:13.777978] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-12 22:20:13.798924] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-12 22:20:13.824411] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-12 22:20:13.845036] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-12 22:20:13.866552] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[INFO]  [2020-02-12 22:20:13.894382] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-12 22:20:13.915642] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[INFO]  [2020-02-12 22:20:13.943648] [/readiness_admin]: RL-8: abort, .*
+[INFO]  [2020-02-12 22:20:13.966635] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-12 22:20:13.989980] [/readiness_admin]: RL-10: .*
+[INFO]  [2020-02-12 22:20:14.397680] [/tcp_server]: Command from #1: print whitelist
+[DEBUG] [2020-02-12 22:20:14.433231] [/readiness_admin]: Command matches current pattern: .*, print whitelist
+[INFO]  [2020-02-12 22:20:14.475237] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 22:20:14.496459] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 22:20:14.520845] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-12 22:20:14.542398] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-12 22:20:14.560645] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-12 22:20:14.591880] [/tcp_server]: Command from #1: print whitelist
+[INFO]  [2020-02-12 22:20:14.604274] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-12 22:20:14.633751] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-12 22:20:14.672402] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[INFO]  [2020-02-12 22:20:14.694731] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-12 22:20:14.723350] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[INFO]  [2020-02-12 22:20:14.745291] [/readiness_admin]: RL-8: abort, .*
+[INFO]  [2020-02-12 22:20:14.765730] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-12 22:20:14.786879] [/tcp_server]: Command from #1: print whitelist
+[INFO]  [2020-02-12 22:20:14.796863] [/readiness_admin]: RL-10: .*
+[DEBUG] [2020-02-12 22:20:14.825643] [/readiness_admin]: Command matches current pattern: .*, print whitelist
+[INFO]  [2020-02-12 22:20:14.862073] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 22:20:14.883855] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 22:20:14.905441] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-12 22:20:14.935677] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-12 22:20:14.961240] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-12 22:20:14.985885] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-12 22:20:15.012727] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-12 22:20:15.043134] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[INFO]  [2020-02-12 22:20:15.068188] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-12 22:20:15.089222] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[INFO]  [2020-02-12 22:20:15.114937] [/readiness_admin]: RL-8: abort, .*
+[INFO]  [2020-02-12 22:20:15.138225] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-12 22:20:15.159301] [/readiness_admin]: RL-10: .*
+[DEBUG] [2020-02-12 22:20:15.180912] [/readiness_admin]: Command matches current pattern: .*, print whitelist
+[INFO]  [2020-02-12 22:20:15.228139] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 22:20:15.245875] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 22:20:15.265593] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-12 22:20:15.291197] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-12 22:20:15.311292] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-12 22:20:15.336290] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-12 22:20:15.355132] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-12 22:20:15.379380] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[INFO]  [2020-02-12 22:20:15.399471] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-12 22:20:15.421469] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[INFO]  [2020-02-12 22:20:15.449670] [/readiness_admin]: RL-8: abort, .*
+[INFO]  [2020-02-12 22:20:15.472220] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-12 22:20:15.494925] [/readiness_admin]: RL-10: .*
+[DEBUG] [2020-02-12 22:20:19.096918] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 22:20:21.518353] [/tcp_server]: Command from #1: set readiness 0
+[DEBUG] [2020-02-12 22:20:21.548239] [/readiness_admin]: Command matches current pattern: .*, set readiness 0
+[INFO]  [2020-02-12 22:20:21.582980] [/readiness_admin]: Set readiness level to 0
+[INFO]  [2020-02-12 22:20:23.286213] [/tcp_server]: Command from #1: set readiness 10
+[DEBUG] [2020-02-12 22:20:23.320961] [/readiness_admin]: Command matches persistent pattern: set readiness [0-9]+, set readiness 10
+[INFO]  [2020-02-12 22:20:23.372331] [/readiness_admin]: Set readiness level to 10
+[INFO]  [2020-02-12 22:20:24.582303] [/tcp_server]: Command from #1: fire ematch
+[DEBUG] [2020-02-12 22:20:24.620913] [/readiness_admin]: Command matches current pattern: .*, fire ematch
+[INFO]  [2020-02-12 22:20:24.657013] [/hardware/ematch]: Firing e-match.
+[DEBUG] [2020-02-12 22:20:27.098339] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 22:20:30.425325] [/tcp_server]: Command from #1: abort
+[DEBUG] [2020-02-12 22:20:30.452706] [/readiness_admin]: Command matches current pattern: .*, abort
+[INFO]  [2020-02-12 22:20:31.496997] [/tcp_server]: Command from #1: abort
+[DEBUG] [2020-02-12 22:20:31.521114] [/readiness_admin]: Command matches current pattern: .*, abort
+[DEBUG] [2020-02-12 22:20:35.099186] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 22:20:35.263435] [/tcp_server]: Command from #1: abort
+[DEBUG] [2020-02-12 22:20:35.287193] [/readiness_admin]: Command matches current pattern: .*, abort
+[DEBUG] [2020-02-12 22:20:39.097965] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:20:43.097506] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:20:47.098180] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:20:51.097549] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 22:20:52.239519] [/tcp_server]: Command from #1: system df -h
+[DEBUG] [2020-02-12 22:20:52.261154] [/readiness_admin]: Command matches current pattern: .*, system df -h
+[INFO]  [2020-02-12 22:20:52.297689] [/exec]: $ df -h
+[INFO]  [2020-02-12 22:20:52.400642] [/exec]: 
+Filesystem      Size  Used Avail Use% Mounted on
+udev            216M     0  216M   0% /dev
+tmpfs            49M  1.6M   47M   4% /run
+/dev/mmcblk0p1   59G  4.8G   52G   9% /
+tmpfs           243M     0  243M   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           243M     0  243M   0% /sys/fs/cgroup
+
+[INFO]  [2020-02-12 22:20:52.430634] [/exec]: Finished with exit code 0
+[DEBUG] [2020-02-12 22:20:55.098532] [/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-02-12 22:20:59.097821] [/tcp_server]: Sending keep-alive message.

@@ -1,0 +1,16 @@
+[INFO]  [2020-02-12 17:54:44.863022] [/tcp_server]: New connection: (1, ('192.168.1.7', 57019))
+[INFO]  [2020-02-12 17:54:44.898212] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 17:54:44.930378]: Connection to master established.
+[INFO]  [2020-02-12 17:54:44.930744]: You are client #1
+[INFO]  [2020-02-12 17:54:45.272590] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 17:54:46.387730] [/tcp_server]: Command from #1: ddddd
+[INFO]  [2020-02-12 17:54:46.426943] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:54:46.473241] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:54:46.514163] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:54:46.550386] [/readiness_admin]: Current: idiot check
+[WARN]  [2020-02-12 17:54:49.796751] [/sensors/sensor_monitor]: Nitrous tank overpressure (12592.1083984, 12517.254957 >1200 psig) detected!
+[INFO]  [2020-02-12 17:54:51.170008] [/tcp_server]: Command from #1: dddd
+[INFO]  [2020-02-12 17:54:51.221572] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 17:54:51.266459] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 17:54:51.302558] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 17:54:51.362950] [/readiness_admin]: Current: idiot check

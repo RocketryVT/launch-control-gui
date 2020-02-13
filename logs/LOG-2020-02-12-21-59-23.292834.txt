@@ -1,0 +1,16 @@
+[INFO]  [2020-02-12 16:59:28.746683] [/tcp_server]: New connection: (1, ('192.168.1.7', 56385))
+[INFO]  [2020-02-12 16:59:28.793319] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 16:59:28.822071]: Connection to master established.
+[INFO]  [2020-02-12 16:59:28.822444]: You are client #1
+[INFO]  [2020-02-12 16:59:29.272550] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 16:59:29.626245] [/tcp_server]: Command from #1: fire ematch
+[INFO]  [2020-02-12 16:59:29.662467] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 16:59:29.713161] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 16:59:29.750623] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 16:59:29.797110] [/readiness_admin]: Current: idiot check
+[INFO]  [2020-02-12 16:59:31.139368] [/tcp_server]: Command from #1: fire ematch
+[INFO]  [2020-02-12 16:59:31.191540] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 16:59:31.231297] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 16:59:31.284317] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 16:59:31.314138] [/readiness_admin]: Current: idiot check
+[WARN]  [2020-02-12 16:59:32.390452] [/sensors/sensor_monitor]: Nitrous tank overpressure (2639.90405273, 2565.05447607 >1200 psig) detected!

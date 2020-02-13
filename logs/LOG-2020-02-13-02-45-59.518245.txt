@@ -1,0 +1,3 @@
+[INFO]  [2020-02-12 21:46:04.021984] [/tcp_server]: New connection: (2, ('192.168.1.7', 59784))
+[INFO]  [2020-02-12 21:46:04.047806] [/tcp_server]: 2 active connection(s)
+[DEBUG] [2020-02-12 21:46:07.096790] [/tcp_server]: Sending keep-alive message.

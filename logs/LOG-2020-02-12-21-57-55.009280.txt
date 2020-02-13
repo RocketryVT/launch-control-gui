@@ -1,0 +1,23 @@
+[INFO]  [2020-02-12 16:58:03.344901] [/tcp_server]: New connection: (1, ('192.168.1.7', 56380))
+[INFO]  [2020-02-12 16:58:03.402548] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 16:58:03.446906]: Connection to master established.
+[INFO]  [2020-02-12 16:58:03.452519]: You are client #1
+[INFO]  [2020-02-12 16:58:04.283076] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 16:58:04.316971] [/tcp_server]: Command from #1: fire ematch
+[INFO]  [2020-02-12 16:58:04.351110] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 16:58:04.396292] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 16:58:04.422915] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 16:58:04.464558] [/readiness_admin]: Current: idiot check
+[INFO]  [2020-02-12 16:58:06.043603] [/tcp_server]: Command from #1: fire ematch
+[INFO]  [2020-02-12 16:58:06.101758] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 16:58:06.132532] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 16:58:06.178492] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 16:58:06.211834] [/readiness_admin]: Current: idiot check
+[WARN]  [2020-02-12 16:58:06.319105] [/sensors/sensor_monitor]: Nitrous tank overpressure (2381.60668945, 2306.75419971 >1200 psig) detected!
+[INFO]  [2020-02-12 16:58:07.289230] [/tcp_server]: Command from #1: fire ematch
+[INFO]  [2020-02-12 16:58:07.322316] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 16:58:07.365146] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 16:58:07.395357] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 16:58:07.427086] [/readiness_admin]: Current: idiot check
+[WARN]  [2020-02-12 16:58:11.394403] [/sensors/sensor_monitor]: Nitrous tank overpressure (2396.90332031, 2322.05410889 >1200 psig) detected!
+[INFO]  [2020-02-12 16:58:13.524737] [/watchdog]: Runtime has reached 14 minutes.

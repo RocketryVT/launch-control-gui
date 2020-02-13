@@ -1,0 +1,15 @@
+[INFO]  [2020-02-12 21:56:02.615883] [/tcp_server]: New connection: (2, ('192.168.1.7', 59850))
+[INFO]  [2020-02-12 21:56:02.649975] [/tcp_server]: 2 active connection(s)
+[INFO]  [2020-02-12 21:56:04.094447] [/tcp_server]: Command from #2: system figlet R@VT
+[DEBUG] [2020-02-12 21:56:04.137320] [/readiness_admin]: Command matches persistent pattern: system .*, system figlet R@VT
+[INFO]  [2020-02-12 21:56:04.175139] [/exec]: $ figlet R@VT
+[INFO]  [2020-02-12 21:56:04.331840] [/exec]: 
+ ____   ______     _______ 
+|  _ \ / __ \ \   / /_   _|
+| |_) / / _` \ \ / /  | |  
+|  _ < | (_| |\ V /   | |  
+|_| \_\ \__,_| \_/    |_|  
+       \____/              
+
+[INFO]  [2020-02-12 21:56:04.369884] [/exec]: Finished with exit code 0
+[DEBUG] [2020-02-12 21:56:07.101511] [/tcp_server]: Sending keep-alive message.

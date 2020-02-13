@@ -1,0 +1,10 @@
+[INFO]  [2020-02-12 16:40:29.145917] [/tcp_server]: New connection: (1, ('192.168.1.7', 56301))
+[INFO]  [2020-02-12 16:40:29.165687] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 16:40:29.181210]: Connection to master established.
+[INFO]  [2020-02-12 16:40:29.181581]: You are client #1
+[INFO]  [2020-02-12 16:40:29.254865] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 16:40:40.111802] [/tcp_server]: Command from #1: sergserg
+[INFO]  [2020-02-12 16:40:40.135560] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 16:40:40.158322] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 16:40:40.178006] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 16:40:40.193683] [/readiness_admin]: Current: 

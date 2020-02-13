@@ -1,0 +1,33 @@
+[INFO]  [2020-02-12 16:29:34.046058] [/tcp_server]: New connection: (1, ('192.168.1.7', 56189))
+[INFO]  [2020-02-12 16:29:34.065726] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 16:29:34.078369]: Connection to master established.
+[INFO]  [2020-02-12 16:29:34.078672]: You are client #1
+[INFO]  [2020-02-12 16:29:34.254878] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 16:29:43.642123] [/tcp_server]: Command from #1: print whitelist
+[DEBUG] [2020-02-12 16:29:43.668845] [/readiness_admin]: Command matches current pattern: .*, print whitelist
+[INFO]  [2020-02-12 16:29:43.694453] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 16:29:43.713608] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 16:29:43.732472] [/readiness_admin]: RL-0: idiot check
+[INFO]  [2020-02-12 16:29:43.749872] [/readiness_admin]: RL-1: close vent valve, close ignition valve, abort
+[INFO]  [2020-02-12 16:29:43.768936] [/readiness_admin]: RL-2: begin fill, end fill, open vent valve, close vent valve, crack vent valve, abort
+[INFO]  [2020-02-12 16:29:43.788365] [/readiness_admin]: RL-3: end fill, open vent valve, close vent valve, crack vent valve, fill disconnect, abort
+[INFO]  [2020-02-12 16:29:43.806802] [/readiness_admin]: RL-4: open vent valve, crack vent valve, close vent valve, idiot check part two, abort
+[INFO]  [2020-02-12 16:29:43.825709] [/readiness_admin]: RL-5: open vent valve, crack vent valve, close vent valve, arm rocket, abort
+[INFO]  [2020-02-12 16:29:43.841285] [/readiness_admin]: RL-6: get ready to rumble, abort, rollback
+[INFO]  [2020-02-12 16:29:43.860342] [/readiness_admin]: RL-7: launch the rocket, abort, rollback
+[INFO]  [2020-02-12 16:29:43.880670] [/readiness_admin]: RL-8: abort, .*
+[INFO]  [2020-02-12 16:29:43.897575] [/readiness_admin]: RL-9: 
+[INFO]  [2020-02-12 16:29:43.913547] [/readiness_admin]: RL-10: .*
+[INFO]  [2020-02-12 16:29:53.708977] [/tcp_server]: Command from #1: set readiness 9
+[DEBUG] [2020-02-12 16:29:53.732918] [/readiness_admin]: Command matches current pattern: .*, set readiness 9
+[INFO]  [2020-02-12 16:29:53.757957] [/readiness_admin]: Set readiness level to 9
+[INFO]  [2020-02-12 16:29:57.070126] [/tcp_server]: Command from #1: ddd
+[INFO]  [2020-02-12 16:29:57.104567] [/readiness_admin]: Command doesn't match any patterns in the current whitelist.
+[INFO]  [2020-02-12 16:29:57.121927] [/readiness_admin]: Available commands are...
+[INFO]  [2020-02-12 16:29:57.141472] [/readiness_admin]: Persistent: read data, read data .*, stop data, system .*, print whitelist, print readiness level, set readiness [0-9]+
+[INFO]  [2020-02-12 16:29:57.159207] [/readiness_admin]: Current: 
+[INFO]  [2020-02-12 16:30:06.153860] [/tcp_server]: Command from #1: read data
+[DEBUG] [2020-02-12 16:30:06.173593] [/readiness_admin]: Command matches persistent pattern: read data, read data
+[DEBUG] [2020-02-12 16:30:16.230619] [/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-02-12 16:30:23.805667] [/tcp_server]: Command from #1: read data 1
+[DEBUG] [2020-02-12 16:30:23.826070] [/readiness_admin]: Command matches persistent pattern: read data .*, read data 1

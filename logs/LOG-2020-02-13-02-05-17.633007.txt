@@ -1,0 +1,44 @@
+[INFO]  [2020-02-12 21:05:21.650314] [/tcp_server]: New connection: (1, ('192.168.1.7', 59366))
+[INFO]  [2020-02-12 21:05:21.677817] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 21:05:21.736389]: Connection to master established.
+[INFO]  [2020-02-12 21:05:21.736770]: You are client #1
+[INFO]  [2020-02-12 21:05:21.773732] [/tcp_server]: Connection with atleast one client restored.
+[WARN]  [2020-02-12 21:05:22.153718] [/sensors/sensor_monitor]: Nitrous tank overpressure (16520.3359375, 16445.4861719 >1200 psig) detected!
+[DEBUG] [2020-02-12 21:05:24.728451] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 21:05:27.157145] [/sensors/sensor_monitor]: Nitrous tank overpressure (16535.3339844, 16460.4861367 >1200 psig) detected!
+[INFO]  [2020-02-12 21:05:27.941340] [/tcp_server]: Command from #1: read data
+[DEBUG] [2020-02-12 21:05:27.974993] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 21:05:28.063222] [/sensors/sensor_monitor]: OTP: 16538.04 psig / CCP: 16542.29 psig / OTT: 11026.66 F / CCT1: 11030.26 F / CCT2: 11029.42 F
+[INFO]  [2020-02-12 21:05:28.361578] [/tcp_server]: Command from #1: read data
+[DEBUG] [2020-02-12 21:05:28.424997] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 21:05:28.524736] [/tcp_server]: Command from #1: read data
+[DEBUG] [2020-02-12 21:05:28.566622] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 21:05:28.554542] [/sensors/sensor_monitor]: OTP: 16539.23 psig / CCP: 16543.48 psig / OTT: 11027.46 F / CCT1: 11031.06 F / CCT2: 11030.22 F
+[INFO]  [2020-02-12 21:05:28.684588] [/tcp_server]: Command from #1: read data
+[DEBUG] [2020-02-12 21:05:28.758093] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 21:05:28.718096] [/sensors/sensor_monitor]: OTP: 16539.54 psig / CCP: 16543.78 psig / OTT: 11027.86 F / CCT1: 11031.26 F / CCT2: 11030.42 F
+[INFO]  [2020-02-12 21:05:28.854814] [/tcp_server]: Command from #1: read data
+[DEBUG] [2020-02-12 21:05:28.899384] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 21:05:29.003762] [/tcp_server]: Command from #1: read data
+[DEBUG] [2020-02-12 21:05:29.055498] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 21:05:28.976891] [/sensors/sensor_monitor]: OTP: 16539.84 psig / CCP: 16544.10 psig / OTT: 11028.06 F / CCT1: 11031.66 F / CCT2: 11030.62 F
+[INFO]  [2020-02-12 21:05:29.161024] [/tcp_server]: Command from #1: read data
+[DEBUG] [2020-02-12 21:05:29.216936] [/readiness_admin]: Command matches current pattern: .*, read data
+[INFO]  [2020-02-12 21:05:29.245722] [/sensors/sensor_monitor]: OTP: 16540.13 psig / CCP: 16544.69 psig / OTT: 11028.46 F / CCT1: 11032.06 F / CCT2: 11031.22 F
+[INFO]  [2020-02-12 21:05:29.428163] [/sensors/sensor_monitor]: OTP: 16540.44 psig / CCP: 16544.98 psig / OTT: 11028.66 F / CCT1: 11032.46 F / CCT2: 11031.42 F
+[INFO]  [2020-02-12 21:05:29.529087] [/sensors/sensor_monitor]: OTP: 16540.74 psig / CCP: 16545.59 psig / OTT: 11028.86 F / CCT1: 11032.66 F / CCT2: 11031.62 F
+[INFO]  [2020-02-12 21:05:30.530465] [/watchdog]: Runtime has reached 261 minutes.
+[WARN]  [2020-02-12 21:05:32.261293] [/sensors/sensor_monitor]: Nitrous tank overpressure (16550.6464844, 16475.7863477 >1200 psig) detected!
+[DEBUG] [2020-02-12 21:05:34.722764] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 21:05:37.399109] [/sensors/sensor_monitor]: Nitrous tank overpressure (16565.9355469, 16491.0864141 >1200 psig) detected!
+[WARN]  [2020-02-12 21:05:40.641863] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 21:05:40.687814] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 21:05:40.734141] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 21:05:40.745674] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 21:05:40.761777] [/sensors/sensor_monitor]: Warnings are being suppressed.
+[WARN]  [2020-02-12 21:05:42.445032] [/sensors/sensor_monitor]: Nitrous tank overpressure (16580.9355469, 16506.0863047 >1200 psig) detected!
+[DEBUG] [2020-02-12 21:05:44.714743] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 21:05:47.449177] [/sensors/sensor_monitor]: Nitrous tank overpressure (16596.234375, 16521.3862383 >1200 psig) detected!
+[DEBUG] [2020-02-12 21:05:50.717717] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 21:05:52.449825] [/sensors/sensor_monitor]: Nitrous tank overpressure (16611.2519531, 16536.3863711 >1200 psig) detected!
+[DEBUG] [2020-02-12 21:05:54.715789] [/tcp_server]: Sending keep-alive message.

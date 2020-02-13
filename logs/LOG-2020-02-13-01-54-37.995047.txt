@@ -1,0 +1,16 @@
+[INFO]  [2020-02-12 20:54:42.350983] [/tcp_server]: New connection: (1, ('192.168.1.7', 59324))
+[INFO]  [2020-02-12 20:54:42.418948] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 20:54:42.484656]: Connection to master established.
+[INFO]  [2020-02-12 20:54:42.485016]: You are client #1
+[INFO]  [2020-02-12 20:54:42.774944] [/tcp_server]: Connection with atleast one client restored.
+[WARN]  [2020-02-12 20:54:45.051819] [/sensors/sensor_monitor]: Nitrous tank overpressure (14609.0351562, 14534.1861914 >1200 psig) detected!
+[DEBUG] [2020-02-12 20:54:48.718041] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 20:54:50.054635] [/sensors/sensor_monitor]: Nitrous tank overpressure (14624.0351562, 14549.1859707 >1200 psig) detected!
+[DEBUG] [2020-02-12 20:54:52.717400] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 20:54:55.058432] [/sensors/sensor_monitor]: Nitrous tank overpressure (14639.0351562, 14564.186125 >1200 psig) detected!
+[DEBUG] [2020-02-12 20:54:58.724327] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 20:55:00.055930] [/sensors/sensor_monitor]: Nitrous tank overpressure (14654.0361328, 14579.1861328 >1200 psig) detected!
+[DEBUG] [2020-02-12 20:55:02.716946] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 20:55:05.152576] [/sensors/sensor_monitor]: Nitrous tank overpressure (14669.3369141, 14594.4863438 >1200 psig) detected!
+[DEBUG] [2020-02-12 20:55:08.726248] [/tcp_server]: Sending keep-alive message.
+[WARN]  [2020-02-12 20:55:10.253408] [/sensors/sensor_monitor]: Nitrous tank overpressure (14684.6357422, 14609.7863555 >1200 psig) detected!

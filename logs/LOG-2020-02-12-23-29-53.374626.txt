@@ -1,0 +1,84 @@
+[INFO]  [2020-02-12 18:29:57.553093] [/tcp_server]: New connection: (1, ('192.168.1.7', 57838))
+[INFO]  [2020-02-12 18:29:57.595494] [/tcp_server]: 1 active connection(s)
+[INFO]  [2020-02-12 18:29:57.628942]: Connection to master established.
+[INFO]  [2020-02-12 18:29:57.630951]: You are client #1
+[INFO]  [2020-02-12 18:29:57.643653] [/sensors/sensor_monitor]: OTP: 18915.50 psig / CCP: 18919.23 psig / OTT: 12611.24 F / CCT1: 12612.79 F / CCT2: 12612.97 F
+[INFO]  [2020-02-12 18:29:57.822427] [/sensors/sensor_monitor]: OTP: 18916.10 psig / CCP: 18919.83 psig / OTT: 12611.64 F / CCT1: 12613.39 F / CCT2: 12613.37 F
+[INFO]  [2020-02-12 18:29:57.989178] [/sensors/sensor_monitor]: OTP: 18916.70 psig / CCP: 18920.43 psig / OTT: 12612.04 F / CCT1: 12613.79 F / CCT2: 12613.77 F
+[INFO]  [2020-02-12 18:29:58.191472] [/sensors/sensor_monitor]: OTP: 18917.01 psig / CCP: 18921.03 psig / OTT: 12612.44 F / CCT1: 12614.19 F / CCT2: 12614.18 F
+[INFO]  [2020-02-12 18:29:58.273546] [/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-02-12 18:29:58.417063] [/sensors/sensor_monitor]: OTP: 18917.64 psig / CCP: 18921.63 psig / OTT: 12612.84 F / CCT1: 12614.59 F / CCT2: 12614.37 F
+[INFO]  [2020-02-12 18:29:58.596710] [/sensors/sensor_monitor]: OTP: 18918.50 psig / CCP: 18922.23 psig / OTT: 12613.24 F / CCT1: 12614.99 F / CCT2: 12614.97 F
+[INFO]  [2020-02-12 18:29:58.790913] [/sensors/sensor_monitor]: OTP: 18919.11 psig / CCP: 18922.83 psig / OTT: 12613.64 F / CCT1: 12615.39 F / CCT2: 12615.37 F
+[INFO]  [2020-02-12 18:29:59.001543] [/sensors/sensor_monitor]: OTP: 18919.70 psig / CCP: 18923.43 psig / OTT: 12614.04 F / CCT1: 12615.79 F / CCT2: 12615.78 F
+[INFO]  [2020-02-12 18:29:59.204461] [/sensors/sensor_monitor]: OTP: 18920.00 psig / CCP: 18924.03 psig / OTT: 12614.44 F / CCT1: 12616.19 F / CCT2: 12616.17 F
+[INFO]  [2020-02-12 18:29:59.419123] [/sensors/sensor_monitor]: OTP: 18920.91 psig / CCP: 18924.33 psig / OTT: 12614.84 F / CCT1: 12616.59 F / CCT2: 12616.57 F
+[INFO]  [2020-02-12 18:29:59.598330] [/sensors/sensor_monitor]: OTP: 18921.50 psig / CCP: 18925.23 psig / OTT: 12615.24 F / CCT1: 12616.99 F / CCT2: 12616.97 F
+[INFO]  [2020-02-12 18:29:59.803069] [/sensors/sensor_monitor]: OTP: 18922.10 psig / CCP: 18925.83 psig / OTT: 12615.64 F / CCT1: 12617.39 F / CCT2: 12617.38 F
+[INFO]  [2020-02-12 18:29:59.990258] [/sensors/sensor_monitor]: OTP: 18922.70 psig / CCP: 18926.44 psig / OTT: 12616.04 F / CCT1: 12617.79 F / CCT2: 12617.77 F
+[INFO]  [2020-02-12 18:30:00.193138] [/sensors/sensor_monitor]: OTP: 18923.31 psig / CCP: 18927.03 psig / OTT: 12616.44 F / CCT1: 12618.19 F / CCT2: 12618.17 F
+[INFO]  [2020-02-12 18:30:00.477349] [/sensors/sensor_monitor]: OTP: 18923.90 psig / CCP: 18927.63 psig / OTT: 12616.84 F / CCT1: 12618.59 F / CCT2: 12618.57 F
+[INFO]  [2020-02-12 18:30:00.670348] [/sensors/sensor_monitor]: OTP: 18924.21 psig / CCP: 18927.93 psig / OTT: 12617.25 F / CCT1: 12618.99 F / CCT2: 12618.77 F
+[INFO]  [2020-02-12 18:30:00.824696] [/sensors/sensor_monitor]: OTP: 18925.10 psig / CCP: 18928.83 psig / OTT: 12617.64 F / CCT1: 12619.39 F / CCT2: 12619.37 F
+[INFO]  [2020-02-12 18:30:00.997775] [/sensors/sensor_monitor]: OTP: 18925.70 psig / CCP: 18929.43 psig / OTT: 12618.04 F / CCT1: 12619.79 F / CCT2: 12619.77 F
+[INFO]  [2020-02-12 18:30:01.202338] [/sensors/sensor_monitor]: OTP: 18926.31 psig / CCP: 18930.03 psig / OTT: 12618.44 F / CCT1: 12620.19 F / CCT2: 12620.17 F
+[INFO]  [2020-02-12 18:30:01.419331] [/sensors/sensor_monitor]: OTP: 18926.90 psig / CCP: 18930.63 psig / OTT: 12618.84 F / CCT1: 12620.59 F / CCT2: 12620.57 F
+[INFO]  [2020-02-12 18:30:01.589724] [/sensors/sensor_monitor]: OTP: 18927.50 psig / CCP: 18931.23 psig / OTT: 12619.24 F / CCT1: 12620.99 F / CCT2: 12620.97 F
+[INFO]  [2020-02-12 18:30:01.794966] [/sensors/sensor_monitor]: OTP: 18928.10 psig / CCP: 18931.83 psig / OTT: 12619.64 F / CCT1: 12621.39 F / CCT2: 12621.37 F
+[WARN]  [2020-02-12 18:30:01.892282] [/sensors/sensor_monitor]: Nitrous tank overpressure (18928.4023438, 18853.5551406 >1200 psig) detected!
+[INFO]  [2020-02-12 18:30:01.992362] [/sensors/sensor_monitor]: OTP: 18928.70 psig / CCP: 18932.43 psig / OTT: 12620.04 F / CCT1: 12621.79 F / CCT2: 12621.77 F
+[INFO]  [2020-02-12 18:30:02.197322] [/sensors/sensor_monitor]: OTP: 18929.30 psig / CCP: 18933.03 psig / OTT: 12620.44 F / CCT1: 12622.19 F / CCT2: 12622.17 F
+[INFO]  [2020-02-12 18:30:02.401283] [/sensors/sensor_monitor]: OTP: 18929.90 psig / CCP: 18933.63 psig / OTT: 12620.84 F / CCT1: 12622.39 F / CCT2: 12622.57 F
+[INFO]  [2020-02-12 18:30:02.590405] [/sensors/sensor_monitor]: OTP: 18930.50 psig / CCP: 18934.23 psig / OTT: 12621.24 F / CCT1: 12622.99 F / CCT2: 12622.97 F
+[INFO]  [2020-02-12 18:30:02.801997] [/sensors/sensor_monitor]: OTP: 18931.10 psig / CCP: 18934.83 psig / OTT: 12621.64 F / CCT1: 12623.39 F / CCT2: 12623.37 F
+[INFO]  [2020-02-12 18:30:02.991618] [/sensors/sensor_monitor]: OTP: 18931.70 psig / CCP: 18935.43 psig / OTT: 12622.05 F / CCT1: 12623.79 F / CCT2: 12623.77 F
+[INFO]  [2020-02-12 18:30:03.195721] [/sensors/sensor_monitor]: OTP: 18932.30 psig / CCP: 18936.03 psig / OTT: 12622.44 F / CCT1: 12624.19 F / CCT2: 12624.17 F
+[INFO]  [2020-02-12 18:30:03.416998] [/sensors/sensor_monitor]: OTP: 18932.90 psig / CCP: 18936.33 psig / OTT: 12622.85 F / CCT1: 12624.59 F / CCT2: 12624.57 F
+[INFO]  [2020-02-12 18:30:03.525831] [/watchdog]: Runtime has reached 105 minutes.
+[INFO]  [2020-02-12 18:30:03.589512] [/sensors/sensor_monitor]: OTP: 18933.50 psig / CCP: 18937.23 psig / OTT: 12623.24 F / CCT1: 12624.99 F / CCT2: 12624.97 F
+[INFO]  [2020-02-12 18:30:03.813768] [/sensors/sensor_monitor]: OTP: 18934.10 psig / CCP: 18937.83 psig / OTT: 12623.64 F / CCT1: 12625.39 F / CCT2: 12625.37 F
+[INFO]  [2020-02-12 18:30:03.994176] [/sensors/sensor_monitor]: OTP: 18934.71 psig / CCP: 18938.43 psig / OTT: 12624.04 F / CCT1: 12625.79 F / CCT2: 12625.77 F
+[INFO]  [2020-02-12 18:30:04.194521] [/sensors/sensor_monitor]: OTP: 18935.30 psig / CCP: 18939.03 psig / OTT: 12624.44 F / CCT1: 12626.19 F / CCT2: 12626.17 F
+[INFO]  [2020-02-12 18:30:04.419435] [/sensors/sensor_monitor]: OTP: 18935.90 psig / CCP: 18939.34 psig / OTT: 12624.84 F / CCT1: 12626.59 F / CCT2: 12626.57 F
+[INFO]  [2020-02-12 18:30:04.603109] [/sensors/sensor_monitor]: OTP: 18936.51 psig / CCP: 18940.23 psig / OTT: 12625.24 F / CCT1: 12626.99 F / CCT2: 12626.97 F
+[INFO]  [2020-02-12 18:30:04.803668] [/sensors/sensor_monitor]: OTP: 18937.10 psig / CCP: 18940.83 psig / OTT: 12625.64 F / CCT1: 12627.39 F / CCT2: 12627.37 F
+[INFO]  [2020-02-12 18:30:04.993189] [/sensors/sensor_monitor]: OTP: 18937.71 psig / CCP: 18941.43 psig / OTT: 12626.04 F / CCT1: 12627.79 F / CCT2: 12627.77 F
+[INFO]  [2020-02-12 18:30:05.217230] [/sensors/sensor_monitor]: OTP: 18938.30 psig / CCP: 18942.03 psig / OTT: 12626.44 F / CCT1: 12628.19 F / CCT2: 12628.17 F
+[INFO]  [2020-02-12 18:30:05.455883] [/sensors/sensor_monitor]: OTP: 18938.90 psig / CCP: 18942.33 psig / OTT: 12626.84 F / CCT1: 12628.39 F / CCT2: 12628.58 F
+[INFO]  [2020-02-12 18:30:05.656883] [/sensors/sensor_monitor]: OTP: 18939.20 psig / CCP: 18942.93 psig / OTT: 12627.24 F / CCT1: 12628.79 F / CCT2: 12628.78 F
+[INFO]  [2020-02-12 18:30:05.803037] [/sensors/sensor_monitor]: OTP: 18940.10 psig / CCP: 18943.83 psig / OTT: 12627.64 F / CCT1: 12629.39 F / CCT2: 12629.37 F
+[INFO]  [2020-02-12 18:30:05.990018] [/sensors/sensor_monitor]: OTP: 18940.70 psig / CCP: 18944.43 psig / OTT: 12628.04 F / CCT1: 12629.79 F / CCT2: 12629.77 F
+[INFO]  [2020-02-12 18:30:06.191578] [/sensors/sensor_monitor]: OTP: 18941.30 psig / CCP: 18945.03 psig / OTT: 12628.44 F / CCT1: 12630.19 F / CCT2: 12630.17 F
+[INFO]  [2020-02-12 18:30:06.397962] [/sensors/sensor_monitor]: OTP: 18941.92 psig / CCP: 18945.63 psig / OTT: 12628.84 F / CCT1: 12630.59 F / CCT2: 12630.57 F
+[INFO]  [2020-02-12 18:30:06.591564] [/sensors/sensor_monitor]: OTP: 18942.50 psig / CCP: 18946.23 psig / OTT: 12629.24 F / CCT1: 12630.99 F / CCT2: 12630.97 F
+[INFO]  [2020-02-12 18:30:06.820530] [/sensors/sensor_monitor]: OTP: 18943.10 psig / CCP: 18946.83 psig / OTT: 12629.64 F / CCT1: 12631.39 F / CCT2: 12631.37 F
+[WARN]  [2020-02-12 18:30:06.897125] [/sensors/sensor_monitor]: Nitrous tank overpressure (18943.4179688, 18868.5551563 >1200 psig) detected!
+[INFO]  [2020-02-12 18:30:07.016842] [/sensors/sensor_monitor]: OTP: 18943.42 psig / CCP: 18947.43 psig / OTT: 12630.04 F / CCT1: 12631.79 F / CCT2: 12631.77 F
+[INFO]  [2020-02-12 18:30:07.197563] [/sensors/sensor_monitor]: OTP: 18944.30 psig / CCP: 18948.03 psig / OTT: 12630.44 F / CCT1: 12632.19 F / CCT2: 12632.17 F
+[INFO]  [2020-02-12 18:30:07.409868] [/sensors/sensor_monitor]: OTP: 18944.91 psig / CCP: 18948.63 psig / OTT: 12630.84 F / CCT1: 12632.59 F / CCT2: 12632.57 F
+[INFO]  [2020-02-12 18:30:07.595950] [/sensors/sensor_monitor]: OTP: 18945.50 psig / CCP: 18949.23 psig / OTT: 12631.24 F / CCT1: 12632.99 F / CCT2: 12632.97 F
+[INFO]  [2020-02-12 18:30:07.797478] [/sensors/sensor_monitor]: OTP: 18946.10 psig / CCP: 18949.83 psig / OTT: 12631.64 F / CCT1: 12633.39 F / CCT2: 12633.37 F
+[INFO]  [2020-02-12 18:30:07.996876] [/sensors/sensor_monitor]: OTP: 18946.70 psig / CCP: 18950.43 psig / OTT: 12632.04 F / CCT1: 12633.79 F / CCT2: 12633.78 F
+[INFO]  [2020-02-12 18:30:08.197831] [/sensors/sensor_monitor]: OTP: 18947.30 psig / CCP: 18951.03 psig / OTT: 12632.44 F / CCT1: 12634.19 F / CCT2: 12634.17 F
+[INFO]  [2020-02-12 18:30:08.405238] [/sensors/sensor_monitor]: OTP: 18947.90 psig / CCP: 18951.63 psig / OTT: 12632.84 F / CCT1: 12634.59 F / CCT2: 12634.57 F
+[INFO]  [2020-02-12 18:30:08.599239] [/sensors/sensor_monitor]: OTP: 18948.51 psig / CCP: 18952.23 psig / OTT: 12633.24 F / CCT1: 12634.99 F / CCT2: 12634.97 F
+[INFO]  [2020-02-12 18:30:08.793671] [/sensors/sensor_monitor]: OTP: 18949.10 psig / CCP: 18952.83 psig / OTT: 12633.64 F / CCT1: 12635.39 F / CCT2: 12635.37 F
+[INFO]  [2020-02-12 18:30:08.998799] [/sensors/sensor_monitor]: OTP: 18949.71 psig / CCP: 18953.43 psig / OTT: 12634.04 F / CCT1: 12635.79 F / CCT2: 12635.77 F
+[INFO]  [2020-02-12 18:30:09.203109] [/sensors/sensor_monitor]: OTP: 18950.30 psig / CCP: 18954.03 psig / OTT: 12634.44 F / CCT1: 12636.19 F / CCT2: 12636.17 F
+[INFO]  [2020-02-12 18:30:09.417107] [/sensors/sensor_monitor]: OTP: 18950.90 psig / CCP: 18954.33 psig / OTT: 12634.84 F / CCT1: 12636.59 F / CCT2: 12636.57 F
+[INFO]  [2020-02-12 18:30:09.591764] [/sensors/sensor_monitor]: OTP: 18951.51 psig / CCP: 18955.23 psig / OTT: 12635.24 F / CCT1: 12636.99 F / CCT2: 12636.98 F
+[INFO]  [2020-02-12 18:30:09.790816] [/sensors/sensor_monitor]: OTP: 18952.12 psig / CCP: 18955.83 psig / OTT: 12635.64 F / CCT1: 12637.39 F / CCT2: 12637.37 F
+[INFO]  [2020-02-12 18:30:09.996567] [/sensors/sensor_monitor]: OTP: 18952.70 psig / CCP: 18956.43 psig / OTT: 12636.04 F / CCT1: 12637.79 F / CCT2: 12637.77 F
+[INFO]  [2020-02-12 18:30:10.193691] [/sensors/sensor_monitor]: OTP: 18953.30 psig / CCP: 18957.03 psig / OTT: 12636.44 F / CCT1: 12638.19 F / CCT2: 12638.17 F
+[INFO]  [2020-02-12 18:30:10.459382] [/sensors/sensor_monitor]: OTP: 18953.90 psig / CCP: 18957.33 psig / OTT: 12636.84 F / CCT1: 12638.59 F / CCT2: 12638.57 F
+[INFO]  [2020-02-12 18:30:10.669816] [/sensors/sensor_monitor]: OTP: 18954.50 psig / CCP: 18958.23 psig / OTT: 12637.24 F / CCT1: 12638.99 F / CCT2: 12638.97 F
+[INFO]  [2020-02-12 18:30:10.796619] [/sensors/sensor_monitor]: OTP: 18955.10 psig / CCP: 18958.83 psig / OTT: 12637.64 F / CCT1: 12639.39 F / CCT2: 12639.37 F
+[INFO]  [2020-02-12 18:30:10.990484] [/sensors/sensor_monitor]: OTP: 18955.70 psig / CCP: 18959.43 psig / OTT: 12638.04 F / CCT1: 12639.79 F / CCT2: 12639.77 F
+[INFO]  [2020-02-12 18:30:11.208728] [/sensors/sensor_monitor]: OTP: 18956.31 psig / CCP: 18960.03 psig / OTT: 12638.45 F / CCT1: 12640.19 F / CCT2: 12640.17 F
+[INFO]  [2020-02-12 18:30:11.403571] [/sensors/sensor_monitor]: OTP: 18956.90 psig / CCP: 18960.63 psig / OTT: 12638.84 F / CCT1: 12640.59 F / CCT2: 12640.57 F
+[INFO]  [2020-02-12 18:30:11.593824] [/sensors/sensor_monitor]: OTP: 18957.50 psig / CCP: 18961.23 psig / OTT: 12639.24 F / CCT1: 12640.99 F / CCT2: 12640.97 F
+[INFO]  [2020-02-12 18:30:11.795220] [/sensors/sensor_monitor]: OTP: 18958.10 psig / CCP: 18961.83 psig / OTT: 12639.64 F / CCT1: 12641.39 F / CCT2: 12641.37 F
+[INFO]  [2020-02-12 18:30:12.000494] [/sensors/sensor_monitor]: OTP: 18958.71 psig / CCP: 18962.43 psig / OTT: 12640.04 F / CCT1: 12641.79 F / CCT2: 12641.78 F
+[WARN]  [2020-02-12 18:30:12.055242] [/sensors/sensor_monitor]: Nitrous tank overpressure (18958.7070312, 18883.8551797 >1200 psig) detected!
+[INFO]  [2020-02-12 18:30:12.232205] [/sensors/sensor_monitor]: OTP: 18959.30 psig / CCP: 18963.03 psig / OTT: 12640.64 F / CCT1: 12642.19 F / CCT2: 12642.17 F
+[INFO]  [2020-02-12 18:30:12.419387] [/sensors/sensor_monitor]: OTP: 18959.90 psig / CCP: 18963.33 psig / OTT: 12640.84 F / CCT1: 12642.59 F / CCT2: 12642.57 F
