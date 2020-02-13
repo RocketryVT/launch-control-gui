@@ -18,7 +18,7 @@ CONSOLE_FONT = ("Ubuntu Mono", 14)
 ERROR_FONT = ("Ubuntu Mono", 14, "bold")
 BUTTON_FONT = ("Helvetica", 11)
 
-list_of_nodes = []
+set_of_nodes = set()
 
 button_commands = [
     "system fortune | cowsay",
@@ -110,6 +110,10 @@ def parse_message(string):
         dict["level"] = level
         dict["stamp"] = datestr
         dict["node"] = node
+        if node not in set_of_nodes:
+            set_of_nodes.add(node)
+            print("New node: " + str(set_of_nodes))
+
         msgdicts.append(dict)
 
     return msgdicts
@@ -319,7 +323,9 @@ class MainWindow(Tk):
         self.buffer.clear()
 
     def redraw_console(self, event=None, another=None, more=None):
+        self.textOutput.configure(state='normal')
         self.textOutput.delete('1.0', 'end')
+        self.textOutput.configure(state='disabled')
         for p in self.buffer:
             st = dict2str(p,
                 self.show_debug.get(),
