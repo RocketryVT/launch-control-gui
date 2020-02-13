@@ -1,22 +1,16 @@
 from tkinter import *
+from tkinter.ttk import *
 from tkinter.font import Font
 from tkinter.scrolledtext import ScrolledText
 import time
 from datetime import datetime
 import numpy
-from collections import deque
 import os
 import socket
 import re
-import ctypes
 import copy
 
-myappid = 'rvtgui' # arbitrary string
-ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
-
-CONSOLE_FONT = ("Ubuntu Mono", 14)
-ERROR_FONT = ("Ubuntu Mono", 14, "bold")
-BUTTON_FONT = ("Helvetica", 11)
+CONSOLE_FONT = ("Consolas", 14)
 
 set_of_nodes = set()
 
@@ -39,7 +33,7 @@ button_commands = [
     "open vent valve",
     "crack vent valve",
     "fire ematch",
-    "abort",
+    "abort"
 ]
 
 def make_command_button(master, window, command, row):
@@ -48,9 +42,8 @@ def make_command_button(master, window, command, row):
     Button(window,
         text=command,
         command=lambda: master.send_command(command),
-        width=20,
-        font=BUTTON_FONT
-    ).grid(row=row, column=0, padx=5, pady=2)
+        width=25
+    ).pack(side=TOP, padx=5, pady=2)
 
 def dict2str(dict, debug, info, warn, error, fatal,
     show_level=False, show_time=False, show_node=False):
@@ -134,34 +127,40 @@ class MainWindow(Tk):
         self.logfile = open(filename, 'wb')
 
         Tk.__init__(self)
+        self.style = Style()
+        self.style.theme_use("xpnative")
+        self.style.configure("console", foreground="black", background="white")
         self.title("Ground Control")
         self.wm_iconbitmap("logo_nowords_cZC_icon.ico")
         self.protocol("WM_DELETE_WINDOW", self.destroy)
-        self.state("zoomed")
         make_focus(self)
+        self.update_idletasks()
+        width = 1400
+        height = 800
+        x = (self.winfo_screenwidth() // 2) - (width // 2)
+        y = (self.winfo_screenheight() // 2) - (height // 2)
+        self.geometry('{}x{}+{}+{}'.format(width, height, x, y - 70))
 
-        bottom_frame = Frame(self, bd=1, relief=RIDGE)
-        sidebar = Frame(self, bd=1, relief=RIDGE)
-        top_frame = Frame(self, bd=1, relief=RIDGE)
+        bottom_frame = Frame(self)
+        sidebar = Frame(self)
+        top_frame = Frame(self)
 
         for i in range(0, len(button_commands)):
             make_command_button(self, sidebar, button_commands[i], i)
         sidebar.pack(side=LEFT, fill=BOTH)
 
-        Label(top_frame, text="IP Address: ", font=BUTTON_FONT).pack(side = LEFT, padx=3, pady=3)
-        self.addrInputBox = Entry(top_frame, font=BUTTON_FONT)
+        Label(top_frame, text="IP Address: ").pack(side = LEFT, padx=3, pady=3)
+        self.addrInputBox = Entry(top_frame)
         self.addrInputBox.insert(0, "gandalf.local")
         self.addrInputBox.pack(side = LEFT, padx=3, pady=3)
-        Label(top_frame, text="Port: ", font=BUTTON_FONT).pack(side = LEFT, padx=3, pady=3)
-        self.portInputBox = Entry(top_frame, font=BUTTON_FONT)
+        Label(top_frame, text="Port: ").pack(side = LEFT, padx=3, pady=3)
+        self.portInputBox = Entry(top_frame)
         self.portInputBox.insert(0, "8001")
         self.portInputBox.pack(side = LEFT, padx=3, pady=3)
         connectButton = Button(top_frame, text='Connect',
-            font=BUTTON_FONT,
             command=lambda: self.tcp_connect(self.addrInputBox.get(), self.portInputBox.get()))
         connectButton.pack(side = LEFT, padx=3, pady=3)
         redrawButton = Button(top_frame, text='Redraw',
-            font=BUTTON_FONT,
             command=lambda: self.redraw_console())
         redrawButton.pack(side = LEFT, padx=3, pady=3)
 
@@ -193,50 +192,38 @@ class MainWindow(Tk):
         self.show_node.trace('w', self.redraw_console)
 
         Checkbutton(top_frame, text="Snap to Bottom", var=self.snap_to_bottom,
-            font=BUTTON_FONT
             ).pack(side = LEFT, padx=3, pady=3)
         Checkbutton(top_frame, text="Debug", var=self.show_debug,
-            font=BUTTON_FONT
             ).pack(side = LEFT, padx=3, pady=3)
         Checkbutton(top_frame, text="Info", var=self.show_info,
-            font=BUTTON_FONT
             ).pack(side = LEFT, padx=3, pady=3)
         Checkbutton(top_frame, text="Warn", var=self.show_warn,
-            font=BUTTON_FONT
             ).pack(side = LEFT, padx=3, pady=3)
         Checkbutton(top_frame, text="Error", var=self.show_error,
-            font=BUTTON_FONT
             ).pack(side = LEFT, padx=3, pady=3)
         Checkbutton(top_frame, text="Fatal", var=self.show_fatal,
-            font=BUTTON_FONT
             ).pack(side = LEFT, padx=3, pady=3)
         Checkbutton(top_frame, text="Levels", var=self.show_level,
-            font=BUTTON_FONT
             ).pack(side = RIGHT, padx=3, pady=3)
         Checkbutton(top_frame, text="Timestamp", var=self.show_time,
-            font=BUTTON_FONT
             ).pack(side = RIGHT, padx=3, pady=3)
         Checkbutton(top_frame, text="Nodes", var=self.show_node,
-            font=BUTTON_FONT
             ).pack(side = RIGHT, padx=3, pady=3)
         top_frame.pack(side=TOP, fill='x')
 
         self.textOutput = ScrolledText(self, wrap=WORD,
             width = 28*3, bg='#1A3747', fg='white',
-            font=CONSOLE_FONT,
-            relief='flat', borderwidth=6)
+            relief='flat', borderwidth=6, font=CONSOLE_FONT)
         self.textOutput.pack(fill=BOTH, expand=YES)
         self.textOutput.config(state=DISABLED)
 
         self.textOutput.tag_configure("DEBUG", foreground="#5D737E")
         self.textOutput.tag_configure("INFO", foreground="white")
         self.textOutput.tag_configure("WARN", foreground="#fffe00")
-        self.textOutput.tag_configure("ERROR", foreground="#f08e00",
-            font=ERROR_FONT)
-        self.textOutput.tag_configure("FATAL", foreground="#bb0000",
-            font=ERROR_FONT)
+        self.textOutput.tag_configure("ERROR", foreground="#f08e00")
+        self.textOutput.tag_configure("FATAL", foreground="#bb0000")
 
-        self.textInputBox = Entry(bottom_frame, font=BUTTON_FONT, width=70)
+        self.textInputBox = Entry(bottom_frame, width=70)
         self.textInputBox.pack(padx=5, pady=5, fill=BOTH)
         bottom_frame.pack(side=BOTTOM, fill=BOTH)
 
