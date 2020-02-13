@@ -81,8 +81,6 @@ def make_focus(window):
 
 def parse_message(string):
 
-    print(string)
-
     pattern = re.compile(
         "\[\w+\]\s+\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{6}\] \[.+\]\:[\S\s]+?(?=(?:\[\w+\]|$))")
     text = re.compile("\]:(\s|$)([\S\s]+)")
@@ -144,10 +142,13 @@ class MainWindow(Tk):
         bottom_frame = Frame(self)
         sidebar = Frame(self)
         top_frame = Frame(self)
+        self.status_text = Label(self)
+        self.set_status("Disconnected.")
 
         for i in range(0, len(button_commands)):
             make_command_button(self, sidebar, button_commands[i], i)
         sidebar.pack(side=LEFT, fill=BOTH)
+        self.status_text.pack(side=TOP, fill='x', padx=3, pady=6)
 
         Label(top_frame, text="IP Address: ").pack(side = LEFT, padx=3, pady=3)
         self.addrInputBox = Entry(top_frame)
@@ -157,12 +158,12 @@ class MainWindow(Tk):
         self.portInputBox = Entry(top_frame)
         self.portInputBox.insert(0, "8001")
         self.portInputBox.pack(side = LEFT, padx=3, pady=3)
-        connectButton = Button(top_frame, text='Connect',
+        self.connectButton = Button(top_frame, text='Connect',
             command=lambda: self.tcp_connect(self.addrInputBox.get(), self.portInputBox.get()))
-        connectButton.pack(side = LEFT, padx=3, pady=3)
-        redrawButton = Button(top_frame, text='Redraw',
-            command=lambda: self.redraw_console())
-        redrawButton.pack(side = LEFT, padx=3, pady=3)
+        self.connectButton.pack(side = LEFT, padx=3, pady=3)
+        # redrawButton = Button(top_frame, text='Redraw',
+        #     command=lambda: self.redraw_console())
+        # redrawButton.pack(side = LEFT, padx=3, pady=3)
 
         self.snap_to_bottom = BooleanVar()
         self.snap_to_bottom.set(True)
@@ -233,6 +234,9 @@ class MainWindow(Tk):
         self.grid_rowconfigure(0, weight=1)
         self.begin_loop()
 
+    def set_status(self, message):
+        self.status_text['text'] = message
+
     def begin_loop(self):
 
         self.update()
@@ -288,12 +292,20 @@ class MainWindow(Tk):
 
 
     def tcp_connect(self, addr, port):
+
         self.socket = socket.socket()
+        if self.connectButton["text"] == "Disconnect":
+            self.connectButton.config(text="Connect")
+            self.set_status("Disconnected.")
+            return
         try:
             self.socket.connect((addr, int(port)))
         except Exception as e:
-            print(e)
+            self.set_status(str(e))
+            return
         self.socket.setblocking(0)
+        self.connectButton.config(text="Disconnect")
+        self.set_status("Connected at {}:{}.".format(addr, port))
 
     def send_command(self, text):
         try:
