@@ -128,16 +128,15 @@ class MainWindow(Tk):
         self.style = Style()
         self.style.theme_use("xpnative")
         self.style.configure("console", foreground="black", background="white")
-        self.title("Ground Control")
+        self.title("Rocketry@VT Ground Control v2020-02-15a")
         self.wm_iconbitmap("logo_nowords_cZC_icon.ico")
         self.protocol("WM_DELETE_WINDOW", self.destroy)
         make_focus(self)
         self.update_idletasks()
         width = 1400
         height = 800
-        x = (self.winfo_screenwidth() // 2) - (width // 2)
-        y = (self.winfo_screenheight() // 2) - (height // 2)
-        self.geometry('{}x{}+{}+{}'.format(width, height, x, y - 70))
+        self.geometry('{}x{}'.format(width, height))
+        self.state('zoomed')
 
         bottom_frame = Frame(self)
         sidebar = Frame(self)
@@ -161,9 +160,9 @@ class MainWindow(Tk):
         self.connectButton = Button(top_frame, text='Connect',
             command=lambda: self.tcp_connect(self.addrInputBox.get(), self.portInputBox.get()))
         self.connectButton.pack(side = LEFT, padx=3, pady=3)
-        # redrawButton = Button(top_frame, text='Redraw',
-        #     command=lambda: self.redraw_console())
-        # redrawButton.pack(side = LEFT, padx=3, pady=3)
+        clearButton = Button(top_frame, text='Clear',
+            command=lambda: self.clear_console())
+        clearButton.pack(side = LEFT, padx=3, pady=3)
 
         self.snap_to_bottom = BooleanVar()
         self.snap_to_bottom.set(True)
@@ -287,12 +286,13 @@ class MainWindow(Tk):
                     if p['level'] == "FATAL":
                         self.textOutput.tag_add("FATAL", begin, end)
 
-            if self.snap_to_bottom.get():
-                self.textOutput.see(END)
+                    if self.snap_to_bottom.get():
+                        self.textOutput.see(END)
 
 
     def tcp_connect(self, addr, port):
 
+        self.set_status("Connecting...")
         self.socket = socket.socket()
         if self.connectButton["text"] == "Disconnect":
             self.connectButton.config(text="Connect")
@@ -320,6 +320,12 @@ class MainWindow(Tk):
 
     def clear_buffers(self):
         self.buffer.clear()
+
+    def clear_console(self):
+        self.textOutput.configure(state='normal')
+        self.textOutput.delete('1.0', 'end')
+        self.textOutput.configure(state='disabled')
+        self.buffer = []
 
     def redraw_console(self, event=None, another=None, more=None):
         self.textOutput.configure(state='normal')
@@ -352,8 +358,8 @@ class MainWindow(Tk):
                 if p['level'] == "FATAL":
                     self.textOutput.tag_add("FATAL", begin, end)
 
-        if self.snap_to_bottom.get():
-            self.textOutput.see(END)
+                if self.snap_to_bottom.get():
+                    self.textOutput.see(END)
 
 
 print("Starting R@VT control.")
