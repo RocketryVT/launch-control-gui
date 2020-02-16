@@ -17,12 +17,16 @@ set_of_nodes = set()
 button_commands = [
     "system fortune | cowsay",
     "system figlet RVT",
-    "system df -h",
-    "system free -th",
+    "",
+    ("view storage usage", "system df -h"),
+    ("view memory usage", "system free -th"),
+    ("view logs", "system ls -lh ~/rocket-os/src/launch/logs"),
+    "",
     "read data",
     "print whitelist",
     "set readiness 0",
     "set readiness 10",
+    "",
     "close solenoid",
     "open solenoid",
     "close ignition valve",
@@ -33,14 +37,25 @@ button_commands = [
     "open vent valve",
     "crack vent valve",
     "fire ematch",
+    "",
     "abort"
 ]
 
 def make_command_button(master, window, command, row):
+
+    if not command:
+        Separator(window, orient=HORIZONTAL
+        ).pack(side=TOP, padx=5, pady=5, fill='x')
+        return
+
     command = copy.copy(command)
+    label = command
+    if type(command) is tuple:
+        label = command[0].title()
+        command = command[1]
     row = copy.copy(row)
     Button(window,
-        text=command,
+        text=label,
         command=lambda: master.send_command(command),
         width=25
     ).pack(side=TOP, padx=5, pady=2)
@@ -82,7 +97,7 @@ def make_focus(window):
 def parse_message(string):
 
     pattern = re.compile(
-        "\[\w+\]\s+\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{6}\] \[.+\]\:[\S\s]+?(?=(?:\[\w+\]|$))")
+        "\[\w+\]\s+\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{6}\] \[.+\]\:[\S\s]+?(?=(?:\[DEBUG\]|\[INFO\]|\[WARN\]|\[ERROR\]|\[FATAL\]|$))")
     text = re.compile("\]:(\s|$)([\S\s]+)")
     meta = re.compile("\[(.*?)\]")
 
@@ -128,7 +143,7 @@ class MainWindow(Tk):
         self.style = Style()
         self.style.theme_use("xpnative")
         self.style.configure("console", foreground="black", background="white")
-        self.title("Rocketry@VT Ground Control v2020-02-15a")
+        self.title("Rocketry@VT Ground Control v2020-02-16a")
         self.wm_iconbitmap("logo_nowords_cZC_icon.ico")
         self.protocol("WM_DELETE_WINDOW", self.destroy)
         make_focus(self)
@@ -151,7 +166,7 @@ class MainWindow(Tk):
 
         Label(top_frame, text="IP Address: ").pack(side = LEFT, padx=3, pady=3)
         self.addrInputBox = Entry(top_frame)
-        self.addrInputBox.insert(0, "gandalf.local")
+        self.addrInputBox.insert(0, "71.62.179.43")
         self.addrInputBox.pack(side = LEFT, padx=3, pady=3)
         Label(top_frame, text="Port: ").pack(side = LEFT, padx=3, pady=3)
         self.portInputBox = Entry(top_frame)
@@ -241,19 +256,36 @@ class MainWindow(Tk):
         self.update()
         self.after(self.delay, self.begin_loop)
 
+    def recvall(sock):
+        BUFF_SIZE = 4096 # 4 KiB
+        data = b''
+        while True:
+            part = sock.recv(BUFF_SIZE)
+            data += part
+            if len(part) < BUFF_SIZE:
+                # either 0 or end of data
+                break
+        return data
+
     def update(self):
 
-        message = None
+        message = b""
 
         if self.socket is not None:
-            try:
-                message = self.socket.recv(1024)
-                message = message.decode()
-            except:
-                pass
+                while True:
+                    part = b""
+                    try:
+                        part = self.socket.recv(1000)
+                    except:
+                        pass
+                    message += part
+                    if len(part) < 1000:
+                        break
+
 
         if message is not None:
 
+            message = message.decode('utf-8', 'ignore')
             self.logfile.write(message.encode())
             self.logfile.flush()
             parsed = parse_message(message)
