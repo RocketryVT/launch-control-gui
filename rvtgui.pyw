@@ -21,6 +21,7 @@ button_commands = [
     ("view storage usage", "system df -h"),
     ("view memory usage", "system free -th"),
     ("view logs", "system ls -lh ~/rocket-os/src/launch/logs"),
+    ("view processes", "system top -bn 1 -u debian -c -w 400"),
     "",
     "read data",
     "print whitelist",
@@ -40,6 +41,9 @@ button_commands = [
     "",
     "abort"
 ]
+
+history_index = 0
+command_history = []
 
 def make_command_button(master, window, command, row):
 
@@ -97,7 +101,7 @@ def make_focus(window):
 def parse_message(string):
 
     pattern = re.compile(
-        "\[\w+\]\s+\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{6}\] \[.+\]\:[\S\s]+?(?=(?:\[DEBUG\]|\[INFO\]|\[WARN\]|\[ERROR\]|\[FATAL\]|$))")
+        "\[\w+\]\s+\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{6}\] \[.+\]\:[\S\s]+?(?=(?:\[DEBUG\]|\[INFO\]|\[WARN\]|\[ERROR\]|\[FATAL\]|\n\[DEBUG\]|\n\[INFO\]|\n\[WARN\]|\n\[ERROR\]|\n\[FATAL\]|$))")
     text = re.compile("\]:(\s|$)([\S\s]+)")
     meta = re.compile("\[(.*?)\]")
 
@@ -106,8 +110,6 @@ def parse_message(string):
     msgdicts = []
     for msg in messages:
         content = text.findall(msg)[0][1]
-        if content.count('\n') is 1:
-            content = content.rstrip() # to combat spurious \n
 
         metadata = meta.findall(msg)
         (level, datestr, node) = metadata[0:3]
@@ -143,7 +145,7 @@ class MainWindow(Tk):
         self.style = Style()
         self.style.theme_use("xpnative")
         self.style.configure("console", foreground="black", background="white")
-        self.title("Rocketry@VT Ground Control v2020-02-16a")
+        self.title("Rocketry@VT Ground Control v2020-02-16b")
         self.wm_iconbitmap("logo_nowords_cZC_icon.ico")
         self.protocol("WM_DELETE_WINDOW", self.destroy)
         make_focus(self)
@@ -166,7 +168,7 @@ class MainWindow(Tk):
 
         Label(top_frame, text="IP Address: ").pack(side = LEFT, padx=3, pady=3)
         self.addrInputBox = Entry(top_frame)
-        self.addrInputBox.insert(0, "71.62.179.43")
+        self.addrInputBox.insert(0, "spookyscary.ddns.net")
         self.addrInputBox.pack(side = LEFT, padx=3, pady=3)
         Label(top_frame, text="Port: ").pack(side = LEFT, padx=3, pady=3)
         self.portInputBox = Entry(top_frame)
@@ -226,7 +228,7 @@ class MainWindow(Tk):
             ).pack(side = RIGHT, padx=3, pady=3)
         top_frame.pack(side=TOP, fill='x')
 
-        self.textOutput = ScrolledText(self, wrap=WORD,
+        self.textOutput = ScrolledText(self, wrap=CHAR,
             width = 28*3, bg='#1A3747', fg='white',
             relief='flat', borderwidth=6, font=CONSOLE_FONT)
         self.textOutput.pack(fill=BOTH, expand=YES)
@@ -238,15 +240,33 @@ class MainWindow(Tk):
         self.textOutput.tag_configure("ERROR", foreground="#f08e00")
         self.textOutput.tag_configure("FATAL", foreground="#bb0000")
 
+        self.textOutput.bind("<MouseWheel>", self.on_text_scroll)
+
         self.textInputBox = Entry(bottom_frame, width=70)
         self.textInputBox.pack(padx=5, pady=5, fill=BOTH)
         bottom_frame.pack(side=BOTTOM, fill=BOTH)
 
         self.bind("<Return>", self.pressed_enter)
+        self.textInputBox.bind("<Up>", self.pressed_arrow_key)
+        self.textInputBox.bind("<Down>", self.pressed_arrow_key)
 
         self.grid_columnconfigure(0, weight=1)
         self.grid_rowconfigure(0, weight=1)
         self.begin_loop()
+
+    def on_text_scroll(self, event):
+        if event.state == 4:
+            font = self.textOutput['font']
+            typeface, size = font.split()
+            if event.delta < 0:
+                size = int(size) - 1
+            else:
+                size = int(size) + 1
+            self.textOutput['font'] = typeface + " " + str(size)
+
+            if self.snap_to_bottom.get():
+                self.textOutput.see(END)
+
 
     def set_status(self, message):
         self.status_text['text'] = message
@@ -329,15 +349,38 @@ class MainWindow(Tk):
         self.set_status("Connected at {}:{}.".format(addr, port))
 
     def send_command(self, text):
+        global history_index
         try:
+            if not len(command_history) or command_history[-1] != text:
+                command_history.append(text)
+            history_index = len(command_history)
             self.socket.sendall(text.encode())
-        except:
-            pass
+        except Exception as e:
+            print(e)
 
     def pressed_enter(self, event):
         if self.focus_get() is self.textInputBox:
             self.send_command(self.textInputBox.get())
             self.textInputBox.delete(0, 'end')
+
+    def pressed_arrow_key(self, event):
+        global history_index
+        if event.keysym == "Up":
+            history_index -= 1
+            if history_index < 0:
+                history_index = 0
+            cmd = command_history[history_index]
+            self.textInputBox.delete(0, 'end')
+            self.textInputBox.insert(0, cmd)
+        elif event.keysym == "Down":
+            history_index += 1
+            cmd = ""
+            if history_index > len(command_history):
+                history_index = len(command_history)
+            if history_index < len(command_history):
+                cmd = command_history[history_index]
+            self.textInputBox.delete(0, 'end')
+            self.textInputBox.insert(0, cmd)
 
     def clear_buffers(self):
         self.buffer.clear()
