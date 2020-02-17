@@ -13,6 +13,8 @@ import copy
 CONSOLE_FONT = ("Consolas", 14)
 
 set_of_nodes = set()
+active_nodes = set()
+node_filters = []
 
 button_commands = [
     "system fortune | cowsay",
@@ -67,6 +69,9 @@ def make_command_button(master, window, command, row):
 def dict2str(dict, debug, info, warn, error, fatal,
     show_level=False, show_time=False, show_node=False):
 
+    if dict["node"] not in active_nodes:
+        return ""
+
     level = dict["level"]
     if level == "DEBUG" and not debug:
         return ""
@@ -98,34 +103,6 @@ def make_focus(window):
     window.attributes('-topmost', 0)
     window.focus()
 
-def parse_message(string):
-
-    pattern = re.compile(
-        "\[\w+\]\s+\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{6}\] \[.+\]\:[\S\s]+?(?=(?:\[DEBUG\]|\[INFO\]|\[WARN\]|\[ERROR\]|\[FATAL\]|\n\[DEBUG\]|\n\[INFO\]|\n\[WARN\]|\n\[ERROR\]|\n\[FATAL\]|$))")
-    text = re.compile("\]:(\s|$)([\S\s]+)")
-    meta = re.compile("\[(.*?)\]")
-
-    messages = pattern.findall(string);
-
-    msgdicts = []
-    for msg in messages:
-        content = text.findall(msg)[0][1]
-
-        metadata = meta.findall(msg)
-        (level, datestr, node) = metadata[0:3]
-        dict = {}
-        dict["content"] = content
-        dict["level"] = level
-        dict["stamp"] = datestr
-        dict["node"] = node
-        if node not in set_of_nodes:
-            set_of_nodes.add(node)
-            print("New node: " + str(set_of_nodes))
-
-        msgdicts.append(dict)
-
-    return msgdicts
-
 class MainWindow(Tk):
 
     def __init__(self):
@@ -145,7 +122,7 @@ class MainWindow(Tk):
         self.style = Style()
         self.style.theme_use("xpnative")
         self.style.configure("console", foreground="black", background="white")
-        self.title("Rocketry@VT Ground Control v2020-02-16b")
+        self.title("Rocketry@VT Ground Control v2020-02-16c")
         self.wm_iconbitmap("logo_nowords_cZC_icon.ico")
         self.protocol("WM_DELETE_WINDOW", self.destroy)
         make_focus(self)
@@ -158,6 +135,7 @@ class MainWindow(Tk):
         bottom_frame = Frame(self)
         sidebar = Frame(self)
         top_frame = Frame(self)
+        self.filter_frame = Frame(self, height=30)
         self.status_text = Label(self)
         self.set_status("Disconnected.")
 
@@ -227,6 +205,7 @@ class MainWindow(Tk):
         Checkbutton(top_frame, text="Nodes", var=self.show_node,
             ).pack(side = RIGHT, padx=3, pady=3)
         top_frame.pack(side=TOP, fill='x')
+        self.filter_frame.pack(side=TOP, fill='x')
 
         self.textOutput = ScrolledText(self, wrap=CHAR,
             width = 28*3, bg='#1A3747', fg='white',
@@ -297,7 +276,7 @@ class MainWindow(Tk):
             message = message.decode('utf-8', 'ignore')
             self.logfile.write(message.encode())
             self.logfile.flush()
-            parsed = parse_message(message)
+            parsed = self.parse_message(message)
             for p in parsed:
                 self.buffer.append(p)
                 st = dict2str(p,
@@ -424,6 +403,58 @@ class MainWindow(Tk):
 
                 if self.snap_to_bottom.get():
                     self.textOutput.see(END)
+
+    def toggle_node(self, nodename):
+
+        if nodename in active_nodes:
+            active_nodes.remove(nodename)
+        else:
+            active_nodes.add(nodename)
+        print(active_nodes)
+        self.redraw_console()
+
+    def add_node_checkbox(self, nodename):
+        print("Add node: " + nodename)
+
+        nodename = copy.copy(nodename)
+        var = IntVar()
+        var.set(1)
+        node_filters.append(var)
+        cb = Checkbutton(self.filter_frame,
+            text=nodename,
+            var=var,
+            command=lambda: self.toggle_node(nodename))
+        cb.pack(side=LEFT, padx=5, pady=4)
+
+    def parse_message(self, string):
+
+        pattern = re.compile(
+            "\[\w+\]\s+\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{6}\] \[.+\]\:[\S\s]+?(?=(?:\[DEBUG\]|\[INFO\]|\[WARN\]|\[ERROR\]|\[FATAL\]|\n\[DEBUG\]|\n\[INFO\]|\n\[WARN\]|\n\[ERROR\]|\n\[FATAL\]|$))")
+        text = re.compile("\]:(\s|$)([\S\s]+)")
+        meta = re.compile("\[(.*?)\]")
+
+        messages = pattern.findall(string);
+
+        msgdicts = []
+        for msg in messages:
+            content = text.findall(msg)[0][1]
+
+            metadata = meta.findall(msg)
+            (level, datestr, node) = metadata[0:3]
+            dict = {}
+            dict["content"] = content
+            dict["level"] = level
+            dict["stamp"] = datestr
+            dict["node"] = node
+            if node not in set_of_nodes:
+                set_of_nodes.add(node)
+                active_nodes.add(node)
+                self.add_node_checkbox(node)
+                print("New node: " + str(set_of_nodes))
+
+            msgdicts.append(dict)
+
+        return msgdicts
 
 
 print("Starting R@VT control.")
