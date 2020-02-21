@@ -17,13 +17,17 @@ active_nodes = set()
 node_filters = []
 
 button_commands = [
+
     "system fortune | cowsay",
     "system figlet RVT",
+    ("Open Pod Bay Doors", "system figlet \"I\'m sorry, Dave. I\'m afraid I can't do that.\""),
     "",
-    ("view storage usage", "system df -h"),
-    ("view memory usage", "system free -th"),
-    ("view logs", "system ls -lh ~/rocket-os/src/launch/logs"),
-    ("view processes", "system top -bn 1 -u debian -c -w 400"),
+    "rosnode list",
+    "rostopic list",
+    ("View Storage Usage", "system df -h"),
+    ("View Memory Usage", "system free -th"),
+    ("View Logs", "system ls -lh ~/rocket-os/src/launch/logs"),
+    ("View CPU Usage", "system mpstat -P ALL 1 1"),
     "",
     "read data",
     "print whitelist",
@@ -41,6 +45,8 @@ button_commands = [
     "crack vent valve",
     "fire ematch",
     "",
+    "launch"
+    "",
     "abort"
 ]
 
@@ -57,7 +63,7 @@ def make_command_button(master, window, command, row):
     command = copy.copy(command)
     label = command
     if type(command) is tuple:
-        label = command[0].title()
+        label = command[0]
         command = command[1]
     row = copy.copy(row)
     Button(window,
@@ -122,7 +128,7 @@ class MainWindow(Tk):
         self.style = Style()
         self.style.theme_use("xpnative")
         self.style.configure("console", foreground="black", background="white")
-        self.title("Rocketry@VT Ground Control v2020-02-16c")
+        self.title("Rocketry@VT Launch Control Operator Interface v2020-02-20a")
         self.wm_iconbitmap("logo_nowords_cZC_icon.ico")
         self.protocol("WM_DELETE_WINDOW", self.destroy)
         make_focus(self)
@@ -145,11 +151,11 @@ class MainWindow(Tk):
         self.status_text.pack(side=TOP, fill='x', padx=3, pady=6)
 
         Label(top_frame, text="IP Address: ").pack(side = LEFT, padx=3, pady=3)
-        self.addrInputBox = Entry(top_frame)
+        self.addrInputBox = Entry(top_frame, width=30)
         self.addrInputBox.insert(0, "spookyscary.ddns.net")
         self.addrInputBox.pack(side = LEFT, padx=3, pady=3)
         Label(top_frame, text="Port: ").pack(side = LEFT, padx=3, pady=3)
-        self.portInputBox = Entry(top_frame)
+        self.portInputBox = Entry(top_frame, width=10)
         self.portInputBox.insert(0, "8001")
         self.portInputBox.pack(side = LEFT, padx=3, pady=3)
         self.connectButton = Button(top_frame, text='Connect',
@@ -205,7 +211,7 @@ class MainWindow(Tk):
         Checkbutton(top_frame, text="Nodes", var=self.show_node,
             ).pack(side = RIGHT, padx=3, pady=3)
         top_frame.pack(side=TOP, fill='x')
-        self.filter_frame.pack(side=TOP, fill='x')
+        self.filter_frame.pack(side=RIGHT, fill='y')
 
         self.textOutput = ScrolledText(self, wrap=CHAR,
             width = 28*3, bg='#1A3747', fg='white',
@@ -424,7 +430,7 @@ class MainWindow(Tk):
             text=nodename,
             var=var,
             command=lambda: self.toggle_node(nodename))
-        cb.pack(side=LEFT, padx=5, pady=4)
+        cb.pack(side=TOP, anchor='w', padx=(2, 20), pady=2)
 
     def parse_message(self, string):
 
