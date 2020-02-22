@@ -12,15 +12,44 @@ import copy
 
 CONSOLE_FONT = ("Consolas", 14)
 
+default_nodes = [
+    "/exec",
+    "/hardware/driver_dispatcher",
+    "/hardware/ematch",
+    "/hardware/ignition_valve",
+    "/hardware/linear_actuator",
+    "/hardware/solenoid",
+    "/hardware/vent_valve",
+    "/listener",
+    "/logging/rosbag_record",
+    "/readiness_admin",
+    "/rosnode_lister",
+    "/rosout",
+    "/sensors/combustion_thermocouple_1",
+    "/sensors/combustion_thermocouple_2",
+    "/sensors/combustion_transducer",
+    "/sensors/float_switch",
+    "/sensors/ox_tank_thermocouple",
+    "/sensors/ox_tank_transducer",
+    "/sensors/sensor_monitor",
+    "/tcp_server",
+    "/watchdog"
+]
 set_of_nodes = set()
 active_nodes = set()
 node_filters = []
 
+config_window = None
+def make_config_window():
+    global config_window
+    if not config_window:
+        config_window = ConfigWindow()
+    else:
+        make_focus(config_window)
+
 button_commands = [
 
     "system fortune | cowsay",
-    "system figlet RVT",
-    ("Open Pod Bay Doors", "system figlet \"I\'m sorry, Dave. I\'m afraid I can't do that.\""),
     "",
     "rosnode list",
     "rostopic list",
@@ -48,6 +77,8 @@ button_commands = [
     "launch"
     "",
     "abort"
+    "",
+    ("Clean Shutdown", "fork rosnode kill -a")
 ]
 
 history_index = 0
@@ -116,6 +147,9 @@ class MainWindow(Tk):
         self.delay = 50
         self.buffer = list([])
         self.socket = None
+        self.num_shown = 0
+        self.addr = None
+        self.port = None
 
         if not os.path.exists("logs"):
             os.mkdir("logs")
@@ -128,7 +162,7 @@ class MainWindow(Tk):
         self.style = Style()
         self.style.theme_use("xpnative")
         self.style.configure("console", foreground="black", background="white")
-        self.title("Rocketry@VT Launch Control Operator Interface v2020-02-20a")
+        self.title("Rocketry@VT Launch Control Operator Interface v2020-02-21a")
         self.wm_iconbitmap("logo_nowords_cZC_icon.ico")
         self.protocol("WM_DELETE_WINDOW", self.destroy)
         make_focus(self)
@@ -141,7 +175,9 @@ class MainWindow(Tk):
         bottom_frame = Frame(self)
         sidebar = Frame(self)
         top_frame = Frame(self)
-        self.filter_frame = Frame(self, height=30)
+        self.filter_frame = Frame(self)
+        Label(self.filter_frame,
+            text="Filter by Node").pack(side=TOP, anchor='w', padx=(4, 10), pady=2)
         self.status_text = Label(self)
         self.set_status("Disconnected.")
 
@@ -163,6 +199,9 @@ class MainWindow(Tk):
         self.connectButton.pack(side = LEFT, padx=3, pady=3)
         clearButton = Button(top_frame, text='Clear',
             command=lambda: self.clear_console())
+        # configButton = Button(top_frame, text='Filter Messages',
+        #     command=lambda: make_config_window())
+        # configButton.pack(side = LEFT, padx=3, pady=3)
         clearButton.pack(side = LEFT, padx=3, pady=3)
 
         self.snap_to_bottom = BooleanVar()
@@ -205,11 +244,11 @@ class MainWindow(Tk):
         Checkbutton(top_frame, text="Fatal", var=self.show_fatal,
             ).pack(side = LEFT, padx=3, pady=3)
         Checkbutton(top_frame, text="Levels", var=self.show_level,
-            ).pack(side = RIGHT, padx=3, pady=3)
+            ).pack(side = LEFT, padx=3, pady=3)
         Checkbutton(top_frame, text="Timestamp", var=self.show_time,
-            ).pack(side = RIGHT, padx=3, pady=3)
+            ).pack(side = LEFT, padx=3, pady=3)
         Checkbutton(top_frame, text="Nodes", var=self.show_node,
-            ).pack(side = RIGHT, padx=3, pady=3)
+            ).pack(side = LEFT, padx=3, pady=3)
         top_frame.pack(side=TOP, fill='x')
         self.filter_frame.pack(side=RIGHT, fill='y')
 
@@ -234,6 +273,9 @@ class MainWindow(Tk):
         self.bind("<Return>", self.pressed_enter)
         self.textInputBox.bind("<Up>", self.pressed_arrow_key)
         self.textInputBox.bind("<Down>", self.pressed_arrow_key)
+
+        for node in default_nodes:
+            self.register_node(node)
 
         self.grid_columnconfigure(0, weight=1)
         self.grid_rowconfigure(0, weight=1)
@@ -266,16 +308,20 @@ class MainWindow(Tk):
         message = b""
 
         if self.socket is not None:
-                while True:
-                    part = b""
-                    try:
-                        part = self.socket.recv(1000)
-                    except:
-                        pass
-                    message += part
-                    if len(part) < 1000:
-                        break
-
+            self.set_status("Connected at {}:{}. Recieved {} messages (showing {})."
+                .format(self.addr, self.port,
+                    len(self.buffer), self.num_shown))
+            while True:
+                part = b""
+                try:
+                    part = self.socket.recv(1000)
+                except:
+                    pass
+                message += part
+                if len(part) < 1000:
+                    break
+        else:
+            self.set_status("Disconnected.")
 
         if message is not None:
 
@@ -285,6 +331,7 @@ class MainWindow(Tk):
             parsed = self.parse_message(message)
             for p in parsed:
                 self.buffer.append(p)
+
                 st = dict2str(p,
                     self.show_debug.get(),
                     self.show_info.get(),
@@ -296,6 +343,8 @@ class MainWindow(Tk):
                     self.show_node.get())
 
                 if st:
+                    self.num_shown += 1
+
                     begin = "end-10c linestart"
                     end = "end-10c lineend"
                     self.textOutput.configure(state='normal')
@@ -318,11 +367,14 @@ class MainWindow(Tk):
 
     def tcp_connect(self, addr, port):
 
+        self.addr = addr
+        self.port = port
         self.set_status("Connecting...")
         self.socket = socket.socket()
         if self.connectButton["text"] == "Disconnect":
             self.connectButton.config(text="Connect")
             self.set_status("Disconnected.")
+            self.socket = None
             return
         try:
             self.socket.connect((addr, int(port)))
@@ -375,11 +427,13 @@ class MainWindow(Tk):
         self.textOutput.delete('1.0', 'end')
         self.textOutput.configure(state='disabled')
         self.buffer = []
+        self.num_shown = 0
 
     def redraw_console(self, event=None, another=None, more=None):
         self.textOutput.configure(state='normal')
         self.textOutput.delete('1.0', 'end')
         self.textOutput.configure(state='disabled')
+        self.num_shown = 0
         for p in self.buffer:
             st = dict2str(p,
                 self.show_debug.get(),
@@ -391,6 +445,7 @@ class MainWindow(Tk):
                 self.show_time.get(),
                 self.show_node.get())
             if st:
+                self.num_shown += 1
                 begin = "end-10c linestart"
                 end = "end-10c lineend"
                 self.textOutput.configure(state='normal')
@@ -409,6 +464,7 @@ class MainWindow(Tk):
 
                 if self.snap_to_bottom.get():
                     self.textOutput.see(END)
+
 
     def toggle_node(self, nodename):
 
@@ -430,7 +486,7 @@ class MainWindow(Tk):
             text=nodename,
             var=var,
             command=lambda: self.toggle_node(nodename))
-        cb.pack(side=TOP, anchor='w', padx=(2, 20), pady=2)
+        cb.pack(side=TOP, anchor='w', padx=(4, 10), pady=2)
 
     def parse_message(self, string):
 
@@ -452,17 +508,78 @@ class MainWindow(Tk):
             dict["level"] = level
             dict["stamp"] = datestr
             dict["node"] = node
-            if node not in set_of_nodes:
-                set_of_nodes.add(node)
-                active_nodes.add(node)
-                self.add_node_checkbox(node)
-                print("New node: " + str(set_of_nodes))
+            self.register_node(node)
 
             msgdicts.append(dict)
 
         return msgdicts
 
+    def register_node(self, node):
+
+        if node not in set_of_nodes:
+            set_of_nodes.add(node)
+            active_nodes.add(node)
+            self.add_node_checkbox(node)
+            print("New node: " + str(set_of_nodes))
+
+
+
+class ConfigWindow(Tk):
+
+    def __init__(self):
+
+        self.delay = 50
+
+        Tk.__init__(self)
+        self.style = Style()
+        self.style.theme_use("xpnative")
+        self.style.configure("console", foreground="black", background="white")
+        self.title("Filter Messages")
+        self.wm_iconbitmap("logo_nowords_cZC_icon.ico")
+        self.protocol("WM_DELETE_WINDOW", self.close)
+        make_focus(self)
+        self.update_idletasks()
+        # width = 300
+        # height = 400
+        # self.geometry('{}x{}'.format(width, height))
+
+        frame = Frame(self, relief='groove')
+
+        import string
+        import random
+        letters = string.ascii_lowercase
+        nodes = []
+        for i in range(15):
+            nodes.append(''.join(random.choice(letters) for i in range(14)))
+        print(nodes)
+        levels = ["DEBUG", "INFO", "WARN", "ERROR", "FATAL"]
+
+        for i, node in enumerate(nodes):
+            Checkbutton(frame, text=node
+            ).grid(row=i, column=0, padx=4, pady=4, sticky='w')
+            for j, level in enumerate(levels):
+                Checkbutton(frame, text=level
+                ).grid(row=i, column=j+1, padx=4, pady=4, sticky='w')
+
+
+        frame.pack(fill=BOTH, padx=2, pady=2)
+
+        self.begin_loop()
+
+    def begin_loop(self):
+        self.update()
+        self.after(self.delay, self.begin_loop)
+
+    def update(self):
+        pass
+
+    def close(self):
+        global config_window
+        config_window = None
+        self.destroy()
+
 
 print("Starting R@VT control.")
 
-MainWindow().mainloop()
+main = MainWindow()
+main.mainloop()
