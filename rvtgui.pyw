@@ -50,7 +50,6 @@ def make_config_window():
 button_commands = [
 
     "system fortune | cowsay",
-    "",
     "rosnode list",
     "rostopic list",
     ("View Storage Usage", "system df -h"),
@@ -63,6 +62,7 @@ button_commands = [
     "set readiness 0",
     "set readiness 10",
     "",
+    "all stop",
     "close solenoid",
     "open solenoid",
     "close ignition valve",
@@ -74,10 +74,8 @@ button_commands = [
     "crack vent valve",
     "fire ematch",
     "",
-    "launch"
-    "",
-    "abort"
-    "",
+    "launch",
+    "abort",
     ("Clean Shutdown", "fork rosnode kill -a")
 ]
 
@@ -88,7 +86,7 @@ def make_command_button(master, window, command, row):
 
     if not command:
         Separator(window, orient=HORIZONTAL
-        ).pack(side=TOP, padx=5, pady=5, fill='x')
+        ).pack(side=TOP, pady=5, fill='x')
         return
 
     command = copy.copy(command)
