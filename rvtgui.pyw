@@ -150,19 +150,17 @@ class MainWindow(Tk):
         self.num_shown = 0
         self.addr = None
         self.port = None
+        self.logfile = None
 
         if not os.path.exists("logs"):
             os.mkdir("logs")
 
-        filename = "logs/LOG-" + str(datetime.utcnow()
-            ).replace(" ", "-").replace(":", "-") + ".txt"
-        self.logfile = open(filename, 'wb')
 
         Tk.__init__(self)
         self.style = Style()
         self.style.theme_use("xpnative")
         self.style.configure("console", foreground="black", background="white")
-        self.title("Rocketry@VT Launch Control Operator Interface v2020-02-21a")
+        self.title("Rocketry@VT Launch Control Operator Interface v2020-02-22a")
         self.wm_iconbitmap("logo_nowords_cZC_icon.ico")
         self.protocol("WM_DELETE_WINDOW", self.destroy)
         make_focus(self)
@@ -323,7 +321,12 @@ class MainWindow(Tk):
         else:
             self.set_status("Disconnected.")
 
-        if message is not None:
+        if len(message) > 0:
+
+            if not self.logfile:
+                filename = "logs/LOG-" + str(datetime.utcnow()
+                    ).replace(" ", "-").replace(":", "-") + ".txt"
+                self.logfile = open(filename, 'wb')
 
             message = message.decode('utf-8', 'ignore')
             self.logfile.write(message.encode())
@@ -472,11 +475,9 @@ class MainWindow(Tk):
             active_nodes.remove(nodename)
         else:
             active_nodes.add(nodename)
-        print(active_nodes)
         self.redraw_console()
 
     def add_node_checkbox(self, nodename):
-        print("Add node: " + nodename)
 
         nodename = copy.copy(nodename)
         var = IntVar()
@@ -520,8 +521,6 @@ class MainWindow(Tk):
             set_of_nodes.add(node)
             active_nodes.add(node)
             self.add_node_checkbox(node)
-            print("New node: " + str(set_of_nodes))
-
 
 
 class ConfigWindow(Tk):
@@ -551,7 +550,6 @@ class ConfigWindow(Tk):
         nodes = []
         for i in range(15):
             nodes.append(''.join(random.choice(letters) for i in range(14)))
-        print(nodes)
         levels = ["DEBUG", "INFO", "WARN", "ERROR", "FATAL"]
 
         for i, node in enumerate(nodes):
