@@ -80,7 +80,6 @@ class MainWindow(Tk):
         if not os.path.exists("logs"):
             os.mkdir("logs")
 
-
         Tk.__init__(self)
         self.style = Style()
         self.style.theme_use("xpnative")
@@ -90,24 +89,30 @@ class MainWindow(Tk):
         self.protocol("WM_DELETE_WINDOW", self.destroy)
         make_focus(self)
         self.update_idletasks()
-        width = 1400
-        height = 800
-        self.geometry('{}x{}'.format(width, height))
-        self.state('zoomed')
+        # width = 1400
+        # height = 800
+        # self.geometry('{}x{}'.format(width, height))
+        # self.update()
+        # self.minsize(self.winfo_width(), self.winfo_height())
 
         bottom_frame = Frame(self)
         sidebar = Frame(self)
         top_frame = Frame(self)
+        status_frame = Frame(self)
         self.filter_frame = Frame(self)
         Label(self.filter_frame,
             text="Filter by Node").pack(side=TOP, anchor='w', padx=(4, 10), pady=2)
-        self.status_text = Label(self)
+        self.status_text = Label(status_frame)
         self.set_status("Disconnected.")
+        self.datetime = Label(status_frame)
+        self.update_time()
 
         for i in range(0, len(button_commands)):
             make_command_button(self, sidebar, button_commands[i], i)
         sidebar.pack(side=LEFT, fill=BOTH)
-        self.status_text.pack(side=TOP, fill='x', padx=3, pady=6)
+        self.status_text.pack(side=LEFT, fill='x', padx=3, pady=6)
+        self.datetime.pack(side=RIGHT, fill='x', padx=10, pady=6)
+        status_frame.pack(side=TOP, fill='x')
 
         Label(top_frame, text="IP Address: ").pack(side = LEFT, padx=3, pady=3)
         self.addrInputBox = Entry(top_frame, width=30)
@@ -200,6 +205,8 @@ class MainWindow(Tk):
         for node in default_nodes:
             self.register_node(node)
 
+        self.state('zoomed')
+
         self.grid_columnconfigure(0, weight=1)
         self.grid_rowconfigure(0, weight=1)
         self.begin_loop()
@@ -226,7 +233,13 @@ class MainWindow(Tk):
         self.update()
         self.after(self.delay, self.begin_loop)
 
+    def update_time(self):
+
+        self.datetime["text"] = datetime.now().strftime("%A, %d %B %Y %I:%M:%S %p")
+
     def update(self):
+
+        self.update_time()
 
         message = b""
 
@@ -252,6 +265,8 @@ class MainWindow(Tk):
                 filename = "logs/LOG-" + str(datetime.utcnow()
                     ).replace(" ", "-").replace(":", "-") + ".txt"
                 self.logfile = open(filename, 'wb')
+                now = datetime.now().strftime("%A, %d %B %Y %I:%M:%S %p")
+                self.logfile.write(f"Log beginning {now}\n".encode())
 
             message = message.decode('utf-8', 'ignore')
             self.logfile.write(message.encode())
