@@ -4,83 +4,10 @@ from tkinter.font import Font
 from tkinter.scrolledtext import ScrolledText
 import time
 from datetime import datetime
-import numpy
 import os
 import socket
 import re
 import copy
-
-CONSOLE_FONT = ("Consolas", 14)
-
-default_nodes = [
-    "/exec",
-    "/hardware/driver_dispatcher",
-    "/hardware/ematch",
-    "/hardware/ignition_valve",
-    "/hardware/linear_actuator",
-    "/hardware/solenoid",
-    "/hardware/vent_valve",
-    "/listener",
-    "/logging/rosbag_record",
-    "/readiness_admin",
-    "/rosnode_lister",
-    "/rosout",
-    "/sensors/combustion_thermocouple_1",
-    "/sensors/combustion_thermocouple_2",
-    "/sensors/combustion_transducer",
-    "/sensors/float_switch",
-    "/sensors/ox_tank_thermocouple",
-    "/sensors/ox_tank_transducer",
-    "/sensors/sensor_monitor",
-    "/tcp_server",
-    "/watchdog"
-]
-set_of_nodes = set()
-active_nodes = set()
-node_filters = []
-
-config_window = None
-def make_config_window():
-    global config_window
-    if not config_window:
-        config_window = ConfigWindow()
-    else:
-        make_focus(config_window)
-
-button_commands = [
-
-    "system fortune | cowsay",
-    "rosnode list",
-    "rostopic list",
-    ("View Storage Usage", "system df -h"),
-    ("View Memory Usage", "system free -th"),
-    ("View Logs", "system ls -lh ~/rocket-os/src/launch/logs"),
-    ("View CPU Usage", "system mpstat -P ALL 1 1"),
-    "",
-    "read data",
-    "print whitelist",
-    "set readiness 0",
-    "set readiness 10",
-    "",
-    "all stop",
-    "close solenoid",
-    "open solenoid",
-    "close ignition valve",
-    "open ignition valve",
-    "retract linear actuator",
-    "extend linear actuator",
-    "close vent valve",
-    "open vent valve",
-    "crack vent valve",
-    "fire ematch",
-    "",
-    "launch",
-    "abort",
-    ("Clean Shutdown", "fork rosnode kill -a")
-]
-
-history_index = 0
-command_history = []
 
 def make_command_button(master, window, command, row):
 
@@ -575,7 +502,81 @@ class ConfigWindow(Tk):
         self.destroy()
 
 
-print("Starting R@VT control.")
+if __name__ == "__main__":
 
-main = MainWindow()
-main.mainloop()
+    CONSOLE_FONT = ("Consolas", 14)
+
+    default_nodes = [
+        "/exec",
+        "/hardware/driver_dispatcher",
+        "/hardware/ematch",
+        "/hardware/ignition_valve",
+        "/hardware/linear_actuator",
+        "/hardware/solenoid",
+        "/hardware/vent_valve",
+        "/listener",
+        "/logging/rosbag_record",
+        "/readiness_admin",
+        "/rosnode_lister",
+        "/rosout",
+        "/sensors/combustion_thermocouple_1",
+        "/sensors/combustion_thermocouple_2",
+        "/sensors/combustion_transducer",
+        "/sensors/float_switch",
+        "/sensors/ox_tank_thermocouple",
+        "/sensors/ox_tank_transducer",
+        "/sensors/sensor_monitor",
+        "/tcp_server",
+        "/watchdog"
+    ]
+    set_of_nodes = set()
+    active_nodes = set()
+    node_filters = []
+
+    config_window = None
+    def make_config_window():
+        global config_window
+        if not config_window:
+            config_window = ConfigWindow()
+        else:
+            make_focus(config_window)
+
+    button_commands = [
+
+        "system fortune | cowsay",
+        "rosnode list",
+        "rostopic list",
+        ("View Storage Usage", "system df -h"),
+        ("View Memory Usage", "system free -th"),
+        ("View Logs", "system ls -lh ~/rocket-os/src/launch/logs"),
+        ("View CPU Usage", "system mpstat -P ALL 1 1"),
+        "",
+        "read data",
+        "print whitelist",
+        "set readiness 0",
+        "set readiness 10",
+        "",
+        "all stop",
+        "close solenoid",
+        "open solenoid",
+        "close ignition valve",
+        "open ignition valve",
+        "retract linear actuator",
+        "extend linear actuator",
+        "close vent valve",
+        "open vent valve",
+        "crack vent valve",
+        "fire ematch",
+        "",
+        "launch",
+        "abort",
+        ("Clean Shutdown", "fork rosnode kill -a")
+    ]
+
+    history_index = 0
+    command_history = []
+
+    print("Starting R@VT control.")
+
+    main = MainWindow()
+    main.mainloop()
