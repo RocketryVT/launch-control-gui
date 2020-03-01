@@ -76,6 +76,7 @@ class MainWindow(Tk):
         self.addr = None
         self.port = None
         self.logfile = None
+        self.last_rcv = datetime.now()
 
         if not os.path.exists("logs"):
             os.mkdir("logs")
@@ -241,9 +242,14 @@ class MainWindow(Tk):
 
         self.update_time()
 
+        if socket:
+            dt = datetime.now() - self.last_rcv;
+            if dt.total_seconds() > 10: # timeout is 10 seconds
+                self.tcp_disconnect("timeout")
+
         message = b""
 
-        if self.socket is not None:
+        if self.socket:
             self.set_status("Connected at {}:{}. Recieved {} messages (showing {})."
                 .format(self.addr, self.port,
                     len(self.buffer), self.num_shown))
@@ -256,8 +262,6 @@ class MainWindow(Tk):
                 message += part
                 if len(part) < 1000:
                     break
-        else:
-            self.set_status("Disconnected.")
 
         if len(message) > 0:
 
@@ -271,6 +275,9 @@ class MainWindow(Tk):
             message = message.decode('utf-8', 'ignore')
             self.logfile.write(message.encode())
             self.logfile.flush()
+
+            self.last_rcv = datetime.now()
+
             parsed = self.parse_message(message)
             for p in parsed:
                 self.buffer.append(p)
@@ -308,6 +315,14 @@ class MainWindow(Tk):
                         self.textOutput.see(END)
 
 
+    def tcp_disconnect(self, reason=None):
+        self.set_status("Disconnected.")
+        if reason:
+            self.set_status(f"Disconnected ({reason}).")
+        self.socket = None
+        self.connectButton.config(text="Connect")
+
+
     def tcp_connect(self, addr, port):
 
         self.addr = addr
@@ -315,9 +330,7 @@ class MainWindow(Tk):
         self.set_status("Connecting...")
         self.socket = socket.socket()
         if self.connectButton["text"] == "Disconnect":
-            self.connectButton.config(text="Connect")
-            self.set_status("Disconnected.")
-            self.socket = None
+            self.tcp_disconnect()
             return
         try:
             self.socket.connect((addr, int(port)))
@@ -327,6 +340,7 @@ class MainWindow(Tk):
         self.socket.setblocking(0)
         self.connectButton.config(text="Disconnect")
         self.set_status("Connected at {}:{}.".format(addr, port))
+        self.last_rcv = datetime.now()
 
     def send_command(self, text):
         global history_index
@@ -334,7 +348,8 @@ class MainWindow(Tk):
             if not len(command_history) or command_history[-1] != text:
                 command_history.append(text)
             history_index = len(command_history)
-            self.socket.sendall(text.encode())
+            if self.socket:
+                self.socket.sendall(text.encode())
         except Exception as e:
             print(e)
 
@@ -522,27 +537,27 @@ if __name__ == "__main__":
     CONSOLE_FONT = ("Consolas", 14)
 
     default_nodes = [
-        "/exec",
-        "/hardware/driver_dispatcher",
+        "/top/tcp_server",
+        "/top/watchdog",
+        "/top/exec",
+        "/top/listener",
+        "/top/readiness_admin",
+        "/top/rosnode_lister",
+        "/logging/rosbag_record",
+        "/hardware/dispatcher",
         "/hardware/ematch",
-        "/hardware/ignition_valve",
+        "/hardware/injection_valve",
         "/hardware/linear_actuator",
         "/hardware/solenoid",
-        "/hardware/vent_valve",
-        "/listener",
-        "/logging/rosbag_record",
-        "/readiness_admin",
-        "/rosnode_lister",
-        "/rosout",
+        "/hardware/abort_valve",
         "/sensors/combustion_thermocouple_1",
         "/sensors/combustion_thermocouple_2",
         "/sensors/combustion_transducer",
         "/sensors/float_switch",
         "/sensors/ox_tank_thermocouple",
         "/sensors/ox_tank_transducer",
-        "/sensors/sensor_monitor",
-        "/tcp_server",
-        "/watchdog"
+        "/sensors/monitor",
+        "/rosout",
     ]
     set_of_nodes = set()
     active_nodes = set()
@@ -572,15 +587,15 @@ if __name__ == "__main__":
         "set readiness 10",
         "",
         "all stop",
-        "close solenoid",
-        "open solenoid",
-        "close ignition valve",
-        "open ignition valve",
+        "disable solenoid",
+        "enable solenoid",
+        "close injection valve",
+        "open injection valve",
         "retract linear actuator",
         "extend linear actuator",
-        "close vent valve",
-        "open vent valve",
-        "crack vent valve",
+        "close abort valve",
+        "open abort valve",
+        "crack abort valve",
         "fire ematch",
         "",
         "launch",
