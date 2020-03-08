@@ -182,7 +182,7 @@ class MainWindow(Tk):
         self.filter_frame.pack(side=RIGHT, fill='y')
 
         self.textOutput = ScrolledText(self, wrap=CHAR,
-            width = 28*3, bg='#1A3747', fg='white',
+            width = 28*3, bg='#0e1c24', fg='white',
             relief='flat', borderwidth=6, font=CONSOLE_FONT)
         self.textOutput.pack(fill=BOTH, expand=YES)
         self.textOutput.config(state=DISABLED)
@@ -195,8 +195,8 @@ class MainWindow(Tk):
 
         self.textOutput.bind("<MouseWheel>", self.on_text_scroll)
 
-        self.textInputBox = Entry(bottom_frame, width=70)
-        self.textInputBox.pack(padx=5, pady=5, fill=BOTH)
+        self.textInputBox = Entry(bottom_frame, width=70, font=CONSOLE_FONT)
+        self.textInputBox.pack(padx=0, pady=5, fill=BOTH)
         bottom_frame.pack(side=BOTTOM, fill=BOTH)
 
         self.bind("<Return>", self.pressed_enter)
@@ -316,6 +316,8 @@ class MainWindow(Tk):
 
 
     def tcp_disconnect(self, reason=None):
+
+        self.textOutput.config(bg="#0e1c24")
         self.set_status("Disconnected.")
         if reason:
             self.set_status(f"Disconnected ({reason}).")
@@ -325,6 +327,7 @@ class MainWindow(Tk):
 
     def tcp_connect(self, addr, port):
 
+        self.textOutput.config(bg="#1A3747")
         self.addr = addr
         self.port = port
         self.set_status("Connecting...")
@@ -578,8 +581,8 @@ if __name__ == "__main__":
         "rostopic list",
         ("View Storage Usage", "system df -h"),
         ("View Memory Usage", "system free -th"),
-        ("View Logs", "system ls -lh ~/rocket-os/src/launch/logs"),
-        ("View CPU Usage", "system mpstat -P ALL 1 1"),
+        ("View Logs", "system ls -lh ~/rocket-os/logs"),
+        ("View ARP Table", "system arp | grep -v '(incomplete)'"),
         "",
         "read data",
         "print whitelist",
