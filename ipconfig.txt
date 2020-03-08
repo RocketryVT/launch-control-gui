@@ -1,0 +1,9 @@
+Upstream Router, 1
+Downstream Router, 90
+Upstream Dish, 110
+Downstream Dish, 112
+Owen's Phone, 113
+Rotary, 109
+Ballista, 111
+gandalf, 114
+gandalf, 120
