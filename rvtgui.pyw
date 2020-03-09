@@ -85,7 +85,7 @@ class MainWindow(Tk):
         self.style = Style()
         self.style.theme_use("xpnative")
         self.style.configure("console", foreground="black", background="white")
-        self.title("Rocketry@VT Launch Control Operator Interface v2020-03-08a")
+        self.title("Rocketry@VT Launch Control Operator Interface v2020-03-09a")
         self.wm_iconbitmap("logo_nowords_cZC_icon.ico")
         self.protocol("WM_DELETE_WINDOW", self.destroy)
         make_focus(self)
@@ -128,9 +128,6 @@ class MainWindow(Tk):
         self.connectButton.pack(side = LEFT, padx=3, pady=3)
         clearButton = Button(top_frame, text='Clear',
             command=lambda: self.clear_console())
-        # configButton = Button(top_frame, text='Filter Messages',
-        #     command=lambda: make_config_window())
-        # configButton.pack(side = LEFT, padx=3, pady=3)
         clearButton.pack(side = LEFT, padx=3, pady=3)
 
         self.snap_to_bottom = BooleanVar()
@@ -245,7 +242,7 @@ class MainWindow(Tk):
         if socket:
             dt = datetime.now() - self.last_rcv;
             if dt.total_seconds() > 10: # timeout is 10 seconds
-                self.tcp_disconnect("timeout")
+                self.tcp_disconnect("No response")
 
         message = b""
 
@@ -332,13 +329,14 @@ class MainWindow(Tk):
         self.port = port
         self.set_status("Connecting...")
         self.socket = socket.socket()
+        self.socket.settimeout(1)
         if self.connectButton["text"] == "Disconnect":
             self.tcp_disconnect()
             return
         try:
             self.socket.connect((addr, int(port)))
         except Exception as e:
-            self.set_status(str(e))
+            self.tcp_disconnect(str(e))
             return
         self.socket.setblocking(0)
         self.connectButton.config(text="Disconnect")
@@ -481,63 +479,9 @@ class MainWindow(Tk):
             self.add_node_checkbox(node)
 
 
-class ConfigWindow(Tk):
-
-    def __init__(self):
-
-        self.delay = 50
-
-        Tk.__init__(self)
-        self.style = Style()
-        self.style.theme_use("xpnative")
-        self.style.configure("console", foreground="black", background="white")
-        self.title("Filter Messages")
-        self.wm_iconbitmap("logo_nowords_cZC_icon.ico")
-        self.protocol("WM_DELETE_WINDOW", self.close)
-        make_focus(self)
-        self.update_idletasks()
-        # width = 300
-        # height = 400
-        # self.geometry('{}x{}'.format(width, height))
-
-        frame = Frame(self, relief='groove')
-
-        import string
-        import random
-        letters = string.ascii_lowercase
-        nodes = []
-        for i in range(15):
-            nodes.append(''.join(random.choice(letters) for i in range(14)))
-        levels = ["DEBUG", "INFO", "WARN", "ERROR", "FATAL"]
-
-        for i, node in enumerate(nodes):
-            Checkbutton(frame, text=node
-            ).grid(row=i, column=0, padx=4, pady=4, sticky='w')
-            for j, level in enumerate(levels):
-                Checkbutton(frame, text=level
-                ).grid(row=i, column=j+1, padx=4, pady=4, sticky='w')
-
-
-        frame.pack(fill=BOTH, padx=2, pady=2)
-
-        self.begin_loop()
-
-    def begin_loop(self):
-        self.update()
-        self.after(self.delay, self.begin_loop)
-
-    def update(self):
-        pass
-
-    def close(self):
-        global config_window
-        config_window = None
-        self.destroy()
-
-
 if __name__ == "__main__":
 
-    CONSOLE_FONT = ("Consolas", 14)
+    CONSOLE_FONT = ("Consolas", 11)
 
     default_nodes = [
         "/top/tcp_server",
@@ -545,7 +489,6 @@ if __name__ == "__main__":
         "/top/exec",
         "/top/listener",
         "/top/readiness_admin",
-        "/top/rosnode_lister",
         "/logging/rosbag_record",
         "/hardware/dispatcher",
         "/hardware/ematch",
@@ -559,26 +502,18 @@ if __name__ == "__main__":
         "/sensors/float_switch",
         "/sensors/ox_tank_thermocouple",
         "/sensors/ox_tank_transducer",
-        "/sensors/monitor",
-        "/rosout",
+        "/sensors/monitor"
     ]
     set_of_nodes = set()
     active_nodes = set()
     node_filters = []
 
-    config_window = None
-    def make_config_window():
-        global config_window
-        if not config_window:
-            config_window = ConfigWindow()
-        else:
-            make_focus(config_window)
-
     button_commands = [
 
         "system fortune | cowsay",
-        "rosnode list",
-        "rostopic list",
+        ("View Nodes", "rosnode list"),
+        ("View Topics", "rostopic list"),
+        ("View Parameters", "system cat ~/rocket-os/params.yaml"),
         ("View Storage Usage", "system df -h"),
         ("View Memory Usage", "system free -th"),
         ("View Logs", "system ls -lh ~/rocket-os/logs"),
