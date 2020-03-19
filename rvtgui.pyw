@@ -9,24 +9,75 @@ import socket
 import re
 import copy
 
-def make_command_button(master, window, command, row):
 
-    if not command:
-        Separator(window, orient=HORIZONTAL
-        ).pack(side=TOP, pady=5, fill='x')
-        return
+class CollapsiblePane(Frame):
+    """
+     -----USAGE-----
+    collapsiblePane = CollapsiblePane(parent,
+                          expanded_text =[string],
+                          collapsed_text =[string])
 
-    command = copy.copy(command)
-    label = command
-    if type(command) is tuple:
-        label = command[0]
-        command = command[1]
-    row = copy.copy(row)
-    Button(window,
-        text=label,
-        command=lambda: master.send_command(command),
-        width=25
-    ).pack(side=TOP, padx=5, pady=2)
+    collapsiblePane.pack()
+    button = Button(collapsiblePane.frame).pack()
+    """
+
+    def __init__(self, parent, expanded_text ="Collapse <<",
+                               collapsed_text ="Expand >>"):
+
+        Frame.__init__(self, parent)
+
+        # These are the class variable
+        # see a underscore in expanded_text and _collapsed_text
+        # this means these are private to class
+        self.parent = parent
+        self._expanded_text = expanded_text
+        self._collapsed_text = collapsed_text
+
+        # Here weight implies that it can grow it's
+        # size if extra space is available
+        # default weight is 0
+        self.columnconfigure(1, weight = 1)
+
+        # Tkinter variable storing integer value
+        self._variable = IntVar()
+
+        # Checkbutton is created but will behave as Button
+        # cause in style, Button is passed
+        # main reason to do this is Button do not support
+        # variable option but checkbutton do
+        boldStyle = Style()
+        boldStyle.configure("Bold.TButton", font = ('Arial','10','italic'))
+        self._button = Checkbutton(self,
+            variable = self._variable,
+            command = self._activate, width=25, style ="Bold.TButton")
+        self._button.grid(row=0, column=0)
+
+        self.frame = Frame(self, relief="groove")
+
+        # This will call activate function of class
+        self._activate()
+
+    def _activate(self):
+        if not self._variable.get():
+
+            # As soon as button is pressed it removes this widget
+            # but is not destroyed means can be displayed again
+            self.frame.grid_forget()
+
+            # This will change the text of the checkbutton
+            self._button.configure(text = self._collapsed_text)
+
+        elif self._variable.get():
+            # increasing the frame area so new widgets
+            # could reside in this container
+            self.frame.grid(row = 1, column = 0, columnspan = 2)
+            self._button.configure(text = self._expanded_text)
+
+    def toggle(self):
+        """Switches the label frame to the opposite state."""
+        self._variable.set(not self._variable.get())
+        self._activate()
+
 
 def dict2str(dict, debug, info, warn, error, fatal,
     show_level=False, show_time=False, show_node=False):
@@ -85,36 +136,40 @@ class MainWindow(Tk):
         self.style = Style()
         self.style.theme_use("xpnative")
         self.style.configure("console", foreground="black", background="white")
-        self.title("Rocketry@VT Launch Control Operator Interface v2020-03-09a")
+        self.title("Rocketry@VT Launch Control Operator Interface v2020-03-19a")
         self.wm_iconbitmap("logo_nowords_cZC_icon.ico")
         self.protocol("WM_DELETE_WINDOW", self.destroy)
         make_focus(self)
         self.update_idletasks()
-        # width = 1400
-        # height = 800
-        # self.geometry('{}x{}'.format(width, height))
-        # self.update()
-        # self.minsize(self.winfo_width(), self.winfo_height())
 
+        # CREATE TOP-LEVEL FRAMES ============================================
         bottom_frame = Frame(self)
         sidebar = Frame(self)
         top_frame = Frame(self)
         status_frame = Frame(self)
         self.filter_frame = Frame(self)
-        Label(self.filter_frame,
-            text="Filter by Node").pack(side=TOP, anchor='w', padx=(4, 10), pady=2)
+
+        # MAKE COMMAND BUTTONS ===============================================
+        for section, commands in button_commands.items():
+            cp = CollapsiblePane(sidebar, section, section)
+            cp.pack(side=TOP, padx=5, pady=3, fill="x");
+            for cmd in commands:
+                label = cmd
+                if type(cmd) is tuple:
+                    label = cmd[0]
+                    cmd = cmd[1]
+                b = Button(cp.frame, text=label, width=23,
+                    command=lambda c=cmd: self.send_command(c))
+                b.pack(side=TOP, padx=3, pady=2, fill="x")
+
+        # MAKE STATUS FRAME ==================================================
         self.status_text = Label(status_frame)
-        self.set_status("Disconnected.")
-        self.datetime = Label(status_frame)
-        self.update_time()
-
-        for i in range(0, len(button_commands)):
-            make_command_button(self, sidebar, button_commands[i], i)
-        sidebar.pack(side=LEFT, fill=BOTH)
         self.status_text.pack(side=LEFT, fill='x', padx=3, pady=6)
+        self.datetime = Label(status_frame)
         self.datetime.pack(side=RIGHT, fill='x', padx=10, pady=6)
-        status_frame.pack(side=TOP, fill='x')
+        self.set_status("Disconnected.")
 
+        # CONNECTION MANAGEMENT PANE =========================================
         Label(top_frame, text="IP Address: ").pack(side = LEFT, padx=3, pady=3)
         self.addrInputBox = Entry(top_frame, width=30)
         self.addrInputBox.insert(0, "spookyscary.ddns.net")
@@ -124,12 +179,16 @@ class MainWindow(Tk):
         self.portInputBox.insert(0, "8001")
         self.portInputBox.pack(side = LEFT, padx=3, pady=3)
         self.connectButton = Button(top_frame, text='Connect',
-            command=lambda: self.tcp_connect(self.addrInputBox.get(), self.portInputBox.get()))
+            command=lambda: self.tcp_connect(self.addrInputBox.get(),
+            self.portInputBox.get()))
         self.connectButton.pack(side = LEFT, padx=3, pady=3)
+
+        # CLEAR BUTTON =======================================================
         clearButton = Button(top_frame, text='Clear',
             command=lambda: self.clear_console())
         clearButton.pack(side = LEFT, padx=3, pady=3)
 
+        # FILTER TOGGLE VARIABLES ============================================
         self.snap_to_bottom = BooleanVar()
         self.snap_to_bottom.set(True)
         self.show_debug = BooleanVar()
@@ -157,6 +216,7 @@ class MainWindow(Tk):
         self.show_node.set(True)
         self.show_node.trace('w', self.redraw_console)
 
+        # CHECKBUTTONS CORRESPONDING TO VARIABLES ABOVE ======================
         Checkbutton(top_frame, text="Snap to Bottom", var=self.snap_to_bottom,
             ).pack(side = LEFT, padx=3, pady=3)
         Checkbutton(top_frame, text="Debug", var=self.show_debug,
@@ -175,36 +235,42 @@ class MainWindow(Tk):
             ).pack(side = LEFT, padx=3, pady=3)
         Checkbutton(top_frame, text="Nodes", var=self.show_node,
             ).pack(side = LEFT, padx=3, pady=3)
-        top_frame.pack(side=TOP, fill='x')
-        self.filter_frame.pack(side=RIGHT, fill='y')
 
+        # TEXT OUTPUT PANE ==================================================
         self.textOutput = ScrolledText(self, wrap=CHAR,
             width = 28*3, bg='#0e1c24', fg='white',
             relief='flat', borderwidth=6, font=CONSOLE_FONT)
-        self.textOutput.pack(fill=BOTH, expand=YES)
         self.textOutput.config(state=DISABLED)
-
         self.textOutput.tag_configure("DEBUG", foreground="#5D737E")
         self.textOutput.tag_configure("INFO", foreground="white")
         self.textOutput.tag_configure("WARN", foreground="#fffe00")
         self.textOutput.tag_configure("ERROR", foreground="#f08e00")
         self.textOutput.tag_configure("FATAL", foreground="#bb0000")
-
         self.textOutput.bind("<MouseWheel>", self.on_text_scroll)
 
+        # TEXT INPUT FRAME ==================================================
         self.textInputBox = Entry(bottom_frame, width=70, font=CONSOLE_FONT)
         self.textInputBox.pack(padx=0, pady=5, fill=BOTH)
-        bottom_frame.pack(side=BOTTOM, fill=BOTH)
-
-        self.bind("<Return>", self.pressed_enter)
         self.textInputBox.bind("<Up>", self.pressed_arrow_key)
         self.textInputBox.bind("<Down>", self.pressed_arrow_key)
+        self.bind("<Return>", self.pressed_enter)
 
+        # NODE FILTER FRAME ================================================
+        filter_label = Label(self.filter_frame, text="Filter by Node")
+        filter_label.pack(side=TOP, anchor='w', padx=(4, 10), pady=2)
         for node in default_nodes:
             self.register_node(node)
 
-        self.state('zoomed')
+        # PACK ALL TOP-LEVEL FRAMES =========================================
+        sidebar.pack(side=LEFT, fill=BOTH)
+        status_frame.pack(side=TOP, fill='x')
+        top_frame.pack(side=TOP, fill='x')
+        self.filter_frame.pack(side=RIGHT, fill='y')
+        self.textOutput.pack(fill=BOTH, expand=YES)
+        bottom_frame.pack(side=BOTTOM, fill=BOTH)
 
+        # WINDOW CONFIGURATION ==============================================
+        self.state('zoomed')
         self.grid_columnconfigure(0, weight=1)
         self.grid_rowconfigure(0, weight=1)
         self.begin_loop()
@@ -222,32 +288,27 @@ class MainWindow(Tk):
             if self.snap_to_bottom.get():
                 self.textOutput.see(END)
 
-
     def set_status(self, message):
         self.status_text['text'] = message
 
     def begin_loop(self):
-
         self.update()
         self.after(self.delay, self.begin_loop)
 
     def update_time(self):
-
-        self.datetime["text"] = datetime.now().strftime("%A, %d %B %Y %I:%M:%S %p")
+        self.datetime["text"] = datetime.now().strftime(
+            "%A, %d %B %Y %I:%M:%S %p")
 
     def update(self):
-
         self.update_time()
-
         if socket:
             dt = datetime.now() - self.last_rcv;
             if dt.total_seconds() > 10: # timeout is 10 seconds
                 self.tcp_disconnect("No response")
-
         message = b""
-
         if self.socket:
-            self.set_status("Connected at {}:{}. Recieved {} messages (showing {})."
+            self.set_status(("Connected at {}:{}. " +
+                "Recieved {} messages (showing {}).")
                 .format(self.addr, self.port,
                     len(self.buffer), self.num_shown))
             while True:
@@ -259,61 +320,50 @@ class MainWindow(Tk):
                 message += part
                 if len(part) < 1000:
                     break
-
         if len(message) > 0:
-
+            now = datetime.now()
             if not self.logfile:
-                filename = "logs/LOG-" + str(datetime.utcnow()
-                    ).replace(" ", "-").replace(":", "-") + ".txt"
+                filename = "logs/LOG-" + now.strftime(
+                    "%Y-%m-%d-%I-%M-%S-%p") + ".txt"
+                print(f"Opening log: {filename}");
                 self.logfile = open(filename, 'wb')
-                now = datetime.now().strftime("%A, %d %B %Y %I:%M:%S %p")
-                self.logfile.write(f"Log beginning {now}\n".encode())
+                nowf = now.strftime("%A, %d %B %Y %I:%M:%S %p")
+                self.logfile.write(f"Log beginning {nowf}\n".encode())
 
             message = message.decode('utf-8', 'ignore')
             self.logfile.write(message.encode())
             self.logfile.flush()
-
-            self.last_rcv = datetime.now()
-
+            self.last_rcv = now
             parsed = self.parse_message(message)
             for p in parsed:
                 self.buffer.append(p)
+            self.render_messages(parsed)
 
-                st = dict2str(p,
-                    self.show_debug.get(),
-                    self.show_info.get(),
-                    self.show_warn.get(),
-                    self.show_error.get(),
-                    self.show_fatal.get(),
-                    self.show_level.get(),
-                    self.show_time.get(),
-                    self.show_node.get())
-
-                if st:
-                    self.num_shown += 1
-
-                    begin = "end-10c linestart"
-                    end = "end-10c lineend"
-                    self.textOutput.configure(state='normal')
-                    self.textOutput.insert(END, st)
-                    self.textOutput.configure(state='disabled')
-                    if p['level'] == "DEBUG":
-                        self.textOutput.tag_add("DEBUG", begin, end)
-                    if p['level'] == "INFO":
-                        self.textOutput.tag_add("INFO", begin, end)
-                    if p['level'] == "WARN":
-                        self.textOutput.tag_add("WARN", begin, end)
-                    if p['level'] == "ERROR":
-                        self.textOutput.tag_add("ERROR", begin, end)
-                    if p['level'] == "FATAL":
-                        self.textOutput.tag_add("FATAL", begin, end)
-
-                    if self.snap_to_bottom.get():
-                        self.textOutput.see(END)
-
+    def render_messages(self, buffer):
+        for p in buffer:
+            st = dict2str(p,
+                self.show_debug.get(),
+                self.show_info.get(),
+                self.show_warn.get(),
+                self.show_error.get(),
+                self.show_fatal.get(),
+                self.show_level.get(),
+                self.show_time.get(),
+                self.show_node.get())
+            if not st:
+                continue
+            self.num_shown += 1
+            begin = "end-10c linestart"
+            end = "end-10c lineend"
+            self.textOutput.configure(state='normal')
+            self.textOutput.insert(END, st)
+            self.textOutput.configure(state='disabled')
+            if p['level'] in ["DEBUG", "INFO", "WARN", "ERROR", "FATAL"]:
+                self.textOutput.tag_add(p['level'], begin, end)
+            if self.snap_to_bottom.get():
+                self.textOutput.see(END)
 
     def tcp_disconnect(self, reason=None):
-
         self.textOutput.config(bg="#0e1c24")
         self.set_status("Disconnected.")
         if reason:
@@ -321,9 +371,7 @@ class MainWindow(Tk):
         self.socket = None
         self.connectButton.config(text="Connect")
 
-
     def tcp_connect(self, addr, port):
-
         self.textOutput.config(bg="#1A3747")
         self.addr = addr
         self.port = port
@@ -393,40 +441,9 @@ class MainWindow(Tk):
         self.textOutput.delete('1.0', 'end')
         self.textOutput.configure(state='disabled')
         self.num_shown = 0
-        for p in self.buffer:
-            st = dict2str(p,
-                self.show_debug.get(),
-                self.show_info.get(),
-                self.show_warn.get(),
-                self.show_error.get(),
-                self.show_fatal.get(),
-                self.show_level.get(),
-                self.show_time.get(),
-                self.show_node.get())
-            if st:
-                self.num_shown += 1
-                begin = "end-10c linestart"
-                end = "end-10c lineend"
-                self.textOutput.configure(state='normal')
-                self.textOutput.insert(END, st)
-                self.textOutput.configure(state='disabled')
-                if p['level'] == "DEBUG":
-                    self.textOutput.tag_add("DEBUG", begin, end)
-                if p['level'] == "INFO":
-                    self.textOutput.tag_add("INFO", begin, end)
-                if p['level'] == "WARN":
-                    self.textOutput.tag_add("WARN", begin, end)
-                if p['level'] == "ERROR":
-                    self.textOutput.tag_add("ERROR", begin, end)
-                if p['level'] == "FATAL":
-                    self.textOutput.tag_add("FATAL", begin, end)
-
-                if self.snap_to_bottom.get():
-                    self.textOutput.see(END)
-
+        self.render_messages(self.buffer)
 
     def toggle_node(self, nodename):
-
         if nodename in active_nodes:
             active_nodes.remove(nodename)
         else:
@@ -446,18 +463,14 @@ class MainWindow(Tk):
         cb.pack(side=TOP, anchor='w', padx=(4, 10), pady=2)
 
     def parse_message(self, string):
-
         pattern = re.compile(
             "\[\w+\]\s+\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{6}\] \[.+\]\:[\S\s]+?(?=(?:\[DEBUG\]|\[INFO\]|\[WARN\]|\[ERROR\]|\[FATAL\]|\n\[DEBUG\]|\n\[INFO\]|\n\[WARN\]|\n\[ERROR\]|\n\[FATAL\]|$))")
         text = re.compile("\]:(\s|$)([\S\s]+)")
         meta = re.compile("\[(.*?)\]")
-
         messages = pattern.findall(string);
-
         msgdicts = []
         for msg in messages:
             content = text.findall(msg)[0][1]
-
             metadata = meta.findall(msg)
             (level, datestr, node) = metadata[0:3]
             dict = {}
@@ -466,13 +479,10 @@ class MainWindow(Tk):
             dict["stamp"] = datestr
             dict["node"] = node
             self.register_node(node)
-
             msgdicts.append(dict)
-
         return msgdicts
 
     def register_node(self, node):
-
         if node not in set_of_nodes:
             set_of_nodes.add(node)
             active_nodes.add(node)
@@ -508,38 +518,61 @@ if __name__ == "__main__":
     active_nodes = set()
     node_filters = []
 
-    button_commands = [
-
-        "system fortune | cowsay",
-        ("View Nodes", "rosnode list"),
-        ("View Topics", "rostopic list"),
-        ("View Parameters", "system cat ~/rocket-os/params.yaml"),
-        ("View Storage Usage", "system df -h"),
-        ("View Memory Usage", "system free -th"),
-        ("View Logs", "system ls -lh ~/rocket-os/logs"),
-        ("View ARP Table", "system arp | grep -v '(incomplete)'"),
-        "",
-        "read data",
-        "print whitelist",
-        "set readiness 0",
-        "set readiness 10",
-        "",
-        "all stop",
-        "disable solenoid",
-        "enable solenoid",
-        "close injection valve",
-        "open injection valve",
-        "retract linear actuator",
-        "extend linear actuator",
-        "close abort valve",
-        "open abort valve",
-        "crack abort valve",
-        "fire ematch",
-        "",
-        "launch",
-        "abort",
-        ("Clean Shutdown", "fork rosnode kill -a")
-    ]
+    button_commands = {
+        "Diagnostics":
+        [
+            ("View Nodes", "rosnode list"),
+            ("View Topics", "rostopic list"),
+            ("View Parameters", "system cat ~/rocket-os/params.yaml"),
+            ("View Storage Usage", "system df -h"),
+            ("View Memory Usage", "system free -th"),
+            ("View Logs", "system ls -lh ~/rocket-os/logs"),
+            ("View ARP Table", "system arp | grep -v '(incomplete)'"),
+            "listen to /uptime",
+            "stop listening all"
+        ],
+        "Permissions":
+        [
+            "print whitelist",
+            "elevate readiness",
+            "reduce readiness",
+            "toggle backdoor",
+            "print reservation table"
+        ],
+        "Telemetry":
+        [
+            "read data",
+            "read data 1",
+            "stop data",
+            "read voltage",
+            "read voltage 1",
+            "stop voltage"
+        ],
+        "Hardware":
+        [
+            "all stop",
+            "disable solenoid",
+            "enable solenoid",
+            "stop injection valve",
+            "close injection valve",
+            "open injection valve",
+            "stop linear actuator",
+            "retract linear actuator",
+            "extend linear actuator",
+            "stop abort valve",
+            "close abort valve",
+            "open abort valve",
+            "crack abort valve",
+            "fire ematch",
+            "release all"
+        ],
+        "Administration":
+        [
+            "launch",
+            "abort",
+            ("Clean Shutdown", "fork rosnode kill -a")
+        ]
+    }
 
     history_index = 0
     command_history = []
