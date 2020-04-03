@@ -80,11 +80,13 @@ class CollapsiblePane(Frame):
 
 
 def dict2str(dict, debug, info, warn, error, fatal,
-    show_level=False, show_time=False, show_node=False):
+    show_level, show_time, show_node, hide_keep_alive):
 
     if dict["node"] not in active_nodes:
         return ""
 
+    if "keep-alive" in dict["content"] and hide_keep_alive:
+        return ""
     level = dict["level"]
     if level == "DEBUG" and not debug:
         return ""
@@ -136,7 +138,7 @@ class MainWindow(Tk):
         self.style = Style()
         self.style.theme_use("xpnative")
         self.style.configure("console", foreground="black", background="white")
-        self.title("Rocketry@VT Launch Control Operator Interface v2020-03-19a")
+        self.title("Rocketry@VT Launch Control Operator Interface v2020-04-03a")
         self.wm_iconbitmap("logo_nowords_cZC_icon.ico")
         self.protocol("WM_DELETE_WINDOW", self.destroy)
         make_focus(self)
@@ -151,7 +153,7 @@ class MainWindow(Tk):
 
         # MAKE COMMAND BUTTONS ===============================================
         for section, commands in button_commands.items():
-            cp = CollapsiblePane(sidebar, section, section)
+            cp = CollapsiblePane(sidebar, section + " ▲", section + " ▼")
             cp.pack(side=TOP, padx=5, pady=3, fill="x");
             for cmd in commands:
                 label = cmd
@@ -191,6 +193,9 @@ class MainWindow(Tk):
         # FILTER TOGGLE VARIABLES ============================================
         self.snap_to_bottom = BooleanVar()
         self.snap_to_bottom.set(True)
+        self.hide_keep_alive = BooleanVar()
+        self.hide_keep_alive.set(True)
+        self.hide_keep_alive.trace('w', self.redraw_console)
         self.show_debug = BooleanVar()
         self.show_debug.set(False)
         self.show_debug.trace('w', self.redraw_console)
@@ -219,6 +224,10 @@ class MainWindow(Tk):
         # CHECKBUTTONS CORRESPONDING TO VARIABLES ABOVE ======================
         Checkbutton(top_frame, text="Snap to Bottom", var=self.snap_to_bottom,
             ).pack(side = LEFT, padx=3, pady=3)
+        Checkbutton(top_frame, text="Hide Keep-Alive", var=self.hide_keep_alive,
+            ).pack(side = LEFT, padx=3, pady=3)
+        Separator(top_frame, orient="vertical"
+            ).pack(side = LEFT, padx=7, fill="y")
         Checkbutton(top_frame, text="Debug", var=self.show_debug,
             ).pack(side = LEFT, padx=3, pady=3)
         Checkbutton(top_frame, text="Info", var=self.show_info,
@@ -229,12 +238,16 @@ class MainWindow(Tk):
             ).pack(side = LEFT, padx=3, pady=3)
         Checkbutton(top_frame, text="Fatal", var=self.show_fatal,
             ).pack(side = LEFT, padx=3, pady=3)
+        Separator(top_frame, orient="vertical"
+            ).pack(side = LEFT, padx=7, fill="y")
         Checkbutton(top_frame, text="Levels", var=self.show_level,
             ).pack(side = LEFT, padx=3, pady=3)
         Checkbutton(top_frame, text="Timestamp", var=self.show_time,
             ).pack(side = LEFT, padx=3, pady=3)
         Checkbutton(top_frame, text="Nodes", var=self.show_node,
             ).pack(side = LEFT, padx=3, pady=3)
+        Separator(top_frame, orient="vertical"
+            ).pack(side = LEFT, padx=7, fill="y")
 
         # TEXT OUTPUT PANE ==================================================
         self.textOutput = ScrolledText(self, wrap=CHAR,
@@ -349,7 +362,8 @@ class MainWindow(Tk):
                 self.show_fatal.get(),
                 self.show_level.get(),
                 self.show_time.get(),
-                self.show_node.get())
+                self.show_node.get(),
+                self.hide_keep_alive.get())
             if not st:
                 continue
             self.num_shown += 1
