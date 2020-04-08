@@ -584,6 +584,8 @@ if __name__ == "__main__":
         [
             "launch",
             "abort",
+            "begin fill",
+            "end fill",
             ("Clean Shutdown", "fork rosnode kill -a")
         ]
     }
