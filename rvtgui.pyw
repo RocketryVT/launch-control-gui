@@ -154,7 +154,7 @@ class MainWindow(Tk):
         # MAKE COMMAND BUTTONS ===============================================
         for section, commands in button_commands.items():
             cp = CollapsiblePane(sidebar, section + " ▲", section + " ▼")
-            cp.pack(side=TOP, padx=5, pady=3, fill="x");
+            cp.pack(side=TOP, padx=5, pady=3, fill="x");                
             for cmd in commands:
                 label = cmd
                 if type(cmd) is tuple:
@@ -564,14 +564,12 @@ if __name__ == "__main__":
         ],
         "Hardware":
         [
-            
 
-            #SOLENOID
+            #SOLENOID"
             ("activate solenoid cycle","driver topic=/hardware/solenoid priority=5 command=SOLENOID_ACTIVE"),
             ("disable solenoid cycle","driver topic=/hardware/solenoid priority=5 command=SOLENOID_INACTIVE"),
             ("disable solenoid", "driver topic=/hardware/solenoid priority=5 command=MOTOR_CLOSE"),
             ("enable solenoid", "driver topic=/hardware/solenoid priority=5 command=MOTOR_OPEN"),
-
             #INJECTION VALVE
             ("stop injection valve", "driver topic=/hardware/injection_valve priority=5 command=MOTOR_STOP"),
             ("close injection valve", "driver topic=/hardware/injection_valve priority=5 command=MOTOR_CLOSE"),
@@ -583,8 +581,8 @@ if __name__ == "__main__":
             ("extend linear actuator", "driver topic=/hardware/linear_actuator priority=5 command=MOTOR_OPEN"),
 
             #ABORT VALVE
-            "stop abort valve",
-            "close abort valve",
+            ("stop abort valve", "driver topic=/hardware/abort_valve priority=5 command=MOTOR_STOP"),
+            ("close abort valve","driver topic=/hardware/abort_valve priority=5 command=MOTOR_CLOSE"),
             ("open abort valve", "driver topic=/hardware/abort_valve priority=5 command=MOTOR_OPEN"),
             ("crack abort valve", "driver topic=/hardware/abort_valve priority=5 command=MOTOR_PULSE_OPEN pulse=2"),
 
