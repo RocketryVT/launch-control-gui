@@ -505,7 +505,7 @@ class MainWindow(Tk):
 
 if __name__ == "__main__":
 
-    CONSOLE_FONT = ("Consolas", 11)
+    CONSOLE_FONT = ("Ubuntu Mono", 11)
 
     default_nodes = [
         "/top/tcp_server",
