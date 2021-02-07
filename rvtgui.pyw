@@ -138,7 +138,7 @@ class MainWindow(Tk):
         self.style = Style()
         self.style.theme_use("xpnative")
         self.style.configure("console", foreground="black", background="white")
-        self.title("Rocketry@VT Launch Control Operator Interface v2020-04-03a")
+        self.title("Rocketry@VT Launch Control Operator Interface v2020-10-09a")
         self.wm_iconbitmap("logo_nowords_cZC_icon.ico")
         self.protocol("WM_DELETE_WINDOW", self.destroy)
         make_focus(self)
@@ -154,7 +154,7 @@ class MainWindow(Tk):
         # MAKE COMMAND BUTTONS ===============================================
         for section, commands in button_commands.items():
             cp = CollapsiblePane(sidebar, section + " ▲", section + " ▼")
-            cp.pack(side=TOP, padx=5, pady=3, fill="x");
+            cp.pack(side=TOP, padx=5, pady=3, fill="x");                
             for cmd in commands:
                 label = cmd
                 if type(cmd) is tuple:
@@ -174,7 +174,7 @@ class MainWindow(Tk):
         # CONNECTION MANAGEMENT PANE =========================================
         Label(top_frame, text="IP Address: ").pack(side = LEFT, padx=3, pady=3)
         self.addrInputBox = Entry(top_frame, width=30)
-        self.addrInputBox.insert(0, "spookyscary.ddns.net")
+        self.addrInputBox.insert(0, "192.168.1.34")
         self.addrInputBox.pack(side = LEFT, padx=3, pady=3)
         Label(top_frame, text="Port: ").pack(side = LEFT, padx=3, pady=3)
         self.portInputBox = Entry(top_frame, width=10)
@@ -550,7 +550,7 @@ if __name__ == "__main__":
             "print whitelist",
             "elevate readiness",
             "reduce readiness",
-            "toggle backdoor",
+            ("Unlimited Power","toggle backdoor"),
             "print reservation table"
         ],
         "Telemetry":
@@ -564,21 +564,37 @@ if __name__ == "__main__":
         ],
         "Hardware":
         [
+
+            #SOLENOID"
+            ("activate solenoid cycle","driver topic=/hardware/solenoid priority=5 command=SOLENOID_ACTIVE"),
+            ("disable solenoid cycle","driver topic=/hardware/solenoid priority=5 command=SOLENOID_INACTIVE"),
+            ("disable solenoid", "driver topic=/hardware/solenoid priority=5 command=MOTOR_CLOSE"),
+            ("enable solenoid", "driver topic=/hardware/solenoid priority=5 command=MOTOR_OPEN"),
+            #INJECTION VALVE
+            ("stop injection valve", "driver topic=/hardware/injection_valve priority=5 command=MOTOR_STOP"),
+            ("close injection valve", "driver topic=/hardware/injection_valve priority=5 command=MOTOR_CLOSE"),
+            ("open injection valve", "driver topic=/hardware/injection_valve priority=5 command=MOTOR_OPEN"),
+
+            #LINEAR ACTUATOR
+            ("stop linear actuator", "driver topic=/hardware/linear_actuator priority=5 command=MOTOR_STOP"),
+            ("retract linear actuator", "driver topic=/hardware/linear_actuator priority=5 command=MOTOR_CLOSE"),
+            ("extend linear actuator", "driver topic=/hardware/linear_actuator priority=5 command=MOTOR_OPEN"),
+
+            #ABORT VALVE
+            ("stop abort valve", "driver topic=/hardware/abort_valve priority=5 command=MOTOR_STOP"),
+            ("close abort valve","driver topic=/hardware/abort_valve priority=5 command=MOTOR_CLOSE"),
+            ("open abort valve", "driver topic=/hardware/abort_valve priority=5 command=MOTOR_OPEN"),
+            ("crack abort valve", "driver topic=/hardware/abort_valve priority=5 command=MOTOR_PULSE_OPEN pulse=2"),
+
+            #EMATCH
+            ("ready ematch", "driver topic=/hardware/ematch priority=5 command=EMATCH_UNLOCK"),
+            ("lock ematch", "driver topic=/hardware/emtach priority=5 command=EMATCH_LOCK"),
+            ("fire ematch", "driver topic=/hardware/ematch priority=5 command=EMATCH_FIRE"),
+             
+
+            #ALL SEEING
+            "release all",
             "all stop",
-            "disable solenoid",
-            "enable solenoid",
-            "stop injection valve",
-            "close injection valve",
-            "open injection valve",
-            "stop linear actuator",
-            "retract linear actuator",
-            "extend linear actuator",
-            "stop abort valve",
-            "close abort valve",
-            "open abort valve",
-            "crack abort valve",
-            "fire ematch",
-            "release all"
         ],
         "Administration":
         [
