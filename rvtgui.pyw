@@ -1,3 +1,5 @@
+#! /usr/bin/env python3
+
 from tkinter import *
 from tkinter.ttk import *
 from tkinter.font import Font
@@ -8,6 +10,7 @@ import os
 import socket
 import re
 import copy
+import sys
 
 
 class CollapsiblePane(Frame):
@@ -136,10 +139,11 @@ class MainWindow(Tk):
 
         Tk.__init__(self)
         self.style = Style()
-        # self.style.theme_use("xpnative")
+        if sys.platform != "linux":
+            self.style.theme_use("xpnative")
+            self.wm_iconbitmap("logo_nowords_cZC_icon.ico")
         self.style.configure("console", foreground="black", background="white")
         self.title("Rocketry@VT Launch Control Operator Interface v2020-10-09a")
-        # self.wm_iconbitmap("logo_nowords_cZC_icon.ico")
         self.protocol("WM_DELETE_WINDOW", self.destroy)
         make_focus(self)
         self.update_idletasks()
@@ -283,7 +287,8 @@ class MainWindow(Tk):
         bottom_frame.pack(side=BOTTOM, fill=BOTH)
 
         # WINDOW CONFIGURATION ==============================================
-        # self.state('zoomed')
+        if sys.platform != "linux":
+            self.state('zoomed')
         self.grid_columnconfigure(0, weight=1)
         self.grid_rowconfigure(0, weight=1)
         self.begin_loop()
