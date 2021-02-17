@@ -1,0 +1,896 @@
+Log beginning Tuesday, 16 February 2021 09:57:16 PM
+[INFO]  [2020-10-09 21:20:09.673535] [/top/tcp_server]: New connection: (0, ('192.168.1.118', 46520))
+[WARN]  [2020-10-09 21:20:09.774422] [/hardware/injection_valve]: 1: Failed to configure. Waiting for 18 seconds before reattempt.
+[DEBUG] [2020-10-09 21:20:09.811891] [/top/tcp_server]: node[/top/tcp_server, http://192.168.1.34:41535/] entering spin(), pid[3786]
+[INFO]  [2020-10-09 21:20:09.982232] [/hardware/solenoid]: Starting solenoid driver on pin P9_26
+[INFO]  [2020-10-09 21:20:09.977390] [/top/tcp_server]: 1 active connection(s)
+[INFO]  [2020-10-09 21:20:10.049294] [/hardware/solenoid]: Using 30 s, 30 s open-close cycle.
+[INFO]  [2020-10-09 21:20:10.180987] [/hardware/ematch]: Starting e-match driver on pins P9_13, P9_15
+[DEBUG] [2020-10-09 21:20:10.251975] [/top/exec]: connecting to 192.168.1.34 40961
+[INFO]  [2020-10-09 21:20:10.261599] [/hardware/ematch]: Using a delay of 0.3 seconds.
+[WARN]  [2020-10-09 21:20:10.550632] [/hardware/solenoid]: 0: Failed to configure. Waiting for 18 seconds before reattempt.
+[DEBUG] [2020-10-09 21:20:07.137670] [/sensors/combustion_thermocouple_2]: [/sensors/combustion_thermocouple_2/set_logger_level]: new Service instance
+[WARN]  [2020-10-09 21:20:10.905675] [/hardware/ematch]: 0: Failed to configure. Waiting for 8 seconds before reattempt.
+[DEBUG] [2020-10-09 21:20:10.984015] [/top/tcp_server]: connecting to 192.168.1.34 37985
+[DEBUG] [2020-10-09 21:20:09.849144] [/admin/adam_driver]: [/admin/adam_driver/set_logger_level]: new Service instance
+[DEBUG] [2020-10-09 21:20:11.314438] [/top/watchdog]: connecting to 192.168.1.34 40961
+[DEBUG] [2020-10-09 21:20:11.356508] [/top/tcp_server]: connecting to 192.168.1.34 45669
+[DEBUG] [2020-10-09 21:20:11.579132] [/top/readiness_admin]: connecting to 192.168.1.34 45669
+[INFO]  [2020-10-09 21:20:11.739132] [/logging/rosbag_record]: Subscribing to /requested_commands
+[DEBUG] [2020-10-09 21:20:11.759725] [/top/tcp_server]: connecting to 192.168.1.34 37631
+[DEBUG] [2020-10-09 21:20:08.088772] [/sensors/ox_tank_transducer]: [/sensors/ox_tank_transducer/set_logger_level]: new Service instance
+[DEBUG] [2020-10-09 21:20:11.848789] [/admin/adam_driver]: node[/admin/adam_driver, http://192.168.1.34:46449/] entering spin(), pid[3845]
+[INFO]  [2020-10-09 21:20:11.906748] [/sensors/combustion_thermocouple_2]: Starting thermocouple driver on ADC AIN2 and polling period 1 seconds.
+[INFO]  [2020-10-09 21:20:11.942525] [/sensors/combustion_thermocouple_1]: Starting thermocouple driver on ADC AIN1 and polling period 1 seconds.
+[DEBUG] [2020-10-09 21:20:11.988577] [/sensors/combustion_thermocouple_2]: node[/sensors/combustion_thermocouple_2, http://192.168.1.34:45217/] entering spin(), pid[3834]
+[DEBUG] [2020-10-09 21:20:12.013696] [/sensors/combustion_thermocouple_1]: node[/sensors/combustion_thermocouple_1, http://192.168.1.34:35505/] entering spin(), pid[3832]
+[INFO]  [2020-10-09 21:20:12.153312] [/sensors/combustion_transducer]: Starting pressure transducer driver on ADC AIN3 and polling period 0.25 seconds.
+[DEBUG] [2020-10-09 21:20:12.254479] [/admin/adam_driver]: connecting to 192.168.1.34 40961
+[DEBUG] [2020-10-09 21:20:12.199784] [/sensors/combustion_transducer]: node[/sensors/combustion_transducer, http://192.168.1.34:36013/] entering spin(), pid[3836]
+[DEBUG] [2020-10-09 21:20:12.228146] [/top/tcp_server]: connecting to 192.168.1.34 44377
+[INFO]  [2020-10-09 21:20:12.306060] [/sensors/ox_tank_thermocouple]: Starting thermocouple driver on ADC AIN4 and polling period 1 seconds.
+[DEBUG] [2020-10-09 21:20:08.833796] [/sensors/float_switch]: [/sensors/float_switch/set_logger_level]: new Service instance
+[DEBUG] [2020-10-09 21:20:12.354756] [/sensors/ox_tank_thermocouple]: node[/sensors/ox_tank_thermocouple, http://192.168.1.34:40909/] entering spin(), pid[3838]
+[INFO]  [2020-10-09 21:20:12.490550] [/sensors/ox_tank_transducer]: Starting pressure transducer driver on ADC AIN5 and polling period 0.25 seconds.
+[INFO]  [2020-10-09 21:20:12.500461] [/hardware/abort_valve]: Success.
+[DEBUG] [2020-10-09 21:20:12.545282] [/sensors/ox_tank_transducer]: node[/sensors/ox_tank_transducer, http://192.168.1.34:42071/] entering spin(), pid[3840]
+[DEBUG] [2020-10-09 21:20:12.549370] [/hardware/abort_valve]: node[/hardware/abort_valve, http://192.168.1.34:41125/] entering spin(), pid[3825]
+[INFO]  [2020-10-09 21:20:12.670712] [/sensors/float_switch]: Starting float switch driver on ADC AIN6 and polling period 0.25 seconds.
+[INFO]  [2020-10-09 21:20:12.703506] [/logging/rosbag_record]: Subscribing to /commands
+[DEBUG] [2020-10-09 21:20:12.724350] [/sensors/float_switch]: node[/sensors/float_switch, http://192.168.1.34:41923/] entering spin(), pid[3843]
+[INFO]  [2020-10-09 21:20:12.890103] [/logging/rosbag_record]: Subscribing to /los
+[INFO]  [2020-10-09 21:20:13.089920] [/logging/rosbag_record]: Subscribing to /readiness_level
+[INFO]  [2020-10-09 21:20:13.264395] [/logging/rosbag_record]: Subscribing to /sensors/combustion_transducer
+[INFO]  [2020-10-09 21:20:13.392835] [/logging/rosbag_record]: Subscribing to /sensors/ox_tank_thermocouple
+[INFO]  [2020-10-09 21:20:13.551979] [/logging/rosbag_record]: Subscribing to /sensors/float_switch
+[INFO]  [2020-10-09 21:20:13.694814] [/logging/rosbag_record]: Subscribing to /sensors/ox_tank_transducer
+[INFO]  [2020-10-09 21:20:13.822881] [/logging/rosbag_record]: Subscribing to /sensors/combustion_thermocouple_2
+[INFO]  [2020-10-09 21:20:13.971251] [/logging/rosbag_record]: Subscribing to /sensors/combustion_thermocouple_1
+[INFO]  [2020-10-09 21:20:14.552798] [/top/watchdog]: /admin/adam_driver has been born.
+[INFO]  [2020-10-09 21:20:14.569415] [/top/watchdog]: /hardware/injection_valve has been born.
+[INFO]  [2020-10-09 21:20:14.582577] [/top/watchdog]: /top/tcp_server has been born.
+[INFO]  [2020-10-09 21:20:14.597022] [/top/watchdog]: /hardware/solenoid has been born.
+[INFO]  [2020-10-09 21:20:14.609704] [/top/watchdog]: /rosout has been born.
+[INFO]  [2020-10-09 21:20:14.637970] [/top/watchdog]: /hardware/abort_valve has been born.
+[INFO]  [2020-10-09 21:20:14.651961] [/top/watchdog]: /logging/rosbag_record has been born.
+[INFO]  [2020-10-09 21:20:14.682631] [/top/watchdog]: /hardware/linear_actuator has been born.
+[INFO]  [2020-10-09 21:20:14.695074] [/top/watchdog]: /top/readiness_admin has been born.
+[INFO]  [2020-10-09 21:20:14.707622] [/top/watchdog]: /top/watchdog has been born.
+[INFO]  [2020-10-09 21:20:14.722215] [/top/watchdog]: /sensors/combustion_transducer has been born.
+[INFO]  [2020-10-09 21:20:14.737451] [/top/watchdog]: /top/exec has been born.
+[INFO]  [2020-10-09 21:20:14.758905] [/top/watchdog]: /hardware/ematch has been born.
+[INFO]  [2020-10-09 21:20:14.771954] [/top/watchdog]: /sensors/ox_tank_transducer has been born.
+[INFO]  [2020-10-09 21:20:14.786728] [/top/watchdog]: /sensors/combustion_thermocouple_2 has been born.
+[INFO]  [2020-10-09 21:20:14.800777] [/top/watchdog]: /sensors/combustion_thermocouple_1 has been born.
+[INFO]  [2020-10-09 21:20:14.813876] [/top/watchdog]: /sensors/float_switch has been born.
+[INFO]  [2020-10-09 21:20:14.833204] [/top/watchdog]: /top/listener has been born.
+[INFO]  [2020-10-09 21:20:14.845467] [/top/watchdog]: /sensors/ox_tank_thermocouple has been born.
+[DEBUG] [2020-10-09 21:20:19.387101] [/top/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-10-09 21:20:19.469027] [/hardware/ematch]: Success.
+[DEBUG] [2020-10-09 21:20:19.486830] [/hardware/ematch]: node[/hardware/ematch, http://192.168.1.34:44781/] entering spin(), pid[3830]
+[INFO]  [2020-10-09 21:20:22.464806] [/hardware/linear_actuator]: Success.
+[DEBUG] [2020-10-09 21:20:22.487781] [/hardware/linear_actuator]: node[/hardware/linear_actuator, http://192.168.1.34:35039/] entering spin(), pid[3827]
+[DEBUG] [2020-10-09 21:20:25.371143] [/top/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-10-09 21:20:28.318253] [/hardware/injection_valve]: Success.
+[DEBUG] [2020-10-09 21:20:28.338477] [/hardware/injection_valve]: node[/hardware/injection_valve, http://192.168.1.34:34017/] entering spin(), pid[3824]
+[INFO]  [2020-10-09 21:20:28.941234] [/hardware/solenoid]: Success.
+[DEBUG] [2020-10-09 21:20:28.960749] [/hardware/solenoid]: node[/hardware/solenoid, http://192.168.1.34:41763/] entering spin(), pid[3828]
+[DEBUG] [2020-10-09 21:20:31.373398] [/top/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-10-09 21:20:35.372172] [/top/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-10-09 21:20:39.372993] [/top/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-10-09 21:20:43.372993] [/top/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-10-09 21:20:47.374520] [/top/tcp_server]: Sending keep-alive message.
+[DEBUG] [2020-10-09 21:20:51.374026] [/top/tcp_server]: Sending keep-alive message.
+[INFO]  [2020-10-09 21:20:54.609615] [/top/tcp_server]: Command from #0: listen to /los
+[DEBUG] [2020-10-09 21:20:54.708475] [/top/readiness_admin]: Command 'listen to /los' matches these patterns: ['listen to .*']
+[INFO]  [2020-10-09 21:20:54.901463] [/top/listener]: Subscribed to /los
+[INFO]  [2020-10-09 21:20:55.627913] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:20:56.657165] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:20:57.632015] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:20:58.627064] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:20:59.628468] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:00.630475] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:01.629099] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:02.628607] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:03.632186] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[DEBUG] [2020-10-09 21:21:04.476309] [/top/watchdog]: Runtime has reached: 1 minutes.
+[INFO]  [2020-10-09 21:21:04.633998] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:05.648369] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:06.628949] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:07.629833] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:08.629832] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:09.634162] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:10.626835] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:11.628029] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:12.637558] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:13.629500] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:14.635276] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:15.626417] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:16.630753] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:17.629209] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:18.628941] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:19.632244] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:20.630440] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:21.630463] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:22.634691] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:23.291134] [/top/tcp_server]: Command from #0: listen to /sensors/combustion_thermocouple_1
+[DEBUG] [2020-10-09 21:21:23.343864] [/top/readiness_admin]: Command 'listen to /sensors/combustion_thermocouple_1' matches these patterns: ['listen to .*']
+[INFO]  [2020-10-09 21:21:23.540779] [/top/listener]: Subscribed to /sensors/combustion_thermocouple_1
+[INFO]  [2020-10-09 21:21:23.635585] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:23.953011] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 70
+  stamp: 
+    secs: 1602292883
+    nsecs: 922369003
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65450549126
+reading: 678.296264648
+[INFO]  [2020-10-09 21:21:24.630410] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:24.947148] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 71
+  stamp: 
+    secs: 1602292884
+    nsecs: 924870967
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65406596661
+reading: 678.080200195
+[INFO]  [2020-10-09 21:21:25.631278] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:25.965744] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 72
+  stamp: 
+    secs: 1602292885
+    nsecs: 923671007
+  frame_id: ''
+unit: "celsius"
+voltage: 1.6531867981
+reading: 677.648132324
+[INFO]  [2020-10-09 21:21:26.649507] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:26.955507] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 73
+  stamp: 
+    secs: 1602292886
+    nsecs: 928498029
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65494501591
+reading: 678.512329102
+[INFO]  [2020-10-09 21:21:27.629096] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:27.943775] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 74
+  stamp: 
+    secs: 1602292887
+    nsecs: 921617031
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65494501591
+reading: 678.512329102
+[INFO]  [2020-10-09 21:21:28.636960] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:28.944226] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 75
+  stamp: 
+    secs: 1602292888
+    nsecs: 921987056
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65230774879
+reading: 677.216064453
+[INFO]  [2020-10-09 21:21:29.637277] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:29.945332] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 76
+  stamp: 
+    secs: 1602292889
+    nsecs: 925638914
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65494501591
+reading: 678.512329102
+[INFO]  [2020-10-09 21:21:30.629846] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:30.952799] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 77
+  stamp: 
+    secs: 1602292890
+    nsecs: 924882888
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65362644196
+reading: 677.864135742
+[INFO]  [2020-10-09 21:21:31.630768] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:31.946338] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 78
+  stamp: 
+    secs: 1602292891
+    nsecs: 925066947
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65450549126
+reading: 678.296264648
+[INFO]  [2020-10-09 21:21:32.634869] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:32.945886] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 79
+  stamp: 
+    secs: 1602292892
+    nsecs: 922391891
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65362644196
+reading: 677.864135742
+[INFO]  [2020-10-09 21:21:33.631766] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:33.946810] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 80
+  stamp: 
+    secs: 1602292893
+    nsecs: 921314001
+  frame_id: ''
+unit: "celsius"
+voltage: 1.6531867981
+reading: 677.648132324
+[INFO]  [2020-10-09 21:21:34.630113] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:34.945538] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 81
+  stamp: 
+    secs: 1602292894
+    nsecs: 921452999
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65362644196
+reading: 677.864135742
+[INFO]  [2020-10-09 21:21:35.630397] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:35.946436] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 82
+  stamp: 
+    secs: 1602292895
+    nsecs: 925018072
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65362644196
+reading: 677.864135742
+[INFO]  [2020-10-09 21:21:36.632778] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:36.946046] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 83
+  stamp: 
+    secs: 1602292896
+    nsecs: 922668933
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65406596661
+reading: 678.080200195
+[INFO]  [2020-10-09 21:21:37.638203] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:37.947405] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 84
+  stamp: 
+    secs: 1602292897
+    nsecs: 922663927
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65406596661
+reading: 678.080200195
+[INFO]  [2020-10-09 21:21:38.634667] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:38.951996] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 85
+  stamp: 
+    secs: 1602292898
+    nsecs: 926584959
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65494501591
+reading: 678.512329102
+[INFO]  [2020-10-09 21:21:39.632663] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:39.945423] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 86
+  stamp: 
+    secs: 1602292899
+    nsecs: 921514034
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65274727345
+reading: 677.432067871
+[INFO]  [2020-10-09 21:21:40.634131] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:40.944871] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 87
+  stamp: 
+    secs: 1602292900
+    nsecs: 921468973
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65230774879
+reading: 677.216064453
+[INFO]  [2020-10-09 21:21:41.637174] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:41.942272] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 88
+  stamp: 
+    secs: 1602292901
+    nsecs: 922192096
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65450549126
+reading: 678.296264648
+[INFO]  [2020-10-09 21:21:42.630887] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:42.945322] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 89
+  stamp: 
+    secs: 1602292902
+    nsecs: 923130035
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65362644196
+reading: 677.864135742
+[INFO]  [2020-10-09 21:21:43.633192] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:43.942662] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 90
+  stamp: 
+    secs: 1602292903
+    nsecs: 922606945
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65406596661
+reading: 678.080200195
+[INFO]  [2020-10-09 21:21:44.630143] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:44.944423] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 91
+  stamp: 
+    secs: 1602292904
+    nsecs: 922808885
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65538465977
+reading: 678.728393555
+[INFO]  [2020-10-09 21:21:45.636590] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:45.943731] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 92
+  stamp: 
+    secs: 1602292905
+    nsecs: 922332048
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65494501591
+reading: 678.512329102
+[INFO]  [2020-10-09 21:21:46.635061] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:46.947137] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 93
+  stamp: 
+    secs: 1602292906
+    nsecs: 924498081
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65538465977
+reading: 678.728393555
+[INFO]  [2020-10-09 21:21:47.631592] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:47.942935] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 94
+  stamp: 
+    secs: 1602292907
+    nsecs: 922312974
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65274727345
+reading: 677.432067871
+[INFO]  [2020-10-09 21:21:48.634509] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:48.942116] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 95
+  stamp: 
+    secs: 1602292908
+    nsecs: 921973943
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65406596661
+reading: 678.080200195
+[INFO]  [2020-10-09 21:21:49.629281] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:49.951560] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 96
+  stamp: 
+    secs: 1602292909
+    nsecs: 922699928
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65494501591
+reading: 678.512329102
+[INFO]  [2020-10-09 21:21:50.625139] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:50.943489] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 97
+  stamp: 
+    secs: 1602292910
+    nsecs: 922097921
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65406596661
+reading: 678.080200195
+[INFO]  [2020-10-09 21:21:51.628679] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:51.943819] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 98
+  stamp: 
+    secs: 1602292911
+    nsecs: 922543048
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65406596661
+reading: 678.080200195
+[INFO]  [2020-10-09 21:21:52.629508] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:52.946405] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 99
+  stamp: 
+    secs: 1602292912
+    nsecs: 924853086
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65538465977
+reading: 678.728393555
+[INFO]  [2020-10-09 21:21:53.630368] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:53.944094] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 100
+  stamp: 
+    secs: 1602292913
+    nsecs: 921458005
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65494501591
+reading: 678.512329102
+[INFO]  [2020-10-09 21:21:54.631899] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:54.944042] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 101
+  stamp: 
+    secs: 1602292914
+    nsecs: 922384977
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65362644196
+reading: 677.864135742
+[INFO]  [2020-10-09 21:21:55.636652] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:55.944511] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 102
+  stamp: 
+    secs: 1602292915
+    nsecs: 921911954
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65406596661
+reading: 678.080200195
+[INFO]  [2020-10-09 21:21:56.631278] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:56.943078] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 103
+  stamp: 
+    secs: 1602292916
+    nsecs: 922008991
+  frame_id: ''
+unit: "celsius"
+voltage: 1.6531867981
+reading: 677.648132324
+[INFO]  [2020-10-09 21:21:57.631016] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:57.944006] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 104
+  stamp: 
+    secs: 1602292917
+    nsecs: 921912908
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65582418442
+reading: 678.944519043
+[INFO]  [2020-10-09 21:21:58.631980] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:58.945860] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 105
+  stamp: 
+    secs: 1602292918
+    nsecs: 922283887
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65582418442
+reading: 678.944519043
+[INFO]  [2020-10-09 21:21:59.635705] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:21:59.946003] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 106
+  stamp: 
+    secs: 1602292919
+    nsecs: 926662921
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65494501591
+reading: 678.512329102
+[INFO]  [2020-10-09 21:22:00.638998] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:22:00.959074] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 107
+  stamp: 
+    secs: 1602292920
+    nsecs: 922947883
+  frame_id: ''
+unit: "celsius"
+voltage: 1.6597802639
+reading: 680.889648438
+[INFO]  [2020-10-09 21:22:01.628149] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:22:01.943625] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 108
+  stamp: 
+    secs: 1602292921
+    nsecs: 922080993
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65582418442
+reading: 678.944519043
+[INFO]  [2020-10-09 21:22:02.628279] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:22:02.942797] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 109
+  stamp: 
+    secs: 1602292922
+    nsecs: 921983003
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65626370907
+reading: 679.160583496
+[INFO]  [2020-10-09 21:22:03.628851] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:22:03.942225] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 110
+  stamp: 
+    secs: 1602292923
+    nsecs: 922125101
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65494501591
+reading: 678.512329102
+[DEBUG] [2020-10-09 21:22:04.479954] [/top/watchdog]: Runtime has reached: 2 minutes.
+[INFO]  [2020-10-09 21:22:04.628288] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:22:04.943601] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 111
+  stamp: 
+    secs: 1602292924
+    nsecs: 922513008
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65582418442
+reading: 678.944519043
+[INFO]  [2020-10-09 21:22:05.628535] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:22:05.942257] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 112
+  stamp: 
+    secs: 1602292925
+    nsecs: 922065019
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65406596661
+reading: 678.080200195
+[INFO]  [2020-10-09 21:22:06.628633] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:22:06.945782] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 113
+  stamp: 
+    secs: 1602292926
+    nsecs: 922208070
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65538465977
+reading: 678.728393555
+[INFO]  [2020-10-09 21:22:07.630336] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:22:07.943868] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 114
+  stamp: 
+    secs: 1602292927
+    nsecs: 922091007
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65450549126
+reading: 678.296264648
+[INFO]  [2020-10-09 21:22:08.628402] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:22:08.944754] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 115
+  stamp: 
+    secs: 1602292928
+    nsecs: 923190116
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65494501591
+reading: 678.512329102
+[INFO]  [2020-10-09 21:22:09.629117] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:25:22.534174] [/top/tcp_server]: New connection: (1, ('192.168.1.118', 46544))
+[INFO]  [2020-10-09 21:25:22.559040] [/top/tcp_server]: 1 active connection(s)
+[INFO]  [2020-10-09 21:25:22.684384] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:25:22.625586] [/top/tcp_server]: Connection with atleast one client restored.
+[INFO]  [2020-10-09 21:25:22.951902] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 309
+  stamp: 
+    secs: 1602293122
+    nsecs: 921967983
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65538465977
+reading: 678.728393555
+[INFO]  [2020-10-09 21:25:23.632325] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:25:23.945533] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 310
+  stamp: 
+    secs: 1602293123
+    nsecs: 921994924
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65714287758
+reading: 679.592834473
+[INFO]  [2020-10-09 21:25:24.632245] [/top/listener]: /los:
+data: 
+  secs: 0
+  nsecs:         0
+[INFO]  [2020-10-09 21:25:24.943716] [/top/listener]: /sensors/combustion_thermocouple_1:
+header: 
+  seq: 311
+  stamp: 
+    secs: 1602293124
+    nsecs: 922066926
+  frame_id: ''
+unit: "celsius"
+voltage: 1.65714287758
+reading: 679.592834473
