@@ -124,22 +124,22 @@ class MainWindow(Tk):
 
         self.delay = 50
         self.buffer = list([])
-        self.socket = None
+#        self.socket = None
         self.num_shown = 0
-        self.addr = None
-        self.port = None
+#        self.addr = None
+#        self.port = None
         self.logfile = None
-        self.last_rcv = datetime.now()
+#        self.last_rcv = datetime.now()
 
         if not os.path.exists("logs"):
             os.mkdir("logs")
 
         Tk.__init__(self)
         self.style = Style()
-        self.style.theme_use("xpnative")
+        # self.style.theme_use("xpnative")
         self.style.configure("console", foreground="black", background="white")
         self.title("Rocketry@VT Launch Control Operator Interface v2020-10-09a")
-        self.wm_iconbitmap("logo_nowords_cZC_icon.ico")
+        # self.wm_iconbitmap("logo_nowords_cZC_icon.ico")
         self.protocol("WM_DELETE_WINDOW", self.destroy)
         make_focus(self)
         self.update_idletasks()
@@ -283,7 +283,7 @@ class MainWindow(Tk):
         bottom_frame.pack(side=BOTTOM, fill=BOTH)
 
         # WINDOW CONFIGURATION ==============================================
-        self.state('zoomed')
+        # self.state('zoomed')
         self.grid_columnconfigure(0, weight=1)
         self.grid_rowconfigure(0, weight=1)
         self.begin_loop()
@@ -314,43 +314,43 @@ class MainWindow(Tk):
 
     def update(self):
         self.update_time()
-        if socket:
-            dt = datetime.now() - self.last_rcv;
-            if dt.total_seconds() > 10: # timeout is 10 seconds
-                self.tcp_disconnect("No response")
-        message = b""
-        if self.socket:
-            self.set_status(("Connected at {}:{}. " +
-                "Recieved {} messages (showing {}).")
-                .format(self.addr, self.port,
-                    len(self.buffer), self.num_shown))
-            while True:
-                part = b""
-                try:
-                    part = self.socket.recv(1000)
-                except:
-                    pass
-                message += part
-                if len(part) < 1000:
-                    break
-        if len(message) > 0:
-            now = datetime.now()
-            if not self.logfile:
-                filename = "logs/LOG-" + now.strftime(
-                    "%Y-%m-%d-%I-%M-%S-%p") + ".txt"
-                print(f"Opening log: {filename}");
-                self.logfile = open(filename, 'wb')
-                nowf = now.strftime("%A, %d %B %Y %I:%M:%S %p")
-                self.logfile.write(f"Log beginning {nowf}\n".encode())
-
-            message = message.decode('utf-8', 'ignore')
-            self.logfile.write(message.encode())
-            self.logfile.flush()
-            self.last_rcv = now
-            parsed = self.parse_message(message)
-            for p in parsed:
-                self.buffer.append(p)
-            self.render_messages(parsed)
+#        if socket:
+#            dt = datetime.now() - self.last_rcv;
+#            if dt.total_seconds() > 10: # timeout is 10 seconds
+#                self.tcp_disconnect("No response")
+#        message = b""
+#        if self.socket:
+#            self.set_status(("Connected at {}:{}. " +
+#                "Recieved {} messages (showing {}).")
+#                .format(self.addr, self.port,
+#                    len(self.buffer), self.num_shown))
+#            while True:
+#                part = b""
+#                try:
+#                    part = self.socket.recv(1000)
+#                except:
+#                    pass
+#                message += part
+#                if len(part) < 1000:
+#                    break
+#        if len(message) > 0:
+#            now = datetime.now()
+#            if not self.logfile:
+#                filename = "logs/LOG-" + now.strftime(
+#                    "%Y-%m-%d-%I-%M-%S-%p") + ".txt"
+#                print(f"Opening log: {filename}");
+#                self.logfile = open(filename, 'wb')
+#                nowf = now.strftime("%A, %d %B %Y %I:%M:%S %p")
+#                self.logfile.write(f"Log beginning {nowf}\n".encode())
+#
+#            message = message.decode('utf-8', 'ignore')
+#            self.logfile.write(message.encode())
+#            self.logfile.flush()
+#            self.last_rcv = now
+#            parsed = self.parse_message(message)
+#            for p in parsed:
+#                self.buffer.append(p)
+#            self.render_messages(parsed)
 
     def render_messages(self, buffer):
         for p in buffer:
@@ -377,33 +377,33 @@ class MainWindow(Tk):
             if self.snap_to_bottom.get():
                 self.textOutput.see(END)
 
-    def tcp_disconnect(self, reason=None):
-        self.textOutput.config(bg="#0e1c24")
-        self.set_status("Disconnected.")
-        if reason:
-            self.set_status(f"Disconnected ({reason}).")
-        self.socket = None
-        self.connectButton.config(text="Connect")
+#    def tcp_disconnect(self, reason=None):
+#        self.textOutput.config(bg="#0e1c24")
+#        self.set_status("Disconnected.")
+#        if reason:
+#            self.set_status(f"Disconnected ({reason}).")
+#        self.socket = None
+#        self.connectButton.config(text="Connect")
 
-    def tcp_connect(self, addr, port):
-        self.textOutput.config(bg="#1A3747")
-        self.addr = addr
-        self.port = port
-        self.set_status("Connecting...")
-        self.socket = socket.socket()
-        self.socket.settimeout(1)
-        if self.connectButton["text"] == "Disconnect":
-            self.tcp_disconnect()
-            return
-        try:
-            self.socket.connect((addr, int(port)))
-        except Exception as e:
-            self.tcp_disconnect(str(e))
-            return
-        self.socket.setblocking(0)
-        self.connectButton.config(text="Disconnect")
-        self.set_status("Connected at {}:{}.".format(addr, port))
-        self.last_rcv = datetime.now()
+#    def tcp_connect(self, addr, port):
+#        self.textOutput.config(bg="#1A3747")
+#        self.addr = addr
+#        self.port = port
+#        self.set_status("Connecting...")
+#        self.socket = socket.socket()
+#        self.socket.settimeout(1)
+#        if self.connectButton["text"] == "Disconnect":
+#            self.tcp_disconnect()
+#            return
+#        try:
+#            self.socket.connect((addr, int(port)))
+#        except Exception as e:
+#            self.tcp_disconnect(str(e))
+#            return
+#        self.socket.setblocking(0)
+#        self.connectButton.config(text="Disconnect")
+#        self.set_status("Connected at {}:{}.".format(addr, port))
+#        self.last_rcv = datetime.now()
 
     def send_command(self, text):
         global history_index
@@ -411,8 +411,8 @@ class MainWindow(Tk):
             if not len(command_history) or command_history[-1] != text:
                 command_history.append(text)
             history_index = len(command_history)
-            if self.socket:
-                self.socket.sendall(text.encode())
+#            if self.socket:
+#                self.socket.sendall(text.encode())
         except Exception as e:
             print(e)
 
