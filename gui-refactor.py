@@ -8,6 +8,7 @@ import os
 import socket
 import re
 import copy
+import rospy
 
 
 class CollapsiblePane(Frame):
@@ -130,6 +131,11 @@ class MainWindow(Tk):
 #        self.port = None
         self.logfile = None
 #        self.last_rcv = datetime.now()
+        self.pub = rospy.Publisher("/commands", String, queue_size=10)
+        rospy.init_node("author", anonymous=True)
+
+        rospy.init_node("reader", anonymous=True)
+        rospy.Subscriber("/commands", String, update)
 
         if not os.path.exists("logs"):
             os.mkdir("logs")
@@ -170,7 +176,7 @@ class MainWindow(Tk):
         self.datetime = Label(status_frame)
         self.datetime.pack(side=RIGHT, fill='x', padx=10, pady=6)
         self.set_status("Disconnected.")
-
+        '''
         # CONNECTION MANAGEMENT PANE =========================================
         Label(top_frame, text="IP Address: ").pack(side = LEFT, padx=3, pady=3)
         self.addrInputBox = Entry(top_frame, width=30)
@@ -184,11 +190,11 @@ class MainWindow(Tk):
             command=lambda: self.tcp_connect(self.addrInputBox.get(),
             self.portInputBox.get()))
         self.connectButton.pack(side = LEFT, padx=3, pady=3)
-
+        '''
         # CLEAR BUTTON =======================================================
-        clearButton = Button(top_frame, text='Clear',
+        self.clearButton = Button(top_frame, text='Clear',
             command=lambda: self.clear_console())
-        clearButton.pack(side = LEFT, padx=3, pady=3)
+        self.clearButton.pack(side = LEFT, padx=3, pady=3)
 
         # FILTER TOGGLE VARIABLES ============================================
         self.snap_to_bottom = BooleanVar()
@@ -312,7 +318,7 @@ class MainWindow(Tk):
         self.datetime["text"] = datetime.now().strftime(
             "%A, %d %B %Y %I:%M:%S %p")
 
-    def update(self):
+    def update(self, message):
         self.update_time()
 #        if socket:
 #            dt = datetime.now() - self.last_rcv;
@@ -333,24 +339,26 @@ class MainWindow(Tk):
 #                message += part
 #                if len(part) < 1000:
 #                    break
-#        if len(message) > 0:
-#            now = datetime.now()
-#            if not self.logfile:
-#                filename = "logs/LOG-" + now.strftime(
-#                    "%Y-%m-%d-%I-%M-%S-%p") + ".txt"
-#                print(f"Opening log: {filename}");
-#                self.logfile = open(filename, 'wb')
-#                nowf = now.strftime("%A, %d %B %Y %I:%M:%S %p")
-#                self.logfile.write(f"Log beginning {nowf}\n".encode())
-#
-#            message = message.decode('utf-8', 'ignore')
-#            self.logfile.write(message.encode())
-#            self.logfile.flush()
-#            self.last_rcv = now
-#            parsed = self.parse_message(message)
-#            for p in parsed:
-#                self.buffer.append(p)
-#            self.render_messages(parsed)
+        if len(message) > 0:
+            now = datetime.now()
+            if not self.logfile:
+                filename = "logs/LOG-" + now.strftime(
+                    "%Y-%m-%d-%I-%M-%S-%p") + ".txt"
+                logMsg = "Opening log: {}".format(filename)
+                print(logMsg)
+                self.logfile = open(filename, 'wb')
+                nowf = now.strftime("%A, %d %B %Y %I:%M:%S %p")
+                logWrite = "Log beginning {}\n".format(nowf)
+                self.logfile.write(logWrite.encode())
+
+            message = message.decode('utf-8', 'ignore')
+            self.logfile.write(message.encode())
+            self.logfile.flush()
+            self.last_rcv = now
+            parsed = self.parse_message(message)
+            for p in parsed:
+                self.buffer.append(p)
+            self.render_messages(parsed)
 
     def render_messages(self, buffer):
         for p in buffer:
@@ -413,6 +421,7 @@ class MainWindow(Tk):
             history_index = len(command_history)
 #            if self.socket:
 #                self.socket.sendall(text.encode())
+            self.pub.publish(text.encode())
         except Exception as e:
             print(e)
 
