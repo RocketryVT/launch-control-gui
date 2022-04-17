@@ -11,6 +11,9 @@ import socket
 import re
 import copy
 import sys
+import rospy
+from std_msgs.msg import String
+from rosgraph_msgs.msg import Log
 
 
 class CollapsiblePane(Frame):
@@ -173,21 +176,6 @@ class MainWindow(Tk):
         self.status_text.pack(side=LEFT, fill='x', padx=3, pady=6)
         self.datetime = Label(status_frame)
         self.datetime.pack(side=RIGHT, fill='x', padx=10, pady=6)
-        self.set_status("Disconnected.")
-
-        # CONNECTION MANAGEMENT PANE =========================================
-        Label(top_frame, text="IP Address: ").pack(side = LEFT, padx=3, pady=3)
-        self.addrInputBox = Entry(top_frame, width=30)
-        self.addrInputBox.insert(0, "192.168.1.34")
-        self.addrInputBox.pack(side = LEFT, padx=3, pady=3)
-        Label(top_frame, text="Port: ").pack(side = LEFT, padx=3, pady=3)
-        self.portInputBox = Entry(top_frame, width=10)
-        self.portInputBox.insert(0, "8001")
-        self.portInputBox.pack(side = LEFT, padx=3, pady=3)
-        self.connectButton = Button(top_frame, text='Connect',
-            command=lambda: self.tcp_connect(self.addrInputBox.get(),
-            self.portInputBox.get()))
-        self.connectButton.pack(side = LEFT, padx=3, pady=3)
 
         # CLEAR BUTTON =======================================================
         clearButton = Button(top_frame, text='Clear',
@@ -319,43 +307,25 @@ class MainWindow(Tk):
 
     def update(self):
         self.update_time()
-        if socket:
-            dt = datetime.now() - self.last_rcv;
-            if dt.total_seconds() > 10: # timeout is 10 seconds
-                self.tcp_disconnect("No response")
-        message = b""
-        if self.socket:
-            self.set_status(("Connected at {}:{}. " +
-                "Recieved {} messages (showing {}).")
-                .format(self.addr, self.port,
-                    len(self.buffer), self.num_shown))
-            while True:
-                part = b""
-                try:
-                    part = self.socket.recv(1000)
-                except:
-                    pass
-                message += part
-                if len(part) < 1000:
-                    break
-        if len(message) > 0:
-            now = datetime.now()
-            if not self.logfile:
-                filename = "logs/LOG-" + now.strftime(
-                    "%Y-%m-%d-%I-%M-%S-%p") + ".txt"
-                print("Opening log: {}".format(filename));
-                self.logfile = open(filename, 'wb')
-                nowf = now.strftime("%A, %d %B %Y %I:%M:%S %p")
-                self.logfile.write("Log beginning {}\n".format(nowf).encode())
 
-            message = message.decode('utf-8', 'ignore')
-            self.logfile.write(message.encode())
-            self.logfile.flush()
-            self.last_rcv = now
-            parsed = self.parse_message(message)
-            for p in parsed:
-                self.buffer.append(p)
-            self.render_messages(parsed)
+    def receive_message(self, message):
+        now = datetime.now()
+        if not self.logfile:
+            filename = "logs/LOG-" + now.strftime(
+                "%Y-%m-%d-%I-%M-%S-%p") + ".txt"
+            print("Opening log: {}".format(filename));
+            self.logfile = open(filename, 'wb')
+            nowf = now.strftime("%A, %d %B %Y %I:%M:%S %p")
+            self.logfile.write("Log beginning {}\n".format(nowf).encode())
+
+        actual_message = message.data
+        self.logfile.write(actual_message.encode())
+        self.logfile.flush()
+        self.last_rcv = now
+        parsed = self.parse_message(actual_message)
+        for p in parsed:
+            self.buffer.append(p)
+        self.render_messages(parsed)
 
     def render_messages(self, buffer):
         for p in buffer:
@@ -382,42 +352,13 @@ class MainWindow(Tk):
             if self.snap_to_bottom.get():
                 self.textOutput.see(END)
 
-    def tcp_disconnect(self, reason=None):
-        self.textOutput.config(bg="#0e1c24")
-        self.set_status("Disconnected.")
-        if reason:
-            self.set_status("Disconnected ({}).".format(reason))
-        self.socket = None
-        self.connectButton.config(text="Connect")
-
-    def tcp_connect(self, addr, port):
-        self.textOutput.config(bg="#1A3747")
-        self.addr = addr
-        self.port = port
-        self.set_status("Connecting...")
-        self.socket = socket.socket()
-        self.socket.settimeout(1)
-        if self.connectButton["text"] == "Disconnect":
-            self.tcp_disconnect()
-            return
-        try:
-            self.socket.connect((addr, int(port)))
-        except Exception as e:
-            self.tcp_disconnect(str(e))
-            return
-        self.socket.setblocking(0)
-        self.connectButton.config(text="Disconnect")
-        self.set_status("Connected at {}:{}.".format(addr, port))
-        self.last_rcv = datetime.now()
-
     def send_command(self, text):
         global history_index
         try:
             if not len(command_history) or command_history[-1] != text:
                 command_history.append(text)
             history_index = len(command_history)
-            if self.socket:
-                self.socket.sendall(text.encode())
+            command_center.publish(text)
         except Exception as e:
             print(e)
 
@@ -616,6 +557,10 @@ if __name__ == "__main__":
     command_history = []
 
     print("Starting R@VT control.")
+    rospy.init_node("launch_control_gui", log_level=rospy.DEBUG)
+    name = rospy.get_name()
 
     main = MainWindow()
+    command_center = rospy.Publisher("/requested_commands", String, queue_size=10)
+    rospy.Subscriber("/client_out", String, main.receive_message)
     main.mainloop()
